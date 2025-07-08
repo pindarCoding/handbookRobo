@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { handbookData, Theme, SubTheme, Generation, Variant } from '@/data/handbook-data'
 import { MainContent } from '@/components/handbook/MainContent'
 import { NavigationFilter } from '@/components/handbook/NavigationFilter'
+import { Header } from '@/components/layout/Header' 
 
 type FilterStep = 'theme' | 'subtheme' | 'generation' | 'variant'
 
@@ -59,7 +60,9 @@ export default function HandbookNavigator() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col">
+      
       {/* Navigazione in alto */}
+      <Header />
       <NavigationFilter
         currentStep={currentStep}
         selectedTheme={selectedTheme}

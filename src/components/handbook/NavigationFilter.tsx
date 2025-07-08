@@ -55,6 +55,7 @@ export const NavigationFilter = ({
   }
 
   return (
+    
     <div className="bg-white dark:bg-slate-800 shadow-lg border-b border-slate-200 dark:border-slate-700">
       <div className="max-w-screen-2xl  mx-auto p-4">
         {/* Header con back button e theme toggle */}
