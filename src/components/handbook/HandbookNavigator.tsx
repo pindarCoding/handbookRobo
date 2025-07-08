@@ -79,9 +79,6 @@ export default function HandbookNavigator() {
       {/* Contenuto principale */}
       <main className="flex-1 overflow-auto">
         <div className="max-w-screen-2xl mx-auto p-4 md:p-6">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-            Generational Handbook
-          </h1>
 
           <MainContent
             step={currentStep}

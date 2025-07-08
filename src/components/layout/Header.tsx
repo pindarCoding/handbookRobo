@@ -25,16 +25,16 @@ export const Header = () => {
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 relative z-50">
-      <div className=" max-w-screen-2xl mx-auto px-4 md:px-6">
+      <div className=" max-w-screen-2xl mx-auto py-4 px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Image
               src="/MYCo-Logo_Transparent-300x300.png"
               alt="MyCo Logo"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
+              width={240}
+              height={80}
+              className="h-20 w-auto"
               priority
             />
           </div>

@@ -5,6 +5,7 @@ import { Theme, SubTheme, Generation, Variant } from '@/data/handbook-data'
 import { useBook } from '@/components/providers/book-provider'
 import { PlusCircleIcon } from 'lucide-react'
 import { YourBook } from './YourBook'
+import { WelcomeContent } from './WelcomeContent'
 
 type FilterStep = 'theme' | 'subtheme' | 'generation' | 'variant'
 
@@ -71,10 +72,7 @@ export const MainContent = ({
     // Stato iniziale - nessuna selezione
     if (!selectedTheme) {
       return (
-        <div className="text-center text-slate-600 dark:text-slate-400 py-12">
-          <h2 className="text-xl font-semibold mb-4">Welcome to the Generational Handbook</h2>
-          <p>Select a theme to begin exploring</p>
-        </div>
+        <WelcomeContent />
       );
     }
 
