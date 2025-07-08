@@ -24,30 +24,30 @@ export const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200 relative z-50">
-      <div className=" max-w-screen-2xl mx-auto py-4 px-4 md:px-6">
+    <header className="bg-white dark:bg-slate-800 shadow-sm border-b border-gray-200 dark:border-slate-700 relative z-50">
+      <div className="max-w-screen-2xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Image
               src="/MYCo-Logo_Transparent-300x300.png"
               alt="MyCo Logo"
-              width={240}
-              height={80}
-              className="h-20 w-auto"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
               priority
             />
           </div>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+            <a href="#" className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium">
               MyCo Website
             </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+            <a href="#" className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium">
               MyLastHandBook
             </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+            <a href="#" className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium">
               How To
             </a>
             
@@ -66,13 +66,13 @@ export const Header = () => {
               </button>
               
               {isLanguageOpen && (
-                <div className="absolute right-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="absolute right-0 mt-2 w-56 bg-white dark:bg-slate-700 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="py-1">
                     {languages.map((language) => (
                       <button
                         key={language.code}
                         onClick={() => handleLanguageSelect(language)}
-                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                        className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-600 w-full text-left"
                       >
                         <span className="text-xl mr-3">{language.flag}</span>
                         <span>{language.name}</span>
@@ -103,21 +103,21 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
             <div className="flex flex-col space-y-4">
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
+              <a href="#" className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2">
                 MyCo Website
               </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
+              <a href="#" className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2">
                 MyLastHandBook
               </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
+              <a href="#" className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2">
                 How To
               </a>
               
               {/* Mobile Language Selection */}
-              <div className="border-t pt-4">
-                <p className="text-sm text-gray-500 mb-2">Select Your Language:</p>
+              <div className="border-t dark:border-gray-700 pt-4">
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Select Your Language:</p>
                 <div className="grid grid-cols-2 gap-2">
                   {languages.map((language) => (
                     <button
@@ -128,8 +128,8 @@ export const Header = () => {
                       }}
                       className={`flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium
                         ${selectedLanguage.code === language.code 
-                          ? 'bg-blue-100 text-blue-700' 
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                          ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300' 
+                          : 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-600'}`}
                     >
                       <span className="text-lg mr-2">{language.flag}</span>
                       <span>{language.name}</span>
