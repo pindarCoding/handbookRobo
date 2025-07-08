@@ -47,7 +47,7 @@ export const YourBook = () => {
       }
 
       // Effettua la chiamata API
-      const response = await fetch('http://192.168.19.204:5000/merge', {
+      const response = await fetch('https://api.meetyourcolleague.eu/merge', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -58,14 +58,49 @@ export const YourBook = () => {
         })
       })
 
+      // Prima controlla il content-type per capire se è un errore JSON o un PDF
+      const contentType = response.headers.get('content-type')
+      
+      if (contentType && contentType.includes('application/json')) {
+        // Il server ha risposto con JSON, probabilmente un errore
+        const errorData = await response.json()
+        if (errorData.error) {
+          // Gestione specifica per errori di file non trovato
+          if (errorData.error.includes('File not found')) {
+            const missingFile = errorData.error.match(/en\/(\d+)\.pdf/)
+            if (missingFile) {
+              alert(`Error: Page ${missingFile[1]} is not available on the server. Please remove it from your selection and try again.`)
+            } else {
+              alert(`Error: ${errorData.error}`)
+            }
+          } else {
+            alert(`Error: ${errorData.error}`)
+          }
+          return
+        }
+      }
+      
+      // Se non è JSON e lo status non è ok, gestisci come errore generico
       if (!response.ok) {
-        const err = await response.json()
-        alert('Error: ' + err.error)
+        alert(`Error: Server responded with status ${response.status}`)
+        return
+      }
+
+      // Verifica che sia effettivamente un PDF
+      if (!contentType || !contentType.includes('application/pdf')) {
+        alert('Error: Server did not return a valid PDF file')
         return
       }
 
       // Gestisci il download del blob
       const blob = await response.blob()
+      
+      // Verifica che il blob non sia vuoto
+      if (blob.size === 0) {
+        alert('Error: Received empty PDF file')
+        return
+      }
+      
       const url = window.URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
@@ -79,7 +114,16 @@ export const YourBook = () => {
       
     } catch (error) {
       console.error('Export error:', error)
-      alert('An error occurred while exporting the handbook. Please check your connection and try again.')
+      
+      // Gestione specifica per errori di rete/CORS
+      if (error instanceof TypeError && error.message === 'Failed to fetch') {
+        alert('Network error: Unable to connect to the PDF server. Please check:\n' +
+              '- The server is running at https://api.meetyourcolleague.eu/merge\n' +
+              '- CORS is properly configured on the server\n' +
+              '- You are on the same network')
+      } else {
+        alert('An unexpected error occurred while exporting the handbook. Please try again.')
+      }
     }
   }
 
