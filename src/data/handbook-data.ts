@@ -105,7 +105,7 @@ export interface Generation {
     }
   ]
 
-  export interface Variant {
+  export interface Card {
     id: string
     title: string
     color: string
@@ -113,11 +113,12 @@ export interface Generation {
     generationId: string  // specifica per quale generazione è questa variante
     subThemeId: string    // per quale sottotema
     page_id: number
+    image?: string
   }
 
   // Dati delle varianti organizzati per generazione e sottotema
-export const variants: Variant[] = [
-  // Varianti per Gen Z
+export const cards: Card[] = [
+  // Card per Gen Z
   {
     id: 'genz-tools-digital',
     title: 'Digital-First Communication',
@@ -180,205 +181,131 @@ export const variants: Variant[] = [
   },
 
 
-  // === VARIANTI PER TEMA "WORK" ===
+  // === NUOVE CARDS PER TEMA "WORK" ===
   
   // --- Workplace Values Across Generations (sub1) ---
-  // Gen Z
   {
-    id: 'genz-work-values-flexibility',
-    title: 'Flexibility & Purpose',
+    id: 'genz-work-sub1',
+    title: 'Gen Z: Workplace Values Across Generations',
     color: 'purple',
-    description: 'Priorità su flessibilità, purpose aziendale e impatto sociale',
+    description: 'Priorità su flessibilità, purpose aziendale, impatto sociale e benessere mentale',
     generationId: 'genz',
     subThemeId: 'sub1',
-    page_id: 6
+    page_id: 6,
+    image: '/images/cards/1.png'
   },
-
-
-  // Millennials
   {
-    id: 'millennial-work-values-growth',
-    title: 'Growth & Development',
+    id: 'millennial-work-sub1',
+    title: 'Millennial: Growth & Meaning',
     color: 'purple',
-    description: 'Valorizzazione crescita personale e opportunità di carriera',
+    description: 'Focus su crescita personale, opportunità di carriera e lavoro con significato',
     generationId: 'millennial',
+    subThemeId: 'sub1',
+    page_id: 7
+  },
+  {
+    id: 'genx-work-sub1',
+    title: 'Gen X: Independence & Balance',
+    color: 'purple',
+    description: 'Valorizzazione autonomia, efficienza e bilanciamento vita-lavoro',
+    generationId: 'genx',
     subThemeId: 'sub1',
     page_id: 8
   },
   {
-    id: 'millennial-work-values-meaning',
-    title: 'Meaningful Work',
-    color: 'teal',
-    description: 'Ricerca di lavoro con significato e contributo sociale',
-    generationId: 'millennial',
+    id: 'boomer-work-sub1',
+    title: 'Boomer: Loyalty & Dedication',
+    color: 'purple',
+    description: 'Focus su fedeltà aziendale, etica del lavoro tradizionale e gerarchia',
+    generationId: 'boomer',
     subThemeId: 'sub1',
     page_id: 9
   },
 
-  // Gen X
+  // --- Motivation and Demotivation (sub2) ---
   {
-    id: 'genx-work-values-independence',
-    title: 'Independence & Autonomy',
-    color: 'purple',
-    description: 'Valorizzazione autonomia e bilanciamento vita-lavoro',
-    generationId: 'genx',
-    subThemeId: 'sub1',
+    id: 'genz-work-sub2',
+    title: 'Gen Z: Instant Feedback & Learning',
+    color: 'orange',
+    description: 'Motivati da riconoscimento immediato e opportunità di apprendimento continuo',
+    generationId: 'genz',
+    subThemeId: 'sub2',
     page_id: 10
   },
-
-  // Boomers
   {
-    id: 'boomer-work-values-loyalty',
-    title: 'Loyalty & Dedication',
-    color: 'purple',
-    description: 'Focus su fedeltà aziendale e etica del lavoro tradizionale',
-    generationId: 'boomer',
-    subThemeId: 'sub1',
+    id: 'millennial-work-sub2',
+    title: 'Millennial: Purpose & Collaboration',
+    color: 'orange',
+    description: 'Motivati da allineamento valoriale e successi di team',
+    generationId: 'millennial',
+    subThemeId: 'sub2',
     page_id: 11
   },
-
-  // --- Motivation and Demotivation (sub2) ---
-  // Gen Z
   {
-    id: 'genz-motivation-recognition',
-    title: 'Instant Recognition',
+    id: 'genx-work-sub2',
+    title: 'Gen X: Results & Autonomy',
     color: 'orange',
-    description: 'Motivati da feedback frequente e riconoscimento immediato',
-    generationId: 'genz',
+    description: 'Motivati da risultati concreti, obiettivi chiari e libertà operativa',
+    generationId: 'genx',
     subThemeId: 'sub2',
     page_id: 12
   },
   {
-    id: 'genz-motivation-learning',
-    title: 'Continuous Learning',
-    color: 'indigo',
-    description: 'Motivati da opportunità di apprendimento e skill development',
-    generationId: 'genz',
+    id: 'boomer-work-sub2',
+    title: 'Boomer: Achievement & Recognition',
+    color: 'orange',
+    description: 'Motivati da riconoscimenti formali e progressione di carriera',
+    generationId: 'boomer',
     subThemeId: 'sub2',
     page_id: 13
   },
 
-  // Millennials
+  // --- Work Styles and Collaboration (sub3) ---
   {
-    id: 'millennial-motivation-purpose',
-    title: 'Purpose-Driven',
-    color: 'orange',
-    description: 'Motivati da allineamento con valori e purpose aziendale',
-    generationId: 'millennial',
-    subThemeId: 'sub2',
+    id: 'genz-work-sub3',
+    title: 'Gen Z: Digital & Async',
+    color: 'cyan',
+    description: 'Collaborazione digitale con comfort per lavoro asincrono e remoto',
+    generationId: 'genz',
+    subThemeId: 'sub3',
     page_id: 14
   },
   {
-    id: 'millennial-motivation-collaboration',
-    title: 'Team Success',
-    color: 'indigo',
-    description: 'Motivati da successi di team e progetti collaborativi',
+    id: 'millennial-work-sub3',
+    title: 'Millennial: Agile & Open',
+    color: 'cyan',
+    description: 'Approccio agile con collaborazione cross-funzionale e ambienti aperti',
     generationId: 'millennial',
-    subThemeId: 'sub2',
+    subThemeId: 'sub3',
     page_id: 15
   },
-
-  // Gen X
   {
-    id: 'genx-motivation-results',
-    title: 'Results-Oriented',
-    color: 'orange',
-    description: 'Motivati da risultati concreti e obiettivi chiari',
+    id: 'genx-work-sub3',
+    title: 'Gen X: Pragmatic & Efficient',
+    color: 'cyan',
+    description: 'Stile pragmatico bilanciando metodi tradizionali e digitali',
     generationId: 'genx',
-    subThemeId: 'sub2',
+    subThemeId: 'sub3',
     page_id: 16
   },
-
-  // Boomers
   {
-    id: 'boomer-motivation-achievement',
-    title: 'Achievement & Status',
-    color: 'orange',
-    description: 'Motivati da riconoscimenti formali e progressione gerarchica',
+    id: 'boomer-work-sub3',
+    title: 'Boomer: Structured & Formal',
+    color: 'cyan',
+    description: 'Preferenza per processi strutturati, comunicazione formale e gerarchie chiare',
     generationId: 'boomer',
-    subThemeId: 'sub2',
+    subThemeId: 'sub3',
     page_id: 17
-  },
-
-  // --- Work Styles and Collaboration (sub3) ---
-  // Gen Z
-  {
-    id: 'genz-workstyle-digital',
-    title: 'Digital Collaboration',
-    color: 'cyan',
-    description: 'Preferenza per collaborazione digitale e strumenti online',
-    generationId: 'genz',
-    subThemeId: 'sub3',
-    page_id: 18
-  },
-  {
-    id: 'genz-workstyle-async',
-    title: 'Async Work',
-    color: 'pink',
-    description: 'Comfort con lavoro asincrono e comunicazione non real-time',
-    generationId: 'genz',
-    subThemeId: 'sub3',
-    page_id: 19
-  },
-
-  // Millennials
-  {
-    id: 'millennial-workstyle-agile',
-    title: 'Agile & Flexible',
-    color: 'cyan',
-    description: 'Approccio agile con focus su iterazione e adattamento',
-    generationId: 'millennial',
-    subThemeId: 'sub3',
-    page_id: 20
-  },
-  {
-    id: 'millennial-workstyle-collaborative',
-    title: 'Open Collaboration',
-    color: 'pink',
-    description: 'Preferenza per ambienti aperti e collaborazione cross-funzionale',
-    generationId: 'millennial',
-    subThemeId: 'sub3',
-    page_id: 21
-  },
-
-  // Gen X
-  {
-    id: 'genx-workstyle-pragmatic',
-    title: 'Pragmatic Approach',
-    color: 'cyan',
-    description: 'Stile di lavoro pragmatico con focus su efficienza',
-    generationId: 'genx',
-    subThemeId: 'sub3',
-    page_id: 22
-  },
-
-  // Boomers
-  {
-    id: 'boomer-workstyle-structured',
-    title: 'Structured Process',
-    color: 'cyan',
-    description: 'Preferenza per processi strutturati e gerarchie chiare',
-    generationId: 'boomer',
-    subThemeId: 'sub3',
-    page_id: 23
   }
-
-
-
 ]
 
-
-
-
-
-
-
+// Aggiorna anche l'interfaccia BookPage
 export interface BookPage {
   id: string;
   title: string;
   themeId: string;
   subThemeId?: string;
   generationId?: string;
-  variantId?: string;
-  addedAt: number; // timestamp per ordinamento
+  cardId?: string;  // era variantId
+  addedAt: number;
 }

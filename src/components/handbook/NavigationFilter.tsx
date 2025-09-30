@@ -3,9 +3,9 @@
 
 import { SunIcon, MoonIcon } from 'lucide-react'
 import { useTheme } from '@/components/providers/theme-provider'
-import { Theme, SubTheme, Generation, Variant, generations, variants } from '@/data/handbook-data'
+import { Theme, SubTheme, Generation, generations } from '@/data/handbook-data'
 
-type FilterStep = 'theme' | 'subtheme' | 'generation' | 'variant'
+type FilterStep = 'theme' | 'subtheme' | 'generation' // Rimosso 'variant'
 
 interface NavigationFilterProps {
   // Current state
@@ -21,7 +21,6 @@ interface NavigationFilterProps {
   onThemeSelect: (theme: Theme) => void
   onSubThemeSelect: (subTheme: SubTheme) => void
   onGenerationSelect: (generation: Generation) => void
-  onVariantSelect: (variant: Variant) => void
   onBack: () => void
 }
 
@@ -34,12 +33,11 @@ export const NavigationFilter = ({
   onThemeSelect,
   onSubThemeSelect,
   onGenerationSelect,
-  onVariantSelect,
   onBack
 }: NavigationFilterProps) => {
   const { theme, toggleTheme } = useTheme()
   
-  const steps = ['theme', 'subtheme', 'generation', 'variant'] as const
+  const steps = ['theme', 'subtheme', 'generation'] as const // Rimosso 'variant'
   const currentStepIndex = steps.indexOf(currentStep)
   
   // Funzione helper per ottenere il titolo dello step corrente
@@ -47,11 +45,20 @@ export const NavigationFilter = ({
     if (selectedTheme && currentStep !== 'theme') {
       return `${selectedTheme.title} > ${
         currentStep === 'subtheme' ? 'Select Subtheme' : 
-        currentStep === 'generation' ? `${selectedSubTheme?.title} > Select Generation` : 
-        currentStep === 'variant' ? `${selectedGeneration?.title} > Select Variant` : ''
+        currentStep === 'generation' ? `${selectedSubTheme?.title} > Select Generation` : ''
       }`
     }
     return 'Select Theme'
+  }
+
+  // Funzione helper per ottenere i nomi degli step
+  const getStepName = (step: string) => {
+    switch(step) {
+      case 'theme': return 'Theme'
+      case 'subtheme': return 'Subtheme'
+      case 'generation': return 'Generation'
+      default: return ''
+    }
   }
 
   return (
@@ -87,25 +94,35 @@ export const NavigationFilter = ({
           </button>
         </div>
 
-        {/* Progress Indicator */}
+        {/* Progress Indicator - Solo 3 step ora */}
         <div className="flex items-center justify-between mb-6 px-2">
           {steps.map((step, index) => (
             <div key={step} className="flex items-center w-full">
-              <div 
-                className={`
-                  w-6 h-6 rounded-full
-                  flex items-center justify-center 
+              <div className="flex flex-col items-center">
+                <div 
+                  className={`
+                    w-8 h-8 rounded-full
+                    flex items-center justify-center 
+                    ${index <= currentStepIndex 
+                      ? 'bg-blue-500 text-white' 
+                      : 'bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400'}
+                    transition-colors duration-300
+                    text-sm font-medium
+                  `}
+                >
+                  {index + 1}
+                </div>
+                <span className={`
+                  text-xs mt-1
                   ${index <= currentStepIndex 
-                    ? 'bg-blue-500 text-white' 
-                    : 'bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400'}
-                  transition-colors duration-300
-                  text-sm
-                `}
-              >
-                {index + 1}
+                    ? 'text-blue-500 dark:text-blue-400' 
+                    : 'text-slate-500 dark:text-slate-400'}
+                `}>
+                  {getStepName(step)}
+                </span>
               </div>
               {index < steps.length - 1 && (
-                <div className="flex-1 mx-2 h-1 rounded">
+                <div className="flex-1 mx-2 h-1 rounded mt-[-1rem]">
                   <div 
                     className={`
                       h-full rounded transition-all duration-300
@@ -168,9 +185,11 @@ export const NavigationFilter = ({
                   className="p-4 rounded-lg bg-slate-100 dark:bg-slate-700 
                            text-slate-700 dark:text-slate-200 
                            hover:bg-slate-200 dark:hover:bg-slate-600 
-                           transition-colors"
+                           transition-colors group"
                 >
-                  <h3 className="font-bold mb-1">{generation.title}</h3>
+                  <h3 className="font-bold mb-1 group-hover:text-blue-500 dark:group-hover:text-blue-400">
+                    {generation.title}
+                  </h3>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">
                     Age: {generation.ageRange}
                   </p>
@@ -179,52 +198,6 @@ export const NavigationFilter = ({
                   </p>
                 </button>
               ))}
-            </div>
-          )}
-
-          {currentStep === 'variant' && selectedGeneration && selectedSubTheme && (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {variants
-                .filter(variant => 
-                  variant.generationId === selectedGeneration.id && 
-                  variant.subThemeId === selectedSubTheme.id
-                ).length === 0 ? (
-                  <div className="col-span-full flex flex-col items-center justify-center p-8 text-center">
-                    <p className="text-slate-500 dark:text-slate-400 mb-2">
-                      No variants available yet for:
-                    </p>
-                    <p className="text-slate-700 dark:text-slate-300 font-medium">
-                      {selectedSubTheme.title} × {selectedGeneration.title}
-                    </p>
-                  </div>
-                ) : (
-                  variants
-                    .filter(variant => 
-                      variant.generationId === selectedGeneration.id && 
-                      variant.subThemeId === selectedSubTheme.id
-                    )
-                    .map((variant) => (
-                      <button
-                        type="button"
-                        key={variant.id}
-                        onClick={() => onVariantSelect(variant)}
-                        className={`
-                          p-4 rounded-lg text-left
-                          transition-all duration-300
-                          ${variant.color === 'blue' ? 'bg-blue-100 dark:bg-blue-900' : ''}
-                          ${variant.color === 'green' ? 'bg-green-100 dark:bg-green-900' : ''}
-                          hover:scale-105
-                        `}
-                      >
-                        <h3 className="font-bold mb-2 text-slate-900 dark:text-white">
-                          {variant.title}
-                        </h3>
-                        <p className="text-sm text-slate-600 dark:text-slate-300">
-                          {variant.description}
-                        </p>
-                      </button>
-                    ))
-              )}
             </div>
           )}
         </div>

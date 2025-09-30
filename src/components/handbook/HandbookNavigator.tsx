@@ -2,37 +2,53 @@
 'use client'
 
 import { useState } from 'react'
-import { handbookData, Theme, SubTheme, Generation, Variant } from '@/data/handbook-data'
+import { handbookData, Theme, SubTheme, Generation, Card, cards } from '@/data/handbook-data'
 import { MainContent } from '@/components/handbook/MainContent'
 import { NavigationFilter } from '@/components/handbook/NavigationFilter'
 import { Header } from '@/components/layout/Header' 
 
-type FilterStep = 'theme' | 'subtheme' | 'generation' | 'variant'
+type FilterStep = 'theme' | 'subtheme' | 'generation'  // Rimosso 'variant'
 
 export default function HandbookNavigator() {
   const [currentStep, setCurrentStep] = useState<FilterStep>('theme')
   const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null)
   const [selectedSubTheme, setSelectedSubTheme] = useState<SubTheme | null>(null)
   const [selectedGeneration, setSelectedGeneration] = useState<Generation | null>(null)
-  const [selectedVariant, setSelectedVariant] = useState<Variant | null>(null)
+  const [selectedCard, setSelectedCard] = useState<Card | null>(null)  // Cambiato da selectedVariant
 
   const handleThemeSelect = (theme: Theme) => {
     setSelectedTheme(theme)
+    setSelectedSubTheme(null)
+    setSelectedGeneration(null)
+    setSelectedCard(null)
     setCurrentStep('subtheme')
   }
 
   const handleSubThemeSelect = (subTheme: SubTheme) => {
     setSelectedSubTheme(subTheme)
+    setSelectedGeneration(null)
+    setSelectedCard(null)
     setCurrentStep('generation')
   }
 
   const handleGenerationSelect = (generation: Generation) => {
     setSelectedGeneration(generation)
-    setCurrentStep('variant')
-  }
-
-  const handleVariantSelect = (variant: Variant) => {
-    setSelectedVariant(variant)
+    
+    // Trova automaticamente la card quando si seleziona una generazione
+    if (selectedSubTheme) {
+      const card = cards.find(c => 
+        c.generationId === generation.id && 
+        c.subThemeId === selectedSubTheme.id
+      )
+      
+      if (card) {
+        setSelectedCard(card)
+      } else {
+        console.warn(`No card found for generation ${generation.id} and subtheme ${selectedSubTheme.id}`)
+        setSelectedCard(null)
+      }
+    }
+    // Non cambiamo più lo step - restiamo su 'generation'
   }
 
   const handleBack = () => {
@@ -42,18 +58,13 @@ export default function HandbookNavigator() {
         setSelectedTheme(null)
         setSelectedSubTheme(null)
         setSelectedGeneration(null)
-        setSelectedVariant(null)
+        setSelectedCard(null)
         break
       case 'generation':
         setCurrentStep('subtheme')
         setSelectedSubTheme(null)
         setSelectedGeneration(null)
-        setSelectedVariant(null)
-        break
-      case 'variant':
-        setCurrentStep('generation')
-        setSelectedGeneration(null)
-        setSelectedVariant(null)
+        setSelectedCard(null)
         break
     }
   }
@@ -72,7 +83,6 @@ export default function HandbookNavigator() {
         onThemeSelect={handleThemeSelect}
         onSubThemeSelect={handleSubThemeSelect}
         onGenerationSelect={handleGenerationSelect}
-        onVariantSelect={handleVariantSelect}
         onBack={handleBack}
       />
 
@@ -85,7 +95,7 @@ export default function HandbookNavigator() {
             selectedTheme={selectedTheme}
             selectedSubTheme={selectedSubTheme}
             selectedGeneration={selectedGeneration}
-            selectedVariant={selectedVariant}
+            selectedCard={selectedCard}  // Passato selectedCard invece di selectedVariant
           />
         </div>
       </main>
