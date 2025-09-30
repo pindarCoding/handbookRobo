@@ -196,30 +196,33 @@ export const cards: Card[] = [
   },
   {
     id: 'millennial-work-sub1',
-    title: 'Millennial: Growth & Meaning',
+    title: 'Millennial:Workplace Values Across Generations',
     color: 'purple',
     description: 'Focus su crescita personale, opportunità di carriera e lavoro con significato',
     generationId: 'millennial',
     subThemeId: 'sub1',
-    page_id: 7
+    page_id: 7,
+      image: '/images/cards/2.png'
   },
   {
     id: 'genx-work-sub1',
-    title: 'Gen X: Independence & Balance',
+    title: 'Gen X: Workplace Values Across Generations',
     color: 'purple',
     description: 'Valorizzazione autonomia, efficienza e bilanciamento vita-lavoro',
     generationId: 'genx',
     subThemeId: 'sub1',
-    page_id: 8
+    page_id: 8,
+     image: '/images/cards/3.png'
   },
   {
     id: 'boomer-work-sub1',
-    title: 'Boomer: Loyalty & Dedication',
+    title: 'Boomer: Workplace Values Across Generations',
     color: 'purple',
     description: 'Focus su fedeltà aziendale, etica del lavoro tradizionale e gerarchia',
     generationId: 'boomer',
     subThemeId: 'sub1',
-    page_id: 9
+    page_id: 9,
+    image: '/images/cards/4.png'
   },
 
   // --- Motivation and Demotivation (sub2) ---

@@ -221,14 +221,14 @@ export const MainContent = ({
 
                 <div className="bg-white dark:bg-slate-800 rounded-lg p-8 mb-6 text-center">
 
-                  <BookOpenIcon className="w-16 h-16 mx-auto mb-4 text-slate-400" />
+                  {/* <BookOpenIcon className="w-16 h-16 mx-auto mb-4 text-slate-400" />
                   <p className="text-slate-600 dark:text-slate-400 mb-2">
                     Full content for this card will be loaded here
 
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-500">
                     Content ID: {selectedCard.page_id}
-                  </p>
+                  </p> */}
 
                 </div>
                 {selectedCard.image && (
