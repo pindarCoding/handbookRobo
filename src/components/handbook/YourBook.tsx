@@ -3,30 +3,30 @@
 
 import { useBook } from '@/components/providers/book-provider'
 import { Trash2Icon } from 'lucide-react'
-import { handbookData, variants } from '@/data/handbook-data'
+import { BookPage, handbookData, cards } from '@/data/handbook-data'  // Cambiato variants → cards
 
 export const YourBook = () => {
   const { pages, removePage, clearBook } = useBook()
 
   // Funzione helper per recuperare il page_id basandosi sugli ID salvati
-  const getPageId = (page: any): number | null => {
+  const getPageId = (page: BookPage): number | null => {
     // Caso 1: Solo Theme selezionato
-    if (page.themeId && !page.subThemeId && !page.variantId) {
+    if (page.themeId && !page.subThemeId && !page.cardId) {  // Cambiato variantId → cardId
       const theme = handbookData.find(t => t.id === page.themeId)
       return theme?.page_id || null
     }
     
     // Caso 2: Theme + SubTheme selezionati
-    if (page.themeId && page.subThemeId && !page.variantId) {
+    if (page.themeId && page.subThemeId && !page.cardId) {  // Cambiato variantId → cardId
       const theme = handbookData.find(t => t.id === page.themeId)
       const subTheme = theme?.subThemes.find(st => st.id === page.subThemeId)
       return subTheme?.page_id || null
     }
     
-    // Caso 3: Variant completa selezionata
-    if (page.variantId) {
-      const variant = variants.find(v => v.id === page.variantId)
-      return variant?.page_id || null
+    // Caso 3: Card completa selezionata
+    if (page.cardId) {  // Cambiato variantId → cardId
+      const card = cards.find(c => c.id === page.cardId)  // Cambiato variant → card, variants → cards
+      return card?.page_id || null
     }
     
     return null
