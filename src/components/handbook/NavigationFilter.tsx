@@ -12,7 +12,7 @@ interface NavigationFilterProps {
   currentStep: FilterStep
   selectedTheme: Theme | null
   selectedSubTheme: SubTheme | null
-  selectedGeneration: Generation | null
+  // selectedGeneration: Generation | null
   
   // Available data
   themes: Theme[]
@@ -28,7 +28,7 @@ export const NavigationFilter = ({
   currentStep,
   selectedTheme,
   selectedSubTheme,
-  selectedGeneration,
+  // selectedGeneration,
   themes,
   onThemeSelect,
   onSubThemeSelect,
