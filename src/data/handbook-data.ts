@@ -124,7 +124,7 @@ export const handbookData: Theme[] = [
   {
     id: 'work',
     title: 'Differences in approach to work',
-    introduction: 'This chapter explores how different generations approach work, including methodologies, work-life balance, and motivation.',
+    introduction: 'Workplaces today bring together a uniquely diverse mix of generations. Baby Boomers, Generation X, Millennials, and Generation Z collaborate daily, each shaped by the social, economic, and technological environments of their formative years. These influences affect not only how individuals define success but also how they communicate, stay motivated, and approach teamwork. While differences in expectations and styles can sometimes create tension or misunderstanding, they also open valuable opportunities for mutual learning, innovation, and resilience. By exploring generational perspectives on values, motivation, and collaboration, this handbook provides practical insights and strategies to help organizations build inclusive environments where all generations feel recognized, respected, and empowered to contribute their strengths. ',
     page_id: 4,
     reportPdfUrl: '/pdfs/work-report.pdf',
     subThemes: [
