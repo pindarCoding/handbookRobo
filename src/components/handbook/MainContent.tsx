@@ -284,15 +284,32 @@ export const MainContent = ({
                 
                 <div className="flex items-center gap-3 ml-4">
   {/* Thumbnail dell'immagine se disponibile */}
+   <AnimatedCharacter
+      images={generateImageSequence({
+        basePath: '/characters/test',
+        prefix: 'millenial_',           // NESSUN PREFISSO!
+        startFrame: 86400,    
+        endFrame: 86520,      
+        digits: 0,            // NIENTE PADDING DI ZERI!
+        extension: 'png'
+      })}
+      alt="Test Character Animation"
+      width={128}
+      height={128}
+      frameRate={24}
+      loop={true}
+      playOnHover={true}
+      className="rounded-lg  hover:shadow-2xl transition-shadow duration-300"
+    />      
   {selectedCard.image && (
     <div className="w-20 h-28 rounded-lg overflow-hidden shadow-sm">
-      <Image
+      {/* <Image
         src={selectedCard.image}
         alt={selectedCard.title}
         width={48}
         height={64}
         className="w-full h-full object-cover"
-      />
+      /> */}
     </div>
   )}
   
@@ -354,23 +371,6 @@ export const MainContent = ({
 
               {/* Informazioni aggiuntive */}
               <div className="grid md:grid-cols-2 gap-4">
-                 <AnimatedCharacter
-      images={generateImageSequence({
-        basePath: '/characters/test',
-        prefix: '',           // NESSUN PREFISSO!
-        startFrame: 86400,    
-        endFrame: 86520,      
-        digits: 0,            // NIENTE PADDING DI ZERI!
-        extension: 'png'
-      })}
-      alt="Test Character Animation"
-      width={300}
-      height={300}
-      frameRate={24}
-      loop={true}
-      playOnHover={true}
-      className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
-    />
 
                 <div className="bg-white dark:bg-slate-800 rounded-lg p-4">
                   <h3 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">

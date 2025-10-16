@@ -4,6 +4,8 @@
 import { SunIcon, MoonIcon } from 'lucide-react'
 import { useTheme } from '@/components/providers/theme-provider'
 import { Theme, SubTheme, Generation, generations } from '@/data/handbook-data'
+// import { AnimatedCharacter } from '@/components/AnimatedCharacter'
+// import { generateImageSequence } from '@/utils/imageSequence' 
 
 type FilterStep = 'theme' | 'subtheme' | 'generation' // Rimosso 'variant'
 
@@ -190,6 +192,7 @@ export const NavigationFilter = ({
                   <h3 className="font-bold mb-1 group-hover:text-blue-500 dark:group-hover:text-blue-400">
                     {generation.title}
                   </h3>
+
                   <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">
                     Age: {generation.ageRange}
                   </p>
