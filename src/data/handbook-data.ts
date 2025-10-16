@@ -41,6 +41,10 @@ export interface Generation {
   title: string
   ageRange: string
   description: string
+  characterFolder?: string  // Nome della cartella del personaggio
+  frameStart?: number       // Frame iniziale
+  frameEnd?: number        // Frame finale
+  framePrefix?: string     // Prefisso del file (se presente)
 }
 
 export interface Card {
@@ -153,7 +157,12 @@ export const generations: Generation[] = [
     id: 'millennial',
     title: 'Millennial',
     ageRange: '28 - 43',
-    description: 'Tech-savvy optimists focused on purpose and growth'
+    description: 'Tech-savvy optimists focused on purpose and growth',
+    characterFolder: 'test',
+    frameStart: 86400,
+    frameEnd:  86520,
+    framePrefix: 'millenial_'
+
   },
   {
     id: 'genx',

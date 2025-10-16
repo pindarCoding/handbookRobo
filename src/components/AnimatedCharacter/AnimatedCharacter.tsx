@@ -262,12 +262,8 @@ const AnimatedCharacter: React.FC<AnimatedCharacterProps> = ({
         )}
       </AnimatePresence>
 
-      {/* Debug info (remove in production) */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className={styles.debug}>
-          Frame: {animationState.currentFrame + 1}/{images.length}
-        </div>
-      )}
+      
+      
     </motion.div>
   );
 };
