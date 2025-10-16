@@ -246,9 +246,9 @@ export const cards: Card[] = [
     subThemeId: 'work-values',
     page_id: 7,
     image: '/images/cards/2.png',
-    stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    stereotype: 'Many people characterize Millennials as entitled job-hoppers who are reluctant to commit to a single employer and are focused solely on perks or immediate rewards. They are perceived as being overly reliant on feedback and requesting excessive flexibility. This stereotype overlooks their deep dedication to pursuing meaningful work, fostering inclusion, and engaging in purpose-driven careers that resonate with their personal values.',
+      researchFindings: 'Research indicates that Millennials prioritize ongoing education, diversity, and empowering leadership. They look for meaningful work and inclusivity, favoring less rigid organizational structures and teamwork-oriented environments. Studies reveal that they anticipate frequent feedback and a connection between their personal beliefs and the goals of the organization, leading to higher engagement in socially responsible companies.',
+      strategiesAdvice: 'Millennials excel in environments that offer chances for advancement, encouraging mentorship, and openness. Companies should promote honest communication and align corporate objectives with social or environmental missions. Providing distinct career paths, continuous learning, and inclusive environments enhances their enthusiasm and commitment.'
   },
   {
     id: 'work-values-genx',
@@ -260,9 +260,9 @@ export const cards: Card[] = [
     subThemeId: 'work-values',
     page_id: 8,
     image: '/images/cards/3.png',
-    stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    stereotype: 'Generation X is often viewed as disillusioned and aloof, shying away from loyalty to their employers and favoring independent work. They are frequently characterized as doubtful of authority, reluctant to make commitments, and less involved in collaborative efforts. Although they do appreciate independence, this perception overlooks their flexibility and practical mindset in finding a balance between structure and autonomy.',
+      researchFindings: 'Studies indicate that Generation X prioritizes independence, equity, and a balance between work and personal life. Due to experiencing corporate layoffs in their formative years, they are often self-sufficient and wary of making excessive commitments to employers. Nevertheless, they are capable of adjusting to both conventional structures and contemporary collaborative environments, succeeding in settings that merge autonomy with fairness and openness.',
+      strategiesAdvice: 'Organizations can assist Gen X by offering flexibility, acknowledging their contributions appropriately, and presenting avenues for advancement. Having clear objectives alongside independence enables them to work efficiently. They are adept at connecting different generations, as they can comprehend established norms while accepting modern collaborative and digital methods.'
   },
   {
     id: 'work-values-boomer',
@@ -274,9 +274,9 @@ export const cards: Card[] = [
     subThemeId: 'work-values',
     page_id: 9,
     image: '/images/cards/4.png',
-    stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    stereotype: 'Baby Boomers are frequently depicted as excessively committed to their jobs, associating extended hours with loyalty and showing resistance to flexibility or change. This characterization shows them as inflexible traditionalists clinging to outdated ways. In truth, Boomers have experienced swift cultural and technological transformations and have consistently demonstrated their capacity to adjust to new circumstances when provided with respectful assistance.',
+      researchFindings: 'Studies indicate that Baby Boomers prioritize loyalty, respect, and acknowledgment. They perceive their work as a component of their personal identity and are driven by the desire to make significant contributions. They are inclined towards organized settings and value the trust placed in them to handle responsibilities. Research also reveals that they can adapt to digital transformation successfully, provided they receive clear instructions and adequate support systems.',
+      strategiesAdvice: 'To maintain the interest of Boomers, organizations ought to acknowledge their longstanding contributions and furnish structured training on new technologies. Engaging them in mentorship allows them to share their expertise and feel appreciated. Positions that highlight their institutional knowledge, strategic advisory roles, and recognition initiatives support ongoing motivation and inclusion.'
   },
   
   // --- Work Motivation Subtheme ---

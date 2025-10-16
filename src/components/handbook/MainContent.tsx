@@ -278,14 +278,31 @@ export const MainContent = ({
                     {selectedCard.description}
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={handleAddPage}
-                  className="ml-4 p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors shadow-md hover:shadow-lg"
-                  title="Add to your handbook"
-                >
-                  <PlusCircleIcon size={28} />
-                </button>
+                
+                <div className="flex items-center gap-3 ml-4">
+  {/* Thumbnail dell'immagine se disponibile */}
+  {selectedCard.image && (
+    <div className="w-20 h-28 rounded-lg overflow-hidden shadow-sm">
+      <Image
+        src={selectedCard.image}
+        alt={selectedCard.title}
+        width={48}
+        height={64}
+        className="w-full h-full object-cover"
+      />
+    </div>
+  )}
+  
+  {/* Pulsante Add */}
+  <button
+    type="button"
+    onClick={handleAddPage}
+    className="p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors shadow-md hover:shadow-lg"
+    title="Add to your handbook"
+  >
+    <PlusCircleIcon size={28} />
+  </button>
+</div>
               </div>
             </div>
 
@@ -329,20 +346,7 @@ export const MainContent = ({
                   </div>
                 </div>
 
-                {/* Mantieni l'immagine per retrocompatibilità */}
-                {selectedCard.image && (
-                  <div className="mb-6 flex justify-center">
-                    <div className="rounded-lg overflow-hidden shadow-md">
-                      <Image
-                        src={selectedCard.image}
-                        alt={selectedCard.title}
-                        width={400} // o la larghezza appropriata
-                        height={300}
-                        className="max-w-full h-auto"
-                      />
-                    </div>
-                  </div>
-                )}
+               
               </div>
 
               {/* Informazioni aggiuntive */}
