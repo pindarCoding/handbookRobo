@@ -53,6 +53,9 @@ export interface Card {
   generationId: string
   page_id: number
   image?: string
+  stereotype: string
+  researchFindings: string
+  strategiesAdvice: string
 }
 
 export interface BookPage {
@@ -175,46 +178,46 @@ export const cards: Card[] = [
   // ========== COMMUNICATION THEME CARDS ==========
   
   // --- Communication Tools Subtheme ---
-  {
-    id: 'communication-tools-genz',
-    title: 'Digital-First Communication',
-    color: 'blue',
-    description: 'Preferenza per comunicazione asincrona attraverso strumenti digitali',
-    themeId: 'communication',
-    generationId: 'genz',
-    subThemeId: 'communication-tools',
-    page_id: 3
-  },
-  {
-    id: 'communication-tools-millennial',
-    title: 'Hybrid Communication',
-    color: 'blue',
-    description: 'Bilanciamento tra comunicazione digitale e tradizionale',
-    themeId: 'communication',
-    generationId: 'millennial',
-    subThemeId: 'communication-tools',
-    page_id: 5
-  },
-  {
-    id: 'communication-tools-genx',
-    title: 'Balanced Approach',
-    color: 'blue',
-    description: 'Approccio equilibrato tra metodi tradizionali e digitali',
-    themeId: 'communication',
-    generationId: 'genx',
-    subThemeId: 'communication-tools',
-    page_id: 4
-  },
-  {
-    id: 'communication-tools-boomer',
-    title: 'Traditional Communication',
-    color: 'blue',
-    description: 'Preferenza per comunicazione diretta e face-to-face',
-    themeId: 'communication',
-    generationId: 'boomer',
-    subThemeId: 'communication-tools',
-    page_id: 1
-  },
+  // {
+  //   id: 'communication-tools-genz',
+  //   title: 'Digital-First Communication',
+  //   color: 'blue',
+  //   description: 'Preferenza per comunicazione asincrona attraverso strumenti digitali',
+  //   themeId: 'communication',
+  //   generationId: 'genz',
+  //   subThemeId: 'communication-tools',
+  //   page_id: 3
+  // },
+  // {
+  //   id: 'communication-tools-millennial',
+  //   title: 'Hybrid Communication',
+  //   color: 'blue',
+  //   description: 'Bilanciamento tra comunicazione digitale e tradizionale',
+  //   themeId: 'communication',
+  //   generationId: 'millennial',
+  //   subThemeId: 'communication-tools',
+  //   page_id: 5
+  // },
+  // {
+  //   id: 'communication-tools-genx',
+  //   title: 'Balanced Approach',
+  //   color: 'blue',
+  //   description: 'Approccio equilibrato tra metodi tradizionali e digitali',
+  //   themeId: 'communication',
+  //   generationId: 'genx',
+  //   subThemeId: 'communication-tools',
+  //   page_id: 4
+  // },
+  // {
+  //   id: 'communication-tools-boomer',
+  //   title: 'Traditional Communication',
+  //   color: 'blue',
+  //   description: 'Preferenza per comunicazione diretta e face-to-face',
+  //   themeId: 'communication',
+  //   generationId: 'boomer',
+  //   subThemeId: 'communication-tools',
+  //   page_id: 1
+  // },
   
   // ========== WORK THEME CARDS ==========
   
@@ -228,7 +231,10 @@ export const cards: Card[] = [
     generationId: 'genz',
     subThemeId: 'work-values',
     page_id: 6,
-    image: '/images/cards/1.png'
+    image: '/images/cards/1.png',
+      stereotype: 'Gen Z is often depicted as restless, fixated on technology, and hesitant to adhere to traditional workplace standards. They face criticism for insisting on excessive flexibility and exhibiting a lack of resilience. This characterization fails to recognize their practicality, capacity for adaptation, and deep commitment to equity, openness, and personal wellbeing in their work environments.',
+      researchFindings: 'Studies show that Gen Z values openness, adaptability, and mental well-being. As digital natives who are adept with technology, they also desire mentorship and personal connections. Although job security is important, they want it to be accompanied by flexibility and a connection to their core beliefs. They tend to lose interest when organizations do not provide transparency or equity.',
+      strategiesAdvice: 'In a marketing agency, Gen Z staff received support through a combination of daily communications on Slack for their tasks and weekly face-to-face mentoring sessions. This blended strategy enabled them to leverage digital tools effectively while also receiving personalized guidance, thereby enhancing both their engagement and performance.'
   },
   {
     id: 'work-values-millennial',
@@ -239,7 +245,10 @@ export const cards: Card[] = [
     generationId: 'millennial',
     subThemeId: 'work-values',
     page_id: 7,
-    image: '/images/cards/2.png'
+    image: '/images/cards/2.png',
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-values-genx',
@@ -250,7 +259,10 @@ export const cards: Card[] = [
     generationId: 'genx',
     subThemeId: 'work-values',
     page_id: 8,
-    image: '/images/cards/3.png'
+    image: '/images/cards/3.png',
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-values-boomer',
@@ -261,7 +273,10 @@ export const cards: Card[] = [
     generationId: 'boomer',
     subThemeId: 'work-values',
     page_id: 9,
-    image: '/images/cards/4.png'
+    image: '/images/cards/4.png',
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   
   // --- Work Motivation Subtheme ---
@@ -273,7 +288,10 @@ export const cards: Card[] = [
     themeId: 'work',
     generationId: 'genz',
     subThemeId: 'work-motivation',
-    page_id: 10
+    page_id: 10,
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-motivation-millennial',
@@ -283,7 +301,10 @@ export const cards: Card[] = [
     themeId: 'work',
     generationId: 'millennial',
     subThemeId: 'work-motivation',
-    page_id: 11
+    page_id: 11,
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-motivation-genx',
@@ -293,7 +314,10 @@ export const cards: Card[] = [
     themeId: 'work',
     generationId: 'genx',
     subThemeId: 'work-motivation',
-    page_id: 12
+    page_id: 12,
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-motivation-boomer',
@@ -303,7 +327,10 @@ export const cards: Card[] = [
     themeId: 'work',
     generationId: 'boomer',
     subThemeId: 'work-motivation',
-    page_id: 13
+    page_id: 13,
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   
   // --- Work Styles Subtheme ---
@@ -315,7 +342,10 @@ export const cards: Card[] = [
     themeId: 'work',
     generationId: 'genz',
     subThemeId: 'work-styles',
-    page_id: 14
+    page_id: 14,
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-styles-millennial',
@@ -325,7 +355,10 @@ export const cards: Card[] = [
     themeId: 'work',
     generationId: 'millennial',
     subThemeId: 'work-styles',
-    page_id: 15
+    page_id: 15,
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-styles-genx',
@@ -335,7 +368,10 @@ export const cards: Card[] = [
     themeId: 'work',
     generationId: 'genx',
     subThemeId: 'work-styles',
-    page_id: 16
+    page_id: 16,
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-styles-boomer',
@@ -345,7 +381,10 @@ export const cards: Card[] = [
     themeId: 'work',
     generationId: 'boomer',
     subThemeId: 'work-styles',
-    page_id: 17
+    page_id: 17,
+    stereotype: 'Digital Native',
+      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   }
   
   // ========== ADD OTHER THEME CARDS HERE ==========
