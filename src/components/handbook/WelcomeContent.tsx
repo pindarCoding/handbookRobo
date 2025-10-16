@@ -17,7 +17,7 @@ export const WelcomeContent = () => {
       </div>
 
       {/* Features Grid */}
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
+      <div className="grid md:grid-cols-3 gap-8 mb-12">
         {/* Download Complete Handbook */}
         <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
           <div className="flex items-center mb-4">
@@ -56,7 +56,30 @@ export const WelcomeContent = () => {
             Start by selecting a theme above
           </p>
         </div>
+
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div className="flex items-center mb-4">
+            <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4">
+              <FilterIcon className="w-6 h-6 text-green-600 dark:text-green-300" />
+            </div>
+            <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+              Test 
+            </h3>
+          </div>
+          <p className="text-slate-600 dark:text-slate-300 mb-4">
+            Test placeholder
+          </p>
+          <p className="text-green-600 dark:text-green-400 font-medium">
+            Start by selecting a theme above
+          </p>
+        </div>
+
+        
       </div>
+
+      
+
+      
 
       {/* How It Works Section */}
       <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-8 mb-12">
