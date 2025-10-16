@@ -270,7 +270,7 @@ export const MainContent = ({
                       {selectedGeneration.title} • {selectedGeneration.ageRange}
                     </span>
                     <span className="text-sm text-slate-500 dark:text-slate-400">
-                      Page {selectedCard.page_id}
+                      Page {selectedCard.page_id}  {/* Mi devo ricordare di toglierlo in PROD */}
                     </span>
                   </div>
 
@@ -294,16 +294,7 @@ export const MainContent = ({
               {/* Placeholder per contenuto futuro */}
 
               <div className="mb-6 rounded-lg overflow-hidden shadow-md">
-                <div className="bg-white dark:bg-slate-800 rounded-lg p-8 mb-6 text-center">
-                  {/* <BookOpenIcon className="w-16 h-16 mx-auto mb-4 text-slate-400" />
-                  <p className="text-slate-600 dark:text-slate-400 mb-2">
-                    Full content for this card will be loaded here
-
-                  </p>
-                  <p className="text-sm text-slate-500 dark:text-slate-500">
-                    Content ID: {selectedCard.page_id}
-                  </p> */}
-                </div>
+                
                 {/* Mostra i tre contenuti strutturati */}
                 <div className="space-y-6 mb-6">
                   {/* The Stereotype */}
