@@ -33,6 +33,7 @@ export interface Theme {
   introduction?: string
   page_id: number
   subThemes: SubTheme[]
+  reportPdfUrl?: string
 }
 
 export interface Generation {
@@ -125,6 +126,7 @@ export const handbookData: Theme[] = [
     title: 'Differences in approach to work',
     introduction: 'This chapter explores how different generations approach work, including methodologies, work-life balance, and motivation.',
     page_id: 4,
+    reportPdfUrl: '/pdfs/work-report.pdf',
     subThemes: [
       { id: 'work-values', title: 'Workplace Values Across Generations', page_id: 2 },
       { id: 'work-motivation', title: 'Motivation and Demotivation', page_id: 3 },

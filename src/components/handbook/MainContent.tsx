@@ -3,9 +3,10 @@
 
 import { Theme, SubTheme, Generation, Card } from '@/data/handbook-data'
 import { useBook } from '@/components/providers/book-provider'
-import { PlusCircleIcon, BookOpenIcon } from 'lucide-react'
+import { PlusCircleIcon } from 'lucide-react'
 import { YourBook } from './YourBook'
 import { WelcomeContent } from './WelcomeContent'
+import Image from 'next/image'
 
 type FilterStep = 'theme' | 'subtheme' | 'generation'
 
@@ -98,40 +99,50 @@ export const MainContent = ({
       return <WelcomeContent />;
     }
 
-    // Visualizzazione tema
-    if (step === 'theme' || (step === 'subtheme' && selectedTheme && !selectedSubTheme)) {
-      return (
-        <div className="animate-fadeIn">
-          <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
-            <div className="flex justify-between items-start mb-6">
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                {selectedTheme.title}
-              </h2>
-              <button
-                type="button"
-                onClick={handleAddPage}
-                className="text-blue-500 hover:text-blue-700"
-                title="Add to your handbook"
-              >
-                <PlusCircleIcon size={24} />
-              </button>
-            </div>
-
-            <div className="h-64 bg-slate-100 dark:bg-slate-700 rounded-lg mb-6 flex items-center justify-center">
-              <p className="text-slate-500 dark:text-slate-400">
-                Theme visualization coming soon
-              </p>
-            </div>
-
-            <div className="prose dark:prose-invert max-w-none">
-              <p className="text-slate-600 dark:text-slate-300">
-                {selectedTheme.introduction}
-              </p>
-            </div>
-          </div>
+ // Visualizzazione tema
+if (step === 'theme' || (step === 'subtheme' && selectedTheme && !selectedSubTheme)) {
+  return (
+    <div className="animate-fadeIn">
+      <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
+        <div className="flex justify-between items-start mb-6">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+            {selectedTheme.title}
+          </h2>
+          <button
+            type="button"
+            onClick={handleAddPage}
+            className="text-blue-500 hover:text-blue-700"
+            title="Add to your handbook"
+          >
+            <PlusCircleIcon size={24} />
+          </button>
         </div>
-      );
-    }
+
+        <div className="prose dark:prose-invert max-w-none mb-6">
+          <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+            {selectedTheme.introduction}
+          </p>
+        </div>
+
+        {selectedTheme.reportPdfUrl && (
+          <div className="flex justify-center">
+            <a
+              href={selectedTheme.reportPdfUrl}
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-md hover:shadow-lg"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download Analysis Report
+            </a>
+          </div>
+        )}
+        
+      </div>
+    </div>
+  );
+}
 
     // Visualizzazione sottotema
     if (step === 'subtheme' && selectedSubTheme) {
@@ -240,10 +251,12 @@ export const MainContent = ({
 
                 </div>
                 {selectedCard.image && (
-                  <div className="mb-6 rounded-lg overflow-hidden shadow-md inline-block">
-                    <img
+                  <div className="mb-6 rounded-lg overflow-hidden shadow-md inline-block relative w-full">
+                    <Image
                       src={selectedCard.image}
                       alt={selectedCard.title}
+                      width={800}
+                      height={600}
                       className="w-full h-auto"
                     />
                   </div>
