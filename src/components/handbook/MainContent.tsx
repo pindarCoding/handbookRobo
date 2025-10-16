@@ -174,7 +174,15 @@ export const MainContent = ({
     }
 
     // Visualizzazione CARD quando si seleziona la generazione
-    if (selectedCard && selectedGeneration && selectedSubTheme) {
+    if (selectedCard && selectedGeneration && selectedSubTheme && selectedTheme) {
+       // Verifica coerenza del themeId
+  if (selectedCard.themeId !== selectedTheme.id) {
+    console.error('Card theme mismatch!', {
+      cardThemeId: selectedCard.themeId,
+      selectedThemeId: selectedTheme.id
+    });
+    return null;
+  }
       return (
         <div className="animate-fadeIn">
           {/* Card principale con stile distintivo */}

@@ -38,7 +38,8 @@ export default function HandbookNavigator() {
     if (selectedSubTheme) {
       const card = cards.find(c => 
         c.generationId === generation.id && 
-        c.subThemeId === selectedSubTheme.id
+        c.subThemeId === selectedSubTheme.id &&
+        c.themeId === selectedTheme.id
       )
       
       if (card) {
