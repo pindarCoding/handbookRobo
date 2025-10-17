@@ -168,7 +168,11 @@ export const generations: Generation[] = [
     id: 'genx',
     title: 'Gen X',
     ageRange: '44 - 59',
-    description: 'Independent and adaptable, bridging traditional and digital approaches'
+    description: 'Independent and adaptable, bridging traditional and digital approaches',
+    characterFolder: 'genx',
+    frameStart: 86400,
+    frameEnd:  86455,
+    framePrefix: 'genx_'
   },
   {
     id: 'boomer',
