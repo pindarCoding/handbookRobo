@@ -6,10 +6,8 @@ import { useBook } from "@/components/providers/book-provider";
 import { PlusCircleIcon } from "lucide-react";
 import { YourBook } from "./YourBook";
 import { WelcomeContent } from "./WelcomeContent";
-import Image from "next/image";
 
-import { AnimatedCharacter } from '@/components/AnimatedCharacter'
-import { generateImageSequence } from '@/utils/imageSequence'
+
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
