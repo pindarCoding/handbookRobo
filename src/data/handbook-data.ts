@@ -158,9 +158,9 @@ export const generations: Generation[] = [
     title: 'Millennial',
     ageRange: '28 - 43',
     description: 'Tech-savvy optimists focused on purpose and growth',
-    characterFolder: 'test',
+    characterFolder: 'millenial_small',
     frameStart: 86400,
-    frameEnd:  86520,
+    frameEnd:  86519,
     framePrefix: 'millenial_'
 
   },
@@ -169,7 +169,7 @@ export const generations: Generation[] = [
     title: 'Gen X',
     ageRange: '44 - 59',
     description: 'Independent and adaptable, bridging traditional and digital approaches',
-    characterFolder: 'genx',
+    characterFolder: 'genx_small',
     frameStart: 86400,
     frameEnd:  86455,
     framePrefix: 'genx_'

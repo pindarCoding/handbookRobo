@@ -1,7 +1,7 @@
 // src/components/GenerationCharacter/GenerationCharacter.tsx
 'use client'
 
-import React from 'react'
+import React, { useMemo } from 'react'
 import { AnimatedCharacter } from '@/components/AnimatedCharacter'
 import { generateImageSequence } from '@/utils/imageSequence'
 
@@ -29,14 +29,17 @@ export const GenerationCharacter: React.FC<GenerationCharacterProps> = ({
   borderColor = 'border-slate-300'
 }) => {
   // Genera la sequenza di immagini basata sui parametri
-  const images = generateImageSequence({
-    basePath: `/characters/${characterFolder}`,
-    prefix: framePrefix,
-    startFrame: frameStart,
-    endFrame: frameEnd,
-    digits: framePrefix ? 3 : 0,  // Se c'è un prefisso, usa 3 digit padding
-    extension: 'png'
-  })
+  const images = useMemo(() => {
+    console.log(`🔄 Generating images for ${characterFolder}`) // 
+    return generateImageSequence({
+      basePath: `/characters/${characterFolder}`,
+      prefix: framePrefix,
+      startFrame: frameStart,
+      endFrame: frameEnd,
+      digits: framePrefix ? 3 : 0,
+      extension: 'png'
+    })
+  }, [characterFolder, framePrefix, frameStart, frameEnd])
 
   return (
     <div 
