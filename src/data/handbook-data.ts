@@ -151,7 +151,11 @@ export const generations: Generation[] = [
     id: 'genz',
     title: 'Gen Z',
     ageRange: '14 - 27',
-    description: 'Digital natives who value authenticity and work-life integration'
+    description: 'Digital natives who value authenticity and work-life integration',
+        characterFolder: 'millenial_small',
+    frameStart: 86400,
+    frameEnd:  86519,
+    framePrefix: 'millenial_'
   },
   {
     id: 'millennial',
@@ -178,7 +182,11 @@ export const generations: Generation[] = [
     id: 'boomer',
     title: 'Baby Boomer',
     ageRange: '60 - 78',
-    description: 'Experience-driven with strong work ethic and traditional values'
+    description: 'Experience-driven with strong work ethic and traditional values',
+        characterFolder: 'millenial_small',
+    frameStart: 86400,
+    frameEnd:  86519,
+    framePrefix: 'millenial_'
   }
 ]
 
