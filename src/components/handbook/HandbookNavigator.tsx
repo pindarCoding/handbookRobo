@@ -7,6 +7,7 @@ import { MainContent } from '@/components/handbook/MainContent'
 import { NavigationFilter } from '@/components/handbook/NavigationFilter'
 import { Header } from '@/components/layout/Header' 
 import { Footer } from '../layout/Footer'
+import { YourBook } from './YourBook'
 
 type FilterStep = 'theme' | 'subtheme' | 'generation'  // Rimosso 'variant'
 
@@ -71,37 +72,54 @@ export default function HandbookNavigator() {
     }
   }
 
-  return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col">
+ return (
+  <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col">
+    
+    {/* Header Sticky */}
+    <Header />
+
+    {/* Main Layout Container - Holy Grail */}
+    <div className="flex-1 flex overflow-hidden">
       
-      {/* Navigazione in alto */}
-      <Header />
-      <NavigationFilter
-        currentStep={currentStep}
-        selectedTheme={selectedTheme}
-        selectedSubTheme={selectedSubTheme}
-        selectedGeneration={selectedGeneration}
-        themes={handbookData}
-        onThemeSelect={handleThemeSelect}
-        onSubThemeSelect={handleSubThemeSelect}
-        onGenerationSelect={handleGenerationSelect}
-        onBack={handleBack}
-      />
+      {/* LEFT SIDEBAR - NavigationFilter */}
+      <aside className="hidden lg:flex lg:flex-col w-[220px] bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 overflow-y-auto">
+        <NavigationFilter
+          currentStep={currentStep}
+          selectedTheme={selectedTheme}
+          selectedSubTheme={selectedSubTheme}
+          selectedGeneration={selectedGeneration}
+          themes={handbookData}
+          onThemeSelect={handleThemeSelect}
+          onSubThemeSelect={handleSubThemeSelect}
+          onGenerationSelect={handleGenerationSelect}
+          onBack={handleBack}
+        />
+      </aside>
 
-      {/* Contenuto principale */}
-      <main className="flex-1 overflow-auto">
+      {/* MAIN CONTENT - Center */}
+      <main className="flex-1 overflow-y-auto bg-slate-50 dark:bg-slate-900">
         <div className="max-w-screen-2xl mx-auto p-4 md:p-6">
-
           <MainContent
             step={currentStep}
             selectedTheme={selectedTheme}
             selectedSubTheme={selectedSubTheme}
             selectedGeneration={selectedGeneration}
-            selectedCard={selectedCard}  // Passato selectedCard invece di selectedVariant
+            selectedCard={selectedCard}
           />
         </div>
       </main>
-      <Footer />
+
+      {/* RIGHT SIDEBAR - YourBook */}
+      <aside className="hidden lg:flex lg:flex-col w-[280px] bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 overflow-y-auto">
+        <div className="p-4">
+          <YourBook />
+        </div>
+      </aside>
+
     </div>
-  )
+
+    {/* Footer */}
+    <Footer />
+  </div>
+)
 }

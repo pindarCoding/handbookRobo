@@ -4,7 +4,6 @@
 import { Theme, SubTheme, Generation, Card } from "@/data/handbook-data";
 import { useBook } from "@/components/providers/book-provider";
 import { PlusCircleIcon } from "lucide-react";
-import { YourBook } from "./YourBook";
 import { WelcomeContent } from "./WelcomeContent";
 
 
@@ -399,14 +398,8 @@ export const MainContent = ({
 
   // Layout a due colonne
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      {/* Area contenuto principale (più larga) */}
-      <div className="lg:col-span-2">{renderContent()}</div>
-
-      {/* Area YourBook (fissa sulla destra) */}
-      <div className="lg:sticky lg:top-6 lg:self-start">
-        <YourBook />
-      </div>
-    </div>
-  );
+  <div className="w-full">
+    {renderContent()}
+  </div>
+)
 };
