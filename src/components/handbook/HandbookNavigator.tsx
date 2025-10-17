@@ -6,6 +6,7 @@ import { handbookData, Theme, SubTheme, Generation, Card, cards } from '@/data/h
 import { MainContent } from '@/components/handbook/MainContent'
 import { NavigationFilter } from '@/components/handbook/NavigationFilter'
 import { Header } from '@/components/layout/Header' 
+import { Footer } from '../layout/Footer'
 
 type FilterStep = 'theme' | 'subtheme' | 'generation'  // Rimosso 'variant'
 
@@ -100,6 +101,7 @@ export default function HandbookNavigator() {
           />
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
