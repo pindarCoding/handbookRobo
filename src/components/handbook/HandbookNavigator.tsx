@@ -35,7 +35,7 @@ export default function HandbookNavigator() {
     setSelectedGeneration(generation)
     
     // Trova automaticamente la card quando si seleziona una generazione
-    if (selectedSubTheme) {
+    if (selectedSubTheme && selectedTheme) {
       const card = cards.find(c => 
         c.generationId === generation.id && 
         c.subThemeId === selectedSubTheme.id &&
