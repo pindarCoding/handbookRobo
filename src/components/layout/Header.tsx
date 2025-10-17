@@ -24,7 +24,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="bg-white dark:bg-slate-800 shadow-sm border-b border-gray-200 dark:border-slate-700 relative z-50">
+    <header className="sticky top-0 bg-white dark:bg-slate-800 shadow-md border-b border-gray-200 dark:border-slate-700  z-50">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
