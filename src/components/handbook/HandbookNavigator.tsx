@@ -8,6 +8,7 @@ import { NavigationFilter } from '@/components/handbook/NavigationFilter'
 import { Header } from '@/components/layout/Header' 
 import { Footer } from '../layout/Footer'
 import { YourBook } from './YourBook'
+import { MobileNavigationDrawer } from '@/components/mobile/MobileNavigationDrawer'
 
 type FilterStep = 'theme' | 'subtheme' | 'generation'  // Rimosso 'variant'
 
@@ -53,6 +54,9 @@ export default function HandbookNavigator() {
     }
     // Non cambiamo più lo step - restiamo su 'generation'
   }
+
+  // State per mobile drawer
+const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
 
   const handleBack = () => {
     switch (currentStep) {
@@ -117,6 +121,51 @@ export default function HandbookNavigator() {
       </aside>
 
     </div>
+
+{/* Floating Action Button - Solo Mobile */}
+<button
+  onClick={() => setIsMobileNavOpen(true)}
+  className="lg:hidden fixed bottom-6 right-6 z-30
+             px-6 py-3 rounded-full 
+             bg-orange-500 hover:bg-orange-600 
+             text-white shadow-lg hover:shadow-xl
+             flex items-center gap-2
+             transition-all active:scale-95"
+  aria-label="Open navigation"
+>
+  {/* Icona hamburger */}
+  <svg 
+    className="w-5 h-5" 
+    fill="none" 
+    stroke="currentColor" 
+    viewBox="0 0 24 24"
+  >
+    <path 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      strokeWidth={2} 
+      d="M4 6h16M4 12h16M4 18h16" 
+    />
+  </svg>
+  <span className="font-semibold text-sm whitespace-nowrap">
+    Filter & Navigate
+  </span>
+</button>
+
+{/* Mobile Navigation Drawer */}
+<MobileNavigationDrawer
+  isOpen={isMobileNavOpen}
+  onClose={() => setIsMobileNavOpen(false)}
+  currentStep={currentStep}
+  selectedTheme={selectedTheme}
+  selectedSubTheme={selectedSubTheme}
+  selectedGeneration={selectedGeneration}
+  themes={handbookData}
+  onThemeSelect={handleThemeSelect}
+  onSubThemeSelect={handleSubThemeSelect}
+  onGenerationSelect={handleGenerationSelect}
+  onBack={handleBack}
+/>
 
     {/* Footer */}
     <Footer />

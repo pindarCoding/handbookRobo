@@ -19,6 +19,7 @@ interface NavigationFilterProps {
   onSubThemeSelect: (subTheme: SubTheme) => void
   onGenerationSelect: (generation: Generation) => void
   onBack: () => void
+  context?: 'desktop' | 'mobile'  // ← NUOVO: default 'desktop'
 }
 
 export const NavigationFilter = ({
@@ -30,7 +31,8 @@ export const NavigationFilter = ({
   onThemeSelect,
   onSubThemeSelect,
   onGenerationSelect,
-  onBack
+  onBack,
+  context = 'desktop' 
 }: NavigationFilterProps) => {
   const { theme, toggleTheme } = useTheme()
 
@@ -38,6 +40,7 @@ export const NavigationFilter = ({
     <div className="h-full flex flex-col">
       
       {/* Header con Back Button e Theme Toggle */}
+      {context === 'desktop' && (
       <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
         <div className="flex items-center gap-2">
           {currentStep !== 'theme' && (
@@ -65,10 +68,12 @@ export const NavigationFilter = ({
           )}
         </button>
       </div>
+      )}
 
       {/* Progress Indicator Compatto */}
+      {context === 'desktop' && (
       <ProgressIndicator currentStep={currentStep} variant="compact" />
-
+      )}
       {/* Navigation Content - Scrollable */}
       <div className="flex-1 overflow-y-auto p-4">
         
@@ -122,72 +127,80 @@ export const NavigationFilter = ({
         )}
 
         {/* GENERATION Selection */}
-        {currentStep === 'generation' && (
-          <div className="space-y-3">
-            <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
-              Select Generation
+        {/* GENERATION Selection */}
+{currentStep === 'generation' && (
+  <div className="space-y-3">
+    <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
+      Select Generation
+    </h3>
+    {selectedTheme && selectedSubTheme && (
+      <div className="text-xs text-slate-600 dark:text-slate-400 mb-3 p-2 bg-slate-100 dark:bg-slate-700/50 rounded">
+        {selectedTheme.title} → {selectedSubTheme.title}
+      </div>
+    )}
+    
+    {/* Container con layout dinamico: 1 colonna desktop, 2 colonne mobile */}
+    <div className={context === 'mobile' ? 'grid grid-cols-2 gap-3' : 'space-y-3'}>
+      {generations.map((generation) => (
+        <button
+          type="button"
+          key={generation.id}
+          onClick={() => onGenerationSelect(generation)}
+          className={`
+            ${context === 'mobile' ? 'p-2' : 'p-3'} 
+            rounded-lg text-center relative
+            transition-all group
+            ${selectedGeneration?.id === generation.id
+              ? 'bg-blue-100 dark:bg-blue-900/50 ring-2 ring-blue-500'
+              : 'bg-slate-100 dark:bg-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/20'
+            }
+            ${context === 'mobile' ? 'w-full' : 'w-full'}
+          `}
+        >
+          {/* Avatar centrato */}
+          {generation.characterFolder && (
+            <div className="flex justify-center mb-2">
+              <GenerationCharacter
+                characterFolder={generation.characterFolder}
+                frameStart={generation.frameStart || 1}
+                frameEnd={generation.frameEnd || 10}
+                framePrefix={generation.framePrefix}
+                size={context === 'mobile' ? 80 : 50}
+                frameRate={24}
+                showBorder={true}
+                borderColor={selectedGeneration?.id === generation.id 
+                  ? "border-blue-500" 
+                  : "border-slate-300 dark:border-slate-600"}
+                className="transition-all group-hover:scale-110"
+              />
+            </div>
+          )}
+          
+          {/* Testo centrato */}
+          <div>
+            <h3 className={`font-bold mb-1 transition-colors leading-tight
+              ${context === 'mobile' ? 'text-xs' : 'text-sm'}
+              ${selectedGeneration?.id === generation.id
+                ? 'text-blue-700 dark:text-blue-300'
+                : 'text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400'
+              }`}
+            >
+              {generation.title}
             </h3>
-            {selectedTheme && selectedSubTheme && (
-              <div className="text-xs text-slate-600 dark:text-slate-400 mb-3 p-2 bg-slate-100 dark:bg-slate-700/50 rounded">
-                {selectedTheme.title} → {selectedSubTheme.title}
-              </div>
-            )}
-            {generations.map((generation) => (
-              <button
-                type="button"
-                key={generation.id}
-                onClick={() => onGenerationSelect(generation)}
-                className={`
-                  w-full p-3 rounded-lg text-center relative
-                  transition-all group
-                  ${selectedGeneration?.id === generation.id
-                    ? 'bg-blue-100 dark:bg-blue-900/50 ring-2 ring-blue-500'
-                    : 'bg-slate-100 dark:bg-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/20'
-                  }
-                `}
-              >
-                {/* Avatar animato centrato */}
-                {generation.characterFolder && (
-                  <div className="flex justify-center mb-2">
-                    <GenerationCharacter
-                      characterFolder={generation.characterFolder}
-                      frameStart={generation.frameStart || 1}
-                      frameEnd={generation.frameEnd || 10}
-                      framePrefix={generation.framePrefix}
-                      size={100}
-                      frameRate={24}
-                      showBorder={true}
-                      borderColor={selectedGeneration?.id === generation.id 
-                        ? "border-blue-500" 
-                        : "border-slate-300 dark:border-slate-600"}
-                      className="transition-all group-hover:scale-110"
-                    />
-                  </div>
-                )}
-                
-                {/* Testo centrato */}
-                <div>
-                  <h3 className={`font-bold text-sm mb-1 transition-colors
-                    ${selectedGeneration?.id === generation.id
-                      ? 'text-blue-700 dark:text-blue-300'
-                      : 'text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400'
-                    }`}
-                  >
-                    {generation.title}
-                  </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
-                    {generation.ageRange}
-                  </p>
-                </div>
-
-                {/* Badge di selezione */}
-                {selectedGeneration?.id === generation.id && (
-                  <div className="absolute top-2 right-2 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-                )}
-              </button>
-            ))}
+            <p className={`text-slate-500 dark:text-slate-400 ${context === 'mobile' ? 'text-xs' : 'text-xs'}`}>
+              {generation.ageRange}
+            </p>
           </div>
-        )}
+
+          {/* Badge di selezione */}
+          {selectedGeneration?.id === generation.id && (
+            <div className="absolute top-1.5 right-1.5 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+          )}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
       </div>
 
     </div>
