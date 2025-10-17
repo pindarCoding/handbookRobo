@@ -11,6 +11,7 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { AnimatedCharacterProps, AnimationState } from './AnimatedCharacter.types';
 import { useImagePreloader } from './hooks/useImagePreloader';
+import { useImageCache } from '@/components/providers/image-cache-provider';
 import styles from './AnimatedCharacter.module.css';
 
 const AnimatedCharacter: React.FC<AnimatedCharacterProps> = ({
@@ -29,11 +30,17 @@ const AnimatedCharacter: React.FC<AnimatedCharacterProps> = ({
   loading = 'eager',
   showSkeleton = true,
 }) => {
+  // 🆕 SV0002 - Controlla cache per inizializzazione intelligente
+  const { areAllImagesCached } = useImageCache();
+  
+  // 🆕 SV0002 - Inizializza isLoading basandosi sulla cache
+  const initialLoadingState = !areAllImagesCached(images);
+  
   // State management
   const [animationState, setAnimationState] = useState<AnimationState>({
     isPlaying: false,
     currentFrame: 0,
-    isLoading: true,
+    isLoading: initialLoadingState, // ✅ FALSE se già in cache!
     hasError: false,
     loadedImages: new Set(),
   });
@@ -49,14 +56,14 @@ const AnimatedCharacter: React.FC<AnimatedCharacterProps> = ({
     enabled: true
   });
 
-  // Update loading state
+  // 🔧 SV0002 - Update loading state (SEMPLIFICATO E UNIFICATO)
   useEffect(() => {
     setAnimationState((prev: AnimationState) => ({
       ...prev,
       isLoading,
       hasError: !loadingState.success && !isLoading
     }));
-  }, [isLoading, loadingState]);
+  }, [isLoading, loadingState.success]); // 🔧 Solo dipendenze primitive
 
   // Handle animation frame update
   const updateFrame = useCallback(() => {
@@ -135,7 +142,7 @@ const AnimatedCharacter: React.FC<AnimatedCharacterProps> = ({
     }
   }, [animationState.hasError, onError]);
 
-  // Render loading skeleton
+  // 🔧 SV0002 - Render loading skeleton SOLO se sta veramente caricando (non cached)
   if (isLoading && showSkeleton) {
     return (
       <motion.div
@@ -224,7 +231,7 @@ const AnimatedCharacter: React.FC<AnimatedCharacterProps> = ({
       whileTap="active"
       animate={animationState.isPlaying ? "hover" : "idle"}
     >
-      {/* Rimuoviamo AnimatePresence e motion per i frame - causano lo sliding */}
+      {/* 🔧 SV0002 - Renderizza immagini sempre se disponibili (rimosso check su hasError) */}
       {images.length > 0 && (
         <div className={styles.imageWrapper}>
           <Image
@@ -234,8 +241,8 @@ const AnimatedCharacter: React.FC<AnimatedCharacterProps> = ({
             height={typeof height === 'number' ? height : 100}
             loading={loading}
             className={styles.image}
-            priority={true}  // Carica subito le immagini
-            unoptimized={true}  // Evita ottimizzazioni Next.js che potrebbero rallentare
+            priority={true}
+            unoptimized={true}
             onError={() => {
               console.error(`Failed to display frame ${animationState.currentFrame}`);
             }}
@@ -261,9 +268,6 @@ const AnimatedCharacter: React.FC<AnimatedCharacterProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-
-      
-      
     </motion.div>
   );
 };

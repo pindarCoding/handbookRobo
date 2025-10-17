@@ -5,6 +5,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import { ImagePreloadResult } from '../AnimatedCharacter.types';
+import { useImageCache } from '@/components/providers/image-cache-provider';
 
 interface UseImagePreloaderProps {
   images: string[];
@@ -15,12 +16,18 @@ export const useImagePreloader = ({
   images, 
   enabled = true 
 }: UseImagePreloaderProps) => {
+  const { areAllImagesCached, addImagesToCache } = useImageCache();
+  
+  // 🆕 SV0002 - Inizializza isLoading in modo intelligente
+  const allCached = areAllImagesCached(images);
+  const initialLoadingState = enabled && images.length > 0 && !allCached;
+  
   const [loadingState, setLoadingState] = useState<ImagePreloadResult>({
-    success: false,
-    loadedCount: 0,
+    success: allCached, // ✅ TRUE se già in cache
+    loadedCount: allCached ? images.length : 0, // ✅ Se cached, già "caricate"
     failedIndexes: []
   });
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(initialLoadingState); // ✅ FALSE se cached!
 
   const preloadImage = useCallback((src: string): Promise<boolean> => {
     return new Promise((resolve) => {
@@ -45,6 +52,19 @@ export const useImagePreloader = ({
       return;
     }
 
+    // 🆕 SV0002 - CONTROLLA CACHE E SKIP PRELOAD
+    if (areAllImagesCached(images)) {
+      console.log(`✅ All ${images.length} images already cached, skipping preload`);
+      setLoadingState({
+        success: true,
+        loadedCount: images.length,
+        failedIndexes: []
+      });
+      setIsLoading(false); // ✅ Importante!
+      return;
+    }
+
+    console.log(`⏳ Preloading ${images.length} images...`);
     setIsLoading(true);
     
     try {
@@ -62,6 +82,14 @@ export const useImagePreloader = ({
         loadedCount,
         failedIndexes
       });
+
+      // 🆕 SV0002 - AGGIUNGI ALLA CACHE
+      if (loadedCount > 0) {
+        const successfulImages = images.filter((_, index) => !failedIndexes.includes(index));
+        addImagesToCache(successfulImages);
+        console.log(`✅ Preloaded and cached ${loadedCount} images`);
+      }
+      
     } catch (error) {
       console.error('Error preloading images:', error);
       setLoadingState({
@@ -72,11 +100,17 @@ export const useImagePreloader = ({
     } finally {
       setIsLoading(false);
     }
-  }, [images, enabled, preloadImage]);
+  }, [images, enabled, preloadImage, areAllImagesCached, addImagesToCache]);
 
   useEffect(() => {
+    // 🆕 SV0002 - Se già tutto in cache, non chiamare preloadAllImages
+    if (allCached) {
+      console.log(`🚀 Hook initialized with all images cached`);
+      return; // ✅ Skip completamente
+    }
+    
     preloadAllImages();
-  }, [preloadAllImages]);
+  }, [allCached, preloadAllImages]);
 
   const retry = useCallback(() => {
     preloadAllImages();
