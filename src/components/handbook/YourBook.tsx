@@ -4,7 +4,6 @@
 import { useBook } from '@/components/providers/book-provider'
 import { Trash2Icon } from 'lucide-react'
 import { BookPage, handbookData, cards } from '@/data/handbook-data'  // Cambiato variants → cards
-import Image from 'next/image'
 
 export const YourBook = () => {
   const { pages, removePage, clearBook } = useBook()
@@ -113,7 +112,7 @@ export const YourBook = () => {
       // Pulisci l'URL object
       window.URL.revokeObjectURL(url)
       
-    } catch (error) {
+    } catch (error: unknown) {
       console.error('Export error:', error)
       
       // Gestione specifica per errori di rete/CORS
