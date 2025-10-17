@@ -4,7 +4,7 @@ import HandbookNavigator from "@/components/handbook/HandbookNavigator";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
       <HandbookNavigator />
       <Image
         src="/images/generations.png"
