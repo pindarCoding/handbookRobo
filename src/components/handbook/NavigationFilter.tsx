@@ -165,7 +165,7 @@ export const NavigationFilter = ({
                 frameStart={generation.frameStart || 1}
                 frameEnd={generation.frameEnd || 10}
                 framePrefix={generation.framePrefix}
-                size={context === 'mobile' ? 80 : 50}
+                size={context === 'mobile' ? 50 : 100}
                 frameRate={24}
                 showBorder={true}
                 borderColor={selectedGeneration?.id === generation.id 

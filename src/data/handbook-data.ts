@@ -152,10 +152,10 @@ export const generations: Generation[] = [
     title: 'Gen Z',
     ageRange: '14 - 27',
     description: 'Digital natives who value authenticity and work-life integration',
-        characterFolder: 'millenial_small',
+        characterFolder: 'genZ',
     frameStart: 86400,
-    frameEnd:  86519,
-    framePrefix: 'millenial_'
+    frameEnd:  86515,
+    framePrefix: 'genZ_'
   },
   {
     id: 'millennial',
