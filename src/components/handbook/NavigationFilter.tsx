@@ -1,8 +1,6 @@
 // src/components/handbook/NavigationFilter.tsx
 'use client'
 
-import { SunIcon, MoonIcon } from 'lucide-react'
-import { useTheme } from '@/components/providers/theme-provider'
 import { Theme, SubTheme, Generation, generations } from '@/data/handbook-data'
 import { GenerationCharacter } from '@/components/GenerationCharacter/GenerationCharacter'
 import { ProgressIndicator } from './ProgressIndicator'
@@ -34,40 +32,37 @@ export const NavigationFilter = ({
   onBack,
   context = 'desktop' 
 }: NavigationFilterProps) => {
-  const { theme, toggleTheme } = useTheme()
 
   return (
     <div className="h-full flex flex-col">
       
-      {/* Header con Back Button e Theme Toggle */}
-      {context === 'desktop' && (
-      <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
-        <div className="flex items-center gap-2">
-          {currentStep !== 'theme' && (
-            <button
-              onClick={onBack}
-              className="text-slate-600 dark:text-slate-400 hover:text-slate-900 
-                       dark:hover:text-white transition-colors text-sm font-medium"
-              title="Go back"
-            >
-              ← Back
-            </button>
-          )}
-        </div>
-        
-        <button
-          type="button"
-          onClick={toggleTheme}
-          className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
-          title="Toggle theme"
-        >
-          {theme === 'dark' ? (
-            <SunIcon className="w-5 h-5 text-slate-700 dark:text-slate-200" />
-          ) : (
-            <MoonIcon className="w-5 h-5 text-slate-700 dark:text-slate-200" />
-          )}
-        </button>
-      </div>
+      {/* Back Button - Solo Desktop */}
+{context === 'desktop' && currentStep !== 'theme' && (
+  <div className="p-4 border-b border-slate-200 dark:border-slate-700">
+    <button
+      onClick={onBack}
+      className="flex items-center gap-2 text-slate-600 dark:text-slate-400 
+               hover:text-slate-900 dark:hover:text-white 
+               transition-colors text-sm font-medium"
+      title="Go back"
+    >
+      <svg 
+        className="w-4 h-4" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24"
+      >
+        <path 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          strokeWidth={2} 
+          d="M15 19l-7-7 7-7" 
+        />
+      </svg>
+      Back
+    </button>
+  </div>
+)}
       )}
 
       {/* Progress Indicator Compatto */}
