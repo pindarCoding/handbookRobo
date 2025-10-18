@@ -63,7 +63,6 @@ export const NavigationFilter = ({
     </button>
   </div>
 )}
-      )}
 
       {/* Progress Indicator Compatto */}
       {context === 'desktop' && (
