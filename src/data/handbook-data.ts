@@ -183,10 +183,10 @@ export const generations: Generation[] = [
     title: 'Baby Boomer',
     ageRange: '60 - 78',
     description: 'Experience-driven with strong work ethic and traditional values',
-        characterFolder: 'millenial_small',
+        characterFolder: 'b_boomers',
     frameStart: 86400,
-    frameEnd:  86519,
-    framePrefix: 'millenial_'
+    frameEnd:  86449,
+    framePrefix: 'bBoomers_'
   }
 ]
 
