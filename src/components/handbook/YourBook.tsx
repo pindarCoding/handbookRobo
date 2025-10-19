@@ -118,12 +118,30 @@ export const YourBook = () => {
       // Pulisci l'URL object
       window.URL.revokeObjectURL(url);
 
-      // 🎉 Confetti!
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+// 🎉 Confetti - Always on top!
+const canvas = document.createElement('canvas')
+canvas.style.position = 'fixed'
+canvas.style.top = '0'
+canvas.style.left = '0'
+canvas.style.width = '100%'
+canvas.style.height = '100%'
+canvas.style.pointerEvents = 'none'
+canvas.style.zIndex = '9999'
+document.body.appendChild(canvas)
+
+const myConfetti = confetti.create(canvas, { resize: true })
+myConfetti({
+  particleCount: 100,
+  tikcks: 500,
+  spread: 70,
+  gravity: 0.4,
+  origin: { y: 0.6 }
+})
+
+// Rimuovi canvas dopo 5 secondi
+setTimeout(() => {
+  document.body.removeChild(canvas)
+}, 5000)
     } catch (error: unknown) {
       console.error("Export error:", error);
 
