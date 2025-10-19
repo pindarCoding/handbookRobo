@@ -52,6 +52,7 @@ export default function HandbookNavigator() {
         setSelectedCard(null)
       }
     }
+    setIsMobileNavOpen(false)
     // Non cambiamo più lo step - restiamo su 'generation'
   }
 
