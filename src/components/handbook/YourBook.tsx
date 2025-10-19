@@ -1,131 +1,147 @@
 // src/components/handbook/YourBook.tsx
-'use client'
+"use client";
 
-import { useBook } from '@/components/providers/book-provider'
-import { Trash2Icon } from 'lucide-react'
-import { BookPage, handbookData, cards } from '@/data/handbook-data'  // Cambiato variants → cards
+import { useBook } from "@/components/providers/book-provider";
+import { Trash2Icon } from "lucide-react";
+import { BookPage, handbookData, cards } from "@/data/handbook-data"; // Cambiato variants → cards
+import confetti from "canvas-confetti";
 
 export const YourBook = () => {
-  const { pages, removePage, clearBook } = useBook()
+  const { pages, removePage, clearBook } = useBook();
 
   // Funzione helper per recuperare il page_id basandosi sugli ID salvati
   const getPageId = (page: BookPage): number | null => {
     // Caso 1: Solo Theme selezionato
-    if (page.themeId && !page.subThemeId && !page.cardId) {  // Cambiato variantId → cardId
-      const theme = handbookData.find(t => t.id === page.themeId)
-      return theme?.page_id || null
+    if (page.themeId && !page.subThemeId && !page.cardId) {
+      // Cambiato variantId → cardId
+      const theme = handbookData.find((t) => t.id === page.themeId);
+      return theme?.page_id || null;
     }
-    
+
     // Caso 2: Theme + SubTheme selezionati
-    if (page.themeId && page.subThemeId && !page.cardId) {  // Cambiato variantId → cardId
-      const theme = handbookData.find(t => t.id === page.themeId)
-      const subTheme = theme?.subThemes.find(st => st.id === page.subThemeId)
-      return subTheme?.page_id || null
+    if (page.themeId && page.subThemeId && !page.cardId) {
+      // Cambiato variantId → cardId
+      const theme = handbookData.find((t) => t.id === page.themeId);
+      const subTheme = theme?.subThemes.find((st) => st.id === page.subThemeId);
+      return subTheme?.page_id || null;
     }
-    
+
     // Caso 3: Card completa selezionata
-    if (page.cardId) {  // Cambiato variantId → cardId
-      const card = cards.find(c => c.id === page.cardId)  // Cambiato variant → card, variants → cards
-      return card?.page_id || null
+    if (page.cardId) {
+      // Cambiato variantId → cardId
+      const card = cards.find((c) => c.id === page.cardId); // Cambiato variant → card, variants → cards
+      return card?.page_id || null;
     }
-    
-    return null
-  }
+
+    return null;
+  };
 
   // Funzione per esportare il PDF
   const exportHandbook = async () => {
     try {
       // Estrai tutti i page_id nell'ordine corretto
       const pageIds = pages
-        .map(page => getPageId(page))
-        .filter(id => id !== null)
-        .map(id => id!.toString())
+        .map((page) => getPageId(page))
+        .filter((id) => id !== null)
+        .map((id) => id!.toString());
 
       if (pageIds.length === 0) {
-        alert('No pages with valid page IDs to export')
-        return
+        alert("No pages with valid page IDs to export");
+        return;
       }
 
       // Effettua la chiamata API
-      const response = await fetch('https://api.meetyourcolleague.eu/merge', {
-        method: 'POST',
+      const response = await fetch("https://api.meetyourcolleague.eu/merge", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          language: 'en',
-          pages: pageIds
-        })
-      })
+          language: "en",
+          pages: pageIds,
+        }),
+      });
 
       // Prima controlla il content-type per capire se è un errore JSON o un PDF
-      const contentType = response.headers.get('content-type')
-      
-      if (contentType && contentType.includes('application/json')) {
+      const contentType = response.headers.get("content-type");
+
+      if (contentType && contentType.includes("application/json")) {
         // Il server ha risposto con JSON, probabilmente un errore
-        const errorData = await response.json()
+        const errorData = await response.json();
         if (errorData.error) {
           // Gestione specifica per errori di file non trovato
-          if (errorData.error.includes('File not found')) {
-            const missingFile = errorData.error.match(/en\/(\d+)\.pdf/)
+          if (errorData.error.includes("File not found")) {
+            const missingFile = errorData.error.match(/en\/(\d+)\.pdf/);
             if (missingFile) {
-              alert(`Error: Page ${missingFile[1]} is not available on the server. Please remove it from your selection and try again.`)
+              alert(
+                `Error: Page ${missingFile[1]} is not available on the server. Please remove it from your selection and try again.`
+              );
             } else {
-              alert(`Error: ${errorData.error}`)
+              alert(`Error: ${errorData.error}`);
             }
           } else {
-            alert(`Error: ${errorData.error}`)
+            alert(`Error: ${errorData.error}`);
           }
-          return
+          return;
         }
       }
-      
+
       // Se non è JSON e lo status non è ok, gestisci come errore generico
       if (!response.ok) {
-        alert(`Error: Server responded with status ${response.status}`)
-        return
+        alert(`Error: Server responded with status ${response.status}`);
+        return;
       }
 
       // Verifica che sia effettivamente un PDF
-      if (!contentType || !contentType.includes('application/pdf')) {
-        alert('Error: Server did not return a valid PDF file')
-        return
+      if (!contentType || !contentType.includes("application/pdf")) {
+        alert("Error: Server did not return a valid PDF file");
+        return;
       }
 
       // Gestisci il download del blob
-      const blob = await response.blob()
-      
+      const blob = await response.blob();
+
       // Verifica che il blob non sia vuoto
       if (blob.size === 0) {
-        alert('Error: Received empty PDF file')
-        return
+        alert("Error: Received empty PDF file");
+        return;
       }
-      
-      const url = window.URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'custom-handbook.pdf'
-      document.body.appendChild(a)
-      a.click()
-      a.remove()
-      
+
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "custom-handbook.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+
       // Pulisci l'URL object
-      window.URL.revokeObjectURL(url)
-      
+      window.URL.revokeObjectURL(url);
+
+      // 🎉 Confetti!
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
     } catch (error: unknown) {
-      console.error('Export error:', error)
-      
+      console.error("Export error:", error);
+
       // Gestione specifica per errori di rete/CORS
-      if (error instanceof TypeError && error.message === 'Failed to fetch') {
-        alert('Network error: Unable to connect to the PDF server. Please check:\n' +
-              '- The server is running at https://api.meetyourcolleague.eu/merge\n' +
-              '- CORS is properly configured on the server\n' +
-              '- You are on the same network')
+      if (error instanceof TypeError && error.message === "Failed to fetch") {
+        alert(
+          "Network error: Unable to connect to the PDF server. Please check:\n" +
+            "- The server is running at https://api.meetyourcolleague.eu/merge\n" +
+            "- CORS is properly configured on the server\n" +
+            "- You are on the same network"
+        );
       } else {
-        alert('An unexpected error occurred while exporting the handbook. Please try again.')
+        alert(
+          "An unexpected error occurred while exporting the handbook. Please try again."
+        );
       }
     }
-  }
+  };
 
   if (pages.length === 0) {
     return (
@@ -134,10 +150,11 @@ export const YourBook = () => {
           Your Custom Handbook
         </h2>
         <p className="text-slate-600 dark:text-slate-400 text-sm">
-          Add pages to your handbook by clicking the + button when viewing content.
+          Add pages to your handbook by clicking the + button when viewing
+          content.
         </p>
       </div>
-    )
+    );
   }
 
   return (
@@ -153,17 +170,19 @@ export const YourBook = () => {
           Clear All
         </button>
       </div>
-      
+
       <ul className="space-y-2 max-h-60 overflow-y-auto">
         {pages.map((page) => (
-          <li 
+          <li
             key={page.id}
             className="flex justify-between items-center p-2 bg-slate-50 dark:bg-slate-700 rounded"
           >
             <div className="flex-1">
-              <span className="text-slate-800 dark:text-slate-200 text-sm">{page.title}</span>
+              <span className="text-slate-800 dark:text-slate-200 text-sm">
+                {page.title}
+              </span>
               <span className="text-slate-500 dark:text-slate-400 text-xs ml-2">
-                (Page {getPageId(page) || 'N/A'})
+                (Page {getPageId(page) || "N/A"})
               </span>
             </div>
             <button
@@ -175,7 +194,7 @@ export const YourBook = () => {
           </li>
         ))}
       </ul>
-      
+
       <button
         onClick={exportHandbook}
         className="mt-4 w-full py-2 bg-blue-500 hover:bg-blue-600 text-white rounded transition-colors"
@@ -183,6 +202,5 @@ export const YourBook = () => {
         Export Handbook PDF
       </button>
     </div>
-    
-  )
-}
+  );
+};
