@@ -82,29 +82,7 @@ export const MainContent = ({
     }
   };
 
-  // Funzione helper per determinare il colore della card
-  const getCardColorClasses = (color: string) => {
-    switch (color) {
-      case "blue":
-        return "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800";
-      case "green":
-        return "bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800";
-      case "purple":
-        return "bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800";
-      case "orange":
-        return "bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800";
-      case "cyan":
-        return "bg-cyan-50 dark:bg-cyan-900/20 border-cyan-200 dark:border-cyan-800";
-      case "pink":
-        return "bg-pink-50 dark:bg-pink-900/20 border-pink-200 dark:border-pink-800";
-      case "teal":
-        return "bg-teal-50 dark:bg-teal-900/20 border-teal-200 dark:border-teal-800";
-      case "indigo":
-        return "bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800";
-      default:
-        return "bg-slate-50 dark:bg-slate-900/20 border-slate-200 dark:border-slate-800";
-    }
-  };
+  
 
   // Contenuto del main in base allo stato
   const renderContent = () => {
