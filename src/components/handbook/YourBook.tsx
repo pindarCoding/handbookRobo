@@ -132,7 +132,7 @@ document.body.appendChild(canvas)
 const myConfetti = confetti.create(canvas, { resize: true })
 myConfetti({
   particleCount: 100,
-  tikcks: 500,
+  ticks: 500,
   spread: 70,
   gravity: 0.4,
   origin: { y: 0.6 }
