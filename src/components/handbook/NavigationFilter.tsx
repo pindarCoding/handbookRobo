@@ -188,7 +188,11 @@ export const NavigationFilter = ({
                       key={generation.id}
                       variants={staggerItem}
                       onClick={() => onGenerationSelect(generation)}
-                      whileHover={{ scale: 1.02, x: 4 }}
+                      whileHover={{ 
+    scale: 1.02,
+    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)',
+    transition: { duration: 0.2 }
+  }}
                       whileTap={{ scale: 0.98 }}
                       className={`
        w-full p-3 rounded-lg bg-slate-100 dark:bg-slate-700 
