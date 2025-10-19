@@ -5,6 +5,7 @@ import { Theme, SubTheme, Generation, Card } from "@/data/handbook-data";
 import { useBook } from "@/components/providers/book-provider";
 import { PlusCircleIcon } from "lucide-react";
 import { WelcomeContent } from "./WelcomeContent";
+import { toast } from "sonner";
 
 
 
@@ -62,6 +63,7 @@ export const MainContent = ({
         generationId: selectedGeneration.id,
         cardId: selectedCard.id, // Cambiato da variantId
       });
+      toast.success(`Added "${selectedCard.title}" to your handbook!`);
     } else if (selectedTheme && selectedSubTheme) {
       addPage({
         id: generatePageId(),
@@ -69,12 +71,14 @@ export const MainContent = ({
         themeId: selectedTheme.id,
         subThemeId: selectedSubTheme.id,
       });
+      toast.success(`Added "${selectedSubTheme.title} (${selectedTheme.title})" to your handbook!`);
     } else if (selectedTheme) {
       addPage({
         id: generatePageId(),
         title: selectedTheme.title,
         themeId: selectedTheme.id,
       });
+      toast.success(`Added "${selectedTheme.title}" to your handbook!`);
     }
   };
 

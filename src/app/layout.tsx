@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { BookProvider } from "@/components/providers/book-provider";
 import { ImageCacheProvider } from "@/components/providers/image-cache-provider";
+import { Toaster } from 'sonner'
+
 
 import "./globals.css";
 
@@ -34,6 +36,7 @@ export default function RootLayout({
             <BookProvider>{children}</BookProvider>
           </ImageCacheProvider>
           </ThemeProvider>
+          <Toaster position="top-center" richColors/>
       </body>
     </html>
   );
