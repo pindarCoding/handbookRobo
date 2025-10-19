@@ -114,7 +114,7 @@ const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
       </main>
 
       {/* RIGHT SIDEBAR - YourBook */}
-      <aside className="hidden lg:flex lg:flex-col w-[280px] bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 overflow-y-auto">
+      <aside className="hidden lg:flex lg:flex-col w-[340px] bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 overflow-y-auto">
         <div className="p-4">
           <YourBook />
         </div>

@@ -126,13 +126,17 @@ export const MainContent = ({
                 {selectedTheme.title}
               </h2>
               <button
-                type="button"
-                onClick={handleAddPage}
-                className="text-blue-500 hover:text-blue-700"
-                title="Add to your handbook"
-              >
-                <PlusCircleIcon size={24} />
-              </button>
+  type="button"
+  onClick={handleAddPage}
+  className="inline-flex items-center gap-2 px-3 py-1.5
+             text-blue-600 dark:text-blue-400 
+             hover:text-blue-700 dark:hover:text-blue-300
+             hover:bg-blue-50 dark:hover:bg-blue-900/20
+             rounded-lg transition-colors"
+>
+  <PlusCircleIcon size={24} />
+  <span className="text-sm font-medium">Add to Handbook</span>
+</button>
             </div>
 
             <div className="prose dark:prose-invert max-w-none mb-6">
@@ -258,8 +262,7 @@ export const MainContent = ({
           {/* Card principale con stile distintivo */}
           <div
             className={`
-            rounded-lg border-2 shadow-lg overflow-hidden
-            ${getCardColorClasses(selectedCard.color)}
+            rounded-lg  overflow-hidden
           `}
           >
             {/* Header della card */}
@@ -298,14 +301,17 @@ export const MainContent = ({
   )}
   
   {/* Pulsante Add */}
-  <button
-    type="button"
-    onClick={handleAddPage}
-    className="p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors shadow-md hover:shadow-lg"
-    title="Add to your handbook"
-  >
-    <PlusCircleIcon size={28} />
-  </button>
+<button
+  type="button"
+  onClick={handleAddPage}
+  className="inline-flex items-center gap-2 px-4 py-2
+             bg-blue-500 hover:bg-blue-600 
+             text-white rounded-lg 
+             transition-all shadow-md hover:shadow-lg"
+>
+  <PlusCircleIcon size={16} />
+  <span className="text-sm font-medium">Add to Handbook</span>
+</button>
 </div>
               </div>
             </div>
@@ -353,26 +359,7 @@ export const MainContent = ({
                
               </div>
 
-              {/* Informazioni aggiuntive */}
-              <div className="grid md:grid-cols-2 gap-4">
-
-                <div className="bg-white dark:bg-slate-800 rounded-lg p-4">
-                  <h3 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">
-                    📍 Navigation Path
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">
-                    {selectedTheme.title} → {selectedSubTheme.title} →{" "}
-                    {selectedGeneration.title}
-                  </p>
-                </div>
-                <div className="bg-white dark:bg-slate-800 rounded-lg p-4">
-                  <h3 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">
-                    👥 About {selectedGeneration.title}
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">
-                    {selectedGeneration.description}
-                  </p>
-                </div>
+              <div>              
               </div>
             </div>
           </div>
