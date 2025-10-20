@@ -3,7 +3,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { BookOpenIcon, FilterIcon, DownloadIcon, PlusCircleIcon } from 'lucide-react'
+import { FilterIcon, DownloadIcon, PlusCircleIcon } from 'lucide-react'
 import { fadeSlideUp, staggerContainer, staggerItem, scalePop } from '@/data/config/animations'
 
 export const WelcomeContent = () => {
@@ -311,7 +311,7 @@ export const WelcomeContent = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          "MYCO – Meet Your Colleague" is a 24-month Erasmus+ funded project that aims to create a training tool in the field of Diversity and Inclusion.
+          &ldquo;MYCO – Meet Your Colleague&rdquo; is a 24-month Erasmus+ funded project that aims to create a training tool in the field of Diversity and Inclusion.
           By going beyond generational stereotypes, we want to promote inclusion in the workplace.
         </motion.p>
       </motion.div>
