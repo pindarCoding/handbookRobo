@@ -36,14 +36,16 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image
-              src="/MYCo-Logo_Transparent-300x300.png"
-              alt="MyCo Logo"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
-              priority
-            />
+            <a href="/" className="block">
+              <Image
+          src="/MYCo-Logo_Transparent-300x300.png"
+          alt="MyCo Logo"
+          width={120}
+          height={40}
+          className="h-10 w-auto"
+          priority
+              />
+            </a>
           </div>
 
           {/* Desktop Menu */}

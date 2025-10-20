@@ -1,11 +1,13 @@
 // src/components/handbook/MainContent.tsx
 "use client";
 
+import { motion } from "framer-motion";
 import { Theme, SubTheme, Generation, Card } from "@/data/handbook-data";
 import { useBook } from "@/components/providers/book-provider";
 import { PlusCircleIcon } from "lucide-react";
 import { WelcomeContent } from "./WelcomeContent";
 import { toast } from "sonner";
+import { fadeSlideUp, staggerContainer, staggerItem, scalePop } from "@/data/config/animations";
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
@@ -234,44 +236,69 @@ export const MainContent = ({
         return null;
       }
       return (
-        <div className="animate-fadeIn">
+        <motion.div 
+          className="animate-fadeIn"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
           {/* Card principale con stile distintivo */}
-          <div
+          <motion.div
             className={`
             rounded-lg  overflow-hidden
           `}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
           >
             {/* Header della card */}
             <div className="bg-white dark:bg-slate-800 p-6 border-b border-slate-200 dark:border-slate-700">
               <div className="space-y-4">
               {/* First row: Button */}
-              <div className="flex justify-end">
-                <button
+              <motion.div 
+                className="flex justify-end"
+                variants={scalePop}
+                initial="initial"
+                animate="animate"
+              >
+                <motion.button
                 type="button"
                 onClick={handleAddPage}
                 className="inline-flex items-center gap-2 px-4 py-2
              bg-blue-500 hover:bg-blue-600 
              text-white rounded-lg 
              transition-all shadow-md hover:shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 >
                 <PlusCircleIcon size={16} />
                 <span className="text-sm font-medium">Add to Handbook</span>
-                </button>
-              </div>
+                </motion.button>
+              </motion.div>
 
               {/* Second row: Title */}
-              <div>
+              <motion.div
+                variants={fadeSlideUp}
+                initial="hidden"
+                animate="visible"
+              >
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
                 {selectedCard.title}
                 </h2>
-              </div>
+              </motion.div>
 
               {/* Third row: Chip with title and age range */}
-              <div>
-                <span className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100">
+              <motion.div
+                variants={fadeSlideUp}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: 0.2 }}
+              >
+                <motion.span 
+                  className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100"
+                  whileHover={{ scale: 1.05 }}
+                >
                 {selectedGeneration.title} • {selectedGeneration.ageRange}
-                </span>
-              </div>
+                </motion.span>
+              </motion.div>
               </div>
             </div>
 
@@ -281,29 +308,46 @@ export const MainContent = ({
 
               <div className="mb-6 rounded-lg overflow-hidden shadow-md">
                 {/* Mostra i tre contenuti strutturati */}
-                <div className="space-y-6 mb-6">
+                <motion.div 
+                  className="space-y-6 mb-6"
+                  variants={staggerContainer}
+                  initial="hidden"
+                  animate="visible"
+                >
                   {/* The Stereotype */}
-                  <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
+                  <motion.div 
+                    className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4"
+                    variants={staggerItem}
+                    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                  >
                     <h3 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
                       <span className="text-lg">🏷️</span> The Stereotype
                     </h3>
                     <p className="text-red-800 dark:text-red-200">
                       {selectedCard.stereotype}
                     </p>
-                  </div>
+                  </motion.div>
 
                   {/* Research Findings */}
-                  <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+                  <motion.div 
+                    className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4"
+                    variants={staggerItem}
+                    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                  >
                     <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
                       <span className="text-lg">📊</span> Research Findings
                     </h3>
                     <p className="text-green-800 dark:text-green-200">
                       {selectedCard.researchFindings}
                     </p>
-                  </div>
+                  </motion.div>
 
                   {/* Strategies and Practical Advice */}
-                  <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                  <motion.div 
+                    className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4"
+                    variants={staggerItem}
+                    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                  >
                     <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center gap-2">
                       <span className="text-lg">💡</span> Strategies and
                       Practical Advice
@@ -311,14 +355,14 @@ export const MainContent = ({
                     <p className="text-blue-800 dark:text-blue-200">
                       {selectedCard.strategiesAdvice}
                     </p>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </div>
 
               <div></div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       );
     }
 
