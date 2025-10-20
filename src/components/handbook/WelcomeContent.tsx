@@ -15,18 +15,22 @@ export const WelcomeContent = () => {
         <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-8">
           Your comprehensive guide to navigating intergenerational workplace dynamics
         </p>
-        
+
         {/* Generations Image */}
         <div className="flex justify-center mb-12">
           <Image
             src="/images/generations.png"
             alt="Generational representation"
-            width={400}
-            height={200}
+            width={300}
+            height={150}
             className="rounded-lg shadow-lg"
             priority
           />
         </div>
+        <div className='text-xs max-w-[370px] mx-auto'>
+          <p className="text-sm text-center text-slate-500 dark:text-slate-400">Following an introductory chapter, the Handbook explores generational inclusion from five different perspectives.</p>
+        </div>
+
       </div>
 
 
@@ -36,7 +40,7 @@ export const WelcomeContent = () => {
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 text-center">
           How to Create Your Custom Handbook
         </h2>
-        
+
         <div className="grid md:grid-cols-4 gap-6">
           {/* Step 1 */}
           <div className="text-center">
@@ -87,7 +91,7 @@ export const WelcomeContent = () => {
       {/* Key Features */}
       <div className="text-center mb-12">
         <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
-          Key Features
+          Start now
         </h3>
         <div className="flex flex-wrap justify-center gap-4 text-sm">
           <div className="flex items-center text-slate-600 dark:text-slate-400">
@@ -118,7 +122,7 @@ export const WelcomeContent = () => {
             </h3>
           </div>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
-            Create your personalized handbook by selecting only the topics that matter to you. 
+            Create your personalized handbook by selecting only the topics that matter to you.
             Navigate through themes, generations, and specific approaches to build your custom guide.
           </p>
           <p className="text-green-600 dark:text-green-400 font-medium">
@@ -133,7 +137,7 @@ export const WelcomeContent = () => {
               <FilterIcon className="w-6 h-6 text-green-600 dark:text-green-300" />
             </div>
             <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-              Test 
+              Test
             </h3>
           </div>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
@@ -144,8 +148,12 @@ export const WelcomeContent = () => {
           </p>
         </div>
       </div>
+      <div className='text-xs mx-auto my-8'>
+        <p className='text-sm text-center text-slate-500 dark:text-slate-400'> "MYCO – Meet Your Colleague" is a 24-month Erasmus+ funded project that aims to create a training tool in the field of Diversity and Inclusion.
+          By going beyond generational stereotypes, we want to promote inclusion in the workplace.</p>
+      </div>
 
-      
     </div>
+
   )
 }
