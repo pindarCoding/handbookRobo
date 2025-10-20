@@ -7,8 +7,6 @@ import { PlusCircleIcon } from "lucide-react";
 import { WelcomeContent } from "./WelcomeContent";
 import { toast } from "sonner";
 
-
-
 type FilterStep = "theme" | "subtheme" | "generation";
 
 interface MainContentProps {
@@ -71,7 +69,9 @@ export const MainContent = ({
         themeId: selectedTheme.id,
         subThemeId: selectedSubTheme.id,
       });
-      toast.success(`Added "${selectedSubTheme.title} (${selectedTheme.title})" to your handbook!`);
+      toast.success(
+        `Added "${selectedSubTheme.title} (${selectedTheme.title})" to your handbook!`
+      );
     } else if (selectedTheme) {
       addPage({
         id: generatePageId(),
@@ -81,8 +81,6 @@ export const MainContent = ({
       toast.success(`Added "${selectedTheme.title}" to your handbook!`);
     }
   };
-
-  
 
   // Contenuto del main in base allo stato
   const renderContent = () => {
@@ -104,17 +102,17 @@ export const MainContent = ({
                 {selectedTheme.title}
               </h2>
               <button
-  type="button"
-  onClick={handleAddPage}
-  className="inline-flex items-center gap-2 px-3 py-1.5
+                type="button"
+                onClick={handleAddPage}
+                className="inline-flex items-center gap-2 px-3 py-1.5
              text-blue-600 dark:text-blue-400 
              hover:text-blue-700 dark:hover:text-blue-300
              hover:bg-blue-50 dark:hover:bg-blue-900/20
              rounded-lg transition-colors"
->
-  <PlusCircleIcon size={24} />
-  <span className="text-sm font-medium">Add to Handbook</span>
-</button>
+              >
+                <PlusCircleIcon size={24} />
+                <span className="text-sm font-medium">Add to Handbook</span>
+              </button>
             </div>
 
             <div className="prose dark:prose-invert max-w-none mb-6">
@@ -245,52 +243,35 @@ export const MainContent = ({
           >
             {/* Header della card */}
             <div className="bg-white dark:bg-slate-800 p-6 border-b border-slate-200 dark:border-slate-700">
-              <div className="flex justify-between items-start">
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
-                    {selectedCard.title}
-                  </h2>
-                  <div className="flex flex-wrap items-center gap-2 mb-4">
-                    <span className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100">
-                      {selectedGeneration.title} • {selectedGeneration.ageRange}
-                    </span>
-                    <span className="text-sm text-slate-500 dark:text-slate-400">
-                      Page {selectedCard.page_id}  {/* Mi devo ricordare di toglierlo in PROD */}
-                    </span>
-                  </div>
-
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                    {selectedCard.description}
-                  </p>
-                </div>
-                
-                <div className="flex items-center gap-3 ml-4">
-  {/* Thumbnail dell'immagine se disponibile */}
-  {selectedCard.image && (
-    <div className="w-20 h-28 rounded-lg overflow-hidden shadow-sm">
-      {/* <Image
-        src={selectedCard.image}
-        alt={selectedCard.title}
-        width={48}
-        height={64}
-        className="w-full h-full object-cover"
-      /> */}
-    </div>
-  )}
-  
-  {/* Pulsante Add */}
-<button
-  type="button"
-  onClick={handleAddPage}
-  className="inline-flex items-center gap-2 px-4 py-2
+              <div className="space-y-4">
+              {/* First row: Button */}
+              <div className="flex justify-end">
+                <button
+                type="button"
+                onClick={handleAddPage}
+                className="inline-flex items-center gap-2 px-4 py-2
              bg-blue-500 hover:bg-blue-600 
              text-white rounded-lg 
              transition-all shadow-md hover:shadow-lg"
->
-  <PlusCircleIcon size={16} />
-  <span className="text-sm font-medium">Add to Handbook</span>
-</button>
-</div>
+                >
+                <PlusCircleIcon size={16} />
+                <span className="text-sm font-medium">Add to Handbook</span>
+                </button>
+              </div>
+
+              {/* Second row: Title */}
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+                {selectedCard.title}
+                </h2>
+              </div>
+
+              {/* Third row: Chip with title and age range */}
+              <div>
+                <span className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100">
+                {selectedGeneration.title} • {selectedGeneration.ageRange}
+                </span>
+              </div>
               </div>
             </div>
 
@@ -299,7 +280,6 @@ export const MainContent = ({
               {/* Placeholder per contenuto futuro */}
 
               <div className="mb-6 rounded-lg overflow-hidden shadow-md">
-                
                 {/* Mostra i tre contenuti strutturati */}
                 <div className="space-y-6 mb-6">
                   {/* The Stereotype */}
@@ -333,12 +313,9 @@ export const MainContent = ({
                     </p>
                   </div>
                 </div>
-
-               
               </div>
 
-              <div>              
-              </div>
+              <div></div>
             </div>
           </div>
         </div>
@@ -366,9 +343,5 @@ export const MainContent = ({
   };
 
   // Layout a due colonne
-  return (
-  <div className="w-full">
-    {renderContent()}
-  </div>
-)
+  return <div className="w-full">{renderContent()}</div>;
 };

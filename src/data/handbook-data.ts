@@ -89,7 +89,7 @@ export const handbookData: Theme[] = [
       { id: 'communication-values', title: 'Valori', page_id: 3 }
     ]
   },
-  
+
   // THEME 2: DIVERSITY
   {
     id: 'diversity',
@@ -101,7 +101,7 @@ export const handbookData: Theme[] = [
       { id: 'diversity-inclusion', title: 'Inclusione sul lavoro', page_id: 3 }
     ]
   },
-  
+
   // THEME 3: DIGITAL
   {
     id: 'digital',
@@ -115,7 +115,7 @@ export const handbookData: Theme[] = [
       { id: 'digital-accessibility', title: 'Accessibilità digitale', page_id: 2 }
     ]
   },
-  
+
   // THEME 4: INTERCULTURAL
   {
     id: 'intercultural',
@@ -126,7 +126,7 @@ export const handbookData: Theme[] = [
       { id: 'intercultural-backgrounds', title: 'Background culturali', page_id: 5 }
     ]
   },
-  
+
   // THEME 5: WORK
   {
     id: 'work',
@@ -152,9 +152,9 @@ export const generations: Generation[] = [
     title: 'Gen Z',
     ageRange: '14 - 27',
     description: 'Digital natives who value authenticity and work-life integration',
-        characterFolder: 'genZ',
+    characterFolder: 'genZ',
     frameStart: 86400,
-    frameEnd:  86515,
+    frameEnd: 86515,
     framePrefix: 'genZ_'
   },
   {
@@ -164,7 +164,7 @@ export const generations: Generation[] = [
     description: 'Tech-savvy optimists focused on purpose and growth',
     characterFolder: 'millenial_small',
     frameStart: 86400,
-    frameEnd:  86519,
+    frameEnd: 86519,
     framePrefix: 'millenial_'
 
   },
@@ -175,7 +175,7 @@ export const generations: Generation[] = [
     description: 'Independent and adaptable, bridging traditional and digital approaches',
     characterFolder: 'genx_small',
     frameStart: 86400,
-    frameEnd:  86455,
+    frameEnd: 86455,
     framePrefix: 'genx_'
   },
   {
@@ -183,9 +183,9 @@ export const generations: Generation[] = [
     title: 'Baby Boomer',
     ageRange: '60 - 78',
     description: 'Experience-driven with strong work ethic and traditional values',
-        characterFolder: 'b_boomers',
+    characterFolder: 'b_boomers',
     frameStart: 86400,
-    frameEnd:  86449,
+    frameEnd: 86449,
     framePrefix: 'bBoomers_'
   }
 ]
@@ -195,9 +195,9 @@ export const generations: Generation[] = [
 // ==========================================
 
 export const cards: Card[] = [
-  
+
   // ========== COMMUNICATION THEME CARDS ==========
-  
+
   // --- Communication Tools Subtheme ---
   // {
   //   id: 'communication-tools-genz',
@@ -239,9 +239,9 @@ export const cards: Card[] = [
   //   subThemeId: 'communication-tools',
   //   page_id: 1
   // },
-  
+
   // ========== WORK THEME CARDS ==========
-  
+
   // --- Work Values Subtheme ---
   {
     id: 'work-values-genz',
@@ -253,9 +253,9 @@ export const cards: Card[] = [
     subThemeId: 'work-values',
     page_id: 6,
     image: '/images/cards/1.png',
-      stereotype: 'Gen Z is often depicted as restless, fixated on technology, and hesitant to adhere to traditional workplace standards. They face criticism for insisting on excessive flexibility and exhibiting a lack of resilience. This characterization fails to recognize their practicality, capacity for adaptation, and deep commitment to equity, openness, and personal wellbeing in their work environments.',
-      researchFindings: 'Studies show that Gen Z values openness, adaptability, and mental well-being. As digital natives who are adept with technology, they also desire mentorship and personal connections. Although job security is important, they want it to be accompanied by flexibility and a connection to their core beliefs. They tend to lose interest when organizations do not provide transparency or equity.',
-      strategiesAdvice: 'In a marketing agency, Gen Z staff received support through a combination of daily communications on Slack for their tasks and weekly face-to-face mentoring sessions. This blended strategy enabled them to leverage digital tools effectively while also receiving personalized guidance, thereby enhancing both their engagement and performance.'
+    stereotype: 'Gen Z is often depicted as restless, fixated on technology, and hesitant to adhere to traditional workplace standards. They face criticism for insisting on excessive flexibility and exhibiting a lack of resilience. This characterization fails to recognize their practicality, capacity for adaptation, and deep commitment to equity, openness, and personal wellbeing in their work environments.',
+    researchFindings: 'Studies show that Gen Z values openness, adaptability, and mental well-being. As digital natives who are adept with technology, they also desire mentorship and personal connections. Although job security is important, they want it to be accompanied by flexibility and a connection to their core beliefs. They tend to lose interest when organizations do not provide transparency or equity.',
+    strategiesAdvice: 'In a marketing agency, Gen Z staff received support through a combination of daily communications on Slack for their tasks and weekly face-to-face mentoring sessions. This blended strategy enabled them to leverage digital tools effectively while also receiving personalized guidance, thereby enhancing both their engagement and performance.'
   },
   {
     id: 'work-values-millennial',
@@ -268,8 +268,8 @@ export const cards: Card[] = [
     page_id: 7,
     image: '/images/cards/2.png',
     stereotype: 'Many people characterize Millennials as entitled job-hoppers who are reluctant to commit to a single employer and are focused solely on perks or immediate rewards. They are perceived as being overly reliant on feedback and requesting excessive flexibility. This stereotype overlooks their deep dedication to pursuing meaningful work, fostering inclusion, and engaging in purpose-driven careers that resonate with their personal values.',
-      researchFindings: 'Research indicates that Millennials prioritize ongoing education, diversity, and empowering leadership. They look for meaningful work and inclusivity, favoring less rigid organizational structures and teamwork-oriented environments. Studies reveal that they anticipate frequent feedback and a connection between their personal beliefs and the goals of the organization, leading to higher engagement in socially responsible companies.',
-      strategiesAdvice: 'Millennials excel in environments that offer chances for advancement, encouraging mentorship, and openness. Companies should promote honest communication and align corporate objectives with social or environmental missions. Providing distinct career paths, continuous learning, and inclusive environments enhances their enthusiasm and commitment.'
+    researchFindings: 'Research indicates that Millennials prioritize ongoing education, diversity, and empowering leadership. They look for meaningful work and inclusivity, favoring less rigid organizational structures and teamwork-oriented environments. Studies reveal that they anticipate frequent feedback and a connection between their personal beliefs and the goals of the organization, leading to higher engagement in socially responsible companies.',
+    strategiesAdvice: 'Millennials excel in environments that offer chances for advancement, encouraging mentorship, and openness. Companies should promote honest communication and align corporate objectives with social or environmental missions. Providing distinct career paths, continuous learning, and inclusive environments enhances their enthusiasm and commitment.'
   },
   {
     id: 'work-values-genx',
@@ -282,8 +282,8 @@ export const cards: Card[] = [
     page_id: 8,
     image: '/images/cards/3.png',
     stereotype: 'Generation X is often viewed as disillusioned and aloof, shying away from loyalty to their employers and favoring independent work. They are frequently characterized as doubtful of authority, reluctant to make commitments, and less involved in collaborative efforts. Although they do appreciate independence, this perception overlooks their flexibility and practical mindset in finding a balance between structure and autonomy.',
-      researchFindings: 'Studies indicate that Generation X prioritizes independence, equity, and a balance between work and personal life. Due to experiencing corporate layoffs in their formative years, they are often self-sufficient and wary of making excessive commitments to employers. Nevertheless, they are capable of adjusting to both conventional structures and contemporary collaborative environments, succeeding in settings that merge autonomy with fairness and openness.',
-      strategiesAdvice: 'Organizations can assist Gen X by offering flexibility, acknowledging their contributions appropriately, and presenting avenues for advancement. Having clear objectives alongside independence enables them to work efficiently. They are adept at connecting different generations, as they can comprehend established norms while accepting modern collaborative and digital methods.'
+    researchFindings: 'Studies indicate that Generation X prioritizes independence, equity, and a balance between work and personal life. Due to experiencing corporate layoffs in their formative years, they are often self-sufficient and wary of making excessive commitments to employers. Nevertheless, they are capable of adjusting to both conventional structures and contemporary collaborative environments, succeeding in settings that merge autonomy with fairness and openness.',
+    strategiesAdvice: 'Organizations can assist Gen X by offering flexibility, acknowledging their contributions appropriately, and presenting avenues for advancement. Having clear objectives alongside independence enables them to work efficiently. They are adept at connecting different generations, as they can comprehend established norms while accepting modern collaborative and digital methods.'
   },
   {
     id: 'work-values-boomer',
@@ -296,10 +296,10 @@ export const cards: Card[] = [
     page_id: 9,
     image: '/images/cards/4.png',
     stereotype: 'Baby Boomers are frequently depicted as excessively committed to their jobs, associating extended hours with loyalty and showing resistance to flexibility or change. This characterization shows them as inflexible traditionalists clinging to outdated ways. In truth, Boomers have experienced swift cultural and technological transformations and have consistently demonstrated their capacity to adjust to new circumstances when provided with respectful assistance.',
-      researchFindings: 'Studies indicate that Baby Boomers prioritize loyalty, respect, and acknowledgment. They perceive their work as a component of their personal identity and are driven by the desire to make significant contributions. They are inclined towards organized settings and value the trust placed in them to handle responsibilities. Research also reveals that they can adapt to digital transformation successfully, provided they receive clear instructions and adequate support systems.',
-      strategiesAdvice: 'To maintain the interest of Boomers, organizations ought to acknowledge their longstanding contributions and furnish structured training on new technologies. Engaging them in mentorship allows them to share their expertise and feel appreciated. Positions that highlight their institutional knowledge, strategic advisory roles, and recognition initiatives support ongoing motivation and inclusion.'
+    researchFindings: 'Studies indicate that Baby Boomers prioritize loyalty, respect, and acknowledgment. They perceive their work as a component of their personal identity and are driven by the desire to make significant contributions. They are inclined towards organized settings and value the trust placed in them to handle responsibilities. Research also reveals that they can adapt to digital transformation successfully, provided they receive clear instructions and adequate support systems.',
+    strategiesAdvice: 'To maintain the interest of Boomers, organizations ought to acknowledge their longstanding contributions and furnish structured training on new technologies. Engaging them in mentorship allows them to share their expertise and feel appreciated. Positions that highlight their institutional knowledge, strategic advisory roles, and recognition initiatives support ongoing motivation and inclusion.'
   },
-  
+
   // --- Work Motivation Subtheme ---
   {
     id: 'work-motivation-genz',
@@ -311,8 +311,8 @@ export const cards: Card[] = [
     subThemeId: 'work-motivation',
     page_id: 10,
     stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+    strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-motivation-millennial',
@@ -324,8 +324,8 @@ export const cards: Card[] = [
     subThemeId: 'work-motivation',
     page_id: 11,
     stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+    strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-motivation-genx',
@@ -337,8 +337,8 @@ export const cards: Card[] = [
     subThemeId: 'work-motivation',
     page_id: 12,
     stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+    strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-motivation-boomer',
@@ -350,10 +350,10 @@ export const cards: Card[] = [
     subThemeId: 'work-motivation',
     page_id: 13,
     stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+    strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
-  
+
   // --- Work Styles Subtheme ---
   {
     id: 'work-styles-genz',
@@ -365,8 +365,8 @@ export const cards: Card[] = [
     subThemeId: 'work-styles',
     page_id: 14,
     stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+    strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-styles-millennial',
@@ -378,8 +378,8 @@ export const cards: Card[] = [
     subThemeId: 'work-styles',
     page_id: 15,
     stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+    strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-styles-genx',
@@ -391,8 +391,8 @@ export const cards: Card[] = [
     subThemeId: 'work-styles',
     page_id: 16,
     stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+    strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   },
   {
     id: 'work-styles-boomer',
@@ -404,10 +404,10 @@ export const cards: Card[] = [
     subThemeId: 'work-styles',
     page_id: 17,
     stereotype: 'Digital Native',
-      researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
-      strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
+    researchFindings: 'Gen Z prioritizes flexibility and mental well-being in the workplace.',
+    strategiesAdvice: 'Offer remote work options and prioritize mental health resources.'
   }
-  
+
   // ========== ADD OTHER THEME CARDS HERE ==========
   // Follow the same pattern for diversity, digital, and intercultural themes
 ]
@@ -427,8 +427,8 @@ export const getCardsByTheme = (themeId: string): Card[] => {
  * Find a specific card by generation and subtheme
  */
 export const findCard = (generationId: string, subThemeId: string): Card | undefined => {
-  return cards.find(card => 
-    card.generationId === generationId && 
+  return cards.find(card =>
+    card.generationId === generationId &&
     card.subThemeId === subThemeId
   )
 }
