@@ -1,6 +1,7 @@
 // src/components/handbook/WelcomeContent.tsx
 'use client'
 
+import Image from 'next/image'
 import { BookOpenIcon, FilterIcon, DownloadIcon, PlusCircleIcon } from 'lucide-react'
 
 export const WelcomeContent = () => {
@@ -11,75 +12,24 @@ export const WelcomeContent = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
           Welcome to the Generational Handbook
         </h1>
-        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-8">
           Your comprehensive guide to navigating intergenerational workplace dynamics
         </p>
-      </div>
-
-      {/* Features Grid */}
-      <div className="grid md:grid-cols-3 gap-8 mb-12">
-        {/* Download Complete Handbook */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
-          <div className="flex items-center mb-4">
-            <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg mr-4">
-              <BookOpenIcon className="w-6 h-6 text-blue-600 dark:text-blue-300" />
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-              Complete Handbook
-            </h3>
-          </div>
-          <p className="text-slate-600 dark:text-slate-300 mb-4">
-            Download the entire Generational Handbook as a comprehensive PDF. Get all chapters, 
-            themes, and insights in one complete document ready for offline reading and sharing.
-          </p>
-          <button className="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
-            <DownloadIcon className="w-4 h-4 mr-2" />
-            Download Full Handbook
-          </button>
-        </div>
-
-        {/* Create Custom Handbook */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
-          <div className="flex items-center mb-4">
-            <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4">
-              <FilterIcon className="w-6 h-6 text-green-600 dark:text-green-300" />
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-              Custom Handbook
-            </h3>
-          </div>
-          <p className="text-slate-600 dark:text-slate-300 mb-4">
-            Create your personalized handbook by selecting only the topics that matter to you. 
-            Navigate through themes, generations, and specific approaches to build your custom guide.
-          </p>
-          <p className="text-green-600 dark:text-green-400 font-medium">
-            Start by selecting a theme above
-          </p>
-        </div>
-
-        <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
-          <div className="flex items-center mb-4">
-            <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4">
-              <FilterIcon className="w-6 h-6 text-green-600 dark:text-green-300" />
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-              Test 
-            </h3>
-          </div>
-          <p className="text-slate-600 dark:text-slate-300 mb-4">
-            Test placeholder
-          </p>
-          <p className="text-green-600 dark:text-green-400 font-medium">
-            Start by selecting a theme above
-          </p>
-        </div>
-
         
+        {/* Generations Image */}
+        <div className="flex justify-center mb-12">
+          <Image
+            src="/images/generations.png"
+            alt="Generational representation"
+            width={400}
+            height={200}
+            className="rounded-lg shadow-lg"
+            priority
+          />
+        </div>
       </div>
 
-      
 
-      
 
       {/* How It Works Section */}
       <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-8 mb-12">
@@ -135,7 +85,7 @@ export const WelcomeContent = () => {
       </div>
 
       {/* Key Features */}
-      <div className="text-center">
+      <div className="text-center mb-12">
         <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
           Key Features
         </h3>
@@ -152,6 +102,46 @@ export const WelcomeContent = () => {
             <DownloadIcon className="w-4 h-4 mr-2 text-purple-500" />
             Export as PDF
           </div>
+        </div>
+      </div>
+
+      {/* Action Cards */}
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Create Custom Handbook */}
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div className="flex items-center mb-4">
+            <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4">
+              <FilterIcon className="w-6 h-6 text-green-600 dark:text-green-300" />
+            </div>
+            <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+              Custom Handbook
+            </h3>
+          </div>
+          <p className="text-slate-600 dark:text-slate-300 mb-4">
+            Create your personalized handbook by selecting only the topics that matter to you. 
+            Navigate through themes, generations, and specific approaches to build your custom guide.
+          </p>
+          <p className="text-green-600 dark:text-green-400 font-medium">
+            Start by selecting a theme above
+          </p>
+        </div>
+
+        {/* Test Card */}
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div className="flex items-center mb-4">
+            <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4">
+              <FilterIcon className="w-6 h-6 text-green-600 dark:text-green-300" />
+            </div>
+            <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+              Test 
+            </h3>
+          </div>
+          <p className="text-slate-600 dark:text-slate-300 mb-4">
+            Test placeholder
+          </p>
+          <p className="text-green-600 dark:text-green-400 font-medium">
+            Start by selecting a theme above
+          </p>
         </div>
       </div>
 
