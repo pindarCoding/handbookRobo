@@ -750,90 +750,151 @@ The component automatically preloads all frames before displaying:
   size={100}
 />
 ```
-
-## Troubleshooting
-
-### Images not loading
-- Check file paths are correct
-- Ensure images are in `/public/characters/`
-- Verify file naming matches configuration
-- Check browser console for 404 errors
-
-### Animation stuttering
-- Reduce image dimensions
-- Lower frame count
-- Decrease frameRate
-- Ensure images are optimized
-
-### Memory issues
-- Limit frame count for multiple animations
-- Use smaller image dimensions
-- Consider lazy loading for off-screen animations
-
-## Examples
-
-### Hero Animation
-```typescript
-<AnimatedCharacter
-  images={generateImageSequence({
-    basePath: '/characters/hero',
-    prefix: 'hero_',
-    startFrame: 1,
-    endFrame: 60,
-    digits: 3,
-    extension: 'png'
-  })}
-  width={400}
-  height={400}
-  frameRate={30}
-  loop={true}
-  playOnHover={false}  // Auto-play
-/>
+4. Traduzioni
+{
+  "work-values": {
+    "genz": {
+      "id": "work-values-genz",
+      "title": "Gen Z: Workplace Values",
+      "description": "Priority on flexibility, company purpose, social impact and mental wellbeing",
+      "stereotype": "Gen Z is often depicted as restless, fixated on technology...",
+      "researchFindings": "Studies show that Gen Z values openness, adaptability...",
+      "strategiesAdvice": "In a marketing agency, Gen Z staff received support..."
+    },
+    "millennial": {
+      "id": "work-values-millennial",
+      "title": "Millennial: Workplace Values",
+      "description": "Focus on personal growth, career opportunities and meaningful work",
+      "stereotype": "Many people characterize Millennials as entitled...",
+      "researchFindings": "Research indicates that Millennials prioritize...",
+      "strategiesAdvice": "Millennials excel in environments that offer..."
+    },
+    "genx": {
+      "id": "work-values-genx",
+      "title": "Gen X: Workplace Values",
+      "description": "Valuing autonomy, efficiency and work-life balance",
+      "stereotype": "Generation X is often viewed as disillusioned...",
+      "researchFindings": "Studies indicate that Generation X prioritizes...",
+      "strategiesAdvice": "Organizations can assist Gen X by offering..."
+    },
+    "boomer": {
+      "id": "work-values-boomer",
+      "title": "Boomer: Workplace Values",
+      "description": "Focus on company loyalty, traditional work ethic and hierarchy",
+      "stereotype": "Baby Boomers are frequently depicted as excessively...",
+      "researchFindings": "Studies indicate that Baby Boomers prioritize...",
+      "strategiesAdvice": "To maintain the interest of Boomers, organizations..."
+    }
+  },
+  
+  "work-motivation": {
+    "genz": {
+      "id": "work-motivation-genz",
+      "title": "Gen Z: Instant Feedback & Learning",
+      "description": "Motivated by immediate recognition and continuous learning opportunities",
+      "stereotype": "...",
+      "researchFindings": "...",
+      "strategiesAdvice": "..."
+    },
+    "millennial": { ... },
+    "genx": { ... },
+    "boomer": { ... }
+  },
+  
+  "work-styles": {
+    "genz": { ... },
+    "millennial": { ... },
+    "genx": { ... },
+    "boomer": { ... }
+  }
+}
 ```
 
-### Navigation Avatars
-```typescript
-{generations.map((gen) => (
-  <GenerationCharacter
-    key={gen.id}
-    characterFolder={gen.characterFolder}
-    frameStart={gen.frameStart}
-    frameEnd={gen.frameEnd}
-    size={60}
-    frameRate={10}
-  />
-))}
+---
+
+### Perché Questa Struttura?
+
+#### **cards/work.json Contiene:**
+```
+SubTheme: work-values
+  ├─ Card GenZ
+  ├─ Card Millennial
+  ├─ Card GenX
+  └─ Card Boomer
+
+SubTheme: work-motivation
+  ├─ Card GenZ
+  ├─ Card Millennial
+  ├─ Card GenX
+  └─ Card Boomer
+
+SubTheme: work-styles
+  ├─ Card GenZ
+  ├─ Card Millennial
+  ├─ Card GenX
+  └─ Card Boomer
 ```
 
-### Loading State Example
-```typescript
-<AnimatedCharacter
-  images={images}
-  width={200}
-  height={200}
-  showSkeleton={true}  // Shows progress during load
-  onAnimationStart={() => console.log('Started!')}
-  onAnimationComplete={() => console.log('Complete!')}
-  onError={(err) => console.error('Load failed:', err)}
-/>
+**Totale:** 3 SubThemes × 4 Generations = **12 cards in `work.json`**
+
+---
+
+### Relazione SubTheme ↔ Cards
+
+#### **SubTheme (Markdown)**
+```
+File: subthemes/work-values.md
+Contiene: Introduzione generale sul tema "Workplace Values"
+          Spiega differenze generazionali ad alto livello
+          Immagini, grafici, contesto
 ```
 
-## Future Enhancements
+#### **Cards (JSON)**
+```
+File: cards/work.json → work-values → genz/millennial/genx/boomer
+Contiene: Dettaglio specifico PER GENERAZIONE
+          - Stereotype
+          - Research Findings  
+          - Strategies & Advice
+```
 
-- [ ] WebP format support for better compression
-- [ ] Sprite sheet support (single image with multiple frames)
-- [ ] APNG format support
-- [ ] Video fallback for complex animations
-- [ ] Intersection Observer for viewport-based playback
-- [ ] Redux/Context integration for global animation state
-- [ ] Animation sequences (idle → walk → run)
+---
 
-## Credits
+### Flow Utente Completo
+```
+1. User seleziona Theme: "Work"
+   └─ Vede: themes.json → work.introduction
 
-Built with:
-- [Framer Motion](https://www.framer.com/motion/) - Animation library
-- [Next.js Image](https://nextjs.org/docs/api-reference/next/image) - Image optimization
-- TypeScript - Type safety
-- CSS Modules - Scoped styling
+2. User seleziona SubTheme: "Workplace Values"
+   └─ Vede: subthemes/work-values.md (contenuto lungo)
+   └─ Vede: Prompt "Select a generation to see specific approaches"
 
+3. User seleziona Generation: "Gen Z"
+   └─ Vede: cards/work.json → work-values → genz
+           (Stereotype, Research, Strategies)
+```
 
+---
+
+### Esempio Visivo Relazione
+```
+Theme: Work
+├─ SubTheme: Workplace Values
+│  ├─ Content: work-values.md (Markdown - intro generale)
+│  └─ Cards:
+│     ├─ GenZ Card     (work.json → work-values.genz)
+│     ├─ Millennial Card (work.json → work-values.millennial)
+│     ├─ GenX Card     (work.json → work-values.genx)
+│     └─ Boomer Card   (work.json → work-values.boomer)
+│
+├─ SubTheme: Motivation
+│  ├─ Content: work-motivation.md
+│  └─ Cards:
+│     ├─ GenZ Card     (work.json → work-motivation.genz)
+│     └─ ...
+│
+└─ SubTheme: Work Styles
+   ├─ Content: work-styles.md
+   └─ Cards:
+      ├─ GenZ Card     (work.json → work-styles.genz)
+      └─ ...
