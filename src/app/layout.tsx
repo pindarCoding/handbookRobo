@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { LanguageProvider } from "@/components/providers/language-provider";
 import { BookProvider } from "@/components/providers/book-provider";
 import { ImageCacheProvider } from "@/components/providers/image-cache-provider";
 import { Toaster } from 'sonner'
@@ -32,9 +33,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
-          <ImageCacheProvider>
-            <BookProvider>{children}</BookProvider>
-          </ImageCacheProvider>
+          <LanguageProvider>
+            <ImageCacheProvider>
+              <BookProvider>{children}</BookProvider>
+            </ImageCacheProvider>
+          </LanguageProvider>
           </ThemeProvider>
           <Toaster position="top-center" richColors/>
       </body>
