@@ -35,7 +35,9 @@ export default function RootLayout({
         <ThemeProvider>
           <LanguageProvider>
             <ImageCacheProvider>
-              <BookProvider>{children}</BookProvider>
+              <BookProvider>
+                {children}
+              </BookProvider>    
             </ImageCacheProvider>
           </LanguageProvider>
           </ThemeProvider>
