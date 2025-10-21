@@ -6,13 +6,7 @@ export default function Home() {
   return (
     <main className="min-h-screen relative">
       <HandbookNavigator />
-      <Image
-        src="/images/generations.png"
-        alt="Generations"
-        width={400}
-        height={250}
-        className="hidden lg:block absolute bottom-0 right-4"
-      />
+      
     </main>
   );
 }

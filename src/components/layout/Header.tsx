@@ -54,8 +54,9 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                   alt="MyCo Logo"
                   width={240}
                   height={80}
+                  style={{ height: 'auto', width: 'auto' }}
                   className="h-20 w-auto hover:opacity-80 transition-opacity"
-                  priority
+                  priority={true}
                 />
               </button>
             </div>

@@ -1,0 +1,22 @@
+{
+  "genz": {
+    "title": "Gen Z",
+    "ageRange": "14 - 27",
+    "description": "Nativi digitali che valorizzano l'autenticità e l'integrazione tra lavoro e vita privata"
+  },
+  "millennial": {
+    "title": "Millennial",
+    "ageRange": "28 - 43",
+    "description": "Ottimisti esperti di tecnologia, focalizzati su scopo e crescita"
+  },
+  "genx": {
+    "title": "Gen X",
+    "ageRange": "44 - 59",
+    "description": "Indipendenti e adattabili, un ponte tra gli approcci tradizionali e quelli digitali"
+  },
+  "boomer": {
+    "title": "Baby Boomer",
+    "ageRange": "60 - 78",
+    "description": "Guidati dall'esperienza con una forte etica del lavoro e valori tradizionali"
+  }
+}

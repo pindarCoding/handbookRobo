@@ -1,0 +1,22 @@
+{
+  "work": {
+    "title": "Differences in approach to work",
+    "introduction": "Placeholder intro for work theme"
+  },
+  "communication": {
+    "title": "Communication between generations",
+    "introduction": "Placeholder intro for communication theme"
+  },
+  "diversity": {
+    "title": "Generational diversity",
+    "introduction": "Placeholder intro for diversity theme"
+  },
+  "digital": {
+    "title": "Digital inequality",
+    "introduction": "Placeholder intro for digital theme"
+  },
+  "intercultural": {
+    "title": "Intercultural perspectives",
+    "introduction": "Placeholder intro for intercultural theme"
+  }
+}

@@ -1,8 +1,24 @@
-// src/hooks/useTranslation.ts
-
 import { useLanguage } from '@/components/providers/language-provider'
 
-// Interface ricorsiva (non type alias)
+// Import statici di TUTTE le traduzioni
+import enThemes from '@/data/i18n/en/themes.json'
+import enGenerations from '@/data/i18n/en/generations.json'
+import enUi from '@/data/i18n/en/ui.json'
+import enWork from '@/data/i18n/en/cards/work.json'
+import enCommunication from '@/data/i18n/en/cards/communication.json'
+import enDiversity from '@/data/i18n/en/cards/diversity.json'
+import enDigital from '@/data/i18n/en/cards/digital.json'
+import enIntercultural from '@/data/i18n/en/cards/intercultural.json'
+
+import itThemes from '@/data/i18n/it/themes.json'
+import itGenerations from '@/data/i18n/it/generations.json'
+import itUi from '@/data/i18n/it/ui.json'
+import itWork from '@/data/i18n/it/cards/work.json'
+import itCommunication from '@/data/i18n/it/cards/communication.json'
+import itDiversity from '@/data/i18n/it/cards/diversity.json'
+import itDigital from '@/data/i18n/it/cards/digital.json'
+import itIntercultural from '@/data/i18n/it/cards/intercultural.json'
+
 interface TranslationObject {
   [key: string]: string | TranslationObject
 }
@@ -20,7 +36,34 @@ type Translations = {
   generations: TranslationObject
 }
 
-// Helper con tipo corretto (no any!)
+// Tutte le traduzioni caricate all'init (sync!)
+const allTranslations: Record<'en' | 'it', Translations> = {
+  en: {
+    themes: enThemes as TranslationObject,
+    cards: {
+      work: enWork as TranslationObject,
+      communication: enCommunication as TranslationObject,
+      diversity: enDiversity as TranslationObject,
+      digital: enDigital as TranslationObject,
+      intercultural: enIntercultural as TranslationObject
+    },
+    ui: enUi as TranslationObject,
+    generations: enGenerations as TranslationObject
+  },
+  it: {
+    themes: itThemes as TranslationObject,
+    cards: {
+      work: itWork as TranslationObject,
+      communication: itCommunication as TranslationObject,
+      diversity: itDiversity as TranslationObject,
+      digital: itDigital as TranslationObject,
+      intercultural: itIntercultural as TranslationObject
+    },
+    ui: itUi as TranslationObject,
+    generations: itGenerations as TranslationObject
+  }
+}
+
 function getNestedValue(obj: TranslationObject | string, path: string): string | undefined {
   const keys = path.split('.')
   let current: TranslationObject | string = obj
@@ -36,79 +79,46 @@ function getNestedValue(obj: TranslationObject | string, path: string): string |
   return typeof current === 'string' ? current : undefined
 }
 
-// Load con dynamic import (no require!)
-async function loadTranslations(lang: 'en' | 'it'): Promise<Translations> {
-  try {
-    const [themes, workCards, communicationCards, diversityCards, digitalCards, interculturalCards, ui, generations] = await Promise.all([
-      import(`@/data/i18n/${lang}/themes.json`).then(m => m.default),
-      import(`@/data/i18n/${lang}/cards/work.json`).then(m => m.default),
-      import(`@/data/i18n/${lang}/cards/communication.json`).then(m => m.default),
-      import(`@/data/i18n/${lang}/cards/diversity.json`).then(m => m.default),
-      import(`@/data/i18n/${lang}/cards/digital.json`).then(m => m.default),
-      import(`@/data/i18n/${lang}/cards/intercultural.json`).then(m => m.default),
-      import(`@/data/i18n/${lang}/ui.json`).then(m => m.default),
-      import(`@/data/i18n/${lang}/generations.json`).then(m => m.default),
-    ])
-    
-    return {
-      themes,
-      cards: {
-        work: workCards,
-        communication: communicationCards,
-        diversity: diversityCards,
-        digital: digitalCards,
-        intercultural: interculturalCards
-      },
-      ui,
-      generations
-    }
-  } catch (error) {
-    console.error(`Failed to load translations for ${lang}:`, error)
-    return {
-      themes: {},
-      cards: {
-        work: {},
-        communication: {},
-        diversity: {},
-        digital: {},
-        intercultural: {}
-      },
-      ui: {},
-      generations: {}
-    }
-  }
-}
-
 export function useTranslation() {
   const { language } = useLanguage()
   
-  // Nota: In produzione, considera useMemo qui
-  const currentTranslations = loadTranslations(language)
-  const fallbackTranslations = language !== 'en' 
-    ? loadTranslations('en') 
-    : currentTranslations
+  const currentTranslations = allTranslations[language]
+  const fallbackTranslations = allTranslations['en']
   
-  const t = async (key: string): Promise<string> => {
-    const [current, fallback] = await Promise.all([currentTranslations, fallbackTranslations])
+  /**
+   * Traduce una chiave (SINCRONO!)
+   * @param key - Path della traduzione (es: 'generations.genz.title')
+   * @returns Stringa tradotta o [key] se mancante
+   */
+  const t = (key: string): string => {
+    // Cerca in tutti i namespace
+    const searchInAll = (translations: Translations): string | undefined => {
+      return getNestedValue(translations.themes, key) ||
+             getNestedValue(translations.cards.work, key) ||
+             getNestedValue(translations.cards.communication, key) ||
+             getNestedValue(translations.cards.diversity, key) ||
+             getNestedValue(translations.cards.digital, key) ||
+             getNestedValue(translations.cards.intercultural, key) ||
+             getNestedValue(translations.ui, key) ||
+             getNestedValue(translations.generations, key)
+    }
     
-    const currentValue = getNestedValue(current.themes, key) ||
-                        getNestedValue(current.cards as unknown as TranslationObject, key) ||
-                        getNestedValue(current.ui, key) ||
-                        getNestedValue(current.generations, key)
-    
+    // 1. Prova lingua corrente
+    const currentValue = searchInAll(currentTranslations)
     if (currentValue) return currentValue
     
-    const fallbackValue = getNestedValue(fallback.themes, key) ||
-                         getNestedValue(fallback.cards as unknown as TranslationObject, key) ||
-                         getNestedValue(fallback.ui, key) ||
-                         getNestedValue(fallback.generations, key)
-    
+    // 2. Fallback inglese
+    const fallbackValue = searchInAll(fallbackTranslations)
     if (fallbackValue) return fallbackValue
     
+    // 3. Mostra key se manca
     console.warn(`Translation missing: ${key} (${language})`)
     return `[${key}]`
   }
   
+  /**
+   * Carica contenuto Markdown per SubTheme (rimane async)
+   */
   const loadMarkdown = async (filename: string): Promise<string> => {
     try {
       const response = await fetch(`/data/i18n/${language}/subthemes/${filename}`)

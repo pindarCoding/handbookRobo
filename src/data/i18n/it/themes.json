@@ -1,0 +1,22 @@
+{
+  "work": {
+    "title": "Differenze nell'approccio al lavoro",
+    "introduction": "Introduzione placeholder per tema lavoro"
+  },
+  "communication": {
+    "title": "Comunicazione tra generazioni",
+    "introduction": "Introduzione placeholder"
+  },
+  "diversity": {
+    "title": "Diversità generazionale",
+    "introduction": "Introduzione placeholder"
+  },
+  "digital": {
+    "title": "Disuguaglianza digitale",
+    "introduction": "Introduzione placeholder"
+  },
+  "intercultural": {
+    "title": "Prospettive interculturali",
+    "introduction": "Introduzione placeholder"
+  }
+}
