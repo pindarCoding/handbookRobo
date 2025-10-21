@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import HandbookNavigator from "@/components/handbook/HandbookNavigator";
 
 export default function Home() {
