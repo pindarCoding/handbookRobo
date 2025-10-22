@@ -23,6 +23,15 @@ interface TranslationObject {
   [key: string]: string | TranslationObject
 }
 
+// ✨ NUOVO: Interface per Generation da JSON
+interface GenerationTranslation {
+  id: string
+  code: string
+  title: string
+  ageRange: string
+  description: string
+}
+
 type Translations = {
   themes: TranslationObject
   cards: {
@@ -117,6 +126,61 @@ export function useTranslation() {
   }
   
   /**
+   * ✨ NUOVO: Ottieni generation completa per CODICE
+   * @param code - Generation code (GZ, GM, GX, GB)
+   * @returns Generation object con tutte le traduzioni
+   */
+  const getGeneration = (code: string): GenerationTranslation | null => {
+    // Type guard: verifica che sia un oggetto valido
+    const generationsData = currentTranslations.generations
+    
+    if (typeof generationsData === 'object' && generationsData !== null) {
+      const generation = generationsData[code]
+      
+      // Verifica che sia un GenerationTranslation valido
+      if (typeof generation === 'object' && generation !== null && 
+          'id' in generation && 'code' in generation && 'title' in generation) {
+        return generation as unknown as GenerationTranslation
+      }
+    }
+    
+    // Fallback inglese
+    const fallbackData = fallbackTranslations.generations
+    if (typeof fallbackData === 'object' && fallbackData !== null) {
+      const fallbackGeneration = fallbackData[code]
+      
+      if (typeof fallbackGeneration === 'object' && fallbackGeneration !== null &&
+          'id' in fallbackGeneration && 'code' in fallbackGeneration && 'title' in fallbackGeneration) {
+        console.warn(`Generation ${code} not found in ${language}, using EN fallback`)
+        return fallbackGeneration as unknown as GenerationTranslation
+      }
+    }
+    
+    console.error(`Generation ${code} not found in any language`)
+    return null
+  }
+  
+  /**
+   * ✨ NUOVO: Ottieni TUTTE le generations
+   * @returns Array di tutte le generations con traduzioni correnti
+   */
+const getAllGenerations = (): GenerationTranslation[] => {
+  const generationsData = currentTranslations.generations
+  
+  if (typeof generationsData === 'object' && generationsData !== null) {
+    // Cast via unknown per compatibilità TypeScript
+    const values = Object.values(generationsData) as unknown as GenerationTranslation[]
+    
+    return values.filter((gen): gen is GenerationTranslation => {
+      return typeof gen === 'object' && gen !== null &&
+             'id' in gen && 'code' in gen && 'title' in gen
+    })
+  }
+  
+  return []
+}
+  
+  /**
    * Carica contenuto Markdown per SubTheme (rimane async)
    */
   const loadMarkdown = async (filename: string): Promise<string> => {
@@ -142,5 +206,11 @@ export function useTranslation() {
     }
   }
   
-  return { t, loadMarkdown, language }
+  return { 
+    t, 
+    getGeneration,        // ✨ NUOVO
+    getAllGenerations,    // ✨ NUOVO
+    loadMarkdown, 
+    language 
+  }
 }

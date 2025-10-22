@@ -749,152 +749,242 @@ The component automatically preloads all frames before displaying:
   framePrefix="frame_"
   size={100}
 />
+## 🏗️ Data Structure & Taxonomy System (SV0008)
+
+### Overview
+The application uses a **hybrid ID + Code system** for maximum clarity:
+- **IDs**: Original descriptive names used in code (`work`, `work-values`, `genz`)
+- **Codes**: Hierarchical taxonomy for translators (`T5`, `T5.1`, `T5.1.GZ`)
+
+---
+
+### Taxonomy Hierarchy
 ```
-4. Traduzioni
+T{n}              Theme (T1-T5)
+├── T{n}.{m}      SubTheme (T5.1, T5.2)
+│   ├── T{n}.{m}.GZ   Card - Gen Z
+│   ├── T{n}.{m}.GM   Card - Millennial
+│   ├── T{n}.{m}.GX   Card - Gen X
+│   └── T{n}.{m}.GB   Card - Baby Boomer
+```
+
+**Example:** `T5.1.GZ` = Theme 5 (Work) → SubTheme 1 (Values) → Gen Z Card
+
+---
+
+### Theme Codes
+
+| Code | ID | Title | SubThemes |
+|------|-----|-------|-----------|
+| T1 | `communication` | 1 - Communication between generations | 3 |
+| T2 | `diversity` | 2 - Generational diversity (intersectional) | 2 |
+| T3 | `digital` | 3 - How to bridge digital inequality | 4 |
+| T4 | `intercultural` | 4 - Generational diversity (intercultural) | 1 |
+| T5 | `work` | 5 - Differences in approach to work | 3 |
+
+**Note:** Titles include number prefix for immediate identification
+
+---
+
+### Generation Codes
+
+| Code | ID | Title | Age Range |
+|------|-----|-------|-----------|
+| GZ | `genz` | Gen Z | 14 - 27 |
+| GM | `millennial` | Millennial | 28 - 43 |
+| GX | `genx` | Gen X | 44 - 59 |
+| GB | `boomer` | Baby Boomer | 60 - 78 |
+
+---
+
+### File Naming Convention
+
+#### **JSON Files (i18n translations)**
+```
+src/data/i18n/{lang}/
+├── themes.json                    # All themes + subthemes hierarchy
+├── generations.json               # All generations (GZ, GM, GX, GB)
+├── ui.json                       # UI strings
+└── cards/
+    ├── t1-communication.json     # {themeCode}-{themeId}.json
+    ├── t2-diversity.json
+    ├── t3-digital.json
+    ├── t4-intercultural.json
+    └── t5-work.json
+```
+
+**Pattern:** `{themeCode}-{themeId}.json`
+- Example: `t5-work.json` (Theme 5 - Work)
+
+#### **Markdown Files (SubTheme content)**
+```
+public/data/i18n/{lang}/subthemes/
+├── t1-1-communication-tools.md       # {themeCode}-{subNumber}-{subThemeId}.md
+├── t1-2-communication-conflicts.md
+├── t5-1-work-values.md
+├── t5-2-work-motivation.md
+└── t5-3-work-styles.md
+```
+
+**Pattern:** `{themeCode}-{subNumber}-{subThemeId}.md`
+- Example: `t5-1-work-values.md` (Theme 5, SubTheme 1 - Work Values)
+
+---
+
+### JSON Structure Examples
+
+#### **themes.json**
+```json
 {
-  "work-values": {
-    "genz": {
-      "id": "work-values-genz",
-      "title": "Gen Z: Workplace Values",
-      "description": "Priority on flexibility, company purpose, social impact and mental wellbeing",
-      "stereotype": "Gen Z is often depicted as restless, fixated on technology...",
-      "researchFindings": "Studies show that Gen Z values openness, adaptability...",
-      "strategiesAdvice": "In a marketing agency, Gen Z staff received support..."
-    },
-    "millennial": {
-      "id": "work-values-millennial",
-      "title": "Millennial: Workplace Values",
-      "description": "Focus on personal growth, career opportunities and meaningful work",
-      "stereotype": "Many people characterize Millennials as entitled...",
-      "researchFindings": "Research indicates that Millennials prioritize...",
-      "strategiesAdvice": "Millennials excel in environments that offer..."
-    },
-    "genx": {
-      "id": "work-values-genx",
-      "title": "Gen X: Workplace Values",
-      "description": "Valuing autonomy, efficiency and work-life balance",
-      "stereotype": "Generation X is often viewed as disillusioned...",
-      "researchFindings": "Studies indicate that Generation X prioritizes...",
-      "strategiesAdvice": "Organizations can assist Gen X by offering..."
-    },
-    "boomer": {
-      "id": "work-values-boomer",
-      "title": "Boomer: Workplace Values",
-      "description": "Focus on company loyalty, traditional work ethic and hierarchy",
-      "stereotype": "Baby Boomers are frequently depicted as excessively...",
-      "researchFindings": "Studies indicate that Baby Boomers prioritize...",
-      "strategiesAdvice": "To maintain the interest of Boomers, organizations..."
+  "T5": {
+    "id": "work",
+    "code": "T5",
+    "title": "5 - Differences in approach to work",
+    "introduction": "Workplaces today bring together...",
+    "reportPdfUrl": "/pdfs/work-report.pdf",
+    "subthemes": {
+      "T5.1": {
+        "id": "work-values",
+        "code": "T5.1",
+        "title": "Workplace Values Across Generations",
+        "description": "How different generations define success",
+        "pageId": 51,
+        "markdownFile": "t5-1-work-values.md"
+      }
     }
-  },
-  
-  "work-motivation": {
-    "genz": {
-      "id": "work-motivation-genz",
-      "title": "Gen Z: Instant Feedback & Learning",
-      "description": "Motivated by immediate recognition and continuous learning opportunities",
+  }
+}
+```
+
+#### **cards/t5-work.json**
+```json
+{
+  "T5.1": {
+    "GZ": {
+      "id": "work-values-genz",
+      "code": "T5.1.GZ",
+      "title": "Gen Z: Workplace Values",
+      "color": "purple",
+      "description": "Priority on flexibility...",
+      "pageId": 511,
       "stereotype": "...",
       "researchFindings": "...",
       "strategiesAdvice": "..."
     },
-    "millennial": { ... },
-    "genx": { ... },
-    "boomer": { ... }
-  },
-  
-  "work-styles": {
-    "genz": { ... },
-    "millennial": { ... },
-    "genx": { ... },
-    "boomer": { ... }
+    "GM": { "..." },
+    "GX": { "..." },
+    "GB": { "..." }
+  }
+}
+```
+
+#### **generations.json**
+```json
+{
+  "GZ": {
+    "id": "genz",
+    "code": "GZ",
+    "title": "Gen Z",
+    "ageRange": "14 - 27",
+    "description": "Digital natives who value authenticity..."
   }
 }
 ```
 
 ---
 
-### Perché Questa Struttura?
+### PageId Schema
 
-#### **cards/work.json Contiene:**
+PageIds follow a logical hierarchical pattern:
 ```
-SubTheme: work-values
-  ├─ Card GenZ
-  ├─ Card Millennial
-  ├─ Card GenX
-  └─ Card Boomer
+Theme:    T5 → 50-59 range
+SubTheme: T5.1 → 51
+Cards:    T5.1.GZ → 511
+          T5.1.GM → 512
+          T5.1.GX → 513
+          T5.1.GB → 514
 
-SubTheme: work-motivation
-  ├─ Card GenZ
-  ├─ Card Millennial
-  ├─ Card GenX
-  └─ Card Boomer
-
-SubTheme: work-styles
-  ├─ Card GenZ
-  ├─ Card Millennial
-  ├─ Card GenX
-  └─ Card Boomer
+SubTheme: T5.2 → 52
+Cards:    T5.2.GZ → 521
+          T5.2.GM → 522
+          ...
 ```
 
-**Totale:** 3 SubThemes × 4 Generations = **12 cards in `work.json`**
+**Formula:**
+- Theme: `{themeNumber}0`
+- SubTheme: `{themeNumber}{subThemeNumber}`
+- Card: `{subThemePageId}{generationSequence}`
 
 ---
 
-### Relazione SubTheme ↔ Cards
+### Code Usage Examples
 
-#### **SubTheme (Markdown)**
-```
-File: subthemes/work-values.md
-Contiene: Introduzione generale sul tema "Workplace Values"
-          Spiega differenze generazionali ad alto livello
-          Immagini, grafici, contesto
-```
+#### **Finding a Card by Code**
+```typescript
+// Get card T5.1.GZ (Work Values - Gen Z)
+const card = getCardByCode("T5.1.GZ")
 
-#### **Cards (JSON)**
-```
-File: cards/work.json → work-values → genz/millennial/genx/boomer
-Contiene: Dettaglio specifico PER GENERAZIONE
-          - Stereotype
-          - Research Findings  
-          - Strategies & Advice
+// Traditional way still works:
+const card = findCard("genz", "work-values")
 ```
 
----
+#### **Loading Translations**
+```typescript
+// Load theme translations
+const theme = t("T5.title")  // "5 - Differences in approach to work"
 
-### Flow Utente Completo
+// Load card translations
+const cardTitle = t("T5.1.GZ.title")  // "Gen Z: Workplace Values"
 ```
-1. User seleziona Theme: "Work"
-   └─ Vede: themes.json → work.introduction
 
-2. User seleziona SubTheme: "Workplace Values"
-   └─ Vede: subthemes/work-values.md (contenuto lungo)
-   └─ Vede: Prompt "Select a generation to see specific approaches"
+#### **File Resolution**
+```typescript
+// Markdown file for subtheme
+const filename = getSubThemeMarkdownFile("T5.1")
+// Returns: "t5-1-work-values.md"
 
-3. User seleziona Generation: "Gen Z"
-   └─ Vede: cards/work.json → work-values → genz
-           (Stereotype, Research, Strategies)
+// Cards JSON for theme
+const cardsFile = getThemeCardsFile("T5")
+// Returns: "t5-work.json"
 ```
 
 ---
 
-### Esempio Visivo Relazione
-```
-Theme: Work
-├─ SubTheme: Workplace Values
-│  ├─ Content: work-values.md (Markdown - intro generale)
-│  └─ Cards:
-│     ├─ GenZ Card     (work.json → work-values.genz)
-│     ├─ Millennial Card (work.json → work-values.millennial)
-│     ├─ GenX Card     (work.json → work-values.genx)
-│     └─ Boomer Card   (work.json → work-values.boomer)
-│
-├─ SubTheme: Motivation
-│  ├─ Content: work-motivation.md
-│  └─ Cards:
-│     ├─ GenZ Card     (work.json → work-motivation.genz)
-│     └─ ...
-│
-└─ SubTheme: Work Styles
-   ├─ Content: work-styles.md
-   └─ Cards:
-      ├─ GenZ Card     (work.json → work-styles.genz)
-      └─ ...
+### Migration Notes
+
+**Current Status (Pre-SV0008):**
+- Data hardcoded in `src/data/handbook-data.ts`
+- No systematic coding system
+- Mixed naming conventions
+
+**After SV0008:**
+- All data in i18n JSON files
+- Hybrid ID+Code system throughout
+- Consistent naming: `t5-work.json`, `t5-1-work-values.md`
+- Full translation support ready
+
+---
+
+### Benefits
+
+1. ✅ **Translator-Friendly**: Clear codes (`T5.1.GZ`) instead of long IDs
+2. ✅ **Self-Documenting**: File names reveal structure
+3. ✅ **Scalable**: Easy to add new themes/generations
+4. ✅ **Consistent**: Same pattern everywhere
+5. ✅ **Backwards Compatible**: Original IDs still work in code
+6. ✅ **Hierarchical**: Clear parent-child relationships
+7. ✅ **Searchable**: Grep by code finds all related files
+
+---
+
+### Related Files
+
+- **Theme Data**: `src/data/i18n/{lang}/themes.json`
+- **Card Data**: `src/data/i18n/{lang}/cards/t{n}-{themeId}.json`
+- **Generation Data**: `src/data/i18n/{lang}/generations.json`
+- **SubTheme Content**: `public/data/i18n/{lang}/subthemes/t{n}-{m}-{subthemeId}.md`
+- **Technical Config**: `src/data/config/generations.ts` (animations only)
+
+---
+
+**Last Updated:** SV0008 Implementation (January 2025) 
