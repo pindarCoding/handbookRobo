@@ -4,6 +4,8 @@ import { useLanguage } from '@/components/providers/language-provider'
 import { useTranslation } from '@/hooks/useTranslation'
 import { generationsConfig } from '@/data/config/generations'
 import { useState, useEffect } from 'react'
+import { useGenerations } from '@/hooks/useGenerations'
+
 
 // Type per le traduzioni
 interface GenerationTranslation {
@@ -16,6 +18,8 @@ export function GenerationsTest() {
   const { language, setLanguage } = useLanguage()
   const { t } = useTranslation()
   const [translations, setTranslations] = useState<Record<string, GenerationTranslation>>({})
+  const { generations: hookGenerations } = useGenerations()
+
 
 useEffect(() => {
   const data: Record<string, GenerationTranslation> = {}
@@ -76,6 +80,38 @@ useEffect(() => {
           </div>
         ))}
       </div>
+      {/* ✨ NUOVO: Test useGenerations Hook */}
+<div className="mt-4 border-t border-green-500 pt-4">
+  <h4 className="font-bold text-sm text-green-600 dark:text-green-400 mb-3">
+    🔧 useGenerations Hook Test
+  </h4>
+  <div className="space-y-2">
+    {hookGenerations.map(gen => (
+      <div 
+        key={gen.id} 
+        className="text-xs p-3 bg-green-50 dark:bg-green-900/20 rounded border border-green-200 dark:border-green-800"
+      >
+        <div className="grid grid-cols-2 gap-2">
+          <div>
+            <span className="font-bold text-green-700 dark:text-green-300">ID:</span> {gen.id}
+          </div>
+          <div>
+            <span className="font-bold text-green-700 dark:text-green-300">Code:</span> {gen.code}
+          </div>
+          <div className="col-span-2">
+            <span className="font-bold text-green-700 dark:text-green-300">Title:</span> {gen.title}
+          </div>
+          <div className="col-span-2">
+            <span className="font-bold text-green-700 dark:text-green-300">Age:</span> {gen.ageRange}
+          </div>
+          <div className="col-span-2 text-gray-600 dark:text-gray-400 text-xs">
+            📁 {gen.characterFolder} | 🎬 {gen.frameStart}-{gen.frameEnd}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
     </div>
   )
 }
