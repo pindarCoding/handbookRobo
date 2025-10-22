@@ -241,7 +241,8 @@ export const NavigationFilter = ({
                   }`}
               >
                 {generation.title}
-                {/* {generation.description} */}
+                {/* <div className="text-center mx-auto"> {generation.description}</div> */}
+                
               </h3>
               <p
                 className={`text-slate-500 dark:text-slate-400 ${
