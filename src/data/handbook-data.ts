@@ -142,53 +142,7 @@ export const handbookData: Theme[] = [
   }
 ]
 
-// ==========================================
-// 3. GENERATIONS DATA
-// ==========================================
 
-export const generations: Generation[] = [
-  {
-    id: 'genz',
-    title: 'Gen Z',
-    ageRange: '14 - 27',
-    description: 'Digital natives who value authenticity and work-life integration',
-    characterFolder: 'genZ',
-    frameStart: 86400,
-    frameEnd: 86515,
-    framePrefix: 'genZ_'
-  },
-  {
-    id: 'millennial',
-    title: 'Millennial',
-    ageRange: '28 - 43',
-    description: 'Tech-savvy optimists focused on purpose and growth',
-    characterFolder: 'millenial_small',
-    frameStart: 86400,
-    frameEnd: 86519,
-    framePrefix: 'millenial_'
-
-  },
-  {
-    id: 'genx',
-    title: 'Gen X',
-    ageRange: '44 - 59',
-    description: 'Independent and adaptable, bridging traditional and digital approaches',
-    characterFolder: 'genx_small',
-    frameStart: 86400,
-    frameEnd: 86455,
-    framePrefix: 'genx_'
-  },
-  {
-    id: 'boomer',
-    title: 'Baby Boomer',
-    ageRange: '60 - 78',
-    description: 'Experience-driven with strong work ethic and traditional values',
-    characterFolder: 'b_boomers',
-    frameStart: 86400,
-    frameEnd: 86449,
-    framePrefix: 'bBoomers_'
-  }
-]
 
 // ==========================================
 // 4. CARDS DATA (organized by theme)
