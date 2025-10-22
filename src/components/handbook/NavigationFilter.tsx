@@ -1,7 +1,8 @@
 // src/components/handbook/NavigationFilter.tsx
 "use client";
 
-import { Theme, SubTheme, Generation, generations } from "@/data/handbook-data";
+import { Theme, SubTheme, Generation } from "@/data/handbook-data";
+import { useGenerations } from "@/hooks/useGenerations";
 import { GenerationCharacter } from "@/components/GenerationCharacter/GenerationCharacter";
 import { ProgressIndicator } from "./ProgressIndicator";
 import { getGenerationClasses } from "@/data/config/colors";
@@ -39,6 +40,7 @@ export const NavigationFilter = ({
   onBack,
   context = "desktop",
 }: NavigationFilterProps) => {
+  const { generations } = useGenerations()
   return (
     <div className="h-full flex flex-col">
       {/* Back Button - Solo Desktop */}
@@ -239,6 +241,7 @@ export const NavigationFilter = ({
                   }`}
               >
                 {generation.title}
+                {/* {generation.description} */}
               </h3>
               <p
                 className={`text-slate-500 dark:text-slate-400 ${
