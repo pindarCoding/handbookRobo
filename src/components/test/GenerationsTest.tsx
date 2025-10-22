@@ -95,6 +95,12 @@ useEffect(() => {
           <div>
             <span className="font-bold text-green-700 dark:text-green-300">ID:</span> {gen.id}
           </div>
+          <div className="border-t border-green-300 dark:border-green-700 pt-2">
+        <div className="font-bold text-green-700 dark:text-green-300 mb-1">Description:</div>
+        <div className="text-gray-700 dark:text-gray-300 italic">
+          &quot;{gen.description}&quot;
+        </div>
+      </div>
           <div>
             <span className="font-bold text-green-700 dark:text-green-300">Code:</span> {gen.code}
           </div>
