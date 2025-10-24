@@ -1,8 +1,9 @@
 // src/components/handbook/HandbookNavigator.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useThemes, Theme, SubTheme } from "@/hooks/useThemes";
+import { useLanguage } from "@/components/providers/language-provider";
 import { Generation } from "@/hooks/useGenerations";
 import { Card, cards } from "@/data/handbook-data";
 import { MainContent } from "@/components/handbook/MainContent";
@@ -12,18 +13,40 @@ import { Footer } from "../layout/Footer";
 import { YourBook } from "./YourBook";
 import { MobileNavigationDrawer } from "@/components/mobile/MobileNavigationDrawer";
 
-type FilterStep = "theme" | "subtheme" | "generation"; // Rimosso 'variant'
+type FilterStep = "theme" | "subtheme" | "generation";
 
 export default function HandbookNavigator() {
   const { themes } = useThemes();
+  const { language } = useLanguage(); // ✅ NUOVO: Monitora cambio lingua
+  
   const [currentStep, setCurrentStep] = useState<FilterStep>("theme");
   const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null);
-  const [selectedSubTheme, setSelectedSubTheme] = useState<SubTheme | null>(
-    null
-  );
-  const [selectedGeneration, setSelectedGeneration] =
-    useState<Generation | null>(null);
-  const [selectedCard, setSelectedCard] = useState<Card | null>(null); // Cambiato da selectedVariant
+  const [selectedSubTheme, setSelectedSubTheme] = useState<SubTheme | null>(null);
+  const [selectedGeneration, setSelectedGeneration] = useState<Generation | null>(null);
+  const [selectedCard, setSelectedCard] = useState<Card | null>(null);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+  // ✅ NUOVO: Sincronizza selectedTheme quando cambia la lingua
+  useEffect(() => {
+    if (selectedTheme) {
+      // Trova il theme aggiornato con le nuove traduzioni
+      const updatedTheme = themes.find(t => t.id === selectedTheme.id);
+      if (updatedTheme) {
+        setSelectedTheme(updatedTheme);
+        
+        // Se c'è anche un subTheme selezionato, aggiorna anche quello
+        if (selectedSubTheme) {
+          const updatedSubTheme = updatedTheme.subThemes.find(
+            st => st.id === selectedSubTheme.id
+          );
+          if (updatedSubTheme) {
+            setSelectedSubTheme(updatedSubTheme);
+          }
+        }
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language, themes]); // Trigger quando cambia lingua o themes si rigenera
 
   const handleThemeSelect = (theme: Theme) => {
     setSelectedTheme(theme);
@@ -62,11 +85,7 @@ export default function HandbookNavigator() {
       }
     }
     setIsMobileNavOpen(false);
-    // Non cambiamo più lo step - restiamo su 'generation'
   };
-
-  // State per mobile drawer
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   const handleBack = () => {
     switch (currentStep) {
@@ -86,23 +105,20 @@ export default function HandbookNavigator() {
     }
   };
 
-  // Reset completo della navigazione (torna a WelcomePage)
   const resetNavigation = () => {
-    setCurrentStep('theme')
-    setSelectedTheme(null)
-    setSelectedSubTheme(null)
-    setSelectedGeneration(null)
-    setSelectedCard(null)
-    setIsMobileNavOpen(false) // Chiudi anche il drawer se aperto
-    console.log('🔄 Navigation reset to initial state')
-  }
+    setCurrentStep('theme');
+    setSelectedTheme(null);
+    setSelectedSubTheme(null);
+    setSelectedGeneration(null);
+    setSelectedCard(null);
+    setIsMobileNavOpen(false);
+    console.log('🔄 Navigation reset to initial state');
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col">
-      {/* Header Sticky */}
-      <Header   onLogoClick={resetNavigation} />
+      <Header onLogoClick={resetNavigation} />
 
-      {/* Main Layout Container - Holy Grail */}
       <div className="flex-1 flex overflow-hidden">
         {/* LEFT SIDEBAR - NavigationFilter */}
         <aside className="hidden lg:flex lg:flex-col w-[220px] bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 overflow-y-auto">
@@ -151,7 +167,6 @@ export default function HandbookNavigator() {
              transition-all active:scale-95"
         aria-label="Open navigation"
       >
-        {/* Icona hamburger */}
         <svg
           className="w-5 h-5"
           fill="none"
@@ -185,7 +200,6 @@ export default function HandbookNavigator() {
         onBack={handleBack}
       />
 
-      {/* Footer */}
       <Footer />
     </div>
   );
