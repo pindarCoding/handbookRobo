@@ -2,14 +2,9 @@
 "use client";
 
 import { useState } from "react";
-import {
-  handbookData,
-  Theme,
-  SubTheme,
-  Generation,
-  Card,
-  cards,
-} from "@/data/handbook-data";
+import { useThemes, Theme, SubTheme } from "@/hooks/useThemes";
+import { Generation } from "@/hooks/useGenerations";
+import { Card, cards } from "@/data/handbook-data";
 import { MainContent } from "@/components/handbook/MainContent";
 import { NavigationFilter } from "@/components/handbook/NavigationFilter";
 import { Header } from "@/components/layout/Header";
@@ -20,6 +15,7 @@ import { MobileNavigationDrawer } from "@/components/mobile/MobileNavigationDraw
 type FilterStep = "theme" | "subtheme" | "generation"; // Rimosso 'variant'
 
 export default function HandbookNavigator() {
+  const { themes } = useThemes();
   const [currentStep, setCurrentStep] = useState<FilterStep>("theme");
   const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null);
   const [selectedSubTheme, setSelectedSubTheme] = useState<SubTheme | null>(
@@ -115,7 +111,7 @@ export default function HandbookNavigator() {
             selectedTheme={selectedTheme}
             selectedSubTheme={selectedSubTheme}
             selectedGeneration={selectedGeneration}
-            themes={handbookData}
+            themes={themes}
             onThemeSelect={handleThemeSelect}
             onSubThemeSelect={handleSubThemeSelect}
             onGenerationSelect={handleGenerationSelect}
@@ -182,7 +178,7 @@ export default function HandbookNavigator() {
         selectedTheme={selectedTheme}
         selectedSubTheme={selectedSubTheme}
         selectedGeneration={selectedGeneration}
-        themes={handbookData}
+        themes={themes}
         onThemeSelect={handleThemeSelect}
         onSubThemeSelect={handleSubThemeSelect}
         onGenerationSelect={handleGenerationSelect}

@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { XIcon } from 'lucide-react'
 import { useEffect } from 'react'
 import { NavigationFilter } from '@/components/handbook/NavigationFilter'
-import { Theme, SubTheme, Generation } from '@/data/handbook-data'
+import { Theme, SubTheme } from '@/hooks/useThemes'
+import { Generation } from '@/hooks/useGenerations'
 
 type FilterStep = 'theme' | 'subtheme' | 'generation'
 

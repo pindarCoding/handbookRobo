@@ -2,7 +2,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Theme, SubTheme, Generation, Card } from "@/data/handbook-data";
+import { Theme, SubTheme } from '@/hooks/useThemes'
+import { Generation } from '@/hooks/useGenerations'
+import { Card } from "@/data/handbook-data";
 import { useBook } from "@/components/providers/book-provider";
 import { PlusCircleIcon } from "lucide-react";
 import { WelcomeContent } from "./WelcomeContent";

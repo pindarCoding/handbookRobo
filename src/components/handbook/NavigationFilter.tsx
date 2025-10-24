@@ -1,7 +1,8 @@
 // src/components/handbook/NavigationFilter.tsx
 "use client";
 
-import { Theme, SubTheme, Generation } from "@/data/handbook-data";
+import { Theme, SubTheme } from "@/hooks/useThemes";
+import { Generation } from "@/hooks/useGenerations";
 import { useGenerations } from "@/hooks/useGenerations";
 import { GenerationCharacter } from "@/components/GenerationCharacter/GenerationCharacter";
 import { ProgressIndicator } from "./ProgressIndicator";
