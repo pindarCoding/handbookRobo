@@ -46,7 +46,7 @@ export default function HandbookNavigator() {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [language, themes]); // Trigger quando cambia lingua o themes si rigenera
+  }, [language]); // Trigger quando cambia lingua o themes si rigenera
 
   const handleThemeSelect = (theme: Theme) => {
     setSelectedTheme(theme);
