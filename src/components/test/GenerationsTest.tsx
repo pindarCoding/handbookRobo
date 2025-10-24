@@ -37,7 +37,7 @@ useEffect(() => {
 }, [language])
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-lg border-2 border-green-500 z-50 max-w-md max-h-[80vh] overflow-y-auto">
+    <div className="fixed bottom-4 right-4 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-lg border-2 border-green-500 z-50 max-w-md max-h-[40vh] overflow-y-auto">
       <div className="flex items-center justify-between mb-3">
         <h3 className="font-bold text-sm">🧪 Generations i18n Test</h3>
         <div className="flex gap-2">

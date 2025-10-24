@@ -6,7 +6,7 @@ import { BookProvider } from "@/components/providers/book-provider";
 import { ImageCacheProvider } from "@/components/providers/image-cache-provider";
 import { Toaster } from 'sonner'
 import "./globals.css";
-import { GenerationsTest } from "@/components/test/GenerationsTest";
+import { ThemesTest } from "@/components/test/themesTest";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +36,7 @@ export default function RootLayout({
             <ImageCacheProvider>
               <BookProvider>
                 {children}
-                <GenerationsTest />
+                <ThemesTest />
               </BookProvider>    
             </ImageCacheProvider>
           </LanguageProvider>

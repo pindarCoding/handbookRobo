@@ -20,7 +20,7 @@ import itDigital from '@/data/i18n/it/cards/digital.json'
 import itIntercultural from '@/data/i18n/it/cards/intercultural.json'
 
 interface TranslationObject {
-  [key: string]: string | TranslationObject
+  [key: string]: string | number |boolean | null | TranslationObject
 }
 
 // ✨ NUOVO: Interface per Generation da JSON
@@ -32,8 +32,30 @@ interface GenerationTranslation {
   description: string
 }
 
+// ✨ NUOVO: Interfaces per Theme e SubTheme
+interface SubThemeTranslation {
+  id: string
+  code: string
+  title: string
+  description?: string
+  pageId: number
+  markdownFile?: string
+}
+
+interface ThemeTranslation {
+  id: string
+  code: string
+  title: string
+  introduction?: string
+  reportPdfUrl?: string | null
+  pageId: number
+  subthemes: {
+    [key: string]: SubThemeTranslation
+  }
+}
+
 type Translations = {
-  themes: TranslationObject
+  themes: TranslationObject  // ✨ AGGIUNTO
   cards: {
     work: TranslationObject
     communication: TranslationObject
@@ -48,7 +70,7 @@ type Translations = {
 // Tutte le traduzioni caricate all'init (sync!)
 const allTranslations: Record<'en' | 'it', Translations> = {
   en: {
-    themes: enThemes as TranslationObject,
+    themes: enThemes as TranslationObject,  // ✨ AGGIUNTO
     cards: {
       work: enWork as TranslationObject,
       communication: enCommunication as TranslationObject,
@@ -60,7 +82,7 @@ const allTranslations: Record<'en' | 'it', Translations> = {
     generations: enGenerations as TranslationObject
   },
   it: {
-    themes: itThemes as TranslationObject,
+    themes: itThemes as TranslationObject,  // ✨ AGGIUNTO
     cards: {
       work: itWork as TranslationObject,
       communication: itCommunication as TranslationObject,
@@ -79,7 +101,12 @@ function getNestedValue(obj: TranslationObject | string, path: string): string |
   
   for (const key of keys) {
     if (typeof current === 'object' && key in current) {
-      current = current[key]
+      const value = current[key]
+      if (typeof value === 'string' || (typeof value === 'object' && value !== null)) {
+        current = value as TranslationObject | string
+      } else {
+        return undefined
+      }
     } else {
       return undefined
     }
@@ -126,18 +153,16 @@ export function useTranslation() {
   }
   
   /**
-   * ✨ NUOVO: Ottieni generation completa per CODICE
+   * Ottieni generation completa per CODICE
    * @param code - Generation code (GZ, GM, GX, GB)
    * @returns Generation object con tutte le traduzioni
    */
   const getGeneration = (code: string): GenerationTranslation | null => {
-    // Type guard: verifica che sia un oggetto valido
     const generationsData = currentTranslations.generations
     
     if (typeof generationsData === 'object' && generationsData !== null) {
       const generation = generationsData[code]
       
-      // Verifica che sia un GenerationTranslation valido
       if (typeof generation === 'object' && generation !== null && 
           'id' in generation && 'code' in generation && 'title' in generation) {
         return generation as unknown as GenerationTranslation
@@ -161,24 +186,99 @@ export function useTranslation() {
   }
   
   /**
-   * ✨ NUOVO: Ottieni TUTTE le generations
+   * Ottieni TUTTE le generations
    * @returns Array di tutte le generations con traduzioni correnti
    */
-const getAllGenerations = (): GenerationTranslation[] => {
-  const generationsData = currentTranslations.generations
-  
-  if (typeof generationsData === 'object' && generationsData !== null) {
-    // Cast via unknown per compatibilità TypeScript
-    const values = Object.values(generationsData) as unknown as GenerationTranslation[]
+  const getAllGenerations = (): GenerationTranslation[] => {
+    const generationsData = currentTranslations.generations
     
-    return values.filter((gen): gen is GenerationTranslation => {
-      return typeof gen === 'object' && gen !== null &&
-             'id' in gen && 'code' in gen && 'title' in gen
-    })
+    if (typeof generationsData === 'object' && generationsData !== null) {
+      const values = Object.values(generationsData) as unknown as GenerationTranslation[]
+      
+      return values.filter((gen): gen is GenerationTranslation => {
+        return typeof gen === 'object' && gen !== null &&
+               'id' in gen && 'code' in gen && 'title' in gen
+      })
+    }
+    
+    return []
   }
   
-  return []
-}
+  /**
+   * ✨ NUOVO: Ottieni theme completo per CODICE
+   * @param code - Theme code (T1, T2, T3, T4, T5)
+   * @returns Theme object con tutte le traduzioni
+   */
+  const getTheme = (code: string): ThemeTranslation | null => {
+    const themesData = currentTranslations.themes
+    
+    if (typeof themesData === 'object' && themesData !== null) {
+      const theme = themesData[code]
+      
+      if (typeof theme === 'object' && theme !== null && 
+          'id' in theme && 'code' in theme && 'title' in theme) {
+        return theme as unknown as ThemeTranslation
+      }
+    }
+    
+    // Fallback inglese
+    const fallbackData = fallbackTranslations.themes
+    if (typeof fallbackData === 'object' && fallbackData !== null) {
+      const fallbackTheme = fallbackData[code]
+      
+      if (typeof fallbackTheme === 'object' && fallbackTheme !== null &&
+          'id' in fallbackTheme && 'code' in fallbackTheme && 'title' in fallbackTheme) {
+        console.warn(`Theme ${code} not found in ${language}, using EN fallback`)
+        return fallbackTheme as unknown as ThemeTranslation
+      }
+    }
+    
+    console.error(`Theme ${code} not found in any language`)
+    return null
+  }
+  
+  /**
+   * ✨ NUOVO: Ottieni TUTTI i themes
+   * @returns Array di tutti i themes con traduzioni correnti
+   */
+  const getAllThemes = (): ThemeTranslation[] => {
+    const themesData = currentTranslations.themes
+    
+    if (typeof themesData === 'object' && themesData !== null) {
+      const values = Object.values(themesData) as unknown as ThemeTranslation[]
+      
+      return values.filter((theme): theme is ThemeTranslation => {
+        return typeof theme === 'object' && theme !== null &&
+               'id' in theme && 'code' in theme && 'title' in theme
+      })
+    }
+    
+    return []
+  }
+  
+  /**
+   * ✨ NUOVO: Ottieni subtheme specifico
+   * @param themeCode - Theme code (es: 'T5')
+   * @param subThemeCode - SubTheme code (es: 'T5.1')
+   * @returns SubTheme object o null
+   */
+  const getSubTheme = (themeCode: string, subThemeCode: string): SubThemeTranslation | null => {
+    const theme = getTheme(themeCode)
+    
+    if (!theme || !theme.subthemes) {
+      console.error(`Theme ${themeCode} not found or has no subthemes`)
+      return null
+    }
+    
+    const subTheme = theme.subthemes[subThemeCode]
+    
+    if (!subTheme) {
+      console.error(`SubTheme ${subThemeCode} not found in theme ${themeCode}`)
+      return null
+    }
+    
+    return subTheme as SubThemeTranslation
+  }
   
   /**
    * Carica contenuto Markdown per SubTheme (rimane async)
@@ -208,9 +308,19 @@ const getAllGenerations = (): GenerationTranslation[] => {
   
   return { 
     t, 
-    getGeneration,        // ✨ NUOVO
-    getAllGenerations,    // ✨ NUOVO
+    getGeneration,
+    getAllGenerations,
+    getTheme,         // ✨ NUOVO
+    getAllThemes,     // ✨ NUOVO
+    getSubTheme,      // ✨ NUOVO
     loadMarkdown, 
     language 
   }
+}
+
+// ✨ EXPORT dei tipi (per uso in altri file)
+export type { 
+  GenerationTranslation, 
+  ThemeTranslation, 
+  SubThemeTranslation 
 }

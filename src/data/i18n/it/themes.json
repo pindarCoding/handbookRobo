@@ -1,22 +1,156 @@
 {
-  "work": {
-    "title": "Differenze nell'approccio al lavoro",
-    "introduction": "Introduzione placeholder per tema lavoro"
+  "T1": {
+    "id": "communication",
+    "code": "T1",
+    "title": "1 - Comunicazione tra generazioni",
+    "introduction": "Comprendere come le diverse generazioni comunicano è fondamentale per costruire relazioni lavorative più solide. Questo capitolo esplora vari stili di comunicazione, strumenti e strategie per colmare i divari generazionali.",
+    "reportPdfUrl": null,
+    "pageId": 10,
+    "subthemes": {
+      "T1.1": {
+        "id": "communication-tools",
+        "code": "T1.1",
+        "title": "Strumenti di comunicazione",
+        "description": "Metodi di comunicazione digitali vs tradizionali",
+        "pageId": 11,
+        "markdownFile": "t1-1-communication-tools.md"
+      },
+      "T1.2": {
+        "id": "communication-conflicts",
+        "code": "T1.2",
+        "title": "Risoluzione dei conflitti",
+        "description": "Gestione dei conflitti intergenerazionali",
+        "pageId": 12,
+        "markdownFile": "t1-2-communication-conflicts.md"
+      },
+      "T1.3": {
+        "id": "communication-values",
+        "code": "T1.3",
+        "title": "Valori della comunicazione",
+        "description": "Valori fondamentali nella comunicazione intergenerazionale",
+        "pageId": 13,
+        "markdownFile": "t1-3-communication-values.md"
+      }
+    }
   },
-  "communication": {
-    "title": "Comunicazione tra generazioni",
-    "introduction": "Introduzione placeholder"
+  "T2": {
+    "id": "diversity",
+    "code": "T2",
+    "title": "2 - Diversità generazionale da un punto di vista intersezionale",
+    "introduction": "Esplorare come le differenze generazionali si intersecano con altri aspetti dell'identità, creando prospettive ed esperienze uniche sul posto di lavoro.",
+    "reportPdfUrl": null,
+    "pageId": 20,
+    "subthemes": {
+      "T2.1": {
+        "id": "diversity-identity",
+        "code": "T2.1",
+        "title": "Identità e diversità",
+        "description": "Identità multiple attraverso le generazioni",
+        "pageId": 21,
+        "markdownFile": "t2-1-diversity-identity.md"
+      },
+      "T2.2": {
+        "id": "diversity-inclusion",
+        "code": "T2.2",
+        "title": "Inclusione sul lavoro",
+        "description": "Pratiche inclusive per tutte le generazioni",
+        "pageId": 22,
+        "markdownFile": "t2-2-diversity-inclusion.md"
+      }
+    }
   },
-  "diversity": {
-    "title": "Diversità generazionale",
-    "introduction": "Introduzione placeholder"
+  "T3": {
+    "id": "digital",
+    "code": "T3",
+    "title": "3 - Come colmare la disuguaglianza digitale",
+    "introduction": "Questo capitolo affronta il divario digitale e offre strategie per garantire pari accesso alla tecnologia e alfabetizzazione digitale per tutte le generazioni.",
+    "reportPdfUrl": null,
+    "pageId": 30,
+    "subthemes": {
+      "T3.1": {
+        "id": "digital-gap",
+        "code": "T3.1",
+        "title": "Divario digitale",
+        "description": "Comprendere le divisioni tecnologiche",
+        "pageId": 31,
+        "markdownFile": "t3-1-digital-gap.md"
+      },
+      "T3.2": {
+        "id": "digital-training",
+        "code": "T3.2",
+        "title": "Formazione digitale",
+        "description": "Aggiornamento delle competenze per tutte le età",
+        "pageId": 32,
+        "markdownFile": "t3-2-digital-training.md"
+      },
+      "T3.3": {
+        "id": "digital-collaboration",
+        "code": "T3.3",
+        "title": "Strumenti di collaborazione digitale",
+        "description": "Strumenti per il lavoro di squadra intergenerazionale",
+        "pageId": 33,
+        "markdownFile": "t3-3-digital-collaboration.md"
+      },
+      "T3.4": {
+        "id": "digital-accessibility",
+        "code": "T3.4",
+        "title": "Accessibilità digitale",
+        "description": "Rendere la tecnologia accessibile a tutti",
+        "pageId": 34,
+        "markdownFile": "t3-4-digital-accessibility.md"
+      }
+    }
   },
-  "digital": {
-    "title": "Disuguaglianza digitale",
-    "introduction": "Introduzione placeholder"
+  "T4": {
+    "id": "intercultural",
+    "code": "T4",
+    "title": "4 - Diversità generazionale da un punto di vista interculturale",
+    "introduction": "Comprendere l'impatto dei background culturali sulle prospettive generazionali può migliorare la comunicazione e la collaborazione interculturale sul posto di lavoro.",
+    "reportPdfUrl": null,
+    "pageId": 40,
+    "subthemes": {
+      "T4.1": {
+        "id": "intercultural-backgrounds",
+        "code": "T4.1",
+        "title": "Background culturali",
+        "description": "Influenze culturali sulle prospettive generazionali",
+        "pageId": 41,
+        "markdownFile": "t4-1-intercultural-backgrounds.md"
+      }
+    }
   },
-  "intercultural": {
-    "title": "Prospettive interculturali",
-    "introduction": "Introduzione placeholder"
+  "T5": {
+    "id": "work",
+    "code": "T5",
+    "title": "5 - Differenze nell'approccio al lavoro",
+    "introduction": "I luoghi di lavoro oggi riuniscono un mix straordinariamente diversificato di generazioni. Baby Boomer, Generazione X, Millennial e Generazione Z collaborano quotidianamente, ognuno plasmato dagli ambienti sociali, economici e tecnologici dei loro anni formativi. Queste influenze influenzano non solo il modo in cui gli individui definiscono il successo, ma anche come comunicano, rimangono motivati e affrontano il lavoro di squadra. Sebbene le differenze nelle aspettative e negli stili possano talvolta creare tensioni o incomprensioni, aprono anche preziose opportunità di apprendimento reciproco, innovazione e resilienza. Esplorando le prospettive generazionali su valori, motivazione e collaborazione, questo manuale fornisce intuizioni pratiche e strategie per aiutare le organizzazioni a costruire ambienti inclusivi in cui tutte le generazioni si sentano riconosciute, rispettate e autorizzate a contribuire con i loro punti di forza.",
+    "reportPdfUrl": "/pdfs/work-report.pdf",
+    "pageId": 50,
+    "subthemes": {
+      "T5.1": {
+        "id": "work-values",
+        "code": "T5.1",
+        "title": "Valori lavorativi attraverso le generazioni",
+        "description": "Come le diverse generazioni definiscono successo e significato nel lavoro",
+        "pageId": 51,
+        "markdownFile": "t5-1-work-values.md"
+      },
+      "T5.2": {
+        "id": "work-motivation",
+        "code": "T5.2",
+        "title": "Motivazione e demotivazione",
+        "description": "Cosa motiva e scoraggia le diverse generazioni",
+        "pageId": 52,
+        "markdownFile": "t5-2-work-motivation.md"
+      },
+      "T5.3": {
+        "id": "work-styles",
+        "code": "T5.3",
+        "title": "Stili di lavoro e collaborazione",
+        "description": "Diversi approcci al lavoro di squadra e alla produttività",
+        "pageId": 53,
+        "markdownFile": "t5-3-work-styles.md"
+      }
+    }
   }
 }
