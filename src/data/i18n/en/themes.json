@@ -2,15 +2,15 @@
   "T1": {
     "id": "communication",
     "code": "T1",
-    "title": "1 - Communication between generations",
-    "introduction": "Understanding how different generations communicate is key to building stronger workplace relationships. This chapter explores various communication styles, tools, and strategies to bridge generational gaps.",
+    "title": "1 - Communication between generations - Conflict prevention and management",
+    "introduction": "This chapter introduces the three key themes that emerged as the most insightful findings from our cross-generational research on Intergenerational Communication and Conflict in the workplace across five European countries. Drawing on the diverse perspectives of four generations in the workforce, our study revealed that workplace communication and conflict are shaped by three interrelated themes: Communication Channel Confusion and Response Expectations, Identity and Value-Based Conflict, and The Role of Open Dialogue and Social Interaction in Conflict Prevention. Firstly, Communication Channel Confusion and Response Expectations reflect the growing complexity of workplace communication in hybrid and digital environments. Employees often face uncertainty about which platforms to use, how quickly to respond, and how to interpret tone and urgency—issues that are further complicated by generational differences in communication preferences. Secondly, Identity and Value-Based Conflict arises when individuals experience tension due to differences in personal beliefs, cultural backgrounds, or social identities. These conflicts are particularly pronounced in diverse and multi-generational teams, where varying ethical standards, cultural norms, and lived experiences can lead to misunderstanding or exclusion. Finally, our research highlights the importance of Open Dialogue and Social Interaction as a proactive strategy for conflict prevention. Opportunities for informal connection, active listening, and inclusive conversation were consistently identified as key to building trust, fostering empathy, and reducing the likelihood of interpersonal conflict. Each of the three sections below each offer deeper analysis, practical insights, and evidence-based recommendations for improving workplace relationships.",
     "reportPdfUrl": null,
     "pageId": 10,
     "subthemes": {
       "T1.1": {
         "id": "communication-tools",
         "code": "T1.1",
-        "title": "Communication Tools",
+        "title": "Communication Channel Confusion and Response Expectations in the Workplace",
         "description": "Digital vs traditional communication methods",
         "pageId": 11,
         "markdownFile": "t1-1-communication-tools.md"
@@ -18,7 +18,7 @@
       "T1.2": {
         "id": "communication-conflicts",
         "code": "T1.2",
-        "title": "Conflict Resolution",
+        "title": "Identity and Value based conflict in the workplace",
         "description": "Managing intergenerational conflicts",
         "pageId": 12,
         "markdownFile": "t1-2-communication-conflicts.md"
@@ -26,7 +26,7 @@
       "T1.3": {
         "id": "communication-values",
         "code": "T1.3",
-        "title": "Communication Values",
+        "title": "The Role of Open Dialogue and Social Interaction in Conflict Prevention in the Workplace",
         "description": "Core values in cross-generational communication",
         "pageId": 13,
         "markdownFile": "t1-3-communication-values.md"
@@ -37,14 +37,14 @@
     "id": "diversity",
     "code": "T2",
     "title": "2 - Generational diversity from an intersectional point of view",
-    "introduction": "Explore how generational differences intersect with other aspects of identity, creating unique perspectives and experiences in the workplace.",
+    "introduction": "Generational diversity describes the interaction and collaboration of multiple age cohorts – Baby Boomers, Generation X, Millennials and Generation Z – in a workplace, community or social setting. When we bring an intersectional perspective, we highlight how generational identity intersects with other social identities, like gender, ethnicity, disability, class, etc., and how these intersections shape experiences of inclusion, discrimination, voice and power. This chapter explores how intersectional factors influence generational diversity. We explore how discrimination can be amplified where stereotypes overlap or conflict and what strategies help to promote equity and understanding. The relevance? As workplaces become more diverse in age as well as other dimensions, policies and culture that ignore intersectionality risk reinforcing systemic bias, leaving some people more marginalised even among “diverse” groups.",
     "reportPdfUrl": null,
     "pageId": 20,
     "subthemes": {
       "T2.1": {
         "id": "diversity-identity",
         "code": "T2.1",
-        "title": "Identity and Diversity",
+        "title": "Intersectional Discrimination & Power Asymmetries",
         "description": "Multiple identities across generations",
         "pageId": 21,
         "markdownFile": "t2-1-diversity-identity.md"
@@ -52,7 +52,7 @@
       "T2.2": {
         "id": "diversity-inclusion",
         "code": "T2.2",
-        "title": "Workplace Inclusion",
+        "title": "Strategies to Avoid and Tackle Intersectional Differences at Work",
         "description": "Inclusive practices for all generations",
         "pageId": 22,
         "markdownFile": "t2-2-diversity-inclusion.md"
@@ -63,14 +63,14 @@
     "id": "digital",
     "code": "T3",
     "title": "3 - How to bridge digital inequality",
-    "introduction": "This chapter addresses the digital divide and offers strategies to ensure equal access to technology and digital literacy for all generations.",
+    "introduction": "Digital inequality represents one of the most pressing challenges in modern workplaces, encompassing disparities in technology access, digital skills, and effective utilization of digital tools among employees. As organizations increasingly embrace digital transformation, these divides can significantly impact workplace equality, employee productivity, and organizational competitiveness. The COVID-19 pandemic starkly revealed how digital disparities can exclude employees from full participation in work life, particularly as remote work arrangements became necessary. Today, with artificial intelligence and advanced technologies reshaping business operations, addressing digital inequality has transitioned from a peripheral concern to a strategic imperative for organizations committed to inclusive growth. This module examines the multifaceted nature of digital inequality in workplace contexts, exploring not only technological access but also the skills, support systems, and cultural factors that determine how employees engage with digital tools. We will explore how digital inequality mirrors and amplifies existing socioeconomic disparities and examine strategies for creating more digitally inclusive workplaces where all employees can thrive. By understanding and addressing these challenges, organizations can unlock significant productivity gains, innovation potential, and competitive advantages while advancing broader equity goals. The relevance of this topic extends beyond mere technical competence. Digital inequality intersects with generational differences, socioeconomic backgrounds, geographic disparities, and educational opportunities, creating complex challenges that require multifaceted solutions. Research shows that companies ignoring workforce technology risk higher turnover, slower growth, and significant skill gaps that undermine competitiveness . By contrast, organizations that proactively address digital inequality can build more robust talent pipelines, reduce hiring costs, and enhance employee retention while fostering a more inclusive workplace culture.",
     "reportPdfUrl": null,
     "pageId": 30,
     "subthemes": {
       "T3.1": {
         "id": "digital-gap",
         "code": "T3.1",
-        "title": "Digital Gap",
+        "title": "Understanding Digital Inequality in Workplace Contexts",
         "description": "Understanding technological divides",
         "pageId": 31,
         "markdownFile": "t3-1-digital-gap.md"
@@ -78,7 +78,7 @@
       "T3.2": {
         "id": "digital-training",
         "code": "T3.2",
-        "title": "Digital Training",
+        "title": "Strategies for Bridging Digital Inequality in the Workplace",
         "description": "Upskilling for all age groups",
         "pageId": 32,
         "markdownFile": "t3-2-digital-training.md"
@@ -86,7 +86,7 @@
       "T3.3": {
         "id": "digital-collaboration",
         "code": "T3.3",
-        "title": "Digital Collaboration Tools",
+        "title": "Case Studies and Best Practices: Lessons from Leading Organizations",
         "description": "Tools for cross-generational teamwork",
         "pageId": 33,
         "markdownFile": "t3-3-digital-collaboration.md"
@@ -94,7 +94,7 @@
       "T3.4": {
         "id": "digital-accessibility",
         "code": "T3.4",
-        "title": "Digital Accessibility",
+        "title": "Key Takeaways",
         "description": "Making technology accessible for everyone",
         "pageId": 34,
         "markdownFile": "t3-4-digital-accessibility.md"
@@ -105,7 +105,7 @@
     "id": "intercultural",
     "code": "T4",
     "title": "4 - Generational diversity from an intercultural point of view",
-    "introduction": "Understanding the impact of cultural backgrounds on generational perspectives can enhance intercultural communication and collaboration in the workplace.",
+    "introduction": "The following section deals with different generations and cultures in the workplace and the challenges that can arise in the workplace. Generational conflicts have always existed. Since ancient times, there have been reports of older generations complaining about disrespect shown to them by younger generations (Kollewe 2016: 188). However, ethnological research shows that across cultures, age alone does not determine attitudes to respect. Comparisons between different cultures seem to show that respect for older and elderly people is closely linked to their status in society. Due to their life experience, older people often have greater knowledge (factual, historical, magical), more material goods and, as a result, enjoy a better position in the group or society (Kollewe 2016: 189). Strictly speaking, the factor of 'age' is therefore only an observable physical characteristic. It is not biological age itself that has a higher social value. Rather, it seems that societies associate certain factors with 'age' that have positive connotations and are therefore reason enough to be valued.",
     "reportPdfUrl": null,
     "pageId": 40,
     "subthemes": {

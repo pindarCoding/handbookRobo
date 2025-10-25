@@ -9,7 +9,7 @@ export function ThemesTest() {
   const { language, setLanguage } = useLanguage()
   
   return (
-    <div className="fixed bottom-20 right-4 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-lg border-2 border-blue-500 z-50 max-w-md max-h-[80vh] overflow-y-auto">
+    <div className="fixed bottom-20 right-2 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-lg border-2 border-blue-500 z-50 max-w-md max-h-[20vh] overflow-y-auto">
       <div className="flex items-center justify-between mb-3">
         <h3 className="font-bold text-sm">🧪 Themes Hook Test</h3>
         <div className="flex gap-2">
