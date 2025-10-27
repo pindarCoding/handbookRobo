@@ -7,7 +7,7 @@ import { useThemes } from '@/hooks/useThemes'
 import { useLanguage } from '@/components/providers/language-provider'
 
 export function SubThemeContentTest() {
-  const { themes } = useThemes()
+  const { themes, getSubThemeById } = useThemes()
   const { language } = useLanguage()
   const [isEnabled, setIsEnabled] = useState(false)
   
@@ -17,10 +17,8 @@ export function SubThemeContentTest() {
   
   // Ottieni SubTheme selezionato
   const selectedSubTheme = useMemo(() => {
-    const theme = themes.find(t => t.id === selectedThemeId)
-    if (!theme) return null
-    return theme.subThemes.find(st => st.id === selectedSubThemeId) || null
-  }, [themes, selectedThemeId, selectedSubThemeId])
+    return getSubThemeById(selectedThemeId, selectedSubThemeId)
+  }, [getSubThemeById, selectedThemeId, selectedSubThemeId])
   
   // Ottieni subthemes disponibili per il theme selezionato
   const availableSubThemes = useMemo(() => {
@@ -29,7 +27,7 @@ export function SubThemeContentTest() {
   }, [themes, selectedThemeId])
   
   const { content, isLoading, error } = useSubThemeContent(
-    isEnabled ? selectedSubTheme : null
+    isEnabled ? (selectedSubTheme || null) : null
   )
   
   return (

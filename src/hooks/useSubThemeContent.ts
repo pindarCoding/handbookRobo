@@ -1,97 +1,126 @@
 // src/hooks/useSubThemeContent.ts
-import { useState, useEffect, useRef } from 'react' // ← Aggiungi useRef
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from './useTranslation'
 import { SubTheme } from './useThemes'
 
-export function useSubThemeContent(subTheme: SubTheme | null) {
+/**
+ * Hook per caricare contenuto Markdown di un SubTheme
+ * 
+ * @param subTheme - SubTheme object da useThemes() o null
+ * @returns { content, isLoading, error }
+ * 
+ * @example
+ * ```tsx
+ * const { getSubThemeById } = useThemes()
+ * const subTheme = getSubThemeById('work', 'work-values')
+ * const { content, isLoading, error } = useSubThemeContent(subTheme)
+ * 
+ * if (isLoading) return <Spinner />
+ * if (error) return <Error message={error.message} />
+ * return <MarkdownRenderer content={content} />
+ * ```
+ */
+export function useSubThemeContent(subTheme: SubTheme | null | undefined) {
   const [content, setContent] = useState<string>('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<Error | null>(null)
   
   const { loadMarkdown } = useTranslation()
   
-  // 🆕 Contatore render per debug
-  const renderCount = useRef(0)
-  renderCount.current++
+  // Estrai valori primitivi per dipendenze stabili
+  const subThemeId = subTheme?.id
+  const markdownFile = subTheme?.markdownFile
   
-  // 🆕 Log ogni render
-  console.log(`🔄 useSubThemeContent render #${renderCount.current}`, {
-    subThemeId: subTheme?.id,
-    markdownFile: subTheme?.markdownFile,
-    isLoading,
-    hasContent: content.length > 0,
-    hasError: !!error
-  })
+  // Debug render counter (rimuovere in produzione se necessario)
+  const renderCount = useRef(0)
+  const isDev = process.env.NODE_ENV === 'development'
+  
+  if (isDev) {
+    renderCount.current++
+    console.log(`🔄 useSubThemeContent render #${renderCount.current}`, {
+      subThemeId,
+      markdownFile,
+      isLoading,
+      hasContent: content.length > 0,
+      hasError: !!error
+    })
+  }
   
   useEffect(() => {
-    console.log(`🎯 useEffect triggered for:`, {
-      subThemeId: subTheme?.id,
-      markdownFile: subTheme?.markdownFile,
-      loadMarkdownRef: typeof loadMarkdown
-    })
+    if (isDev) {
+      console.log(`🎯 useEffect triggered`, {
+        subThemeId,
+        markdownFile
+      })
+    }
     
-    // GUARD CLAUSE 1: Nessun SubTheme selezionato
-    if (!subTheme) {
-      console.log('⏭️ Skipping: no subTheme')
+    // GUARD CLAUSE: Nessun SubTheme o file non configurato
+    if (!subThemeId || !markdownFile) {
+      if (isDev && subThemeId && !markdownFile) {
+        console.warn(`⚠️ SubTheme "${subThemeId}" has no markdownFile configured`)
+      }
+      
+      // Reset state
       setContent('')
       setIsLoading(false)
       setError(null)
       return
     }
     
-    // GUARD CLAUSE 2: SubTheme senza file markdown configurato
-    if (!subTheme.markdownFile) {
-      console.warn(`⚠️ SubTheme ${subTheme.id} has no markdownFile configured`)
-      console.log('📋 SubTheme object:', JSON.stringify(subTheme, null, 2))
-      setContent('')
-      setIsLoading(false)
-      setError(new Error('No markdown file configured for this SubTheme'))
-      return
-    }
-    
-    // Flag per gestire cleanup (previene race condition)
+    // Flag per gestire cleanup (previene race conditions)
     let isMounted = true
     
     // Async function per caricare markdown
     const fetchContent = async () => {
       try {
-        // 1️⃣ Inizia caricamento
+        // 1. Inizia caricamento
         setIsLoading(true)
         setError(null)
         
-        console.log(`⏳ Loading markdown: ${subTheme.markdownFile}`)
+        if (isDev) {
+          console.log(`⏳ Loading markdown: ${markdownFile}`)
+        }
         
-        // 2️⃣ Chiama loadMarkdown
-        const markdown = await loadMarkdown(subTheme.markdownFile!)
+        // 2. Carica markdown (con fallback EN automatico in loadMarkdown)
+        const markdown = await loadMarkdown(markdownFile)
         
-        // 3️⃣ Verifica: componente ancora montato?
+        // 3. Verifica: componente ancora montato?
         if (!isMounted) {
-          console.log(`🚫 Component unmounted during fetch, ignoring result for: ${subTheme.markdownFile}`)
+          if (isDev) {
+            console.log(`🚫 Component unmounted, ignoring result for: ${markdownFile}`)
+          }
           return
         }
         
-        // 4️⃣ Success: salva contenuto
+        // 4. Success: salva contenuto
         setContent(markdown)
-        console.log(`✅ Successfully loaded markdown: ${subTheme.markdownFile} (${markdown.length} chars)`)
+        
+        if (isDev) {
+          console.log(`✅ Successfully loaded: ${markdownFile} (${markdown.length} chars)`)
+        }
         
       } catch (err) {
-        // 5️⃣ Error handling
+        // 5. Error handling
         if (!isMounted) {
-          console.log('🚫 Component unmounted during error handling')
+          if (isDev) {
+            console.log('🚫 Component unmounted during error handling')
+          }
           return
         }
-        
-        console.error(`❌ Failed to load markdown: ${subTheme.markdownFile}`, err)
         
         const errorMessage = err instanceof Error 
           ? err.message 
           : 'Unknown error occurred while loading content'
         
+        if (isDev) {
+          console.error(`❌ Failed to load: ${markdownFile}`, err)
+        }
+        
         setError(new Error(errorMessage))
         setContent('')
         
       } finally {
-        // 6️⃣ Sempre eseguito: fine caricamento
+        // 6. Sempre eseguito: fine caricamento
         if (isMounted) {
           setIsLoading(false)
         }
@@ -104,14 +133,20 @@ export function useSubThemeContent(subTheme: SubTheme | null) {
     // CLEANUP: quando SubTheme cambia o componente si smonta
     return () => {
       isMounted = false
-      console.log(`🧹 Cleanup: marking fetch as stale for ${subTheme.markdownFile}`)
+      if (isDev) {
+        console.log(`🧹 Cleanup for: ${markdownFile}`)
+      }
     }
     
-  }, [subTheme, loadMarkdown])
+  }, [subThemeId, markdownFile, loadMarkdown, isDev])
   
   return { 
     content, 
     isLoading, 
-    error 
+    error,
+    // Metadata utile per UI
+    hasContent: content.length > 0,
+    subThemeId,
+    markdownFile
   }
 }
