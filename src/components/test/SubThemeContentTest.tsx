@@ -1,17 +1,35 @@
 // src/components/test/SubThemeContentTest.tsx
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useSubThemeContent } from '@/hooks/useSubThemeContent'
-import { handbookData } from '@/data/handbook-data'
+import { useThemes } from '@/hooks/useThemes'
+import { useLanguage } from '@/components/providers/language-provider'
 
 export function SubThemeContentTest() {
-  // Prendi il primo SubTheme disponibile per test
-  const testSubTheme = handbookData[4].subThemes[0] // work-values
+  const { themes } = useThemes()
+  const { language } = useLanguage()
   const [isEnabled, setIsEnabled] = useState(false)
   
+  // State per selezione
+  const [selectedThemeId, setSelectedThemeId] = useState('work')
+  const [selectedSubThemeId, setSelectedSubThemeId] = useState('work-values')
+  
+  // Ottieni SubTheme selezionato
+  const selectedSubTheme = useMemo(() => {
+    const theme = themes.find(t => t.id === selectedThemeId)
+    if (!theme) return null
+    return theme.subThemes.find(st => st.id === selectedSubThemeId) || null
+  }, [themes, selectedThemeId, selectedSubThemeId])
+  
+  // Ottieni subthemes disponibili per il theme selezionato
+  const availableSubThemes = useMemo(() => {
+    const theme = themes.find(t => t.id === selectedThemeId)
+    return theme?.subThemes || []
+  }, [themes, selectedThemeId])
+  
   const { content, isLoading, error } = useSubThemeContent(
-    isEnabled ? testSubTheme : null
+    isEnabled ? selectedSubTheme : null
   )
   
   return (
@@ -30,6 +48,48 @@ export function SubThemeContentTest() {
         </button>
       </div>
       
+      {/* Language Info */}
+      <div className="mb-3 text-xs text-gray-500 dark:text-gray-400">
+        Language: {language.toUpperCase()}
+      </div>
+      
+      {/* Theme Selector */}
+      <div className="mb-3">
+        <label className="block text-xs font-semibold mb-1">Theme:</label>
+        <select
+          value={selectedThemeId}
+          onChange={(e) => {
+            setSelectedThemeId(e.target.value)
+            // Reset subtheme quando cambia theme
+            const newTheme = themes.find(t => t.id === e.target.value)
+            setSelectedSubThemeId(newTheme?.subThemes[0]?.id || '')
+          }}
+          className="w-full p-2 text-xs border rounded dark:bg-slate-700 dark:border-slate-600"
+        >
+          {themes.map(theme => (
+            <option key={theme.id} value={theme.id}>
+              {theme.code} - {theme.title}
+            </option>
+          ))}
+        </select>
+      </div>
+      
+      {/* SubTheme Selector */}
+      <div className="mb-3">
+        <label className="block text-xs font-semibold mb-1">SubTheme:</label>
+        <select
+          value={selectedSubThemeId}
+          onChange={(e) => setSelectedSubThemeId(e.target.value)}
+          className="w-full p-2 text-xs border rounded dark:bg-slate-700 dark:border-slate-600"
+        >
+          {availableSubThemes.map(subTheme => (
+            <option key={subTheme.id} value={subTheme.id}>
+              {subTheme.code} - {subTheme.title}
+            </option>
+          ))}
+        </select>
+      </div>
+      
       <div className="space-y-3 text-xs">
         {/* Status */}
         <div className="p-2 bg-gray-50 dark:bg-gray-700 rounded">
@@ -43,11 +103,13 @@ export function SubThemeContentTest() {
         </div>
         
         {/* SubTheme Info */}
-        {isEnabled && (
+        {isEnabled && selectedSubTheme && (
           <div className="p-2 bg-gray-50 dark:bg-gray-700 rounded">
             <div className="font-bold mb-1">SubTheme:</div>
-            <div>{testSubTheme.title}</div>
-            <div className="text-gray-500">File: {testSubTheme.markdownFile}</div>
+            <div>{selectedSubTheme.title}</div>
+            <div className="text-gray-500">
+              File: {selectedSubTheme.markdownFile || '❌ NO FILE'}
+            </div>
           </div>
         )}
         

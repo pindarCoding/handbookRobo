@@ -1,7 +1,7 @@
 // src/hooks/useSubThemeContent.ts
 import { useState, useEffect, useRef } from 'react' // ← Aggiungi useRef
 import { useTranslation } from './useTranslation'
-import { SubTheme } from '@/data/handbook-data'
+import { SubTheme } from './useThemes'
 
 export function useSubThemeContent(subTheme: SubTheme | null) {
   const [content, setContent] = useState<string>('')
