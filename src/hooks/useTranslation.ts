@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import { useLanguage } from '@/components/providers/language-provider'
 
 // Import statici di TUTTE le traduzioni
@@ -283,7 +284,7 @@ export function useTranslation() {
   /**
    * Carica contenuto Markdown per SubTheme (rimane async)
    */
-  const loadMarkdown = async (filename: string): Promise<string> => {
+  const loadMarkdown = useCallback(async (filename: string): Promise<string> => {
     try {
       const response = await fetch(`/data/i18n/${language}/subthemes/${filename}`)
       
@@ -304,7 +305,7 @@ export function useTranslation() {
       console.error(`Failed to load markdown: ${filename}`, error)
       return `# Content Not Available\n\nThe content file **${filename}** could not be loaded.\n\n[${filename}]`
     }
-  }
+  }, [language])
   
   return { 
     t, 

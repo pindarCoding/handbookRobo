@@ -25,6 +25,7 @@ export interface SubTheme {
   id: string
   title: string
   page_id: number
+  markdownFile?: string  
 }
 
 export interface Theme {
@@ -84,9 +85,9 @@ export const handbookData: Theme[] = [
     introduction: 'Understanding how different generations communicate is key to building stronger workplace relationships. This chapter explores various communication styles, tools, and strategies to bridge generational gaps.',
     page_id: 1,
     subThemes: [
-      { id: 'communication-tools', title: 'Strumenti di comunicazione', page_id: 2 },
-      { id: 'communication-conflicts', title: 'Risolvere conflitti', page_id: 4 },
-      { id: 'communication-values', title: 'Valori', page_id: 3 }
+      { id: 'communication-tools', title: 'Strumenti di comunicazione', page_id: 2, markdownFile: 'communication-tools.md' },
+      { id: 'communication-conflicts', title: 'Risolvere conflitti', page_id: 4, markdownFile: 'communication-conflicts.md' },
+      { id: 'communication-values', title: 'Valori', page_id: 3, markdownFile: 'communication-values.md' }
     ]
   },
 
