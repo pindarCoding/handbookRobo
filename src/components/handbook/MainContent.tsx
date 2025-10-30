@@ -10,6 +10,10 @@ import { PlusCircleIcon } from "lucide-react";
 import { WelcomeContent } from "./WelcomeContent";
 import { toast } from "sonner";
 import { fadeSlideUp, staggerContainer, staggerItem, scalePop } from "@/data/config/animations";
+// Aggiungi questi import dopo quelli esistenti
+import { useSubThemeContent } from '@/hooks/useSubThemeContent';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
@@ -28,6 +32,8 @@ export const MainContent = ({
   selectedGeneration,
   selectedCard, // Cambiato da selectedVariant
 }: MainContentProps) => {
+const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
+
   const { addPage } = useBook();
 
   // Funzione per generare l'ID della pagina corrente
@@ -160,67 +166,116 @@ export const MainContent = ({
       (step === "subtheme" && selectedSubTheme) ||
       (step === "generation" && selectedSubTheme && !selectedGeneration)
     ) {
-      return (
-        <div className="animate-fadeIn">
-          <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
-            <div className="flex justify-between items-start mb-6">
-              <div className="flex flex-col">
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
-                  {selectedSubTheme.title}
-                </h2>
-                <div className="text-sm text-slate-500 dark:text-slate-400">
-                  Part of: {selectedTheme.title}
-                </div>
-              </div>
-              {step === "subtheme" && (
-                <button
-                  type="button"
-                  onClick={handleAddPage}
-                  className="text-blue-500 hover:text-blue-700"
-                  title="Add to your handbook"
-                >
-                  <PlusCircleIcon size={24} />
-                </button>
-              )}
+  return (
+    <div className="animate-fadeIn">
+      <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
+        {/* Header con titolo e bottone */}
+        <div className="flex justify-between items-start mb-6">
+          <div className="flex flex-col">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+              {selectedSubTheme.title}
+            </h2>
+            <div className="text-sm text-slate-500 dark:text-slate-400">
+              Part of: {selectedTheme.title}
             </div>
+          </div>
+          {step === "subtheme" && (
+            <button
+              type="button"
+              onClick={handleAddPage}
+              className="inline-flex items-center gap-2 px-3 py-1.5
+                text-blue-600 dark:text-blue-400 
+                hover:text-blue-700 dark:hover:text-blue-300
+                hover:bg-blue-50 dark:hover:bg-blue-900/20
+                rounded-lg transition-colors"
+            >
+              <PlusCircleIcon size={24} />
+              <span className="text-sm font-medium">Add to Handbook</span>
+            </button>
+          )}
+        </div>
 
-            <div className="prose dark:prose-invert max-w-none">
-              <p className="text-slate-600 dark:text-slate-300">
-                {step === "generation"
-                  ? "Select a generation above to see specific approaches and methodologies for this topic."
-                  : "Choose a generation to explore how different age groups approach this topic."}
-              </p>
+        {/* Helper Message */}
+        <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0">
+              <svg
+                className="w-5 h-5 text-blue-600 dark:text-blue-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </div>
-
-            {/* Opzionale: aggiungi un'icona o grafica helper */}
-            {step === "generation" && (
-              <div className="mt-8 flex justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-12 h-12 text-slate-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">
-                    Choose a generation to continue
-                  </p>
-                </div>
-              </div>
-            )}
+            <p className="text-sm text-blue-800 dark:text-blue-200">
+              {step === "generation"
+                ? "Select a generation above to see specific approaches and methodologies for this topic."
+                : "Choose a generation to explore how different age groups approach this topic."}
+            </p>
           </div>
         </div>
-      );
-    }
+
+        {/* Content Area - Loading/Error/Content */}
+        {isLoading && (
+          <div className="space-y-3 mb-6">
+            <div className="animate-pulse">
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-3"></div>
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full mb-3"></div>
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-3"></div>
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3"></div>
+            </div>
+          </div>
+        )}
+
+        {!isLoading && error && (
+          <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+            <p className="text-center text-gray-600 dark:text-gray-400">
+              Oops. The content for this chapter is still not ready
+            </p>
+          </div>
+        )}
+
+        {!isLoading && !error && content && (
+          <div className="prose prose-slate dark:prose-invert max-w-none mb-6">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {content}
+            </ReactMarkdown>
+          </div>
+        )}
+
+        {/* Helper Icon (solo se generation step e nessun errore) */}
+        {step === "generation" && !isLoading && (
+          <div className="mt-8 flex justify-center">
+            <div className="text-center">
+              <div className="w-24 h-24 mx-auto mb-4 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-12 h-12 text-slate-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </div>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                Choose a generation to continue
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 
     // Visualizzazione CARD quando si seleziona la generazione
     if (

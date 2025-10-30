@@ -7,7 +7,6 @@ import { ImageCacheProvider } from "@/components/providers/image-cache-provider"
 import { Toaster } from 'sonner'
 import "./globals.css";
 import { SubThemeContentTest } from "@/components/test/SubThemeContentTest";
-import { SubThemeDebug } from "@/components/test/subThemeDebug";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +36,6 @@ export default function RootLayout({
             <ImageCacheProvider>
               <BookProvider>
                 {children}
-                <SubThemeDebug />
                 <SubThemeContentTest />
               </BookProvider>    
             </ImageCacheProvider>
