@@ -4,16 +4,23 @@ import { useState } from "react";
 import Image from "next/image";
 import { ChevronDownIcon, MenuIcon, XIcon } from "lucide-react";
 import { useTheme } from "../providers/theme-provider";
+import { useLanguage } from "../providers/language-provider";
 import { YourBookBadge } from "@/components/handbook/YourBookBadge";
 import { YourBookModal } from "@/components/mobile/YourBookModal";
 
+// const languages = [
+//   { code: "en", name: "English", flag: "🇬🇧" },
+//   { code: "de", name: "Deutsch", flag: "🇩🇪" },
+//   { code: "it", name: "Italiano", flag: "🇮🇹" },
+//   { code: "pl", name: "Polski", flag: "🇵🇱" },
+//   { code: "pt", name: "Português", flag: "🇵🇹" },
+// ];
+
 const languages = [
-  { code: "en", name: "English", flag: "🇬🇧" },
-  { code: "de", name: "Deutsch", flag: "🇩🇪" },
-  { code: "it", name: "Italiano", flag: "🇮🇹" },
-  { code: "pl", name: "Polski", flag: "🇵🇱" },
-  { code: "pt", name: "Português", flag: "🇵🇹" },
+  { code: "en" as const, name: "English", flag: "🇬🇧" },
+  { code: "it" as const, name: "Italiano", flag: "🇮🇹" },
 ];
+
 
 interface HeaderProps {
   onLogoClick?: () => void;
@@ -21,15 +28,18 @@ interface HeaderProps {
 
 export const Header = ({ onLogoClick }: HeaderProps) => {
   const { theme, toggleTheme } = useTheme();
+  const { language, setLanguage } = useLanguage(); // 🆕 Hook i18n
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
+  
+  // 🆕 Trova la lingua selezionata dall'array
+  const selectedLanguage = languages.find(lang => lang.code === language) || languages[0];
 
-  const handleLanguageSelect = (language: (typeof languages)[0]) => {
-    setSelectedLanguage(language);
-    setIsLanguageOpen(false);
-  };
+const handleLanguageSelect = (lang: (typeof languages)[0]) => {
+  setLanguage(lang.code); // 🆕 Usa hook invece di stato locale
+  setIsLanguageOpen(false);
+};
 
   return (
     <>
