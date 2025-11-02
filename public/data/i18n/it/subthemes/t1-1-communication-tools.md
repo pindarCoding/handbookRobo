@@ -1,54 +1,67 @@
-Confusione sui Canali di Comunicazione e Aspettative di Risposta sul Posto di Lavoro
-Finanziato dall'Unione Europea. Le opinioni espresse sono tuttavia solo quelle degli autori e non riflettono necessariamente quelle dell'Unione Europea o dell'Agenzia Esecutiva Europea per l'Istruzione e la Cultura (EACEA). Né l'Unione Europea né l'EACEA possono essere ritenute responsabili per esse. 3
 
-Confusione sui Canali di Comunicazione e Aspettative di Risposta sul Posto di Lavoro
-Introduzione
-A causa dei diversi canali di comunicazione utilizzati dalle diverse generazioni, sul posto di lavoro possono verificarsi incomprensioni. Tali incomprensioni possono portare a problemi per le dinamiche di squadra, manifestandosi come frustrazione e tensione tra le generazioni, ridotta fiducia nell'affidabilità dei colleghi, demotivazione e interruzione delle collaborazioni. Le conseguenze operative derivanti dalla comunicazione mancata includono scadenze non rispettate a causa di risposte trascurate o ritardate, lavoro duplicato dove gli aggiornamenti delle attività non vengono visti e ritardi nei progetti dovuti a aspettative temporali non allineate.
+![Logo 1](image_1.jpg)
 
-In generale, la Gen Z e i Millennial si aspettano risposte rapide, spesso utilizzando la messaggistica istantanea. Tuttavia, i colleghi più anziani potrebbero non percepire i messaggi basati su chat come urgenti o ufficiali. I lavoratori più giovani interpretano i ritardi come mancanza di impegno o rispetto. Questo rappresenta una sfida per i luoghi di lavoro in cui colleghi di diverse generazioni lavorano insieme.
+![Logo 2](image_2.jpg)
 
-Problemi e Opportunità derivanti dalle Preferenze dei Canali di Comunicazione
-La nostra ricerca mostra molte analogie tra i cinque paesi partecipanti in relazione alle preferenze generazionali per le diverse modalità di comunicazione.
+![Logo 3](image_3.jpg)
 
-I Millennial e la Gen Z preferiscono la messaggistica istantanea, i messaggi di testo e i social media, e gravitano verso le piattaforme visive. Spesso, tuttavia, mancano di fiducia nella comunicazione professionale faccia a faccia.
 
-Al contrario, i Boomer e la Gen X preferiscono comunicare faccia a faccia, per telefono e via e-mail, e sono meno propensi a utilizzare la messaggistica istantanea o i social media.
+# Communication Channel Confusion and Response Expectations in the Workplace
 
-I seguenti grafici illustrano come ciascuna generazione classifica l'importanza delle seguenti cinque modalità di comunicazione:
+## Introduction
 
-Incontro Faccia a Faccia
+Due to different communication channels used by different generations miscommunication can occur in the workplace. These misunderstandings can lead to problems for team dynamics which manifest as frustration and tension between generations, reduced trust in colleagues' reliability, demotivation and breakdown in collaborations.
 
-Telefono
+Operational Consequences arising from missed communication include missed deadlines due to overlooked or delayed responses, duplicated work where task updates aren't seen and project delays from misaligned time expectations.
 
-Email
+In general, Gen Z & Millennials expect fast replies, often using instant messaging, however older colleagues may not perceive chat-based messages as urgent or official. Younger workers interpret delays as lack of engagement or respect. This presents a challenge to workplaces where colleagues from different generations work together.
 
-Videochiamata
+## Issues and Opportunities arising from Communication Channel Preferences
 
-Strumenti Collaborativi
+Our research shows many commonalities across the five participating countries in relation to generational preferences for different modes of communication.
 
-Messaggistica Istantanea
+Millennials & Gen Z prefer instant messaging, texts, and social media and they gravitate toward visual platforms. However, they often lack confidence in face-to-face professional communication. Conversely Boomers & Gen X prefer to communicate face-to-face, by phone, and by email and are less likely to use instant messaging or social media.
 
-4
+The following charts illustrate how each generation ranks each of the following five modes of communication in importance:
+- Face to Face Meeting
+- Phone
+- Email
+- Video Call
+- Collaborative Tools
+- Instant Messaging
 
-Gen Z La Gen Z attribuisce grande importanza alla messaggistica istantanea e agli strumenti di collaborazione digitale, seguiti dalle videochiamate, con minore importanza attribuita alle modalità tradizionali come riunioni, e-mail e telefono. Vedono i Boomer come dipendenti dalle riunioni faccia a faccia e dalle telefonate, e i Millennial e la Gen X come aventi un uso equilibrato di tutte le modalità di comunicazione. Esempi di incomprensioni riportate includono la Gen Z che invia messaggi istantanei e non riceve risposta dai lavoratori più anziani, e i lavoratori più anziani che si sentono a disagio con la Gen Z che partecipa a riunioni online senza l'uso della telecamera.
+### Gen Z
 
-Millennial I Millennial occupano una posizione intermedia nell'ambito della comunicazione con un uso equilibrato di strumenti di comunicazione digitali e tradizionali. Vedono la Gen Z come altamente digitale e orientata visivamente, la Gen X come più tradizionale e i Boomer come molto attaccati alla comunicazione tradizionale sotto forma di riunioni e telefonate. I Millennial hanno riportato casi in cui i Boomer non hanno dato seguito ai piani concordati durante una telefonata e hanno insistito per avere un incontro di persona sullo stesso argomento.
+![Gen Z Communication Preferences](/data/i18n/it/subthemes/images/t1-1-imageA.png)
 
-5
+Gen Z places great importance on instant messaging and digital collaboration tools followed by video calls, with less importance attributed to traditional modes like meetings, email and telephone. They see Boomers as reliant on face to face meetings and telephone calls and see Millennials and Gen X having a balanced use of all modes of communication. Instances of misunderstanding reported include Gen Z sending instant messages and not getting a response from older workers, and older workers being uncomfortable with Gen z attending online meetings without the use of a camera.
 
-Gen X La Gen X ha una preferenza generale per l'e-mail, il telefono e la comunicazione faccia a faccia, pur facendo affidamento anche sulle videochiamate e sugli strumenti collaborativi per il lavoro a distanza. Percepiscono le generazioni più giovani come più dipendenti dal digitale e i Boomer come comunicatori tradizionali. I partecipanti al sondaggio della Gen X hanno riportato messaggi persi sulle piattaforme collaborative, con conseguenti ritardi involontari nel loro lavoro.
+### Millennials
 
-Baby Boomer I Baby Boomer assegnano grande importanza agli incontri faccia a faccia e alle telefonate e meno importanza alla comunicazione digitale. Riconoscono una maggiore predisposizione alla comunicazione digitale tra i colleghi più giovani. Gli intervistati hanno riportato problemi in cui i lavoratori più giovani utilizzano la messaggistica istantanea informale laddove ritengono sia necessaria una comunicazione più formale.
+![Millennials Communication Preferences](image_5.png)
 
-6
+Millennials occupy a middle ground in the area of communication with a balanced use of digital and traditional communication tools. They see Gen Z as highly digital and visually oriented, Gen X as more traditional and Boomers as very attached to traditional communication in the form of meetings and phone calls. Millennials reported instances where Boomers did not act on plans agreed during a phone call and insisted on having an in-person meeting on the same issue.
 
-I risultati aggregati del nostro sondaggio evidenziano una discrepanza nell'uso degli strumenti digitali tra le generazioni. Questo può essere un ostacolo alla comunicazione efficace e ostacolare la collaborazione intergenerazionale. Tuttavia, nelle organizzazioni in cui esiste una cultura dell'apertura, questo divario nella comunicazione digitale può offrire un'opportunità per la collaborazione intergenerazionale. I lavoratori più giovani incoraggiano frequentemente i colleghi più anziani a familiarizzare con la messaggistica istantanea, i social media e le piattaforme collaborative.
+### Gen X
 
-Ci sono anche prove di generazioni più anziane che assumono ruoli di mentorato, insegnando soft skills e incoraggiando la comunicazione verbale tra i colleghi più giovani. I lavoratori della Gen Z e Millennial spesso cercano guida sull'etichetta del posto di lavoro e aspettano frequentemente che i colleghi più anziani stabiliscano il tono delle riunioni. Le generazioni più giovani possono anche fare da mentori ai colleghi più anziani nell'ambito della comunicazione politicamente corretta.
+![Gen X Communication Preferences](image_6.png)
 
-Oltre alle preferenze dei canali di comunicazione, altri fattori come il livello di formalità, le differenze culturali, le sfumature della comunicazione indiretta, i segnali non verbali, la velocità di risposta e il tono percepito della comunicazione verbale e scritta sono significativi in tutti i paesi. È evidente che non esiste un approccio "valido per tutti" per allineare le aspettative sui tempi di risposta e i datori di lavoro devono adottare un approccio sfaccettato.
+Gen X have an overall preference for email, phone and face to face communication, while also relying on video calls and collaborative tools for remote work. They perceive younger generations as more digitally dependent and Boomers as traditional communicators. Gen X survey participants have reported missed messages on collaborative platforms resulting in inadvertent delays in their work.
 
-Domande di Discussione
-I datori di lavoro dovrebbero avere una politica di comunicazione formale in atto per le comunicazioni interne ed esterne, specificando canali di comunicazione accettabili con tempi di risposta misurabili?
+### Baby Boomers
 
-In che modo i datori di lavoro dovrebbero creare opportunità per il mentorato intergenerazionale formale e informale nell'ambito della comunicazione?
+![Baby Boomers Communication Preferences](image_7.png)
+
+Baby Boomers assign high importance to face to face meetings and phone calls and less importance to digital communication. They acknowledge a stronger predisposition to digital communication among younger co-workers. Survey respondents reported issues where younger workers use informal instant messaging where they feel more formal communication is needed.
+
+The aggregated results of our survey highlight a mismatch in digital tool usage between generations. This can be a barrier to effective communication and hinder cross generational collaboration. However, in organisations where there is a culture of openness this digital communication gap can provide an opportunity for cross generational collaboration. Younger workers frequently encourage older colleagues to familiarise themselves with instant messaging, social media and collaborative platforms.
+
+There is also evidence of older generations taking on mentorship roles, teaching soft skills and encouraging verbal communication among younger colleagues. Gen Z and Millennial workers often seek guidance on workplace etiquette and frequently wait for older colleagues to set the tone of meetings. Younger generations can also mentor older colleagues in the area of politically correct communication.
+
+In addition to communication channel preferences, other factors such as level of formality, cultural differences, the nuances of indirect communication, nonverbal cues, speed of response and the perceived tone of verbal and written communication are significant across all countries. It is evident that there is no "one size fits all" approach to aligning expectations around response times and employers have to take a multi-faceted approach.
+
+## Discussion Questions
+
+Should employers have a formal communication policy in place for internal and external communications, specifying acceptable communication channels with measurable response times?
+
+How should employers create opportunities for formal and informal cross generational mentorship in the area of communication?

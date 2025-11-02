@@ -1,154 +1,59 @@
 # Communication Channel Confusion and Response Expectations in the Workplace
 
-*Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.*
-
----
-
 ## Introduction
 
-Due to different communication channels used by different generations, miscommunication can occur in the workplace. These misunderstandings can lead to problems for team dynamics which manifest as:
+Due to different communication channels used by different generations miscommunication can occur in the workplace. These misunderstandings can lead to problems for team dynamics which manifest as frustration and tension between generations, reduced trust in colleagues' reliability, demotivation and breakdown in collaborations.
 
-- Frustration and tension between generations
-- Reduced trust in colleagues' reliability
-- Demotivation and breakdown in collaborations
+Operational Consequences arising from missed communication include missed deadlines due to overlooked or delayed responses, duplicated work where task updates aren't seen and project delays from misaligned time expectations.
 
-### Operational Consequences
+In general, Gen Z & Millennials expect fast replies, often using instant messaging, however older colleagues may not perceive chat-based messages as urgent or official. Younger workers interpret delays as lack of engagement or respect. This presents a challenge to workplaces where colleagues from different generations work together.
 
-Missed communication can result in:
-
-- **Missed deadlines** due to overlooked or delayed responses
-- **Duplicated work** where task updates aren't seen
-- **Project delays** from misaligned time expectations
-
-In general, **Gen Z & Millennials** expect fast replies, often using instant messaging, however older colleagues may not perceive chat-based messages as urgent or official. Younger workers interpret delays as lack of engagement or respect. This presents a challenge to workplaces where colleagues from different generations work together.
-
----
-
-## Issues and Opportunities Arising from Communication Channel Preferences
+## Issues and Opportunities arising from Communication Channel Preferences
 
 Our research shows many commonalities across the five participating countries in relation to generational preferences for different modes of communication.
 
-### Communication Preferences by Generation
+Millennials & Gen Z prefer instant messaging, texts, and social media and they gravitate toward visual platforms. However, they often lack confidence in face-to-face professional communication. Conversely Boomers & Gen X prefer to communicate face-to-face, by phone, and by email and are less likely to use instant messaging or social media.
 
-**Millennials & Gen Z:**
-- Prefer instant messaging, texts, and social media
-- Gravitate toward visual platforms
-- Often lack confidence in face-to-face professional communication
-
-**Boomers & Gen X:**
-- Prefer face-to-face, phone, and email communication
-- Less likely to use instant messaging or social media
-
-### Communication Modes Analyzed
-
-The following communication modes were ranked by importance across generations:
-
-1. Face to Face Meeting
-2. Phone
-3. Email
-4. Video Call
-5. Collaborative Tools
-6. Instant Messaging
-
----
-
-## Generational Communication Profiles
+The following charts illustrate how each generation ranks each of the following five modes of communication in importance:
+- Face to Face Meeting
+- Phone
+- Email
+- Video Call
+- Collaborative Tools
+- Instant Messaging
 
 ### Gen Z
 
-**Communication Preferences:**
-- High importance on instant messaging and digital collaboration tools
-- Preference for video calls
-- Less importance on traditional modes (meetings, email, telephone)
+![Gen Z Communication Preferences](/data/i18n/en/subthemes/images/t1-1-imageA.jpg)
 
-**Perceptions of Other Generations:**
-- View Boomers as reliant on face-to-face meetings and telephone calls
-- See Millennials and Gen X as having balanced use of all communication modes
-
-**Common Misunderstandings:**
-- Sending instant messages without receiving responses from older workers
-- Older workers uncomfortable with Gen Z attending online meetings without cameras
-
----
+Gen Z places great importance on instant messaging and digital collaboration tools followed by video calls, with less importance attributed to traditional modes like meetings, email and telephone. They see Boomers as reliant on face to face meetings and telephone calls and see Millennials and Gen X having a balanced use of all modes of communication. Instances of misunderstanding reported include Gen Z sending instant messages and not getting a response from older workers, and older workers being uncomfortable with Gen z attending online meetings without the use of a camera.
 
 ### Millennials
 
-**Communication Style:**
-- Occupy middle ground with balanced use of digital and traditional tools
+![Millennials Communication Preferences](/data/i18n/en/subthemes/images/t1-1-imageB.jpg)
 
-**Perceptions of Other Generations:**
-- See Gen Z as highly digital and visually oriented
-- View Gen X as more traditional
-- Perceive Boomers as very attached to meetings and phone calls
-
-**Common Misunderstandings:**
-- Boomers not acting on plans agreed during phone calls
-- Insistence on in-person meetings for issues already discussed
-
----
+Millennials occupy a middle ground in the area of communication with a balanced use of digital and traditional communication tools. They see Gen Z as highly digital and visually oriented, Gen X as more traditional and Boomers as very attached to traditional communication in the form of meetings and phone calls. Millennials reported instances where Boomers did not act on plans agreed during a phone call and insisted on having an in-person meeting on the same issue.
 
 ### Gen X
 
-**Communication Preferences:**
-- Overall preference for email, phone, and face-to-face communication
-- Also rely on video calls and collaborative tools for remote work
+![Gen X Communication Preferences](/data/i18n/en/subthemes/images/t1-1-imageC.jpg)
 
-**Perceptions of Other Generations:**
-- Perceive younger generations as more digitally dependent
-- View Boomers as traditional communicators
-
-**Common Misunderstandings:**
-- Missed messages on collaborative platforms resulting in inadvertent work delays
-
----
+Gen X have an overall preference for email, phone and face to face communication, while also relying on video calls and collaborative tools for remote work. They perceive younger generations as more digitally dependent and Boomers as traditional communicators. Gen X survey participants have reported missed messages on collaborative platforms resulting in inadvertent delays in their work.
 
 ### Baby Boomers
 
-**Communication Preferences:**
-- Assign high importance to face-to-face meetings and phone calls
-- Less importance to digital communication
+![Baby Boomers Communication Preferences](/data/i18n/en/subthemes/images/t1-1-imageD.jpg)
 
-**Perceptions of Other Generations:**
-- Acknowledge stronger predisposition to digital communication among younger co-workers
+Baby Boomers assign high importance to face to face meetings and phone calls and less importance to digital communication. They acknowledge a stronger predisposition to digital communication among younger co-workers. Survey respondents reported issues where younger workers use informal instant messaging where they feel more formal communication is needed.
 
-**Common Misunderstandings:**
-- Younger workers using informal instant messaging where more formal communication is expected
+The aggregated results of our survey highlight a mismatch in digital tool usage between generations. This can be a barrier to effective communication and hinder cross generational collaboration. However, in organisations where there is a culture of openness this digital communication gap can provide an opportunity for cross generational collaboration. Younger workers frequently encourage older colleagues to familiarise themselves with instant messaging, social media and collaborative platforms.
 
----
+There is also evidence of older generations taking on mentorship roles, teaching soft skills and encouraging verbal communication among younger colleagues. Gen Z and Millennial workers often seek guidance on workplace etiquette and frequently wait for older colleagues to set the tone of meetings. Younger generations can also mentor older colleagues in the area of politically correct communication.
 
-## Opportunities for Collaboration
-
-The aggregated results highlight a mismatch in digital tool usage between generations, which can be a barrier to effective communication. However, in organizations with a culture of openness, this digital communication gap provides opportunities for cross-generational collaboration:
-
-### Younger Workers Mentoring Older Colleagues:
-- Encouraging familiarization with instant messaging
-- Teaching social media usage
-- Training on collaborative platforms
-- Guiding on politically correct communication
-
-### Older Workers Mentoring Younger Colleagues:
-- Teaching soft skills
-- Encouraging verbal communication
-- Providing guidance on workplace etiquette
-- Setting the tone in meetings
-
-### Additional Considerations
-
-Beyond communication channel preferences, other significant factors include:
-
-- Level of formality
-- Cultural differences
-- Nuances of indirect communication
-- Nonverbal cues
-- Speed of response expectations
-- Perceived tone in verbal and written communication
-
-**Important Note:** There is no "one size fits all" approach to aligning expectations around response times. Employers must take a multi-faceted approach.
-
----
+In addition to communication channel preferences, other factors such as level of formality, cultural differences, the nuances of indirect communication, nonverbal cues, speed of response and the perceived tone of verbal and written communication are significant across all countries. It is evident that there is no "one size fits all" approach to aligning expectations around response times and employers have to take a multi-faceted approach.
 
 ## Discussion Questions
 
-1. **Should employers have a formal communication policy in place for internal and external communications, specifying acceptable communication channels with measurable response times?**
+Should employers have a formal communication policy in place for internal and external communications, specifying acceptable communication channels with measurable response times?
 
-2. **How should employers create opportunities for formal and informal cross-generational mentorship in the area of communication?**
+How should employers create opportunities for formal and informal cross generational mentorship in the area of communication?
