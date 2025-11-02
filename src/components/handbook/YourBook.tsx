@@ -3,11 +3,14 @@
 
 import { useBook } from "@/components/providers/book-provider";
 import { Trash2Icon } from "lucide-react";
-import { BookPage, handbookData, cards } from "@/data/handbook-data"; // Cambiato variants → cards
+import { BookPage, handbookData } from "@/data/handbook-data"; // Cambiato variants → cards
+import { useCards } from "@/hooks/useCards"; // Importa useCards per accedere alle cards
 import confetti from "canvas-confetti";
 
 export const YourBook = () => {
   const { pages, removePage, clearBook } = useBook();
+  const { getAllCards } = useCards(); // Usa useCards per ottenere tutte le cards
+  
 
   // Funzione helper per recuperare il page_id basandosi sugli ID salvati
   const getPageId = (page: BookPage): number | null => {
@@ -28,8 +31,8 @@ export const YourBook = () => {
 
     // Caso 3: Card completa selezionata
     if (page.cardId) {
-      // Cambiato variantId → cardId
-      const card = cards.find((c) => c.id === page.cardId); // Cambiato variant → card, variants → cards
+      const allCards = getAllCards(); // Ottieni tutte le cards con traduzioni
+      const card = allCards.find((c) => c.id === page.cardId); // Cambiato variant → card, variants → cards
       return card?.page_id || null;
     }
 
