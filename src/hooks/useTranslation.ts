@@ -43,6 +43,8 @@ interface SubThemeTranslation {
   markdownFile?: string
 }
 
+
+
 interface ThemeTranslation {
   id: string
   code: string
@@ -53,6 +55,19 @@ interface ThemeTranslation {
   subthemes: {
     [key: string]: SubThemeTranslation
   }
+}
+
+interface CardTranslation {
+  id: string
+  code: string
+  title: string
+  color: string
+  description: string
+  pageId: number
+  image?: string
+  stereotype: string
+  researchFindings: string
+  strategiesAdvice: string
 }
 
 type Translations = {
@@ -306,6 +321,110 @@ export function useTranslation() {
       return `# Content Not Available\n\nThe content file **${filename}** could not be loaded.\n\n[${filename}]`
     }
   }, [language])
+
+  /**
+   * ✨ NUOVO: Ottieni card per SubTheme + Generation
+   * @param subThemeCode - SubTheme code (es: 'T5.1')
+   * @param generationCode - Generation code (es: 'GZ')
+   * @param themeId - Theme ID (es: 'work') per sapere quale JSON caricare
+   * @returns Card object o null
+   */
+  const getCard = (subThemeCode: string, generationCode: string, themeId: string): CardTranslation | null => {
+    // Seleziona il JSON corretto in base al themeId
+    const cardsData = currentTranslations.cards[themeId as keyof typeof currentTranslations.cards]
+    
+    if (!cardsData) {
+      console.error(`Cards not found for theme: ${themeId}`)
+      return null
+    }
+    
+    if (typeof cardsData === 'object' && cardsData !== null) {
+      const subThemeCards = cardsData[subThemeCode]
+      
+      if (typeof subThemeCards === 'object' && subThemeCards !== null) {
+        const card = subThemeCards[generationCode]
+        
+        if (typeof card === 'object' && card !== null && 'id' in card && 'code' in card) {
+          return card as unknown as CardTranslation
+        }
+      }
+    }
+    
+    // Fallback inglese
+    const fallbackCardsData = fallbackTranslations.cards[themeId as keyof typeof fallbackTranslations.cards]
+    
+    if (typeof fallbackCardsData === 'object' && fallbackCardsData !== null) {
+      const fallbackSubThemeCards = fallbackCardsData[subThemeCode]
+      
+      if (typeof fallbackSubThemeCards === 'object' && fallbackSubThemeCards !== null) {
+        const fallbackCard = fallbackSubThemeCards[generationCode]
+        
+        if (typeof fallbackCard === 'object' && fallbackCard !== null && 'id' in fallbackCard && 'code' in fallbackCard) {
+          console.warn(`Card ${subThemeCode}.${generationCode} not found in ${language}, using EN fallback`)
+          return fallbackCard as unknown as CardTranslation
+        }
+      }
+    }
+    
+    console.error(`Card not found: ${subThemeCode}.${generationCode} in theme ${themeId}`)
+    return null
+  }
+  
+  /**
+   * ✨ NUOVO: Ottieni card per CODE completo
+   * @param code - Card code (es: 'T5.1.GZ')
+   * @param themeId - Theme ID (es: 'work')
+   * @returns Card object o null
+   * 
+   * @example
+   * const card = getCardByCode('T5.1.GZ', 'work')
+   */
+  const getCardByCode = (code: string, themeId: string): CardTranslation | null => {
+    // Parse code: T5.1.GZ → subTheme='T5.1', generation='GZ'
+    const parts = code.split('.')
+    if (parts.length !== 3) {
+      console.error(`Invalid card code format: ${code}. Expected format: T5.1.GZ`)
+      return null
+    }
+    
+    const subThemeCode = `${parts[0]}.${parts[1]}` // T5.1
+    const generationCode = parts[2] // GZ
+    
+    return getCard(subThemeCode, generationCode, themeId)
+  }
+  
+  /**
+   * ✨ NUOVO: Ottieni TUTTE le cards per un theme
+   * @param themeId - Theme ID (es: 'work')
+   * @returns Array di tutte le cards del theme
+   * 
+   * @example
+   * const cards = getAllCardsForTheme('work') // Tutte le 12 cards di work
+   */
+  const getAllCardsForTheme = (themeId: string): CardTranslation[] => {
+    const cardsData = currentTranslations.cards[themeId as keyof typeof currentTranslations.cards]
+    
+    if (!cardsData || typeof cardsData !== 'object') {
+      console.error(`Cards not found for theme: ${themeId}`)
+      return []
+    }
+    
+    const allCards: CardTranslation[] = []
+    
+    // Itera su tutti i subthemes (T5.1, T5.2, T5.3)
+    Object.values(cardsData).forEach((subThemeCards) => {
+      if (typeof subThemeCards === 'object' && subThemeCards !== null) {
+        // Itera su tutte le generations (GZ, GM, GX, GB)
+        Object.values(subThemeCards).forEach((card) => {
+          if (typeof card === 'object' && card !== null && 'id' in card && 'code' in card) {
+            allCards.push(card as unknown as CardTranslation)
+          }
+        })
+      }
+    })
+    
+    return allCards
+  }
   
   return { 
     t, 
@@ -314,6 +433,9 @@ export function useTranslation() {
     getTheme,         // ✨ NUOVO
     getAllThemes,     // ✨ NUOVO
     getSubTheme,      // ✨ NUOVO
+        getCard,              // ✨ NUOVO
+    getCardByCode,        // ✨ NUOVO
+    getAllCardsForTheme,  // ✨ NUOVO
     loadMarkdown, 
     language 
   }
@@ -323,5 +445,6 @@ export function useTranslation() {
 export type { 
   GenerationTranslation, 
   ThemeTranslation, 
-  SubThemeTranslation 
+  SubThemeTranslation, 
+  CardTranslation
 }

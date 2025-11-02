@@ -1,11 +1,152 @@
 {
-  "work-values": {
-    "genz": {
-      "title": "Gen Z: Workplace Values",
-      "description": "Placeholder description",
-      "stereotype": "Placeholder stereotype",
-      "researchFindings": "Placeholder research",
-      "strategiesAdvice": "Placeholder strategies"
+  "T5.1": {
+    "GZ": {
+      "id": "work-values-genz",
+      "code": "T5.1.GZ",
+      "title": "Gen Z: Valori sul Lavoro",
+      "color": "purple",
+      "description": "Priorità su flessibilità, purpose aziendale, impatto sociale e benessere mentale",
+      "pageId": 511,
+      "image": "/images/cards/1.png",
+      "stereotype": "La Gen Z è spesso descritta come irrequieta, ossessionata dalla tecnologia ed esitante ad aderire agli standard lavorativi tradizionali. Viene criticata per insistere su una flessibilità eccessiva e mostrare scarsa resilienza. Questa caratterizzazione non riconosce la loro praticità, capacità di adattamento e profondo impegno verso equità, trasparenza e benessere personale negli ambienti di lavoro.",
+      "researchFindings": "Gli studi dimostrano che la Gen Z valorizza trasparenza, adattabilità e benessere mentale. Come nativi digitali esperti di tecnologia, desiderano anche mentorship e connessioni personali. Sebbene la sicurezza lavorativa sia importante, la vogliono accompagnata da flessibilità e connessione con i loro valori fondamentali. Tendono a perdere interesse quando le organizzazioni non forniscono trasparenza o equità.",
+      "strategiesAdvice": "In un'agenzia di marketing, il personale Gen Z ha ricevuto supporto attraverso una combinazione di comunicazioni quotidiane su Slack per i loro compiti e sessioni settimanali di mentoring faccia a faccia. Questa strategia ibrida ha permesso loro di sfruttare efficacemente gli strumenti digitali ricevendo al contempo una guida personalizzata, migliorando sia il loro coinvolgimento che le prestazioni."
+    },
+    "GM": {
+      "id": "work-values-millennial",
+      "code": "T5.1.GM",
+      "title": "Millennial: Valori sul Lavoro",
+      "color": "purple",
+      "description": "Focus su crescita personale, opportunità di carriera e lavoro significativo",
+      "pageId": 512,
+      "image": "/images/cards/2.png",
+      "stereotype": "Molte persone caratterizzano i Millennial come pretenziosi saltatori di lavoro riluttanti a impegnarsi con un singolo datore di lavoro e focalizzati solo su benefit o ricompense immediate. Sono percepiti come eccessivamente dipendenti dal feedback e richiedenti troppa flessibilità. Questo stereotipo trascura la loro profonda dedizione nel perseguire un lavoro significativo, promuovere l'inclusione e impegnarsi in carriere guidate da uno scopo che risuona con i loro valori personali.",
+      "researchFindings": "La ricerca indica che i Millennial danno priorità all'educazione continua, diversità e leadership empowering. Cercano lavoro significativo e inclusività, favorendo strutture organizzative meno rigide e ambienti orientati al teamwork. Gli studi rivelano che anticipano feedback frequente e una connessione tra le loro convinzioni personali e gli obiettivi dell'organizzazione, portando a un maggiore coinvolgimento in aziende socialmente responsabili.",
+      "strategiesAdvice": "I Millennial eccellono in ambienti che offrono opportunità di avanzamento, mentorship incoraggiante e trasparenza. Le aziende dovrebbero promuovere una comunicazione onesta e allineare gli obiettivi aziendali con missioni sociali o ambientali. Fornire percorsi di carriera distinti, apprendimento continuo e ambienti inclusivi aumenta il loro entusiasmo e impegno."
+    },
+    "GX": {
+      "id": "work-values-genx",
+      "code": "T5.1.GX",
+      "title": "Gen X: Valori sul Lavoro",
+      "color": "purple",
+      "description": "Valorizzazione di autonomia, efficienza e equilibrio vita-lavoro",
+      "pageId": 513,
+      "image": "/images/cards/3.png",
+      "stereotype": "La Generazione X è spesso vista come disillusa e distaccata, evitando la fedeltà ai datori di lavoro e favorendo il lavoro indipendente. Sono frequentemente caratterizzati come dubbiosi verso l'autorità, riluttanti agli impegni e meno coinvolti negli sforzi collaborativi. Sebbene apprezzino l'indipendenza, questa percezione trascura la loro flessibilità e mentalità pratica nel trovare un equilibrio tra struttura e autonomia.",
+      "researchFindings": "Gli studi indicano che la Generazione X dà priorità a indipendenza, equità e equilibrio tra vita lavorativa e personale. Avendo vissuto licenziamenti aziendali nei loro anni formativi, sono spesso autosufficienti e cauti nel fare impegni eccessivi con i datori di lavoro. Tuttavia, sono capaci di adattarsi sia a strutture convenzionali che ad ambienti collaborativi contemporanei, riuscendo in contesti che uniscono autonomia con equità e trasparenza.",
+      "strategiesAdvice": "Le organizzazioni possono assistere la Gen X offrendo flessibilità, riconoscendo appropriatamente i loro contributi e presentando opportunità di avanzamento. Avere obiettivi chiari insieme all'indipendenza li abilita a lavorare efficientemente. Sono abili nel connettere diverse generazioni, potendo comprendere le norme stabilite mentre accettano metodi collaborativi e digitali moderni."
+    },
+    "GB": {
+      "id": "work-values-boomer",
+      "code": "T5.1.GB",
+      "title": "Boomer: Valori sul Lavoro",
+      "color": "purple",
+      "description": "Focus su fedeltà aziendale, etica del lavoro tradizionale e gerarchia",
+      "pageId": 514,
+      "image": "/images/cards/4.png",
+      "stereotype": "I Baby Boomer sono frequentemente descritti come eccessivamente impegnati nel loro lavoro, associando lunghe ore con fedeltà e mostrando resistenza alla flessibilità o al cambiamento. Questa caratterizzazione li mostra come tradizionalisti inflessibili aggrappati a modi superati. In verità, i Boomer hanno vissuto rapide trasformazioni culturali e tecnologiche e hanno costantemente dimostrato la loro capacità di adattarsi a nuove circostanze quando forniti di assistenza rispettosa.",
+      "researchFindings": "Gli studi indicano che i Baby Boomer danno priorità a fedeltà, rispetto e riconoscimento. Percepiscono il loro lavoro come componente della loro identità personale e sono guidati dal desiderio di fare contributi significativi. Sono inclini verso contesti organizzati e valorizzano la fiducia riposta in loro per gestire responsabilità. La ricerca rivela anche che possono adattarsi con successo alla trasformazione digitale, purché ricevano istruzioni chiare e adeguati sistemi di supporto.",
+      "strategiesAdvice": "Per mantenere l'interesse dei Boomer, le organizzazioni dovrebbero riconoscere i loro contributi di lunga data e fornire formazione strutturata sulle nuove tecnologie. Coinvolgerli in attività di mentorship permette loro di condividere la loro esperienza e sentirsi apprezzati. Posizioni che evidenziano la loro conoscenza istituzionale, ruoli di consulenza strategica e iniziative di riconoscimento supportano motivazione e inclusione continua."
+    }
+  },
+  "T5.2": {
+    "GZ": {
+      "id": "work-motivation-genz",
+      "code": "T5.2.GZ",
+      "title": "Gen Z: Feedback Immediato & Apprendimento",
+      "color": "orange",
+      "description": "Motivati da riconoscimento immediato e opportunità di apprendimento continuo",
+      "pageId": 521,
+      "image": "/images/cards/5.png",
+      "stereotype": "La Gen Z è spesso caratterizzata come bisognosa di costante validazione e incapace di lavorare senza feedback frequente. Questo trascura il loro genuino desiderio di crescita e opportunità di apprendimento.",
+      "researchFindings": "La ricerca mostra che la Gen Z valorizza il feedback in tempo reale come strumento per lo sviluppo, non per la validazione. Cercano apprendimento continuo e apprezzano la comunicazione trasparente sulle prestazioni.",
+      "strategiesAdvice": "Implementare check-in regolari, fornire risorse per l'apprendimento e creare percorsi di crescita chiari. Utilizzare strumenti digitali per feedback istantaneo mantenendo interazioni personali significative."
+    },
+    "GM": {
+      "id": "work-motivation-millennial",
+      "code": "T5.2.GM",
+      "title": "Millennial: Purpose & Collaborazione",
+      "color": "orange",
+      "description": "Motivati da allineamento valoriale e successo di team",
+      "pageId": 522,
+      "image": "/images/cards/6.png",
+      "stereotype": "I Millennial sono stereotipati come desiderosi di lodi costanti e non disposti a lavorare duramente senza ricompense immediate.",
+      "researchFindings": "Gli studi mostrano che i Millennial sono motivati da lavoro significativo e successo collaborativo. Cercano ruoli guidati da uno scopo e valorizzano i risultati del team.",
+      "strategiesAdvice": "Allineare i valori organizzativi con le convinzioni personali, celebrare le vittorie del team e fornire opportunità per progetti collaborativi con impatto sociale."
+    },
+    "GX": {
+      "id": "work-motivation-genx",
+      "code": "T5.2.GX",
+      "title": "Gen X: Risultati & Autonomia",
+      "color": "orange",
+      "description": "Motivati da risultati concreti, obiettivi chiari e libertà operativa",
+      "pageId": 523,
+      "image": "/images/cards/7.png",
+      "stereotype": "La Gen X è spesso vista come cinica e non motivata, interessata solo a portare a termine il lavoro con coinvolgimento minimo.",
+      "researchFindings": "La ricerca indica che la Gen X è altamente motivata da autonomia e risultati. Preferiscono obiettivi chiari e la libertà di raggiungerli a modo loro.",
+      "strategiesAdvice": "Stabilire obiettivi chiari, fornire autonomia nell'esecuzione, riconoscere risultati orientati ai risultati e minimizzare supervisione non necessaria o micromanagement."
+    },
+    "GB": {
+      "id": "work-motivation-boomer",
+      "code": "T5.2.GB",
+      "title": "Boomer: Successo & Riconoscimento",
+      "color": "orange",
+      "description": "Motivati da riconoscimento formale e progressione di carriera",
+      "pageId": 524,
+      "image": "/images/cards/8.png",
+      "stereotype": "I Boomer sono stereotipati come motivati esclusivamente da ricompense tradizionali come titoli e uffici d'angolo, resistenti agli approcci moderni di riconoscimento.",
+      "researchFindings": "Gli studi mostrano che i Boomer valorizzano il riconoscimento significativo e i risultati di carriera. Apprezzano il riconoscimento formale dei loro contributi e competenze.",
+      "strategiesAdvice": "Fornire programmi di riconoscimento formale, riconoscere competenza ed esperienza, offrire ruoli di leadership o mentorship e celebrare traguardi di carriera."
+    }
+  },
+  "T5.3": {
+    "GZ": {
+      "id": "work-styles-genz",
+      "code": "T5.3.GZ",
+      "title": "Gen Z: Digitale & Asincrono",
+      "color": "cyan",
+      "description": "Collaborazione digitale con comfort per lavoro asincrono e remoto",
+      "pageId": 531,
+      "image": "/images/cards/9.png",
+      "stereotype": "Stereotipo placeholder per stili di lavoro Gen Z",
+      "researchFindings": "Ricerca placeholder per stili di lavoro Gen Z",
+      "strategiesAdvice": "Strategie e consigli placeholder per stili di lavoro Gen Z"
+    },
+    "GM": {
+      "id": "work-styles-millennial",
+      "code": "T5.3.GM",
+      "title": "Millennial: Agile & Aperto",
+      "color": "cyan",
+      "description": "Approccio agile con collaborazione cross-funzionale e ambienti aperti",
+      "pageId": 532,
+      "image": "/images/cards/10.png",
+      "stereotype": "Stereotipo placeholder per stili di lavoro Millennial",
+      "researchFindings": "Ricerca placeholder per stili di lavoro Millennial",
+      "strategiesAdvice": "Strategie e consigli placeholder per stili di lavoro Millennial"
+    },
+    "GX": {
+      "id": "work-styles-genx",
+      "code": "T5.3.GX",
+      "title": "Gen X: Pragmatico & Efficiente",
+      "color": "cyan",
+      "description": "Stile pragmatico che bilancia metodi tradizionali e digitali",
+      "pageId": 533,
+      "image": "/images/cards/11.png",
+      "stereotype": "Stereotipo placeholder per stili di lavoro Gen X",
+      "researchFindings": "Ricerca placeholder per stili di lavoro Gen X",
+      "strategiesAdvice": "Strategie e consigli placeholder per stili di lavoro Gen X"
+    },
+    "GB": {
+      "id": "work-styles-boomer",
+      "code": "T5.3.GB",
+      "title": "Boomer: Strutturato & Formale",
+      "color": "cyan",
+      "description": "Preferenza per processi strutturati, comunicazione formale e gerarchie chiare",
+      "pageId": 534,
+      "image": "/images/cards/12.png",
+      "stereotype": "Stereotipo placeholder per stili di lavoro Boomer",
+      "researchFindings": "Ricerca placeholder per stili di lavoro Boomer",
+      "strategiesAdvice": "Strategie e consigli placeholder per stili di lavoro Boomer"
     }
   }
 }

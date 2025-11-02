@@ -1,11 +1,152 @@
 {
-  "work-values": {
-    "genz": {
+  "T5.1": {
+    "GZ": {
+      "id": "work-values-genz",
+      "code": "T5.1.GZ",
       "title": "Gen Z: Workplace Values",
-      "description": "Placeholder description",
-      "stereotype": "Placeholder stereotype",
-      "researchFindings": "Placeholder research",
-      "strategiesAdvice": "Placeholder strategies"
+      "color": "purple",
+      "description": "Priority on flexibility, company purpose, social impact and mental wellbeing",
+      "pageId": 511,
+      "image": "/images/cards/1.png",
+      "stereotype": "Gen Z is often depicted as restless, fixated on technology, and hesitant to adhere to traditional workplace standards. They face criticism for insisting on excessive flexibility and exhibiting a lack of resilience. This characterization fails to recognize their practicality, capacity for adaptation, and deep commitment to equity, openness, and personal wellbeing in their work environments.",
+      "researchFindings": "Studies show that Gen Z values openness, adaptability, and mental well-being. As digital natives who are adept with technology, they also desire mentorship and personal connections. Although job security is important, they want it to be accompanied by flexibility and a connection to their core beliefs. They tend to lose interest when organizations do not provide transparency or equity.",
+      "strategiesAdvice": "In a marketing agency, Gen Z staff received support through a combination of daily communications on Slack for their tasks and weekly face-to-face mentoring sessions. This blended strategy enabled them to leverage digital tools effectively while also receiving personalized guidance, thereby enhancing both their engagement and performance."
+    },
+    "GM": {
+      "id": "work-values-millennial",
+      "code": "T5.1.GM",
+      "title": "Millennial: Workplace Values",
+      "color": "purple",
+      "description": "Focus on personal growth, career opportunities and meaningful work",
+      "pageId": 512,
+      "image": "/images/cards/2.png",
+      "stereotype": "Many people characterize Millennials as entitled job-hoppers who are reluctant to commit to a single employer and are focused solely on perks or immediate rewards. They are perceived as being overly reliant on feedback and requesting excessive flexibility. This stereotype overlooks their deep dedication to pursuing meaningful work, fostering inclusion, and engaging in purpose-driven careers that resonate with their personal values.",
+      "researchFindings": "Research indicates that Millennials prioritize ongoing education, diversity, and empowering leadership. They look for meaningful work and inclusivity, favoring less rigid organizational structures and teamwork-oriented environments. Studies reveal that they anticipate frequent feedback and a connection between their personal beliefs and the goals of the organization, leading to higher engagement in socially responsible companies.",
+      "strategiesAdvice": "Millennials excel in environments that offer chances for advancement, encouraging mentorship, and openness. Companies should promote honest communication and align corporate objectives with social or environmental missions. Providing distinct career paths, continuous learning, and inclusive environments enhances their enthusiasm and commitment."
+    },
+    "GX": {
+      "id": "work-values-genx",
+      "code": "T5.1.GX",
+      "title": "Gen X: Workplace Values",
+      "color": "purple",
+      "description": "Valuing autonomy, efficiency and work-life balance",
+      "pageId": 513,
+      "image": "/images/cards/3.png",
+      "stereotype": "Generation X is often viewed as disillusioned and aloof, shying away from loyalty to their employers and favoring independent work. They are frequently characterized as doubtful of authority, reluctant to make commitments, and less involved in collaborative efforts. Although they do appreciate independence, this perception overlooks their flexibility and practical mindset in finding a balance between structure and autonomy.",
+      "researchFindings": "Studies indicate that Generation X prioritizes independence, equity, and a balance between work and personal life. Due to experiencing corporate layoffs in their formative years, they are often self-sufficient and wary of making excessive commitments to employers. Nevertheless, they are capable of adjusting to both conventional structures and contemporary collaborative environments, succeeding in settings that merge autonomy with fairness and openness.",
+      "strategiesAdvice": "Organizations can assist Gen X by offering flexibility, acknowledging their contributions appropriately, and presenting avenues for advancement. Having clear objectives alongside independence enables them to work efficiently. They are adept at connecting different generations, as they can comprehend established norms while accepting modern collaborative and digital methods."
+    },
+    "GB": {
+      "id": "work-values-boomer",
+      "code": "T5.1.GB",
+      "title": "Boomer: Workplace Values",
+      "color": "purple",
+      "description": "Focus on company loyalty, traditional work ethic and hierarchy",
+      "pageId": 514,
+      "image": "/images/cards/4.png",
+      "stereotype": "Baby Boomers are frequently depicted as excessively committed to their jobs, associating extended hours with loyalty and showing resistance to flexibility or change. This characterization shows them as inflexible traditionalists clinging to outdated ways. In truth, Boomers have experienced swift cultural and technological transformations and have consistently demonstrated their capacity to adjust to new circumstances when provided with respectful assistance.",
+      "researchFindings": "Studies indicate that Baby Boomers prioritize loyalty, respect, and acknowledgment. They perceive their work as a component of their personal identity and are driven by the desire to make significant contributions. They are inclined towards organized settings and value the trust placed in them to handle responsibilities. Research also reveals that they can adapt to digital transformation successfully, provided they receive clear instructions and adequate support systems.",
+      "strategiesAdvice": "To maintain the interest of Boomers, organizations ought to acknowledge their longstanding contributions and furnish structured training on new technologies. Engaging them in mentorship allows them to share their expertise and feel appreciated. Positions that highlight their institutional knowledge, strategic advisory roles, and recognition initiatives support ongoing motivation and inclusion."
+    }
+  },
+  "T5.2": {
+    "GZ": {
+      "id": "work-motivation-genz",
+      "code": "T5.2.GZ",
+      "title": "Gen Z: Instant Feedback & Learning",
+      "color": "orange",
+      "description": "Motivated by immediate recognition and continuous learning",
+      "pageId": 521,
+      "image": "/images/cards/5.png",
+      "stereotype": "Gen Z is often characterized as needing constant validation and being unable to work without frequent feedback. This overlooks their genuine desire for growth and learning opportunities.",
+      "researchFindings": "Research shows Gen Z values real-time feedback as a tool for development, not validation. They seek continuous learning and appreciate transparent communication about performance.",
+      "strategiesAdvice": "Implement regular check-ins, provide learning resources, and create clear growth paths. Use digital tools for instant feedback while maintaining meaningful personal interactions."
+    },
+    "GM": {
+      "id": "work-motivation-millennial",
+      "code": "T5.2.GM",
+      "title": "Millennial: Purpose & Collaboration",
+      "color": "orange",
+      "description": "Motivated by value alignment and team success",
+      "pageId": 522,
+      "image": "/images/cards/6.png",
+      "stereotype": "Millennials are stereotyped as wanting constant praise and being unwilling to work hard without immediate rewards.",
+      "researchFindings": "Studies show Millennials are motivated by meaningful work and collaborative success. They seek purpose-driven roles and value team achievements.",
+      "strategiesAdvice": "Align organizational values with personal beliefs, celebrate team wins, and provide opportunities for collaborative projects with social impact."
+    },
+    "GX": {
+      "id": "work-motivation-genx",
+      "code": "T5.2.GX",
+      "title": "Gen X: Results & Autonomy",
+      "color": "orange",
+      "description": "Motivated by concrete results, clear goals and operational freedom",
+      "pageId": 523,
+      "image": "/images/cards/7.png",
+      "stereotype": "Gen X is often seen as cynical and unmotivated, only caring about getting the job done with minimal engagement.",
+      "researchFindings": "Research indicates Gen X is highly motivated by autonomy and results. They prefer clear objectives and the freedom to achieve them in their own way.",
+      "strategiesAdvice": "Set clear goals, provide autonomy in execution, recognize results-driven achievements, and minimize unnecessary oversight or micromanagement."
+    },
+    "GB": {
+      "id": "work-motivation-boomer",
+      "code": "T5.2.GB",
+      "title": "Boomer: Achievement & Recognition",
+      "color": "orange",
+      "description": "Motivated by formal recognition and career progression",
+      "pageId": 524,
+      "image": "/images/cards/8.png",
+      "stereotype": "Boomers are stereotyped as motivated solely by traditional rewards like titles and corner offices, resistant to modern recognition approaches.",
+      "researchFindings": "Studies show Boomers value meaningful recognition and career achievement. They appreciate formal acknowledgment of their contributions and expertise.",
+      "strategiesAdvice": "Provide formal recognition programs, acknowledge expertise and experience, offer leadership or mentorship roles, and celebrate career milestones."
+    }
+  },
+  "T5.3": {
+    "GZ": {
+      "id": "work-styles-genz",
+      "code": "T5.3.GZ",
+      "title": "Gen Z: Digital & Async",
+      "color": "cyan",
+      "description": "Digital collaboration with comfort for async and remote work",
+      "pageId": 531,
+      "image": "/images/cards/9.png",
+      "stereotype": "Placeholder stereotype for work styles Gen Z",
+      "researchFindings": "Placeholder research findings for work styles Gen Z",
+      "strategiesAdvice": "Placeholder strategies and advice for work styles Gen Z"
+    },
+    "GM": {
+      "id": "work-styles-millennial",
+      "code": "T5.3.GM",
+      "title": "Millennial: Agile & Open",
+      "color": "cyan",
+      "description": "Agile approach with cross-functional collaboration and open environments",
+      "pageId": 532,
+      "image": "/images/cards/10.png",
+      "stereotype": "Placeholder stereotype for work styles Millennial",
+      "researchFindings": "Placeholder research findings for work styles Millennial",
+      "strategiesAdvice": "Placeholder strategies and advice for work styles Millennial"
+    },
+    "GX": {
+      "id": "work-styles-genx",
+      "code": "T5.3.GX",
+      "title": "Gen X: Pragmatic & Efficient",
+      "color": "cyan",
+      "description": "Pragmatic style balancing traditional and digital methods",
+      "pageId": 533,
+      "image": "/images/cards/11.png",
+      "stereotype": "Placeholder stereotype for work styles Gen X",
+      "researchFindings": "Placeholder research findings for work styles Gen X",
+      "strategiesAdvice": "Placeholder strategies and advice for work styles Gen X"
+    },
+    "GB": {
+      "id": "work-styles-boomer",
+      "code": "T5.3.GB",
+      "title": "Boomer: Structured & Formal",
+      "color": "cyan",
+      "description": "Preference for structured processes, formal communication and clear hierarchies",
+      "pageId": 534,
+      "image": "/images/cards/12.png",
+      "stereotype": "Placeholder stereotype for work styles Boomer",
+      "researchFindings": "Placeholder research findings for work styles Boomer",
+      "strategiesAdvice": "Placeholder strategies and advice for work styles Boomer"
     }
   }
 }
