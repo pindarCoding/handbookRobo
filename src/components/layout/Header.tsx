@@ -32,20 +32,20 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
-  
+
   // 🆕 Trova la lingua selezionata dall'array
   const selectedLanguage = languages.find(lang => lang.code === language) || languages[0];
 
-const handleLanguageSelect = (lang: (typeof languages)[0]) => {
-  setLanguage(lang.code); // 🆕 Usa hook invece di stato locale
-  setIsLanguageOpen(false);
-};
+  const handleLanguageSelect = (lang: (typeof languages)[0]) => {
+    setLanguage(lang.code); // 🆕 Usa hook invece di stato locale
+    setIsLanguageOpen(false);
+  };
 
   return (
     <>
       <header className="sticky top-0 bg-white dark:bg-slate-800 shadow-md border-b border-gray-200 dark:border-slate-700  z-50">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-6">
-          <div className="flex items-center justify-between h-20">
+        <div className="max-w-screen-2xl mx-auto px-3 sm:px-4 md:px-6">
+          <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
               <button
@@ -64,8 +64,12 @@ const handleLanguageSelect = (lang: (typeof languages)[0]) => {
                   alt="MyCo Logo"
                   width={240}
                   height={80}
-                  style={{ height: 'auto', width: 'auto' }}
-                  className="h-20 w-auto hover:opacity-80 transition-opacity"
+                  style={{
+                    height: 'auto',
+                    maxHeight: '2.5rem',  // 40px su mobile
+                    width: 'auto'
+                  }}
+                  className="h-8 sm:h-12 lg:h-16 xl:h-20 w-auto hover:opacity-80 transition-opacity"
                   priority={true}
                 />
               </button>
@@ -102,9 +106,8 @@ const handleLanguageSelect = (lang: (typeof languages)[0]) => {
                   <span className="text-xl">{selectedLanguage.flag}</span>
                   <span>Select Your Language</span>
                   <ChevronDownIcon
-                    className={`w-4 h-4 transition-transform ${
-                      isLanguageOpen ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform ${isLanguageOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
@@ -265,11 +268,10 @@ const handleLanguageSelect = (lang: (typeof languages)[0]) => {
                           setIsMobileMenuOpen(false);
                         }}
                         className={`flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium
-                        ${
-                          selectedLanguage.code === language.code
+                        ${selectedLanguage.code === language.code
                             ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
                             : "bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-600"
-                        }`}
+                          }`}
                       >
                         <span className="text-lg mr-2">{language.flag}</span>
                         <span>{language.name}</span>
