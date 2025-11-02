@@ -116,17 +116,56 @@ export const MobileNavigationDrawer = ({
   <div className="flex-1" />
   
   {/* Stepper Compatto */}
-  <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded-full flex-shrink-0">
-    <div className={`w-1.5 h-1.5 rounded-full transition-colors ${
+{/* Stepper con Labels */}
+<div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-700 rounded-full flex-shrink-0">
+  {/* Theme */}
+  <div className="flex items-center gap-1">
+    <div className={`w-2 h-2 rounded-full transition-colors ${
       currentStep === 'theme' ? 'bg-blue-500' : 'bg-slate-400 dark:bg-slate-500'
     }`} />
-    <div className={`w-1.5 h-1.5 rounded-full transition-colors ${
+    <span className={`text-xs font-medium transition-colors ${
+      currentStep === 'theme' 
+        ? 'text-orange-600 dark:text-orange-400' 
+        : 'text-slate-500 dark:text-slate-400'
+    }`}>
+      Theme
+    </span>
+  </div>
+  
+  {/* Divider */}
+  <div className="w-px h-3 bg-slate-300 dark:bg-slate-600" />
+  
+  {/* SubTheme */}
+  <div className="flex items-center gap-1">
+    <div className={`w-2 h-2 rounded-full transition-colors ${
       currentStep === 'subtheme' ? 'bg-blue-500' : 'bg-slate-400 dark:bg-slate-500'
     }`} />
-    <div className={`w-1.5 h-1.5 rounded-full transition-colors ${
-      currentStep === 'generation' ? 'bg-blue-500' : 'bg-slate-400 dark:bg-slate-500'
-    }`} />
+    <span className={`text-xs font-medium transition-colors ${
+      currentStep === 'subtheme' 
+        ? 'text-orange-600 dark:text-orange-400' 
+        : 'text-slate-500 dark:text-slate-400'
+    }`}>
+      Topic
+    </span>
   </div>
+  
+  {/* Divider */}
+  <div className="w-px h-3 bg-slate-300 dark:bg-slate-600" />
+  
+  {/* Generation */}
+  <div className="flex items-center gap-1">
+    <div className={`w-2 h-2 rounded-full transition-colors ${
+      currentStep === 'generation' ? 'bg-orange-500' : 'bg-slate-400 dark:bg-slate-500'
+    }`} />
+    <span className={`text-xs font-medium transition-colors ${
+      currentStep === 'generation' 
+        ? 'text-orange-600 dark:text-orange-400' 
+        : 'text-slate-500 dark:text-slate-400'
+    }`}>
+      Gen
+    </span>
+  </div>
+</div>
   
   {/* Close Button */}
   <button
