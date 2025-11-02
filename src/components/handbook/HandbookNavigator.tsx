@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useThemes, Theme, SubTheme } from "@/hooks/useThemes";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Generation } from "@/hooks/useGenerations";
-import { Card, cards } from "@/data/handbook-data";
+import { useCards, Card } from "@/hooks/useCards";
 import { MainContent } from "@/components/handbook/MainContent";
 import { NavigationFilter } from "@/components/handbook/NavigationFilter";
 import { Header } from "@/components/layout/Header";
@@ -18,6 +18,7 @@ type FilterStep = "theme" | "subtheme" | "generation";
 export default function HandbookNavigator() {
   const { themes } = useThemes();
   const { language } = useLanguage(); // ✅ NUOVO: Monitora cambio lingua
+  const { findCard } = useCards();
   
   const [currentStep, setCurrentStep] = useState<FilterStep>("theme");
   const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null);
@@ -28,25 +29,33 @@ export default function HandbookNavigator() {
 
   // ✅ NUOVO: Sincronizza selectedTheme quando cambia la lingua
   useEffect(() => {
-    if (selectedTheme) {
-      // Trova il theme aggiornato con le nuove traduzioni
-      const updatedTheme = themes.find(t => t.id === selectedTheme.id);
-      if (updatedTheme) {
-        setSelectedTheme(updatedTheme);
-        
-        // Se c'è anche un subTheme selezionato, aggiorna anche quello
-        if (selectedSubTheme) {
-          const updatedSubTheme = updatedTheme.subThemes.find(
-            st => st.id === selectedSubTheme.id
-          );
-          if (updatedSubTheme) {
-            setSelectedSubTheme(updatedSubTheme);
+  if (selectedTheme) {
+    // Trova il theme aggiornato con le nuove traduzioni
+    const updatedTheme = themes.find(t => t.id === selectedTheme.id);
+    if (updatedTheme) {
+      setSelectedTheme(updatedTheme);
+      
+      // Se c'è anche un subTheme selezionato, aggiorna anche quello
+      if (selectedSubTheme) {
+        const updatedSubTheme = updatedTheme.subThemes.find(
+          st => st.id === selectedSubTheme.id
+        );
+        if (updatedSubTheme) {
+          setSelectedSubTheme(updatedSubTheme);
+          
+          // ✨ NUOVO: Se c'è anche una card selezionata, ricaricala con la nuova lingua
+          if (selectedGeneration && selectedCard) {
+            const updatedCard = findCard(selectedGeneration.id, updatedSubTheme.id);
+            if (updatedCard) {
+              setSelectedCard(updatedCard);
+            }
           }
         }
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [language]); // Trigger quando cambia lingua o themes si rigenera
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [language]); // Trigger quando cambia lingua
 
   const handleThemeSelect = (theme: Theme) => {
     setSelectedTheme(theme);
@@ -68,12 +77,7 @@ export default function HandbookNavigator() {
 
     // Trova automaticamente la card quando si seleziona una generazione
     if (selectedSubTheme && selectedTheme) {
-      const card = cards.find(
-        (c) =>
-          c.generationId === generation.id &&
-          c.subThemeId === selectedSubTheme.id &&
-          c.themeId === selectedTheme.id
-      );
+      const card = findCard(generation.id, selectedSubTheme.id);
 
       if (card) {
         setSelectedCard(card);

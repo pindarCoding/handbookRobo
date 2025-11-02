@@ -1,5 +1,4 @@
 // src/hooks/useCards.ts
-import { useMemo } from 'react'
 import { useTranslation, CardTranslation } from './useTranslation'
 
 /**
@@ -33,8 +32,6 @@ const THEME_ID_TO_CODE: Record<string, string> = {
   'digital': 'T3',
   'intercultural': 'T4'
 }
-
-
 
 /**
  * Mapping Generation Code → Generation ID
@@ -71,38 +68,38 @@ export function useCards() {
    * Trasforma CardTranslation in Card completo
    * Aggiunge themeId, subThemeId, generationId per compatibilità
    */
- const transformCard = (cardTranslation: CardTranslation, themeId: string): Card => {
-  // Estrai generationId dal code (es: T5.1.GZ → GZ)
-  const codeParts = cardTranslation.code.split('.')
-  const generationCode = codeParts[2] // GZ
-  
-  // Costruisci subThemeId dal code (T5.1 → work-values)
-  // Usa l'ID dalla card che è già nel formato corretto
-  const subThemeId = cardTranslation.id.split('-').slice(0, -1).join('-') // 'work-values-genz' → 'work-values'
-  
-  // Converti generation code in ID
-  const generationId = GENERATION_CODE_TO_ID[generationCode] || generationCode.toLowerCase()
-  
-  return {
-    ...cardTranslation,
-    themeId,
-    subThemeId,
-    generationId,
-    page_id: cardTranslation.pageId // pageId → page_id
+  const transformCard = (cardTranslation: CardTranslation, themeId: string): Card => {
+    // Estrai generationId dal code (es: T5.1.GZ → GZ)
+    const codeParts = cardTranslation.code.split('.')
+    const generationCode = codeParts[2] // GZ
+    
+    // Costruisci subThemeId dal code (T5.1 → work-values)
+    // Usa l'ID dalla card che è già nel formato corretto
+    const subThemeId = cardTranslation.id.split('-').slice(0, -1).join('-') // 'work-values-genz' → 'work-values'
+    
+    // Converti generation code in ID
+    const generationId = GENERATION_CODE_TO_ID[generationCode] || generationCode.toLowerCase()
+    
+    return {
+      ...cardTranslation,
+      themeId,
+      subThemeId,
+      generationId,
+      page_id: cardTranslation.pageId // pageId → page_id
+    }
   }
-}
   
   /**
    * Ottieni tutte le cards per un theme
    * @param themeId - Theme ID (es: 'work', 'communication')
    * @returns Array di cards per il theme
+   * 
+   * ✨ NESSUN useMemo - si rigenera ad ogni chiamata per reagire al cambio lingua
    */
-  const getCardsByTheme = useMemo(() => {
-    return (themeId: string): Card[] => {
-      const cardsTranslations = getAllCardsForTheme(themeId)
-      return cardsTranslations.map(ct => transformCard(ct, themeId))
-    }
-  }, [getAllCardsForTheme])
+  const getCardsByTheme = (themeId: string): Card[] => {
+    const cardsTranslations = getAllCardsForTheme(themeId)
+    return cardsTranslations.map(ct => transformCard(ct, themeId))
+  }
   
   /**
    * Trova card per generation + subtheme (compatibilità con codice esistente)
@@ -117,7 +114,7 @@ export function useCards() {
     // Estrai themeId dal subThemeId (work-values → work)
     const themeId = subThemeId.split('-')[0]
     
-    // Ottieni tutte le cards del theme
+    // Ottieni tutte le cards del theme (dinamico, no cache)
     const themeCards = getCardsByTheme(themeId)
     
     // Trova la card che matcha
@@ -145,8 +142,10 @@ export function useCards() {
   /**
    * Ottieni TUTTE le cards di tutti i themes
    * @returns Array di tutte le cards
+   * 
+   * ✨ NESSUN useMemo - si rigenera ad ogni chiamata per reagire al cambio lingua
    */
-  const getAllCards = useMemo((): Card[] => {
+  const getAllCards = (): Card[] => {
     const allCards: Card[] = []
     
     // Itera su tutti i themes
@@ -156,7 +155,7 @@ export function useCards() {
     })
     
     return allCards
-  }, [getCardsByTheme])
+  }
   
   return {
     getCardsByTheme,

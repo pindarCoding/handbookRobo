@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 import { Theme, SubTheme } from '@/hooks/useThemes'
 import { Generation } from '@/hooks/useGenerations'
-import { Card } from "@/data/handbook-data";
+import { Card } from '@/hooks/useCards'
 import { useBook } from "@/components/providers/book-provider";
 import { PlusCircleIcon } from "lucide-react";
 import { WelcomeContent } from "./WelcomeContent";
