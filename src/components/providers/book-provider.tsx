@@ -2,7 +2,7 @@
 'use client'
 
 import { ReactNode, createContext, useContext, useState, useEffect } from 'react'
-import { BookPage } from '@/data/handbook-data'
+import { BookPage } from '@/types/handbook'
 
 interface BookContextType {
   pages: BookPage[];

@@ -3,29 +3,30 @@
 
 import { useBook } from "@/components/providers/book-provider";
 import { Trash2Icon } from "lucide-react";
-import { BookPage, handbookData } from "@/data/handbook-data"; // Cambiato variants → cards
-import { useCards } from "@/hooks/useCards"; // Importa useCards per accedere alle cards
+import { BookPage } from "@/types/handbook"; // ✅ NUOVO - Solo interface
+import { useCards } from "@/hooks/useCards";
+import { useThemes } from "@/hooks/useThemes"; // ✅ NUOVO - Hook per themes
 import confetti from "canvas-confetti";
 
 export const YourBook = () => {
   const { pages, removePage, clearBook } = useBook();
   const { getAllCards } = useCards(); // Usa useCards per ottenere tutte le cards
-  
+  const { getThemeById, getSubThemeById } = useThemes();
+
 
   // Funzione helper per recuperare il page_id basandosi sugli ID salvati
   const getPageId = (page: BookPage): number | null => {
     // Caso 1: Solo Theme selezionato
     if (page.themeId && !page.subThemeId && !page.cardId) {
       // Cambiato variantId → cardId
-      const theme = handbookData.find((t) => t.id === page.themeId);
+      const theme = getThemeById(page.themeId);
       return theme?.page_id || null;
     }
 
     // Caso 2: Theme + SubTheme selezionati
     if (page.themeId && page.subThemeId && !page.cardId) {
       // Cambiato variantId → cardId
-      const theme = handbookData.find((t) => t.id === page.themeId);
-      const subTheme = theme?.subThemes.find((st) => st.id === page.subThemeId);
+      const subTheme = getSubThemeById(page.themeId, page.subThemeId);
       return subTheme?.page_id || null;
     }
 
@@ -121,30 +122,30 @@ export const YourBook = () => {
       // Pulisci l'URL object
       window.URL.revokeObjectURL(url);
 
-// 🎉 Confetti - Always on top!
-const canvas = document.createElement('canvas')
-canvas.style.position = 'fixed'
-canvas.style.top = '0'
-canvas.style.left = '0'
-canvas.style.width = '100%'
-canvas.style.height = '100%'
-canvas.style.pointerEvents = 'none'
-canvas.style.zIndex = '9999'
-document.body.appendChild(canvas)
+      // 🎉 Confetti - Always on top!
+      const canvas = document.createElement('canvas')
+      canvas.style.position = 'fixed'
+      canvas.style.top = '0'
+      canvas.style.left = '0'
+      canvas.style.width = '100%'
+      canvas.style.height = '100%'
+      canvas.style.pointerEvents = 'none'
+      canvas.style.zIndex = '9999'
+      document.body.appendChild(canvas)
 
-const myConfetti = confetti.create(canvas, { resize: true })
-myConfetti({
-  particleCount: 100,
-  ticks: 500,
-  spread: 70,
-  gravity: 0.4,
-  origin: { y: 0.6 }
-})
+      const myConfetti = confetti.create(canvas, { resize: true })
+      myConfetti({
+        particleCount: 100,
+        ticks: 500,
+        spread: 70,
+        gravity: 0.4,
+        origin: { y: 0.6 }
+      })
 
-// Rimuovi canvas dopo 5 secondi
-setTimeout(() => {
-  document.body.removeChild(canvas)
-}, 5000)
+      // Rimuovi canvas dopo 5 secondi
+      setTimeout(() => {
+        document.body.removeChild(canvas)
+      }, 5000)
     } catch (error: unknown) {
       console.error("Export error:", error);
 
@@ -152,9 +153,9 @@ setTimeout(() => {
       if (error instanceof TypeError && error.message === "Failed to fetch") {
         alert(
           "Network error: Unable to connect to the PDF server. Please check:\n" +
-            "- The server is running at https://api.meetyourcolleague.eu/merge\n" +
-            "- CORS is properly configured on the server\n" +
-            "- You are on the same network"
+          "- The server is running at https://api.meetyourcolleague.eu/merge\n" +
+          "- CORS is properly configured on the server\n" +
+          "- You are on the same network"
         );
       } else {
         alert(
