@@ -108,39 +108,52 @@ export function BookProvider({ children }: { children: ReactNode }) {
     )
 
     setPages(currentPages => {
-      const newPages = [...currentPages]
-      
-      // 3. Se SubTheme non esiste, crealo e inseriscilo
-      if (!subThemeExists) {
-        const subThemePage = createSubThemePage(page)
-        const subThemeWithTime: BookPage = { 
-          ...subThemePage, 
-          addedAt: Date.now() - 1  // -1 per essere sicuri che sia prima della card
+  const newPages = [...currentPages]
+  let addedChapter = false
+  
+  // 3. Se SubTheme non esiste, crealo e inseriscilo
+  if (!subThemeExists) {
+    const subThemePage = createSubThemePage(page)
+    const subThemeWithTime: BookPage = { 
+      ...subThemePage, 
+      addedAt: Date.now() - 1
+    }
+    
+    const subThemePosition = findInsertPosition(newPages, page)
+    newPages.splice(subThemePosition, 0, subThemeWithTime)
+    addedChapter = true
+  }
+  
+  // 4. Inserisci la Card
+  const cardWithTime: BookPage = { 
+    ...page, 
+    addedAt: Date.now() 
+  }
+  const cardPosition = findInsertPosition(newPages, page)
+  newPages.splice(cardPosition, 0, cardWithTime)
+  
+  // 5. Toast DOPO aver aggiornato lo state (fuori dal setter)
+  setTimeout(() => {
+    if (addedChapter) {
+      toast.success(
+        <div className="flex flex-col gap-1">
+          <div className="font-semibold text-base">📖 Added chapter introduction for you</div>
+          <div className="text-sm opacity-90">{page.title}</div>
+        </div>,
+        {
+          duration: 4000,
+          position: 'top-center',
         }
-        
-        // Trova posizione e inserisci SubTheme
-        const subThemePosition = findInsertPosition(newPages, page)
-        newPages.splice(subThemePosition, 0, subThemeWithTime)
-        
-        toast.success(`Added "${page.title}" with its chapter`, {
-          duration: 3000,
-        })
-      } else {
-        toast.success(`Added "${page.title}"`, {
-          duration: 3000,
-        })
-      }
-      
-      // 4. Inserisci la Card nella posizione corretta
-      const cardWithTime: BookPage = { 
-        ...page, 
-        addedAt: Date.now() 
-      }
-      const cardPosition = findInsertPosition(newPages, page)
-      newPages.splice(cardPosition, 0, cardWithTime)
-      
-      return newPages
-    })
+      )
+    } else {
+      toast.success(`Added "${page.title}"`, {
+        duration: 2500,
+      })
+    }
+  }, 0)
+  
+  return newPages
+})
   }
 
   /**

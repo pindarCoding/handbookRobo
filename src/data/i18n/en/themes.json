@@ -132,7 +132,7 @@
         "code": "T5.1",
         "title": "Workplace Values Across Generations",
         "description": "How different generations define success and meaning at work",
-        "pageId": 51,
+        "pageId": 10,
         "markdownFile": "t5-1-work-values.md"
       },
       "T5.2": {
@@ -140,7 +140,7 @@
         "code": "T5.2",
         "title": "Motivation and Demotivation",
         "description": "What drives and discourages different generations",
-        "pageId": 52,
+        "pageId": 10,
         "markdownFile": "t5-2-work-motivation.md"
       },
       "T5.3": {
@@ -148,7 +148,7 @@
         "code": "T5.3",
         "title": "Work Styles and Collaboration",
         "description": "Different approaches to teamwork and productivity",
-        "pageId": 53,
+        "pageId": 10,
         "markdownFile": "t5-3-work-styles.md"
       }
     }
