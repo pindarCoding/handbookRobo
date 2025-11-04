@@ -125,11 +125,23 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
               </button>
             </div>
 
-            <div className="prose dark:prose-invert max-w-none mb-6">
-              <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
-                {selectedTheme.introduction}
-              </p>
-            </div>
+           <div className="prose prose-slate dark:prose-invert max-w-none mb-6
+                prose-p:text-slate-600 dark:prose-p:text-slate-300
+                prose-p:leading-relaxed prose-p:text-lg
+                prose-p:mb-4">
+  <ReactMarkdown 
+    remarkPlugins={[remarkGfm]}
+    components={{
+      p: ({children}) => (
+        <p className="mb-4 last:mb-0">
+          {children}
+        </p>
+      )
+    }}
+  >
+    {selectedTheme.introduction || ''}
+  </ReactMarkdown>
+</div>
 
             {selectedTheme.reportPdfUrl && (
               <div className="flex justify-center">
