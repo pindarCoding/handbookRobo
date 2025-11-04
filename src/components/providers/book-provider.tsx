@@ -3,6 +3,7 @@
 
 import { ReactNode, createContext, useContext, useState, useEffect } from 'react'
 import { BookPage } from '@/types/handbook'
+import { toast } from 'sonner'
 
 interface BookContextType {
   pages: BookPage[];
@@ -14,7 +15,6 @@ interface BookContextType {
 const BookContext = createContext<BookContextType | undefined>(undefined)
 
 export function BookProvider({ children }: { children: ReactNode }) {
-  // Inizializziamo con un array vuoto per evitare hydration mismatch
   const [pages, setPages] = useState<BookPage[]>([])
   
   // Carica le pagine salvate dopo il primo render
@@ -38,27 +38,178 @@ export function BookProvider({ children }: { children: ReactNode }) {
     }
   }, [pages])
 
-  // Aggiunge una pagina al libro
-  const addPage = (page: Omit<BookPage, 'addedAt'>) => {
-    const pageWithTimestamp = { ...page, addedAt: Date.now() }
+  /**
+   * Crea un BookPage per il SubTheme padre di una Card
+   */
+  const createSubThemePage = (cardPage: Omit<BookPage, 'addedAt'>): Omit<BookPage, 'addedAt'> => {
+    // Estrai info dal titolo della card (es: "Gen Z: Workplace Values")
+    // Il SubTheme sarà "Workplace Values (Work)"
+    const cardTitle = cardPage.title
     
-    setPages(currentPages => {
-      // Controlla se la pagina esiste già
-      if (currentPages.some(p => p.id === page.id)) {
-        return currentPages
+    // Rimuovi la parte generation dal titolo (tutto prima del ":")
+    const subThemeTitle = cardTitle.includes(':') 
+      ? cardTitle.split(':')[1].trim() 
+      : cardTitle
+    
+    return {
+      id: `${cardPage.themeId}-${cardPage.subThemeId}`,
+      title: subThemeTitle,
+      themeId: cardPage.themeId,
+      subThemeId: cardPage.subThemeId
+      // No generationId, no cardId → è un SubTheme
+    }
+  }
+
+  /**
+   * Trova la posizione corretta per inserire una nuova card
+   * Mantiene l'ordine: SubTheme → Cards dello stesso SubTheme
+   */
+  const findInsertPosition = (currentPages: BookPage[], newCard: Omit<BookPage, 'addedAt'>): number => {
+    let lastRelatedIndex = -1
+    
+    // Trova l'ultima pagina dello stesso subTheme (SubTheme o Card)
+    for (let i = currentPages.length - 1; i >= 0; i--) {
+      if (currentPages[i].subThemeId === newCard.subThemeId) {
+        lastRelatedIndex = i
+        break
       }
-      return [...currentPages, pageWithTimestamp]
+    }
+    
+    // Se trovata, inserisci dopo
+    if (lastRelatedIndex !== -1) {
+      return lastRelatedIndex + 1
+    }
+    
+    // Altrimenti aggiungi in fondo
+    return currentPages.length
+  }
+
+  /**
+   * Aggiunge una Card al book
+   * Auto-inserisce il SubTheme padre se non esiste
+   */
+  const addPage = (page: Omit<BookPage, 'addedAt'>) => {
+    // ✅ ASSUNZIONE: Sempre una Card (cardId sempre presente)
+    
+    // 1. Check duplicato
+    const isDuplicate = pages.some(p => p.id === page.id)
+    if (isDuplicate) {
+      toast.error(`"${page.title}" is already in your handbook`, {
+        duration: 3000,
+      })
+      return
+    }
+
+    // 2. Check se SubTheme padre esiste
+    const subThemeExists = pages.some(p => 
+      p.themeId === page.themeId && 
+      p.subThemeId === page.subThemeId && 
+      !p.cardId  // È il SubTheme, non una Card
+    )
+
+    setPages(currentPages => {
+      const newPages = [...currentPages]
+      
+      // 3. Se SubTheme non esiste, crealo e inseriscilo
+      if (!subThemeExists) {
+        const subThemePage = createSubThemePage(page)
+        const subThemeWithTime: BookPage = { 
+          ...subThemePage, 
+          addedAt: Date.now() - 1  // -1 per essere sicuri che sia prima della card
+        }
+        
+        // Trova posizione e inserisci SubTheme
+        const subThemePosition = findInsertPosition(newPages, page)
+        newPages.splice(subThemePosition, 0, subThemeWithTime)
+        
+        toast.success(`Added "${page.title}" with its chapter`, {
+          duration: 3000,
+        })
+      } else {
+        toast.success(`Added "${page.title}"`, {
+          duration: 3000,
+        })
+      }
+      
+      // 4. Inserisci la Card nella posizione corretta
+      const cardWithTime: BookPage = { 
+        ...page, 
+        addedAt: Date.now() 
+      }
+      const cardPosition = findInsertPosition(newPages, page)
+      newPages.splice(cardPosition, 0, cardWithTime)
+      
+      return newPages
     })
   }
 
-  // Rimuove una pagina dal libro
+  /**
+   * Rimuove una pagina dal book
+   * Se è un SubTheme con Cards figlie, chiede conferma
+   */
   const removePage = (id: string) => {
-    setPages(currentPages => currentPages.filter(p => p.id !== id))
+    const pageToRemove = pages.find(p => p.id === id)
+    if (!pageToRemove) return
+
+    // Check se è un SubTheme (no cardId)
+    const isSubTheme = !pageToRemove.cardId && !!pageToRemove.subThemeId
+    
+    if (isSubTheme) {
+      // Conta quante cards figlie ha
+      const childCards = pages.filter(p => 
+        p.subThemeId === pageToRemove.subThemeId && 
+        !!p.cardId
+      )
+      
+      if (childCards.length > 0) {
+        // ⚠️ Ha cards figlie → Conferma richiesta
+        toast.warning(
+          `Removing this chapter will leave ${childCards.length} card${childCards.length > 1 ? 's' : ''} without context. Click again to confirm.`,
+          {
+            duration: 5000,
+            action: {
+              label: 'Remove Anyway',
+              onClick: () => {
+                setPages(current => current.filter(p => p.id !== id))
+                toast.success('Chapter removed. Cards are still in your handbook.', {
+                  duration: 3000,
+                })
+              }
+            }
+          }
+        )
+        return
+      }
+    }
+    
+    // Rimozione normale (Card o SubTheme senza figli)
+    setPages(current => current.filter(p => p.id !== id))
+    toast.success('Removed from handbook', {
+      duration: 2000,
+    })
   }
 
-  // Svuota il libro
+  /**
+   * Svuota completamente il book
+   */
   const clearBook = () => {
-    setPages([])
+    if (pages.length === 0) return
+    
+    toast.warning(
+      `Remove all ${pages.length} pages from your handbook?`,
+      {
+        duration: 5000,
+        action: {
+          label: 'Clear All',
+          onClick: () => {
+            setPages([])
+            toast.success('Handbook cleared', {
+              duration: 2000,
+            })
+          }
+        }
+      }
+    )
   }
 
   return (
