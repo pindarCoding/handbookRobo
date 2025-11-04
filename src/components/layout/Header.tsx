@@ -17,8 +17,8 @@ import { YourBookModal } from "@/components/mobile/YourBookModal";
 // ];
 
 const languages = [
-  { code: "en" as const, name: "English", flag: "🇬🇧" },
-  { code: "it" as const, name: "Italiano", flag: "🇮🇹" },
+  { code: "en" as const, name: "English", flagSvg: "/flags/gb.svg" },
+  { code: "it" as const, name: "Italiano", flagSvg: "/flags/it.svg" },
 ];
 
 
@@ -101,13 +101,18 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                 <button
                   type="button"
                   onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                  className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 font-medium"
+                  className="flex items-center space-x-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white p-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
+                  title={`Current language: ${selectedLanguage.name}`}
                 >
-                  <span className="text-xl">{selectedLanguage.flag}</span>
-                  <span>Select Your Language</span>
+                  <Image
+                    src={selectedLanguage.flagSvg}
+                    alt={selectedLanguage.name}
+                    width={28}
+                    height={20}
+                    className="rounded-sm"
+                  />
                   <ChevronDownIcon
-                    className={`w-4 h-4 transition-transform ${isLanguageOpen ? "rotate-180" : ""
-                      }`}
+                    className={`w-4 h-4 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`}
                   />
                 </button>
 
@@ -120,7 +125,13 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                           onClick={() => handleLanguageSelect(language)}
                           className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-600 w-full text-left"
                         >
-                          <span className="text-xl mr-3">{language.flag}</span>
+                          <Image
+                            src={language.flagSvg}
+                            alt={language.name}
+                            width={24}
+                            height={18}
+                            className="rounded-sm mr-3"
+                          />
                           <span>{language.name}</span>
                           {selectedLanguage.code === language.code && (
                             <span className="ml-auto text-blue-500">✓</span>
@@ -273,7 +284,13 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                             : "bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-600"
                           }`}
                       >
-                        <span className="text-lg mr-2">{language.flag}</span>
+                        <Image
+                          src={language.flagSvg}
+                          alt={language.name}
+                          width={20}
+                          height={15}
+                          className="rounded-sm mr-2"
+                        />
                         <span>{language.name}</span>
                       </button>
                     ))}

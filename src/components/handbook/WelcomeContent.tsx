@@ -52,7 +52,7 @@ export const WelcomeContent = () => {
             alt="Generational representation"
             width={300}
             height={150}
-            className="rounded-lg shadow-lg w-auto h-auto max-w-full"
+            className="rounded-lg  w-auto h-auto max-w-full"
             priority
           />
         </motion.div>
