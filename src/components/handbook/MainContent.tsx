@@ -161,7 +161,6 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
     }
 
     // Visualizzazione sottotema
-    // Visualizzazione sottotema o helper per selezione generazione
     if (
       (step === "subtheme" && selectedSubTheme) ||
       (step === "generation" && selectedSubTheme && !selectedGeneration)
@@ -172,9 +171,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
         {/* Header con titolo e bottone */}
         <div className="flex justify-between items-start mb-6">
           <div className="flex flex-col">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
-              {selectedSubTheme.title}
-            </h2>
+
             <div className="text-sm text-slate-500 dark:text-slate-400">
               Part of: {selectedTheme.title}
             </div>
@@ -195,7 +192,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
           )}
         </div>
 
-        {/* Helper Message */}
+        {/* Helper Message
         <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
@@ -217,7 +214,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
                 : "Choose a generation to explore how different age groups approach this topic."}
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Content Area - Loading/Error/Content */}
         {isLoading && (
