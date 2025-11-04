@@ -108,7 +108,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
         <div className="animate-fadeIn">
           <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
             <div className="flex justify-between items-start mb-6">
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-2xl font-bold text-blue-900 dark:text-orange-400">
                 {selectedTheme.title}
               </h2>
               <button
@@ -240,7 +240,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
         )}
 
         {!isLoading && !error && content && (
-          <div className="prose prose-slate dark:prose-invert max-w-none mb-6">
+          <div className="prose prose-slate dark:prose-invert max-w-none mb-6 dark:prose-headings:text-orange-400">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {content}
             </ReactMarkdown>
