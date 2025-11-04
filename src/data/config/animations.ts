@@ -20,15 +20,15 @@ export const staggerContainer: Variants = {
 export const staggerItem: Variants = {
   hidden: { 
     opacity: 0, 
-    x: -60 
+    x: -20 
   },
   visible: { 
     opacity: 1, 
     x: 0,
     transition: {
       type: 'spring',
-      stiffness: 100,
-      damping: 10
+      stiffness: 200,
+      damping: 25
     }
   }
 }

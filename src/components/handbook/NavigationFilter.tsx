@@ -94,7 +94,7 @@ export const NavigationFilter = ({
                 initial="hidden"
                 animate="visible"
               >
-                <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">
+                <h3 className="text-xs font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
                   Select Theme
                 </h3>
                 {themes.map((theme, index) => (
@@ -129,12 +129,10 @@ export const NavigationFilter = ({
               initial="hidden"
               animate="visible"
             >
-              <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
+              <h3 className="text-xs font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
                 Select Subtheme
               </h3>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mb-3 p-2 bg-slate-100 dark:bg-slate-700/50 rounded">
-                {selectedTheme.title}
-              </div>
+
               {selectedTheme.subThemes.map((subTheme, index) => (
                 <motion.button
                   type="button"
@@ -170,14 +168,14 @@ export const NavigationFilter = ({
     animate="visible"
     key="generation-step"  // ← Aggiungi key unica!
   >
-    <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
-      Select Generation
+    <h3 className="text-xs font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
+      Select generation
     </h3>
-    {selectedTheme && selectedSubTheme && (
+    {/* {selectedTheme && selectedSubTheme && (
       <div className="text-xs text-slate-600 dark:text-slate-400 mb-3 p-2 bg-slate-100 dark:bg-slate-700/50 rounded">
         {selectedTheme.title} → {selectedSubTheme.title}
       </div>
-    )}
+    )} */}
 
     {/* Container con layout dinamico */}
     <div
