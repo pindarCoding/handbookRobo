@@ -45,7 +45,7 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
     <>
       <header className="sticky top-0 bg-white dark:bg-slate-800 shadow-md border-b border-gray-200 dark:border-slate-700  z-50">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-4 md:px-6">
-          <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+          <div className="flex items-center justify-between h-16sm:h-16 lg:h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
               <button
@@ -66,10 +66,10 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                   height={80}
                   style={{
                     height: 'auto',
-                    maxHeight: '2.5rem',  // 40px su mobile
+                    maxHeight: '4.5rem',  // 40px su mobile
                     width: 'auto'
                   }}
-                  className="h-8 sm:h-12 lg:h-16 xl:h-20 w-auto hover:opacity-80 transition-opacity"
+                  className="h-9 sm:h-12 lg:h-16 xl:h-20 w-auto hover:opacity-80 transition-opacity"
                   priority={true}
                 />
               </button>
