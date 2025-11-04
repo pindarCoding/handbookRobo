@@ -1,16 +1,15 @@
-// src/components/handbook/MainContent.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import { Theme, SubTheme } from '@/hooks/useThemes'
 import { Generation } from '@/hooks/useGenerations'
 import { Card } from '@/hooks/useCards'
+import { AddToHandbookButton } from "./AddToHandbookButton";
 import { useBook } from "@/components/providers/book-provider";
 import { PlusCircleIcon } from "lucide-react";
 import { WelcomeContent } from "./WelcomeContent";
 import { toast } from "sonner";
 import { fadeSlideUp, staggerContainer, staggerItem, scalePop } from "@/data/config/animations";
-// Aggiungi questi import dopo quelli esistenti
 import { useSubThemeContent } from '@/hooks/useSubThemeContent';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -107,24 +106,6 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
       return (
         <div className="animate-fadeIn">
           <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
-            <div className="flex justify-between items-start mb-6">
-              <h2 className="text-2xl font-bold text-blue-900 dark:text-orange-400">
-                {selectedTheme.title}
-              </h2>
-              <button
-                type="button"
-                onClick={handleAddPage}
-                className="inline-flex items-center gap-2 px-3 py-1.5
-             text-blue-600 dark:text-blue-400 
-             hover:text-blue-700 dark:hover:text-blue-300
-             hover:bg-blue-50 dark:hover:bg-blue-900/20
-             rounded-lg transition-colors"
-              >
-                <PlusCircleIcon size={24} />
-                <span className="text-sm font-medium">Add to Handbook</span>
-              </button>
-            </div>
-
            <div className="prose prose-slate dark:prose-invert max-w-none mb-6
                 prose-p:text-slate-600 dark:prose-p:text-slate-300
                 prose-p:leading-relaxed prose-p:text-lg
@@ -325,19 +306,10 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
                 initial="initial"
                 animate="animate"
               >
-                <motion.button
-                type="button"
-                onClick={handleAddPage}
-                className="inline-flex items-center gap-2 px-4 py-2
-             bg-blue-500 hover:bg-blue-600 
-             text-white rounded-lg 
-             transition-all shadow-md hover:shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                >
-                <PlusCircleIcon size={16} />
-                <span className="text-sm font-medium">Add to Handbook</span>
-                </motion.button>
+                <AddToHandbookButton
+                  size="large"
+                  onClick={handleAddPage}
+                />
               </motion.div>
 
               {/* Second row: Title */}
