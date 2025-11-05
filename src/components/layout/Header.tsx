@@ -181,7 +181,7 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
             </nav>
 
             {/* Mobile controls: Theme toggle + Menu button */}
-            <div className="md:hidden flex items-center gap-2">
+            <div className="lg:hidden flex items-center gap-2">
               {/* Theme Toggle Mobile */}
               <button
                 type="button"
