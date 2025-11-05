@@ -105,7 +105,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
     ) {
       return (
         <div className="animate-fadeIn">
-          <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
+          <div className="bg-white dark:bg-slate-800 rounded-lg p-16 shadow-lg ">
            <div className="prose prose-slate dark:prose-invert max-w-none mb-6
                 prose-p:text-slate-600 dark:prose-p:text-slate-300
                 prose-p:leading-relaxed prose-p:text-lg
@@ -124,30 +124,6 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
   </ReactMarkdown>
 </div>
 
-            {selectedTheme.reportPdfUrl && (
-              <div className="flex justify-center">
-                <a
-                  href={selectedTheme.reportPdfUrl}
-                  download
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-md hover:shadow-lg"
-                >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    />
-                  </svg>
-                  Download Analysis Report
-                </a>
-              </div>
-            )}
           </div>
         </div>
       );
@@ -160,7 +136,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
     ) {
   return (
     <div className="animate-fadeIn">
-      <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
+      <div className="bg-white dark:bg-slate-800 rounded-lg  p-16 shadow-lg">
         {/* Header con titolo e bottone */}
         <div className="flex justify-between items-start mb-6">
           <div className="flex flex-col">
@@ -237,7 +213,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
           </div>
         )}
 
-        {/* Helper Icon (solo se generation step e nessun errore) */}
+        {/* Helper Icon (solo se generation step e nessun errore)   CONTROLLARE E PULIRE*/}
         {step === "generation" && !isLoading && (
           <div className="mt-8 flex justify-center">
             <div className="text-center">
@@ -290,52 +266,52 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
           transition={{ duration: 0.3 }}
         >
           {/* Card principale con stile distintivo */}
-          <motion.div
+            <motion.div
             className={`
-            rounded-lg  overflow-hidden
-          `}
+            rounded-lg  overflow-hidden 
+            `}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-          >
+            >
             {/* Header della card */}
             <div className="bg-white dark:bg-slate-800 p-6 border-b border-slate-200 dark:border-slate-700">
               <div className="space-y-4">
               {/* First row: Button */}
               <motion.div 
-                className="flex justify-end"
-                variants={scalePop}
-                initial="initial"
-                animate="animate"
+              className="flex justify-end"
+              variants={scalePop}
+              initial="initial"
+              animate="animate"
               >
-                <AddToHandbookButton
-                  size="large"
-                  onClick={handleAddPage}
-                />
+              <AddToHandbookButton
+                size="large"
+                onClick={handleAddPage}
+              />
               </motion.div>
 
               {/* Second row: Title */}
               <motion.div
-                variants={fadeSlideUp}
-                initial="hidden"
-                animate="visible"
+              variants={fadeSlideUp}
+              initial="hidden"
+              animate="visible"
               >
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                {selectedCard.title}
-                </h2>
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+              {selectedCard.title}
+              </h2>
               </motion.div>
 
               {/* Third row: Chip with title and age range */}
               <motion.div
-                variants={fadeSlideUp}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: 0.2 }}
+              variants={fadeSlideUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.2 }}
               >
-                <motion.span 
-                  className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100"
-                  whileHover={{ scale: 1.05 }}
-                >
-                {selectedGeneration.title} • {selectedGeneration.ageRange}
-                </motion.span>
+              <motion.span 
+                className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100"
+                whileHover={{ scale: 1.05 }}
+              >
+              {selectedGeneration.title} • {selectedGeneration.ageRange}
+              </motion.span>
               </motion.div>
               </div>
             </div>
@@ -345,61 +321,61 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
               {/* Placeholder per contenuto futuro */}
 
               <div className="mb-6 rounded-lg overflow-hidden shadow-md">
-                {/* Mostra i tre contenuti strutturati */}
+              {/* Mostra i tre contenuti strutturati */}
+              <motion.div 
+                className="space-y-6 lg:space-y-0 lg:space-x-6 mb-6 flex flex-col lg:flex-row"
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+              >
+                {/* The Stereotype */}
                 <motion.div 
-                  className="space-y-6 mb-6"
-                  variants={staggerContainer}
-                  initial="hidden"
-                  animate="visible"
+                className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 lg:flex-1"
+                variants={staggerItem}
+                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
-                  {/* The Stereotype */}
-                  <motion.div 
-                    className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4"
-                    variants={staggerItem}
-                    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                  >
-                    <h3 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
-                      <span className="text-lg">🏷️</span> The Stereotype
-                    </h3>
-                    <p className="text-red-800 dark:text-red-200">
-                      {selectedCard.stereotype}
-                    </p>
-                  </motion.div>
-
-                  {/* Research Findings */}
-                  <motion.div 
-                    className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4"
-                    variants={staggerItem}
-                    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                  >
-                    <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
-                      <span className="text-lg">📊</span> Research Findings
-                    </h3>
-                    <p className="text-green-800 dark:text-green-200">
-                      {selectedCard.researchFindings}
-                    </p>
-                  </motion.div>
-
-                  {/* Strategies and Practical Advice */}
-                  <motion.div 
-                    className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4"
-                    variants={staggerItem}
-                    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                  >
-                    <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center gap-2">
-                      <span className="text-lg">💡</span> Strategies and
-                      Practical Advice
-                    </h3>
-                    <p className="text-blue-800 dark:text-blue-200">
-                      {selectedCard.strategiesAdvice}
-                    </p>
-                  </motion.div>
+                <h3 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
+                  <span className="text-lg">🏷️</span> The Stereotype
+                </h3>
+                <p className="text-red-800 dark:text-red-200">
+                  {selectedCard.stereotype}
+                </p>
                 </motion.div>
+
+                {/* Research Findings */}
+                <motion.div 
+                className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 lg:flex-1"
+                variants={staggerItem}
+                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                >
+                <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
+                  <span className="text-lg">📊</span> Research Findings
+                </h3>
+                <p className="text-green-800 dark:text-green-200">
+                  {selectedCard.researchFindings}
+                </p>
+                </motion.div>
+
+                {/* Strategies and Practical Advice */}
+                <motion.div 
+                className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 lg:flex-1"
+                variants={staggerItem}
+                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                >
+                <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center gap-2">
+                  <span className="text-lg">💡</span> Strategies and
+                  Practical Advice
+                </h3>
+                <p className="text-blue-800 dark:text-blue-200">
+                  {selectedCard.strategiesAdvice}
+                </p>
+                </motion.div>
+              </motion.div>
               </div>
 
               <div></div>
             </div>
-          </motion.div>
+            </motion.div>
         </motion.div>
       );
     }
