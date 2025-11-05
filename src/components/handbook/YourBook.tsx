@@ -230,14 +230,14 @@ export const YourBook = () => {
                   exit="exit"
                   className={`group relative flex gap-0 rounded-lg overflow-hidden transition-all duration-200
                              ${isChapter 
-                               ? 'bg-blue-50 dark:bg-orange-900/20 border-2 border-blue-200 dark:border-orange-700 hover:border-blue-300 dark:hover:border-orange-600 hover:shadow-lg' 
-                               : 'bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-orange-400 hover:shadow-md'
+                                ? 'bg-slate-100 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 hover:border-slate-400 dark:hover:border-slate-500 hover:shadow-lg' 
+               : 'bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-orange-400 hover:shadow-md'
                              }`}
                 >
                   {/* Badge/Icon Area */}
                   {isChapter ? (
                     <motion.div
-                      className="flex items-center justify-center w-14 bg-blue-500 dark:bg-orange-600 text-white"
+                      className="flex items-center justify-center w-14 bg-slate-600 dark:bg-slate-500 text-white"
                       variants={bookBadgePulse}
                       initial="initial"
                       animate="animate"
@@ -250,7 +250,7 @@ export const YourBook = () => {
                   ) : (
                     pageCode && (
                       <motion.div
-                        className="flex items-center justify-center w-14 bg-blue-500 dark:bg-orange-500 text-white text-xs font-bold"
+                        className="flex items-center justify-center w-14 bg-slate-400 dark:bg-slate-400 text-white text-xs font-bold"
                         variants={bookBadgePulse}
                         initial="initial"
                         animate="animate"
