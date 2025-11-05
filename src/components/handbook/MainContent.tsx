@@ -6,7 +6,6 @@ import { Generation } from '@/hooks/useGenerations'
 import { Card } from '@/hooks/useCards'
 import { AddToHandbookButton } from "./AddToHandbookButton";
 import { useBook } from "@/components/providers/book-provider";
-import { PlusCircleIcon } from "lucide-react";
 import { WelcomeContent } from "./WelcomeContent";
 import { toast } from "sonner";
 import { fadeSlideUp, staggerContainer, staggerItem, scalePop } from "@/data/config/animations";
