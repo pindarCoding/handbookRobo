@@ -323,27 +323,38 @@ const t = (key: string, params?: Record<string, string | number>): string => {
    * Carica contenuto Markdown per SubTheme (rimane async)
    */
   const loadMarkdown = useCallback(async (filename: string): Promise<string> => {
-    try {
-      const response = await fetch(`/data/i18n/${language}/subthemes/${filename}`)
-      
-      if (response.ok) {
-        return await response.text()
-      }
-      
-      console.warn(`Markdown not found for ${language}, falling back to English`)
+  try {
+    // 1. Tenta caricamento nella lingua corrente
+    const response = await fetch(`/data/i18n/${language}/subthemes/${filename}`)
+    
+    if (response.ok) {
+      const content = await response.text()
+      console.log(`✅ Loaded markdown: ${filename} (${language})`)
+      return content
+    }
+    
+    // 2. Se non trovato, prova fallback inglese (SILENZIOSO, non è un errore)
+    if (language !== 'en') {
+      console.info(`ℹ️ Markdown not found for ${language}, trying English fallback: ${filename}`)
       const fallbackResponse = await fetch(`/data/i18n/en/subthemes/${filename}`)
       
       if (fallbackResponse.ok) {
-        return await fallbackResponse.text()
+        const content = await fallbackResponse.text()
+        console.log(`✅ Loaded markdown (EN fallback): ${filename}`)
+        return content
       }
-      
-      throw new Error(`Markdown file not found: ${filename}`)
-      
-    } catch (error) {
-      console.error(`Failed to load markdown: ${filename}`, error)
-      return `# Content Not Available\n\nThe content file **${filename}** could not be loaded.\n\n[${filename}]`
     }
-  }, [language])
+    
+    // 3. Se nemmeno fallback funziona, restituisci placeholder (NESSUN THROW)
+    console.warn(`⚠️ Markdown file not available: ${filename}`)
+    return `# Content Not Available\n\nThe content file **${filename}** could not be loaded in any language.\n\nPlease check:\n- File exists in /public/data/i18n/${language}/subthemes/\n- Filename is correct in themes.json`
+    
+  } catch (error) {
+    // 4. Errore di rete o altro problema tecnico
+    console.error(`❌ Network error loading markdown: ${filename}`, error)
+    return `# Error Loading Content\n\nThere was a technical error loading **${filename}**.\n\nError: ${error instanceof Error ? error.message : 'Unknown error'}`
+  }
+}, [language])
 
   /**
    * ✨ NUOVO: Ottieni card per SubTheme + Generation
