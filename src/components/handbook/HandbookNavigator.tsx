@@ -153,7 +153,7 @@ export default function HandbookNavigator() {
         </main>
 
         {/* RIGHT SIDEBAR - YourBook */}
-        <aside className="hidden lg:flex lg:flex-col w-[340px] bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 overflow-y-auto">
+        <aside className="hidden lg:flex lg:flex-col w-[340px] h-screen  dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 overflow-">
           <div className="p-4">
             <YourBook />
           </div>
