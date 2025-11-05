@@ -13,6 +13,7 @@ import { fadeSlideUp, staggerContainer, staggerItem, scalePop } from "@/data/con
 import { useSubThemeContent } from '@/hooks/useSubThemeContent';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { useTranslation } from "@/hooks";
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
@@ -34,6 +35,14 @@ export const MainContent = ({
 const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
 
   const { addPage } = useBook();
+  const { t, language } = useTranslation();
+  
+  // ⬇️ AGGIUNGI SOLO QUESTO
+  console.log('🔍 DEBUG:', {
+    language,
+    testKey: t("handbook.addButton"),
+    rawResult: t("handbook.addButton") === "Add to Handbook"
+  });
 
   // Funzione per generare l'ID della pagina corrente
   const generatePageId = () => {
@@ -98,7 +107,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
       return <WelcomeContent />;
     }
 
-    // Visualizzazione tema
+    // 1 Visualizzazione tema
     if (
       step === "theme" ||
       (step === "subtheme" && selectedTheme && !selectedSubTheme)
@@ -110,6 +119,9 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
                 prose-p:text-slate-600 dark:prose-p:text-slate-300
                 prose-p:leading-relaxed prose-p:text-lg
                 prose-p:mb-4">
+  <h1 className="mb-6 text-4xl font-bold text-slate-900 dark:text-white">
+    Introduzione - {selectedTheme.title}
+  </h1>
   <ReactMarkdown 
     remarkPlugins={[remarkGfm]}
     components={{
@@ -145,23 +157,8 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
               Part of: {selectedTheme.title}
             </div>
           </div>
-          {step === "subtheme" && (
-            <button
-              type="button"
-              onClick={handleAddPage}
-              className="inline-flex items-center gap-2 px-3 py-1.5
-                text-blue-600 dark:text-blue-400 
-                hover:text-blue-700 dark:hover:text-blue-300
-                hover:bg-blue-50 dark:hover:bg-blue-900/20
-                rounded-lg transition-colors"
-            >
-              <PlusCircleIcon size={24} />
-              <span className="text-sm font-medium">Add to Handbook</span>
-            </button>
-          )}
         </div>
 
-        {/* Helper Message
         <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
@@ -179,11 +176,11 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
             </div>
             <p className="text-sm text-blue-800 dark:text-blue-200">
               {step === "generation"
-                ? "Select a generation above to see specific approaches and methodologies for this topic."
+                ? "Select a generation on the navigation menu to see specific approaches and methodologies for this topic."
                 : "Choose a generation to explore how different age groups approach this topic."}
             </p>
           </div>
-        </div> */}
+        </div>
 
         {/* Content Area - Loading/Error/Content */}
         {isLoading && (
