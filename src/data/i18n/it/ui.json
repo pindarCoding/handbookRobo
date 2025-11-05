@@ -2,6 +2,49 @@
   "common": {
     "loading": "Caricamento...",
     "error": "Errore",
-    "back": "Indietro"
+    "back": "Indietro",
+    "clearAll": "Cancella Tutto",
+    "page": "Pagina"
+  },
+  
+  "handbook": {
+    "addButton": "Aggiungi al Manuale",
+    "addedWithChapter": "Ho aggiunto l'introduzione del capitolo per te",
+    "added": "Aggiunto",
+    "alreadyExists": "è già nel tuo manuale",
+    "removed": "Rimosso dal manuale",
+    "chapterRemoved": "Capitolo rimosso. Le schede sono ancora nel tuo manuale.",
+    "removeChapterWarning": "Rimuovere questo capitolo lascerà",
+    "cardWithoutContext": "scheda senza contesto. Clicca di nuovo per confermare.",
+    "cardsWithoutContext": "schede senza contesto. Clicca di nuovo per confermare."
+  },
+  
+  "yourBook": {
+    "title": "Il Tuo Manuale",
+    "emptyMessage": "Il tuo manuale è vuoto. Inizia ad aggiungere pagine dalle categorie sopra.",
+    "exportButton": "Esporta Manuale PDF",
+    "chapterIntroduction": "Introduzione Capitolo",
+    "clearConfirm": "Rimuovere tutte le",
+    "pagesFromHandbook": "pagine dal tuo manuale?",
+    "handbookCleared": "Manuale cancellato"
+  },
+  
+  "navigation": {
+    "selectTheme": "Seleziona Tema",
+    "selectSubTheme": "Seleziona Sottotema",
+    "selectGeneration": "Seleziona Generazione"
+  },
+  
+  "progress": {
+    "theme": "Tema",
+    "subtheme": "Sottotema",
+    "generation": "Generazione"
+  },
+  
+  "errors": {
+    "exportFailed": "Si è verificato un errore durante l'esportazione. Riprova.",
+    "noPages": "Nessuna pagina valida da esportare",
+    "pageNotFound": "La pagina {{pageId}} non è disponibile sul server. Rimuovila dalla selezione e riprova.",
+    "networkError": "Errore di rete: Impossibile connettersi al server PDF."
   }
 }

@@ -6,6 +6,7 @@ import { Trash2Icon } from "lucide-react";
 import { BookPage } from "@/types/handbook";
 import { useCards } from "@/hooks/useCards";
 import { useThemes } from "@/hooks/useThemes";
+import { useTranslation } from "@/hooks";
 import confetti from "canvas-confetti";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -19,6 +20,7 @@ export const YourBook = () => {
   const { pages, removePage, clearBook } = useBook();
   const { getAllCards } = useCards();
   const { getThemeById, getSubThemeById } = useThemes();
+  const { t } = useTranslation();
 
   // Funzione helper per recuperare il page_id basandosi sugli ID salvati
   const getPageId = (page: BookPage): number | null => {
@@ -192,17 +194,17 @@ export const YourBook = () => {
       <div className="flex justify-between items-center p-6 pb-4 border-b border-slate-200 dark:border-slate-700">
         <div className="flex items-center gap-2">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-            Your Custom Handbook
+            {t("yourBook.title")}
           </h2>
           <span className="px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-semibold">
             {pages.length}
           </span>
-        </div>
+        </div> 
         <button
           onClick={clearBook}
           className="text-red-500 hover:text-red-700 dark:hover:text-red-400 text-sm font-medium transition-colors"
         >
-          Clear All
+          {t("common.clearAll")}    
         </button>
       </div>
 
@@ -276,12 +278,12 @@ export const YourBook = () => {
                           <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
                           </svg>
-                          Chapter Introduction
+                          {t("yourBook.chapterIntroduction")}
                         </div>
                       ) : (
                         pageId && (
                           <div className="text-xs text-slate-500 dark:text-slate-400">
-                            Page {pageId}
+                            {t("common.page")} {pageId}
                           </div>
                         )
                       )}

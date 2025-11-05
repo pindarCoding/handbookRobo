@@ -2,6 +2,49 @@
   "common": {
     "loading": "Loading...",
     "error": "Error",
-    "back": "Back"
+    "back": "Back",
+    "clearAll": "Clear All",
+    "page": "Page"
+  },
+  
+  "handbook": {
+    "addButton": "Add to Handbook",
+    "addedWithChapter": "Added chapter introduction for you",
+    "added": "Added",
+    "alreadyExists": "is already in your handbook",
+    "removed": "Removed from handbook",
+    "chapterRemoved": "Chapter removed. Cards are still in your handbook.",
+    "removeChapterWarning": "Removing this chapter will leave",
+    "cardWithoutContext": "card without context. Click again to confirm.",
+    "cardsWithoutContext": "cards without context. Click again to confirm."
+  },
+  
+  "yourBook": {
+    "title": "Your Custom Handbook",
+    "emptyMessage": "Your handbook is empty. Start adding pages from the categories above.",
+    "exportButton": "Export Handbook PDF",
+    "chapterIntroduction": "Chapter Introduction",
+    "clearConfirm": "Remove all",
+    "pagesFromHandbook": "pages from your handbook?",
+    "handbookCleared": "Handbook cleared"
+  },
+  
+  "navigation": {
+    "selectTheme": "Select Theme",
+    "selectSubTheme": "Select Subtheme",
+    "selectGeneration": "Select Generation"
+  },
+  
+  "progress": {
+    "theme": "Theme",
+    "subtheme": "Subtheme",
+    "generation": "Generation"
+  },
+  
+  "errors": {
+    "exportFailed": "An unexpected error occurred while exporting the handbook. Please try again.",
+    "noPages": "No pages with valid page IDs to export",
+    "pageNotFound": "Page {{pageId}} is not available on the server. Please remove it from your selection and try again.",
+    "networkError": "Network error: Unable to connect to the PDF server."
   }
 }
