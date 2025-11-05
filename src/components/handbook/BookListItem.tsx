@@ -44,7 +44,7 @@ export const BookListItem = ({
         // Chapter Icon
         <motion.div
           className="flex-shrink-0 w-10 h-10 rounded-full
-                    bg-slate-600 dark:bg-slate-500
+                    bg-blue-900 dark:bg-blue-500
                     flex items-center justify-center
                     text-white shadow-sm"
           variants={bookBadgePulse}

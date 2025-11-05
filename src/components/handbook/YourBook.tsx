@@ -171,8 +171,6 @@ export const YourBook = () => {
     }
   };
 
-  
-
   if (pages.length === 0) {
     return (
       <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 text-center">
@@ -186,7 +184,7 @@ export const YourBook = () => {
   return (
     <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
       {/* Header */}
-      <div className="flex justify-between items-center p-6 pb-4 border-b border-slate-200 dark:border-slate-700">
+      <div className="flex-shrink-0 justify-between items-center p-6 pb-4 border-b border-slate-200 dark:border-slate-700">
         <div className="flex items-center gap-2">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">
             {t("yourBook.title")}
@@ -194,17 +192,18 @@ export const YourBook = () => {
           <span className="px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-semibold">
             {pages.length}
           </span>
-        </div> 
+        </div>
         <button
           onClick={clearBook}
           className="text-red-500 hover:text-red-700 dark:hover:text-red-400 text-sm font-medium transition-colors"
         >
-          {t("common.clearAll")}    
+          {t("common.clearAll")}
         </button>
       </div>
 
       {/* Lista Items */}
-      <div className={`flex-1 px-6 py-4 overflow-y-auto`}>
+      <div className={`flex-1 overflow-y-auto`}>
+        <div className="p-6 pb-4 space-y-4 border-b">
         <motion.ul
           className="space-y-3"
           variants={bookItemContainer}
@@ -212,35 +211,34 @@ export const YourBook = () => {
           animate="visible"
         >
           <AnimatePresence mode="popLayout">
-  {pages.map((page, index) => {
-    const pageCode = getPageCode(page);
-    const isChapter = !page.cardId && !!page.subThemeId;
-    const isFirst = index === 0;
-    const isSingle = pages.length === 1;
+            {pages.map((page, index) => {
+              const pageCode = getPageCode(page);
+              const isChapter = !page.cardId && !!page.subThemeId;
+              const isFirst = index === 0;
+              const isSingle = pages.length === 1;
 
-    return (
-      <BookListItem
-        key={page.id}
-        page={page}
-        pageCode={pageCode}
-        isChapter={isChapter}
-        isFirst={isFirst}
-        isSingle={isSingle}
-        onRemove={removePage}
-      />
-    );
-  })}
-</AnimatePresence>
+              return (
+                <BookListItem
+                  key={page.id}
+                  page={page}
+                  pageCode={pageCode}
+                  isChapter={isChapter}
+                  isFirst={isFirst}
+                  isSingle={isSingle}
+                  onRemove={removePage}
+                />
+              );
+            })}
+          </AnimatePresence>
         </motion.ul>
-      </div>
+         {/* Footer Button */}
 
-      {/* Footer Button */}
-      <div className="p-6 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <div className="pt-4" >
         <button
           onClick={exportHandbook}
           className="w-full py-3 px-4
-                   bg-gradient-to-r from-blue-500 to-blue-600 
-                   hover:from-blue-600 hover:to-blue-700
+                   bg-gradient-to-r from-orange-500 to-orange-600 
+                   hover:from-orange-600 hover:to-orange-700
                    dark:from-orange-500 dark:to-orange-600
                    dark:hover:from-orange-600 dark:hover:to-orange-700
                    text-white font-semibold rounded-lg 
@@ -248,13 +246,27 @@ export const YourBook = () => {
                    transition-all duration-200
                    flex items-center justify-center gap-2"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          <svg
+            className="w-9 h-9"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
           </svg>
           Export Handbook PDF
         </button>
+      </div>      
+
+        </div>
       </div>
+
+           
     </div>
   );
 };
