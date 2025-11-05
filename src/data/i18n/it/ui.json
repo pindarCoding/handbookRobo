@@ -10,13 +10,13 @@
   "handbook": {
     "addButton": "Aggiungi al Manuale",
     "addedWithChapter": "Ho aggiunto l'introduzione del capitolo per te",
-    "added": "Aggiunto",
-    "alreadyExists": "è già nel tuo manuale",
+    "added": "Aggiunto \"{{title}}\"",
+    "alreadyExists": "\"{{title}}\" è già nel tuo manuale",
     "removed": "Rimosso dal manuale",
     "chapterRemoved": "Capitolo rimosso. Le schede sono ancora nel tuo manuale.",
-    "removeChapterWarning": "Rimuovere questo capitolo lascerà",
-    "cardWithoutContext": "scheda senza contesto. Clicca di nuovo per confermare.",
-    "cardsWithoutContext": "schede senza contesto. Clicca di nuovo per confermare."
+    "removeChapterWarning": "Rimuovere questo capitolo lascerà {{count}} scheda senza contesto. Clicca di nuovo per confermare.",
+    "removeChapterWarningPlural": "Rimuovere questo capitolo lascerà {{count}} schede senza contesto. Clicca di nuovo per confermare.",
+    "handbookCleared": "Manuale cancellato"
   },
   
   "yourBook": {
@@ -24,9 +24,9 @@
     "emptyMessage": "Il tuo manuale è vuoto. Inizia ad aggiungere pagine dalle categorie sopra.",
     "exportButton": "Esporta Manuale PDF",
     "chapterIntroduction": "Introduzione Capitolo",
-    "clearConfirm": "Rimuovere tutte le",
-    "pagesFromHandbook": "pagine dal tuo manuale?",
-    "handbookCleared": "Manuale cancellato"
+    "clearConfirm": "Rimuovere tutte le {{count}} pagine dal tuo manuale?",
+    "clearConfirmSingle": "Rimuovere questa pagina dal tuo manuale?",
+    "removeAnyway": "Rimuovi Comunque"
   },
   
   "navigation": {
@@ -41,10 +41,22 @@
     "generation": "Generazione"
   },
   
+  "toast": {
+    "success": "Successo",
+    "error": "Errore",
+    "warning": "Attenzione",
+    "info": "Info"
+  },
+  
   "errors": {
     "exportFailed": "Si è verificato un errore durante l'esportazione. Riprova.",
     "noPages": "Nessuna pagina valida da esportare",
     "pageNotFound": "La pagina {{pageId}} non è disponibile sul server. Rimuovila dalla selezione e riprova.",
-    "networkError": "Errore di rete: Impossibile connettersi al server PDF."
+    "pageNotFoundSimple": "Errore: La pagina {{pageId}} non è disponibile sul server.",
+    "networkError": "Errore di rete: Impossibile connettersi al server PDF. Controlla la tua connessione.",
+    "serverError": "Errore: Il server ha risposto con stato {{status}}",
+    "emptyPdfError": "Errore: Ricevuto file PDF vuoto",
+    "invalidPdfError": "Errore: Il server non ha restituito un file PDF valido",
+    "corsError": "Errore di rete: Impossibile connettersi al server PDF. Verifica che:\n- Il server sia attivo su {{serverUrl}}\n- CORS sia configurato correttamente sul server\n- Tu sia sulla stessa rete"
   }
 }

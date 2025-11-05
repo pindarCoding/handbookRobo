@@ -10,13 +10,13 @@
   "handbook": {
     "addButton": "Add to Handbook",
     "addedWithChapter": "Added chapter introduction for you",
-    "added": "Added",
-    "alreadyExists": "is already in your handbook",
+    "added": "Added \"{{title}}\"",
+    "alreadyExists": "\"{{title}}\" is already in your handbook",
     "removed": "Removed from handbook",
     "chapterRemoved": "Chapter removed. Cards are still in your handbook.",
-    "removeChapterWarning": "Removing this chapter will leave",
-    "cardWithoutContext": "card without context. Click again to confirm.",
-    "cardsWithoutContext": "cards without context. Click again to confirm."
+    "removeChapterWarning": "Removing this chapter will leave {{count}} card without context. Click again to confirm.",
+    "removeChapterWarningPlural": "Removing this chapter will leave {{count}} cards without context. Click again to confirm.",
+    "handbookCleared": "Handbook cleared"
   },
   
   "yourBook": {
@@ -24,9 +24,9 @@
     "emptyMessage": "Your handbook is empty. Start adding pages from the categories above.",
     "exportButton": "Export Handbook PDF",
     "chapterIntroduction": "Chapter Introduction",
-    "clearConfirm": "Remove all",
-    "pagesFromHandbook": "pages from your handbook?",
-    "handbookCleared": "Handbook cleared"
+    "clearConfirm": "Remove all {{count}} pages from your handbook?",
+    "clearConfirmSingle": "Remove this page from your handbook?",
+    "removeAnyway": "Remove Anyway"
   },
   
   "navigation": {
@@ -41,10 +41,22 @@
     "generation": "Generation"
   },
   
+  "toast": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info"
+  },
+  
   "errors": {
     "exportFailed": "An unexpected error occurred while exporting the handbook. Please try again.",
     "noPages": "No pages with valid page IDs to export",
     "pageNotFound": "Page {{pageId}} is not available on the server. Please remove it from your selection and try again.",
-    "networkError": "Network error: Unable to connect to the PDF server."
+    "pageNotFoundSimple": "Error: Page {{pageId}} is not available on the server.",
+    "networkError": "Network error: Unable to connect to the PDF server. Please check your connection.",
+    "serverError": "Error: Server responded with status {{status}}",
+    "emptyPdfError": "Error: Received empty PDF file",
+    "invalidPdfError": "Error: Server did not return a valid PDF file",
+    "corsError": "Network error: Unable to connect to the PDF server. Please check:\n- The server is running at {{serverUrl}}\n- CORS is properly configured on the server\n- You are on the same network"
   }
 }
