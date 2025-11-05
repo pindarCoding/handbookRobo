@@ -2,6 +2,9 @@
 
 import { motion } from 'framer-motion'
 import { PlusCircleIcon } from 'lucide-react'
+import { useTranslation } from '@/hooks'
+
+
 
 interface AddToHandbookButtonProps {
   onClick: () => void
@@ -11,7 +14,7 @@ interface AddToHandbookButtonProps {
 
 export const AddToHandbookButton = ({ 
   onClick, 
-  title = 'Add to Handbook',
+  // title = {t('handbook.addButton')},
   size = 'default' 
 }: AddToHandbookButtonProps) => {
   const sizeClasses = size === 'large' 
@@ -19,6 +22,7 @@ export const AddToHandbookButton = ({
     : 'px-4 py-2.5 text-sm'
   
   const iconSize = size === 'large' ? 20 : 18
+  const { t } = useTranslation()
 
   return (
     <motion.button
@@ -76,7 +80,7 @@ export const AddToHandbookButton = ({
         <PlusCircleIcon size={iconSize} strokeWidth={2.5} />
       </motion.div>
 
-      <span className="relative z-10">{title}</span>
+      <span className="relative z-10"> {t('handbook.addButton')}</span>
 
       {/* Pulse ring */}
       <motion.div
