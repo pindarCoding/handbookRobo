@@ -13,7 +13,7 @@
         "title": "Communication Channel Confusion and Response Expectations in the Workplace",
         "description": "Digital vs traditional communication methods",
         "pageId": 11,
-        "markdownFile": "t1-1-communication-tools.md"
+        "markdownFile": "t1-1-communication-channels.md"
       },
       "T1.2": {
         "id": "communication-conflicts",
@@ -21,7 +21,7 @@
         "title": "Identity and Value based conflict in the workplace",
         "description": "Managing intergenerational conflicts",
         "pageId": 12,
-        "markdownFile": "t1-2-communication-conflicts.md"
+        "markdownFile": "t1-2-communication-identity.md"
       },
       "T1.3": {
         "id": "communication-values",
@@ -29,7 +29,7 @@
         "title": "The Role of Open Dialogue and Social Interaction in Conflict Prevention in the Workplace",
         "description": "Core values in cross-generational communication",
         "pageId": 13,
-        "markdownFile": "t1-3-communication-values.md"
+        "markdownFile": "t1-3-communication-conflict-prevention.md"
       }
     }
   },

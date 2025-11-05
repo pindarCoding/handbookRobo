@@ -13,7 +13,7 @@
         "title": "Confusione sui Canali di Comunicazione e Aspettative di Risposta sul Posto di Lavoro",
         "description": "Metodi di comunicazione digitali vs tradizionali",
         "pageId": 11,
-        "markdownFile": "t1-1-communication-tools.md"
+        "markdownFile": "t1-1-comunicazione-canali.md"
       },
       "T1.2": {
         "id": "communication-conflicts",
@@ -21,7 +21,7 @@
         "title": "Conflitti Basati su Identità e Valori sul Posto di Lavoro",
         "description": "Gestione dei conflitti intergenerazionali",
         "pageId": 12,
-        "markdownFile": "t1-2-communication-conflicts.md"
+        "markdownFile": "t1-2-comunicazione-identita.md"
       },
       "T1.3": {
         "id": "communication-values",
@@ -29,7 +29,7 @@
         "title": "Il Ruolo del Dialogo Aperto e dell'Interazione Sociale nella Prevenzione dei Conflitti sul Posto di Lavoro",
         "description": "Valori fondamentali nella comunicazione intergenerazionale",
         "pageId": 13,
-        "markdownFile": "t1-3-communication-values.md"
+        "markdownFile": "t1-3-comunicazione-conflitto-prevenzione.md"
       }
     }
   },

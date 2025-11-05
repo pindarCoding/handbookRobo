@@ -1,11 +1,3 @@
-
-![Logo 1](image_1.jpg)
-
-![Logo 2](image_2.jpg)
-
-![Logo 3](image_3.jpg)
-
-
 # Communication Channel Confusion and Response Expectations in the Workplace
 
 ## Introduction
@@ -23,34 +15,34 @@ Our research shows many commonalities across the five participating countries in
 Millennials & Gen Z prefer instant messaging, texts, and social media and they gravitate toward visual platforms. However, they often lack confidence in face-to-face professional communication. Conversely Boomers & Gen X prefer to communicate face-to-face, by phone, and by email and are less likely to use instant messaging or social media.
 
 The following charts illustrate how each generation ranks each of the following five modes of communication in importance:
-- Face to Face Meeting
-- Phone
-- Email
-- Video Call
-- Collaborative Tools
-- Instant Messaging
+- Face to Face Meeting  
+- Phone  
+- Email  
+- Video Call  
+- Collaborative Tools  
+- Instant Messaging  
 
 ### Gen Z
 
-![Gen Z Communication Preferences](/data/i18n/it/subthemes/images/t1-1-imageA.png)
+![Gen Z Communication Preferences](/data/i18n/en/subthemes/images/t1-1-imageA.jpg)
 
-Gen Z places great importance on instant messaging and digital collaboration tools followed by video calls, with less importance attributed to traditional modes like meetings, email and telephone. They see Boomers as reliant on face to face meetings and telephone calls and see Millennials and Gen X having a balanced use of all modes of communication. Instances of misunderstanding reported include Gen Z sending instant messages and not getting a response from older workers, and older workers being uncomfortable with Gen z attending online meetings without the use of a camera.
+Gen Z places great importance on instant messaging and digital collaboration tools followed by video calls, with less importance attributed to traditional modes like meetings, email and telephone. They see Boomers as reliant on face to face meetings and telephone calls and see Millennials and Gen X having a balanced use of all modes of communication. Instances of misunderstanding reported include Gen Z sending instant messages and not getting a response from older workers, and older workers being uncomfortable with Gen Z attending online meetings without the use of a camera.
 
 ### Millennials
 
-![Millennials Communication Preferences](image_5.png)
+![Millennials Communication Preferences](/data/i18n/en/subthemes/images/t1-1-imageB)
 
 Millennials occupy a middle ground in the area of communication with a balanced use of digital and traditional communication tools. They see Gen Z as highly digital and visually oriented, Gen X as more traditional and Boomers as very attached to traditional communication in the form of meetings and phone calls. Millennials reported instances where Boomers did not act on plans agreed during a phone call and insisted on having an in-person meeting on the same issue.
 
 ### Gen X
 
-![Gen X Communication Preferences](image_6.png)
+![Gen X Communication Preferences](/data/i18n/en/subthemes/images/t1-1-imageC)
 
 Gen X have an overall preference for email, phone and face to face communication, while also relying on video calls and collaborative tools for remote work. They perceive younger generations as more digitally dependent and Boomers as traditional communicators. Gen X survey participants have reported missed messages on collaborative platforms resulting in inadvertent delays in their work.
 
 ### Baby Boomers
 
-![Baby Boomers Communication Preferences](image_7.png)
+![Baby Boomers Communication Preferences](/data/i18n/en/subthemes/images/t1-1-imageD)
 
 Baby Boomers assign high importance to face to face meetings and phone calls and less importance to digital communication. They acknowledge a stronger predisposition to digital communication among younger co-workers. Survey respondents reported issues where younger workers use informal instant messaging where they feel more formal communication is needed.
 
