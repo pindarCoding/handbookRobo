@@ -123,7 +123,7 @@ export default function HandbookNavigator() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col">
       <Header onLogoClick={resetNavigation} />
 
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex">
         {/* LEFT SIDEBAR - NavigationFilter */}
         <aside className="hidden lg:flex lg:flex-col w-[220px] bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 overflow-y-auto">
           <NavigationFilter
@@ -153,11 +153,9 @@ export default function HandbookNavigator() {
         </main>
 
         {/* RIGHT SIDEBAR - YourBook */}
-        <aside className="hidden lg:flex lg:flex-col w-[340px] h-screen  dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 overflow-">
-          <div className="p-4">
-            <YourBook />
-          </div>
-        </aside>
+<aside className="hidden lg:flex lg:flex-col w-[340px] sticky top-0 h-screen bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 overflow-hidden">
+  <YourBook />
+</aside>
       </div>
 
       {/* Floating Action Button - Solo Mobile */}
