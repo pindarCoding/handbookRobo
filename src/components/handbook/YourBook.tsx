@@ -283,7 +283,7 @@ export const YourBook = () => {
                       ) : (
                         pageId && (
                           <div className="text-xs text-slate-500 dark:text-slate-400">
-                            {t("common.page")} {pageId}
+                            {t('common.page', { pageId })}
                           </div>
                         )
                       )}

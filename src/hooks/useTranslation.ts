@@ -142,31 +142,54 @@ export function useTranslation() {
    * @param key - Path della traduzione (es: 'generations.genz.title')
    * @returns Stringa tradotta o [key] se mancante
    */
-  const t = (key: string): string => {
-    // Cerca in tutti i namespace
-    const searchInAll = (translations: Translations): string | undefined => {
-      return getNestedValue(translations.themes, key) ||
-             getNestedValue(translations.cards.work, key) ||
-             getNestedValue(translations.cards.communication, key) ||
-             getNestedValue(translations.cards.diversity, key) ||
-             getNestedValue(translations.cards.digital, key) ||
-             getNestedValue(translations.cards.intercultural, key) ||
-             getNestedValue(translations.ui, key) ||
-             getNestedValue(translations.generations, key)
-    }
-    
-    // 1. Prova lingua corrente
-    const currentValue = searchInAll(currentTranslations)
-    if (currentValue) return currentValue
-    
-    // 2. Fallback inglese
-    const fallbackValue = searchInAll(fallbackTranslations)
-    if (fallbackValue) return fallbackValue
-    
-    // 3. Mostra key se manca
+ /**
+ * Traduce una chiave (SINCRONO!)
+ * @param key - Path della traduzione (es: 'ui.common.page')
+ * @param params - Parametri opzionali per interpolazione (es: { pageId: 512 })
+ * @returns Stringa tradotta o [key] se mancante
+ * 
+ * @example
+ * t('ui.common.page') // → "Page"
+ * t('ui.common.page', { pageId: 512 }) // → "Page 512"
+ * t('ui.yourBook.clearConfirm', { count: 5 }) // → "Remove all 5 pages?"
+ */
+const t = (key: string, params?: Record<string, string | number>): string => {
+  // Cerca in tutti i namespace
+  const searchInAll = (translations: Translations): string | undefined => {
+    return getNestedValue(translations.themes, key) ||
+           getNestedValue(translations.cards.work, key) ||
+           getNestedValue(translations.cards.communication, key) ||
+           getNestedValue(translations.cards.diversity, key) ||
+           getNestedValue(translations.cards.digital, key) ||
+           getNestedValue(translations.cards.intercultural, key) ||
+           getNestedValue(translations.ui, key) ||
+           getNestedValue(translations.generations, key)
+  }
+  
+  // 1. Prova lingua corrente
+  let value = searchInAll(currentTranslations)
+  
+  // 2. Fallback inglese se non trovato
+  if (!value) {
+    value = searchInAll(fallbackTranslations)
+  }
+  
+  // 3. Se ancora mancante, mostra key
+  if (!value) {
     console.warn(`Translation missing: ${key} (${language})`)
     return `[${key}]`
   }
+  
+  // 4. ✨ NUOVO: Interpola parametri se presenti
+  if (params) {
+    Object.keys(params).forEach((paramKey) => {
+      const placeholder = new RegExp(`{{${paramKey}}}`, 'g')
+      value = value!.replace(placeholder, String(params[paramKey]))
+    })
+  }
+  
+  return value
+}
   
   /**
    * Ottieni generation completa per CODICE

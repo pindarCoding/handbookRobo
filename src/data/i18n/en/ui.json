@@ -4,7 +4,7 @@
     "error": "Error",
     "back": "Back",
     "clearAll": "Clear All",
-    "page": "Page"
+    "page": "Page {{pageId}}"
   },
   
   "handbook": {
