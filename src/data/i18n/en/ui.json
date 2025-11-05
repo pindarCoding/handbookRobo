@@ -57,6 +57,12 @@
     "serverError": "Error: Server responded with status {{status}}",
     "emptyPdfError": "Error: Received empty PDF file",
     "invalidPdfError": "Error: Server did not return a valid PDF file",
-    "corsError": "Network error: Unable to connect to the PDF server. Please check:\n- The server is running at {{serverUrl}}\n- CORS is properly configured on the server\n- You are on the same network"
+    "corsError": "Network error: Unable to connect to the PDF server. Please check:\n- The server is running at {{serverUrl}}\n- CORS is properly configured on the server\n- You are on the same network",
+    "notLoaded": "Error: Unable to load content"
+  },
+  "cards": {
+   "title-stereotypes": "Stereotypes",
+   "title-research": "Research",
+   "title-advices": "Strategy & Practical Advice"
   }
 }

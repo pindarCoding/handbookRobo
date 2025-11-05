@@ -57,6 +57,12 @@
     "serverError": "Errore: Il server ha risposto con stato {{status}}",
     "emptyPdfError": "Errore: Ricevuto file PDF vuoto",
     "invalidPdfError": "Errore: Il server non ha restituito un file PDF valido",
-    "corsError": "Errore di rete: Impossibile connettersi al server PDF. Verifica che:\n- Il server sia attivo su {{serverUrl}}\n- CORS sia configurato correttamente sul server\n- Tu sia sulla stessa rete"
+    "corsError": "Errore di rete: Impossibile connettersi al server PDF. Verifica che:\n- Il server sia attivo su {{serverUrl}}\n- CORS sia configurato correttamente sul server\n- Tu sia sulla stessa rete",
+    "notLoaded": "Errore: Impossibile caricare il contenuto"
+  },
+  "cards": {
+   "title-stereotypes": "Stereotipi",
+   "title-research": "Ricerche",
+   "title-advices": "Strategia e Consigli pratici"
   }
 }

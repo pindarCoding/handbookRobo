@@ -34,14 +34,8 @@ export const MainContent = ({
 const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
 
   const { addPage } = useBook();
-  const { t, language } = useTranslation();
+  const { t } = useTranslation();
   
-  // ⬇️ AGGIUNGI SOLO QUESTO
-  console.log('🔍 DEBUG:', {
-    language,
-    testKey: t("handbook.addButton"),
-    rawResult: t("handbook.addButton") === "Add to Handbook"
-  });
 
   // Funzione per generare l'ID della pagina corrente
   const generatePageId = () => {
@@ -118,8 +112,8 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
                 prose-p:text-slate-600 dark:prose-p:text-slate-300
                 prose-p:leading-relaxed prose-p:text-lg
                 prose-p:mb-4">
-  <h1 className="mb-6 text-4xl font-bold text-slate-900 dark:text-white">
-    Introduzione - {selectedTheme.title}
+  <h1 className="mb-6 text-4xl font-bold text-slate-900 dark:text-orange-400">
+    {selectedTheme.title}
   </h1>
   <ReactMarkdown 
     remarkPlugins={[remarkGfm]}
@@ -196,7 +190,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
         {!isLoading && error && (
           <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
             <p className="text-center text-gray-600 dark:text-gray-400">
-              Oops. The content for this chapter is still not ready
+              {t('error.notLoaded')}
             </p>
           </div>
         )}
@@ -206,32 +200,6 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {content}
             </ReactMarkdown>
-          </div>
-        )}
-
-        {/* Helper Icon (solo se generation step e nessun errore)   CONTROLLARE E PULIRE*/}
-        {step === "generation" && !isLoading && (
-          <div className="mt-8 flex justify-center">
-            <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-12 h-12 text-slate-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </div>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                Choose a generation to continue
-              </p>
-            </div>
           </div>
         )}
       </div>
@@ -331,7 +299,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                 <h3 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
-                  <span className="text-lg">🏷️</span> The Stereotype
+                  <span className="text-lg">🏷️</span> {t('cards.title-stereotypes')}
                 </h3>
                 <p className="text-red-800 dark:text-red-200">
                   {selectedCard.stereotype}
@@ -345,7 +313,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                 <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
-                  <span className="text-lg">📊</span> Research Findings
+                  <span className="text-lg">📊</span> {t('cards.title-research')}
                 </h3>
                 <p className="text-green-800 dark:text-green-200">
                   {selectedCard.researchFindings}
@@ -359,8 +327,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                 <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center gap-2">
-                  <span className="text-lg">💡</span> Strategies and
-                  Practical Advice
+                  <span className="text-lg">💡</span> {t('cards.title-advices')}
                 </h3>
                 <p className="text-blue-800 dark:text-blue-200">
                   {selectedCard.strategiesAdvice}
