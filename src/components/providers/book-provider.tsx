@@ -4,6 +4,7 @@
 import { ReactNode, createContext, useContext, useState, useEffect } from 'react'
 import { BookPage } from '@/types/handbook'
 import { toast } from 'sonner'
+import { useTranslation } from '@/hooks'
 
 interface BookContextType {
   pages: BookPage[];
@@ -16,7 +17,8 @@ const BookContext = createContext<BookContextType | undefined>(undefined)
 
 export function BookProvider({ children }: { children: ReactNode }) {
   const [pages, setPages] = useState<BookPage[]>([])
-  
+  const { t } = useTranslation()
+
   // Carica le pagine salvate dopo il primo render
   useEffect(() => {
     try {
@@ -94,7 +96,7 @@ export function BookProvider({ children }: { children: ReactNode }) {
     // 1. Check duplicato
     const isDuplicate = pages.some(p => p.id === page.id)
     if (isDuplicate) {
-      toast.error(`"${page.title}" is already in your handbook`, {
+      toast.error(t('handbook.alreadyExists', { title: page.title }), {
         duration: 3000,
       })
       return
@@ -137,7 +139,7 @@ export function BookProvider({ children }: { children: ReactNode }) {
     if (addedChapter) {
       toast.success(
         <div className="flex flex-col gap-1">
-          <div className="font-semibold text-base">📖 Added chapter introduction for you</div>
+          <div className="font-semibold text-base">📖 {t('handbook.addedWithChapter')}</div>
           <div className="text-sm opacity-90">{page.title}</div>
         </div>,
         {
@@ -146,7 +148,7 @@ export function BookProvider({ children }: { children: ReactNode }) {
         }
       )
     } else {
-      toast.success(`Added "${page.title}"`, {
+      toast.success(t('handbook.added', { title: page.title }), {
         duration: 2500,
       })
     }
@@ -176,15 +178,16 @@ export function BookProvider({ children }: { children: ReactNode }) {
       
       if (childCards.length > 0) {
         // ⚠️ Ha cards figlie → Conferma richiesta
+        const warningKey = childCards.length > 1 ? 'handbook.removeChapterWarningPlural' : 'handbook.removeChapterWarning'
         toast.warning(
-          `Removing this chapter will leave ${childCards.length} card${childCards.length > 1 ? 's' : ''} without context. Click again to confirm.`,
+          t(warningKey, { count: childCards.length }),
           {
             duration: 5000,
             action: {
-              label: 'Remove Anyway',
+              label: t('yourBook.removeAnyway'),
               onClick: () => {
                 setPages(current => current.filter(p => p.id !== id))
-                toast.success('Chapter removed. Cards are still in your handbook.', {
+                toast.success(t('handbook.chapterRemoved'), {
                   duration: 3000,
                 })
               }
@@ -197,7 +200,7 @@ export function BookProvider({ children }: { children: ReactNode }) {
     
     // Rimozione normale (Card o SubTheme senza figli)
     setPages(current => current.filter(p => p.id !== id))
-    toast.success('Removed from handbook', {
+    toast.success(t('handbook.removed'), {
       duration: 2000,
     })
   }
@@ -207,16 +210,16 @@ export function BookProvider({ children }: { children: ReactNode }) {
    */
   const clearBook = () => {
     if (pages.length === 0) return
-    
+
     toast.warning(
-      `Remove all ${pages.length} pages from your handbook?`,
+      t('yourBook.clearConfirm', { count: pages.length }),
       {
         duration: 5000,
         action: {
-          label: 'Clear All',
+          label: t('common.clearAll'),
           onClick: () => {
             setPages([])
-            toast.success('Handbook cleared', {
+            toast.success(t('handbook.handbookCleared'), {
               duration: 2000,
             })
           }
