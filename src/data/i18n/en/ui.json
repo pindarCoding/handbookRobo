@@ -32,7 +32,8 @@
   "navigation": {
     "selectTheme": "Select Theme",
     "selectSubTheme": "Select Subtheme",
-    "selectGeneration": "Select Generation"
+    "selectGeneration": "Select Generation",
+    "backArrow": "Back"
   },
   
   "progress": {

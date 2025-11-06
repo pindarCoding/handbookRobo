@@ -8,6 +8,7 @@ import { GenerationCharacter } from "@/components/GenerationCharacter/Generation
 import { ProgressIndicator } from "./ProgressIndicator";
 import { getGenerationClasses } from "@/data/config/colors";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "@/hooks";
 import {
   staggerContainer,
   staggerItem,
@@ -42,6 +43,7 @@ export const NavigationFilter = ({
   context = "desktop",
 }: NavigationFilterProps) => {
   const { generations } = useGenerations()
+  const { t } = useTranslation();
   return (
     <div className="h-full flex flex-col">
       {/* Back Button - Solo Desktop */}
@@ -67,7 +69,7 @@ export const NavigationFilter = ({
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-            Back
+            {t("navigation.backArrow")}
           </button>
         </div>
       )}
@@ -99,7 +101,7 @@ export const NavigationFilter = ({
                 animate="visible"
               >
                 <h3 className="text-xs font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
-                  Select Theme
+                  {t("navigation.selectTheme")}
                 </h3>
                 {themes.map((theme, index) => (
                   <motion.button
@@ -133,7 +135,7 @@ export const NavigationFilter = ({
               animate="visible"
             >
               <h3 className="text-xs font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
-                Select Subtheme
+                {t("navigation.selectSubTheme")}
               </h3>
 
               {selectedTheme.subThemes.map((subTheme, index) => (
@@ -171,13 +173,9 @@ export const NavigationFilter = ({
               key="generation-step"  // ← Aggiungi key unica!
             >
               <h3 className="text-xs font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
-                Select generation
+                {t("navigation.selectGeneration")}
               </h3>
-              {/* {selectedTheme && selectedSubTheme && (
-      <div className="text-xs text-slate-600 dark:text-slate-400 mb-3 p-2 bg-slate-100 dark:bg-slate-700/50 rounded">
-        {selectedTheme.title} → {selectedSubTheme.title}
-      </div>
-    )} */}
+
 
               {/* Container con layout dinamico */}
               <div
