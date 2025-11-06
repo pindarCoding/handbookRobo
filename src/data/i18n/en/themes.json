@@ -47,15 +47,23 @@
         "title": "Intersectional Discrimination & Power Asymmetries",
         "description": "Multiple identities across generations",
         "pageId": 21,
-        "markdownFile": "t2-1-diversity-identity.md"
+        "markdownFile": "t2-1-intersectional-discrimination.md"
       },
       "T2.2": {
         "id": "diversity-inclusion",
         "code": "T2.2",
-        "title": "Strategies to Avoid and Tackle Intersectional Differences at Work",
+        "title": "Patterns of Voice, Victimhood and Support",
         "description": "Inclusive practices for all generations",
         "pageId": 22,
-        "markdownFile": "t2-2-diversity-inclusion.md"
+        "markdownFile": "t2-2-patterns-voice.md"
+      },
+      "T2.3": {
+        "id": "strategies-avoid",
+        "code": "T2.3",
+        "title": "Strategies to Avoid and Tackle Intersectional Differences at Work",
+        "description": "--",
+        "pageId": 23,
+        "markdownFile": "t2-3-strategies-avoid.md"
       }
     }
   },
