@@ -18,7 +18,6 @@ import { useSubThemeContent } from "@/hooks/useSubThemeContent";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useTranslation } from "@/hooks";
-import { GenerationCharacter } from "@/components/GenerationCharacter/GenerationCharacter";
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
