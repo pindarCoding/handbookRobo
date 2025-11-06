@@ -107,7 +107,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
     ) {
       return (
         <div className="animate-fadeIn">
-          <div className="bg-white dark:bg-slate-800 rounded-lg p-16 shadow-lg ">
+          <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6 lg:p-16 shadow-lg ">
            <div className="prose prose-slate dark:prose-invert max-w-none mb-6
                 prose-p:text-slate-600 dark:prose-p:text-slate-300
                 prose-p:leading-relaxed prose-p:text-lg
@@ -141,7 +141,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
     ) {
   return (
     <div className="animate-fadeIn">
-      <div className="bg-white dark:bg-slate-800 rounded-lg  p-16 shadow-lg">
+      <div className="bg-slate-100 dark:bg-slate-800 rounded-lg  p-6 lg:p-16 shadow-lg">
         {/* Header con titolo e bottone */}
         <div className="flex justify-between items-start mb-6">
           <div className="flex flex-col">
@@ -237,7 +237,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
             {/* Header della card */}
-            <div className="bg-white dark:bg-slate-800 p-6 border-b border-slate-200 dark:border-slate-700">
+            <div className="bg-slate-100 dark:bg-slate-800 p-6 border-b border-slate-200 dark:border-slate-700">
               <div className="space-y-4">
               {/* First row: Button */}
               <motion.div 
@@ -284,7 +284,7 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
             <div className="p-6 bg-white/50 dark:bg-slate-800/50">
               {/* Placeholder per contenuto futuro */}
 
-              <div className="mb-6 rounded-lg overflow-hidden shadow-md">
+              <div className="overflow-hidden">
               {/* Mostra i tre contenuti strutturati */}
               <motion.div 
                 className="space-y-6 lg:space-y-0 lg:space-x-6 mb-6 flex flex-col lg:flex-row"
