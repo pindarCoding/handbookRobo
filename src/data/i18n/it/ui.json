@@ -4,7 +4,9 @@
     "error": "Errore",
     "back": "Indietro",
     "clearAll": "Cancella Tutto",
-    "page": "Pagina {{pageId}}"
+    "page": "Pagina {{pageId}}",
+    "chapterIntroduction": "Introduzione Tema"
+
   },
   
   "handbook": {
@@ -16,14 +18,14 @@
     "chapterRemoved": "Capitolo rimosso. Le schede sono ancora nel tuo manuale.",
     "removeChapterWarning": "Rimuovere questo capitolo lascerà {{count}} scheda senza contesto. Clicca di nuovo per confermare.",
     "removeChapterWarningPlural": "Rimuovere questo capitolo lascerà {{count}} schede senza contesto. Clicca di nuovo per confermare.",
-    "handbookCleared": "Manuale cancellato"
+    "handbookCleared": "Manuale cancellato",
+    "helpGeneration": "Seleziona una generazione nel menu di navigazione per vedere approcci e metodologie specifiche per questo argomento."
   },
   
   "yourBook": {
     "title": "Il Tuo Manuale",
     "emptyMessage": "Il tuo manuale è vuoto. Inizia ad aggiungere pagine dalle categorie sopra.",
     "exportButton": "Esporta Manuale PDF",
-    "chapterIntroduction": "Introduzione Capitolo",
     "clearConfirm": "Rimuovere tutte le {{count}} pagine dal tuo manuale?",
     "clearConfirmSingle": "Rimuovere questa pagina dal tuo manuale?",
     "removeAnyway": "Rimuovi Comunque"

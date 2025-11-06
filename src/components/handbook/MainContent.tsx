@@ -31,11 +31,11 @@ export const MainContent = ({
   selectedGeneration,
   selectedCard, // Cambiato da selectedVariant
 }: MainContentProps) => {
-const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
+  const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
 
   const { addPage } = useBook();
   const { t } = useTranslation();
-  
+
 
   // Funzione per generare l'ID della pagina corrente
   const generatePageId = () => {
@@ -108,26 +108,29 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
       return (
         <div className="animate-fadeIn">
           <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6 lg:p-16 shadow-lg ">
-           <div className="prose prose-slate dark:prose-invert max-w-none mb-6
+            <div className="prose prose-slate dark:prose-invert max-w-none mb-6
                 prose-p:text-slate-600 dark:prose-p:text-slate-300
                 prose-p:leading-relaxed prose-p:text-lg
                 prose-p:mb-4">
-  <h1 className="mb-6 text-4xl font-bold text-slate-900 dark:text-orange-400">
-    {selectedTheme.title}
-  </h1>
-  <ReactMarkdown 
-    remarkPlugins={[remarkGfm]}
-    components={{
-      p: ({children}) => (
-        <p className="mb-4 last:mb-0">
-          {children}
-        </p>
-      )
-    }}
-  >
-    {selectedTheme.introduction || ''}
-  </ReactMarkdown>
-</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 mb-2">
+                {t('common.chapterIntroduction')}
+              </div>
+              <h1 className="mb-6 text-4xl font-bold text-slate-900 dark:text-orange-400">
+                {selectedTheme.title}
+              </h1>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  p: ({ children }) => (
+                    <p className="mb-4 last:mb-0">
+                      {children}
+                    </p>
+                  )
+                }}
+              >
+                {selectedTheme.introduction || ''}
+              </ReactMarkdown>
+            </div>
 
           </div>
         </div>
@@ -139,73 +142,71 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
       (step === "subtheme" && selectedSubTheme) ||
       (step === "generation" && selectedSubTheme && !selectedGeneration)
     ) {
-  return (
-    <div className="animate-fadeIn">
-      <div className="bg-slate-100 dark:bg-slate-800 rounded-lg  p-6 lg:p-16 shadow-lg">
-        {/* Header con titolo e bottone */}
-        <div className="flex justify-between items-start mb-6">
-          <div className="flex flex-col">
+      return (
+        <div className="animate-fadeIn">
+          <div className="bg-slate-100 dark:bg-slate-800 rounded-lg  p-6 lg:p-16 shadow-lg">
+            {/* Header con titolo e bottone */}
+            <div className="flex justify-between items-start mb-6">
+              <div className="flex flex-col">
 
-            <div className="text-sm text-slate-500 dark:text-slate-400">
-              Part of: {selectedTheme.title}
+                <div className="text-sm text-slate-500 dark:text-slate-400">
+                  Part of: {selectedTheme.title}
+                </div>
+              </div>
             </div>
+
+            <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0">
+                  <svg
+                    className="w-5 h-5 text-blue-600 dark:text-blue-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <p className="text-sm text-blue-800 dark:text-blue-200">
+                 {t('handbook.helpGeneration')}
+                </p>
+              </div>
+            </div>
+
+            {/* Content Area - Loading/Error/Content */}
+            {isLoading && (
+              <div className="space-y-3 mb-6">
+                <div className="animate-pulse">
+                  <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-3"></div>
+                  <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full mb-3"></div>
+                  <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-3"></div>
+                  <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3"></div>
+                </div>
+              </div>
+            )}
+
+            {!isLoading && error && (
+              <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+                <p className="text-center text-gray-600 dark:text-gray-400">
+                  {t('error.notLoaded')}
+                </p>
+              </div>
+            )}
+
+            {!isLoading && !error && content && (
+              <div className="prose prose-slate dark:prose-invert max-w-none mb-6 dark:prose-headings:text-orange-400">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {content}
+                </ReactMarkdown>
+              </div>
+            )}
           </div>
         </div>
-
-        <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
-          <div className="flex items-start gap-3">
-            <div className="flex-shrink-0">
-              <svg
-                className="w-5 h-5 text-blue-600 dark:text-blue-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <p className="text-sm text-blue-800 dark:text-blue-200">
-              {step === "generation"
-                ? "Select a generation on the navigation menu to see specific approaches and methodologies for this topic."
-                : "Choose a generation to explore how different age groups approach this topic."}
-            </p>
-          </div>
-        </div>
-
-        {/* Content Area - Loading/Error/Content */}
-        {isLoading && (
-          <div className="space-y-3 mb-6">
-            <div className="animate-pulse">
-              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-3"></div>
-              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full mb-3"></div>
-              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-3"></div>
-              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3"></div>
-            </div>
-          </div>
-        )}
-
-        {!isLoading && error && (
-          <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
-            <p className="text-center text-gray-600 dark:text-gray-400">
-              {t('error.notLoaded')}
-            </p>
-          </div>
-        )}
-
-        {!isLoading && !error && content && (
-          <div className="prose prose-slate dark:prose-invert max-w-none mb-6 dark:prose-headings:text-orange-400">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {content}
-            </ReactMarkdown>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
+      );
+    }
 
     // Visualizzazione CARD quando si seleziona la generazione
     if (
@@ -223,60 +224,60 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
         return null;
       }
       return (
-        <motion.div 
+        <motion.div
           className="animate-fadeIn"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
           {/* Card principale con stile distintivo */}
-            <motion.div
+          <motion.div
             className={`
             rounded-lg  overflow-hidden 
             `}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            >
+          >
             {/* Header della card */}
             <div className="bg-slate-100 dark:bg-slate-800 p-6 border-b border-slate-200 dark:border-slate-700">
               <div className="space-y-4">
-              {/* First row: Button */}
-              <motion.div 
-              className="flex justify-end"
-              variants={scalePop}
-              initial="initial"
-              animate="animate"
-              >
-              <AddToHandbookButton
-                size="large"
-                onClick={handleAddPage}
-              />
-              </motion.div>
+                {/* First row: Button */}
+                <motion.div
+                  className="flex justify-end"
+                  variants={scalePop}
+                  initial="initial"
+                  animate="animate"
+                >
+                  <AddToHandbookButton
+                    size="large"
+                    onClick={handleAddPage}
+                  />
+                </motion.div>
 
-              {/* Second row: Title */}
-              <motion.div
-              variants={fadeSlideUp}
-              initial="hidden"
-              animate="visible"
-              >
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-              {selectedCard.title}
-              </h2>
-              </motion.div>
+                {/* Second row: Title */}
+                <motion.div
+                  variants={fadeSlideUp}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+                    {selectedCard.title}
+                  </h2>
+                </motion.div>
 
-              {/* Third row: Chip with title and age range */}
-              <motion.div
-              variants={fadeSlideUp}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.2 }}
-              >
-              <motion.span 
-                className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100"
-                whileHover={{ scale: 1.05 }}
-              >
-              {selectedGeneration.title} • {selectedGeneration.ageRange}
-              </motion.span>
-              </motion.div>
+                {/* Third row: Chip with title and age range */}
+                <motion.div
+                  variants={fadeSlideUp}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ delay: 0.2 }}
+                >
+                  <motion.span
+                    className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    {selectedGeneration.title} • {selectedGeneration.ageRange}
+                  </motion.span>
+                </motion.div>
               </div>
             </div>
 
@@ -285,60 +286,60 @@ const { content, isLoading, error } = useSubThemeContent(selectedSubTheme);
               {/* Placeholder per contenuto futuro */}
 
               <div className="overflow-hidden">
-              {/* Mostra i tre contenuti strutturati */}
-              <motion.div 
-                className="space-y-6 lg:space-y-0 lg:space-x-6 mb-6 flex flex-col lg:flex-row"
-                variants={staggerContainer}
-                initial="hidden"
-                animate="visible"
-              >
-                {/* The Stereotype */}
-                <motion.div 
-                className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 lg:flex-1"
-                variants={staggerItem}
-                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                {/* Mostra i tre contenuti strutturati */}
+                <motion.div
+                  className="space-y-6 lg:space-y-0 lg:space-x-6 mb-6 flex flex-col lg:flex-row"
+                  variants={staggerContainer}
+                  initial="hidden"
+                  animate="visible"
                 >
-                <h3 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
-                  <span className="text-lg">🏷️</span> {t('cards.title-stereotypes')}
-                </h3>
-                <p className="text-red-800 dark:text-red-200">
-                  {selectedCard.stereotype}
-                </p>
-                </motion.div>
+                  {/* The Stereotype */}
+                  <motion.div
+                    className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 lg:flex-1"
+                    variants={staggerItem}
+                    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                  >
+                    <h3 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
+                      <span className="text-lg">🏷️</span> {t('cards.title-stereotypes')}
+                    </h3>
+                    <p className="text-red-800 dark:text-red-200">
+                      {selectedCard.stereotype}
+                    </p>
+                  </motion.div>
 
-                {/* Research Findings */}
-                <motion.div 
-                className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 lg:flex-1"
-                variants={staggerItem}
-                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                >
-                <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
-                  <span className="text-lg">📊</span> {t('cards.title-research')}
-                </h3>
-                <p className="text-green-800 dark:text-green-200">
-                  {selectedCard.researchFindings}
-                </p>
-                </motion.div>
+                  {/* Research Findings */}
+                  <motion.div
+                    className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 lg:flex-1"
+                    variants={staggerItem}
+                    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                  >
+                    <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
+                      <span className="text-lg">📊</span> {t('cards.title-research')}
+                    </h3>
+                    <p className="text-green-800 dark:text-green-200">
+                      {selectedCard.researchFindings}
+                    </p>
+                  </motion.div>
 
-                {/* Strategies and Practical Advice */}
-                <motion.div 
-                className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 lg:flex-1"
-                variants={staggerItem}
-                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                >
-                <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center gap-2">
-                  <span className="text-lg">💡</span> {t('cards.title-advices')}
-                </h3>
-                <p className="text-blue-800 dark:text-blue-200">
-                  {selectedCard.strategiesAdvice}
-                </p>
+                  {/* Strategies and Practical Advice */}
+                  <motion.div
+                    className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 lg:flex-1"
+                    variants={staggerItem}
+                    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                  >
+                    <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center gap-2">
+                      <span className="text-lg">💡</span> {t('cards.title-advices')}
+                    </h3>
+                    <p className="text-blue-800 dark:text-blue-200">
+                      {selectedCard.strategiesAdvice}
+                    </p>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
               </div>
 
               <div></div>
             </div>
-            </motion.div>
+          </motion.div>
         </motion.div>
       );
     }

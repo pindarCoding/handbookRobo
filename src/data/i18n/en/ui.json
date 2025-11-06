@@ -4,7 +4,8 @@
     "error": "Error",
     "back": "Back",
     "clearAll": "Clear All",
-    "page": "Page {{pageId}}"
+    "page": "Page {{pageId}}",
+    "chapterIntroduction": "Theme Introduction"
   },
   
   "handbook": {
@@ -16,7 +17,8 @@
     "chapterRemoved": "Chapter removed. Cards are still in your handbook.",
     "removeChapterWarning": "Removing this chapter will leave {{count}} card without context. Click again to confirm.",
     "removeChapterWarningPlural": "Removing this chapter will leave {{count}} cards without context. Click again to confirm.",
-    "handbookCleared": "Handbook cleared"
+    "handbookCleared": "Handbook cleared",
+    "helpGeneration": "Select a generation on the navigation menu to see specific approaches and methodologies for this topic."
   },
   
   "yourBook": {
