@@ -1,18 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Theme, SubTheme } from '@/hooks/useThemes'
-import { Generation } from '@/hooks/useGenerations'
-import { Card } from '@/hooks/useCards'
+import { Theme, SubTheme } from "@/hooks/useThemes";
+import { Generation } from "@/hooks/useGenerations";
+import { Card } from "@/hooks/useCards";
 import { AddToHandbookButton } from "./AddToHandbookButton";
 import { useBook } from "@/components/providers/book-provider";
 import { WelcomeContent } from "./WelcomeContent";
 import { toast } from "sonner";
-import { fadeSlideUp, staggerContainer, staggerItem, scalePop } from "@/data/config/animations";
-import { useSubThemeContent } from '@/hooks/useSubThemeContent';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import {
+  fadeSlideUp,
+  staggerContainer,
+  staggerItem,
+  scalePop,
+} from "@/data/config/animations";
+import { useSubThemeContent } from "@/hooks/useSubThemeContent";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { useTranslation } from "@/hooks";
+import { GenerationCharacter } from "@/components/GenerationCharacter/GenerationCharacter";
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
@@ -35,7 +41,6 @@ export const MainContent = ({
 
   const { addPage } = useBook();
   const { t } = useTranslation();
-
 
   // Funzione per generare l'ID della pagina corrente
   const generatePageId = () => {
@@ -108,12 +113,14 @@ export const MainContent = ({
       return (
         <div className="animate-fadeIn">
           <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6 lg:p-16 shadow-lg ">
-            <div className="prose prose-slate dark:prose-invert max-w-none mb-6
+            <div
+              className="prose prose-slate dark:prose-invert max-w-none mb-6
                 prose-p:text-slate-600 dark:prose-p:text-slate-300
                 prose-p:leading-relaxed prose-p:text-lg
-                prose-p:mb-4">
+                prose-p:mb-4"
+            >
               <div className="text-sm text-slate-500 dark:text-slate-400 mb-2">
-                {t('common.chapterIntroduction')}
+                {t("common.chapterIntroduction")}
               </div>
               <h1 className="mb-6 text-4xl font-bold text-slate-900 dark:text-orange-400">
                 {selectedTheme.title}
@@ -122,16 +129,13 @@ export const MainContent = ({
                 remarkPlugins={[remarkGfm]}
                 components={{
                   p: ({ children }) => (
-                    <p className="mb-4 last:mb-0">
-                      {children}
-                    </p>
-                  )
+                    <p className="mb-4 last:mb-0">{children}</p>
+                  ),
                 }}
               >
-                {selectedTheme.introduction || ''}
+                {selectedTheme.introduction || ""}
               </ReactMarkdown>
             </div>
-
           </div>
         </div>
       );
@@ -147,8 +151,8 @@ export const MainContent = ({
           <div className="bg-slate-100 dark:bg-slate-800 rounded-lg  p-6 lg:p-16 shadow-lg">
             {/* Header con titolo e bottone */}
             <div className="flex justify-between items-start mb-6">
+              
               <div className="flex flex-col">
-
                 <div className="text-sm text-slate-500 dark:text-slate-400">
                   Part of: {selectedTheme.title}
                 </div>
@@ -171,7 +175,7 @@ export const MainContent = ({
                   </svg>
                 </div>
                 <p className="text-sm text-blue-800 dark:text-blue-200">
-                 {t('handbook.helpGeneration')}
+                  {t("handbook.helpGeneration")}
                 </p>
               </div>
             </div>
@@ -191,7 +195,7 @@ export const MainContent = ({
             {!isLoading && error && (
               <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
                 <p className="text-center text-gray-600 dark:text-gray-400">
-                  {t('error.notLoaded')}
+                  {t("error.notLoaded")}
                 </p>
               </div>
             )}
@@ -247,10 +251,7 @@ export const MainContent = ({
                   initial="initial"
                   animate="animate"
                 >
-                  <AddToHandbookButton
-                    size="large"
-                    onClick={handleAddPage}
-                  />
+                  <AddToHandbookButton size="large" onClick={handleAddPage} />
                 </motion.div>
 
                 {/* Second row: Title */}
@@ -300,7 +301,8 @@ export const MainContent = ({
                     whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                   >
                     <h3 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
-                      <span className="text-lg">🏷️</span> {t('cards.title-stereotypes')}
+                      <span className="text-lg">🏷️</span>{" "}
+                      {t("cards.title-stereotypes")}
                     </h3>
                     <p className="text-red-800 dark:text-red-200">
                       {selectedCard.stereotype}
@@ -314,7 +316,8 @@ export const MainContent = ({
                     whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                   >
                     <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
-                      <span className="text-lg">📊</span> {t('cards.title-research')}
+                      <span className="text-lg">📊</span>{" "}
+                      {t("cards.title-research")}
                     </h3>
                     <p className="text-green-800 dark:text-green-200">
                       {selectedCard.researchFindings}
@@ -328,7 +331,8 @@ export const MainContent = ({
                     whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                   >
                     <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center gap-2">
-                      <span className="text-lg">💡</span> {t('cards.title-advices')}
+                      <span className="text-lg">💡</span>{" "}
+                      {t("cards.title-advices")}
                     </h3>
                     <p className="text-blue-800 dark:text-blue-200">
                       {selectedCard.strategiesAdvice}
@@ -336,7 +340,6 @@ export const MainContent = ({
                   </motion.div>
                 </motion.div>
               </div>
-
               <div></div>
             </div>
           </motion.div>
