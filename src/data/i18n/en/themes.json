@@ -81,7 +81,7 @@
         "title": "Understanding Digital Inequality in Workplace Contexts",
         "description": "Understanding technological divides",
         "pageId": 31,
-        "markdownFile": "t3-1-digital-gap.md"
+        "markdownFile": "t3-1-understanding-digital-inequality.md"
       },
       "T3.2": {
         "id": "digital-training",
@@ -89,7 +89,7 @@
         "title": "Strategies for Bridging Digital Inequality in the Workplace",
         "description": "Upskilling for all age groups",
         "pageId": 32,
-        "markdownFile": "t3-2-digital-training.md"
+        "markdownFile": "t3-2-strategies-for-bridging.md"
       },
       "T3.3": {
         "id": "digital-collaboration",
@@ -97,15 +97,7 @@
         "title": "Case Studies and Best Practices: Lessons from Leading Organizations",
         "description": "Tools for cross-generational teamwork",
         "pageId": 33,
-        "markdownFile": "t3-3-digital-collaboration.md"
-      },
-      "T3.4": {
-        "id": "digital-accessibility",
-        "code": "T3.4",
-        "title": "Key Takeaways",
-        "description": "Making technology accessible for everyone",
-        "pageId": 34,
-        "markdownFile": "t3-4-digital-accessibility.md"
+        "markdownFile": "t3-3-case-studies.md"
       }
     }
   },
@@ -118,12 +110,28 @@
     "pageId": 40,
     "subthemes": {
       "T4.1": {
-        "id": "intercultural-backgrounds",
+        "id": "hierarchy",
         "code": "T4.1",
-        "title": "Cultural Backgrounds",
+        "title": "Cultural Hierarchies",
         "description": "Cultural influences on generational perspectives",
         "pageId": 41,
-        "markdownFile": "t4-1-intercultural-backgrounds.md"
+        "markdownFile": "t4-1-hierarchy.md"
+      },
+      "T4.2": {
+        "id": "uncertainty-avoidance",
+        "code": "T4.2",
+        "title": "Uncertainty Avoidance",
+        "description": "Cultural influences on generational perspectives",
+        "pageId": 41,
+        "markdownFile": "t4-2-uncertainty-avoidance.md"
+      },
+      "T4.3": {
+        "id": "direct-and-indirect",
+        "code": "T4.3",
+        "title": "Direct and Indirect Communication Styles",
+        "description": "Cultural influences on generational perspectives",
+        "pageId": 41,
+        "markdownFile": "t4-3-direct-and-indirect.md"
       }
     }
   },
@@ -141,7 +149,7 @@
         "title": "Workplace Values Across Generations",
         "description": "How different generations define success and meaning at work",
         "pageId": 10,
-        "markdownFile": "t5-1-work-values.md"
+        "markdownFile": "t5-1-workplace-values.md"
       },
       "T5.2": {
         "id": "work-motivation",
@@ -149,7 +157,7 @@
         "title": "Motivation and Demotivation",
         "description": "What drives and discourages different generations",
         "pageId": 10,
-        "markdownFile": "t5-2-work-motivation.md"
+        "markdownFile": "t5-2-motivation-demotivation.md"
       },
       "T5.3": {
         "id": "work-styles",
@@ -157,7 +165,7 @@
         "title": "Work Styles and Collaboration",
         "description": "Different approaches to teamwork and productivity",
         "pageId": 10,
-        "markdownFile": "t5-3-work-styles.md"
+        "markdownFile": "t5-3-workstyles-collaboration.md"
       }
     }
   }
