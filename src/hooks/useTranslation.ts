@@ -6,19 +6,19 @@ import enThemes from '@/data/i18n/en/themes.json'
 import enGenerations from '@/data/i18n/en/generations.json'
 import enUi from '@/data/i18n/en/ui.json'
 import enT5Cards from '@/data/i18n/en/cards/t5_cards.json'
-import enCommunication from '@/data/i18n/en/cards/communication.json'
-import enDiversity from '@/data/i18n/en/cards/diversity.json'
-import enDigital from '@/data/i18n/en/cards/digital.json'
-import enIntercultural from '@/data/i18n/en/cards/intercultural.json'
+import enT1Cards from '@/data/i18n/en/cards/t1_cards.json'
+import enT2Cards from '@/data/i18n/en/cards/t2_cards.json'
+import enT3Cards from '@/data/i18n/en/cards/t3_cards.json'
+import enT4Cards from '@/data/i18n/en/cards/t4_cards.json'
 
 import itThemes from '@/data/i18n/it/themes.json'
 import itGenerations from '@/data/i18n/it/generations.json'
 import itUi from '@/data/i18n/it/ui.json'
 import itT5Cards from '@/data/i18n/it/cards/t5_cards.json'
-import itCommunication from '@/data/i18n/it/cards/communication.json'
-import itDiversity from '@/data/i18n/it/cards/diversity.json'
-import itDigital from '@/data/i18n/it/cards/digital.json'
-import itIntercultural from '@/data/i18n/it/cards/intercultural.json'
+import itT1Cards from '@/data/i18n/it/cards/t1_cards.json'
+import itT2Cards from '@/data/i18n/it/cards/t2_cards.json'
+import itT3Cards from '@/data/i18n/it/cards/t3_cards.json'
+import itT4Cards from '@/data/i18n/it/cards/t4_cards.json'
 
 interface TranslationObject {
   [key: string]: string | number |boolean | null | TranslationObject
@@ -74,10 +74,10 @@ type Translations = {
   themes: TranslationObject
   cards: {
     t5: TranslationObject              // ✅ CODE-based key
-    communication: TranslationObject   // ⚠️ Da cambiare in futuro
-    diversity: TranslationObject       // ⚠️ Da cambiare in futuro
-    digital: TranslationObject         // ⚠️ Da cambiare in futuro
-    intercultural: TranslationObject   // ⚠️ Da cambiare in futuro
+    t1: TranslationObject,
+    t2: TranslationObject,
+    t3: TranslationObject,
+    t4: TranslationObject
   }
   ui: TranslationObject
   generations: TranslationObject
@@ -89,10 +89,10 @@ const allTranslations: Record<'en' | 'it', Translations> = {
   themes: enThemes as TranslationObject,
   cards: {
     t5: enT5Cards as TranslationObject,               // ✅ Nuovo nome
-    communication: enCommunication as TranslationObject,
-    diversity: enDiversity as TranslationObject,
-    digital: enDigital as TranslationObject,
-    intercultural: enIntercultural as TranslationObject
+    t1: enT1Cards as TranslationObject,
+    t2: enT2Cards as TranslationObject,
+    t3: enT3Cards as TranslationObject,
+    t4: enT4Cards as TranslationObject
   },
   ui: enUi as TranslationObject,
   generations: enGenerations as TranslationObject
@@ -101,10 +101,10 @@ const allTranslations: Record<'en' | 'it', Translations> = {
   themes: itThemes as TranslationObject,
   cards: {
     t5: itT5Cards as TranslationObject,               // ✅ Nuovo nome
-    communication: itCommunication as TranslationObject,
-    diversity: itDiversity as TranslationObject,
-    digital: itDigital as TranslationObject,
-    intercultural: itIntercultural as TranslationObject
+    t1: itT1Cards as TranslationObject,
+    t2: itT2Cards as TranslationObject,
+    t3: itT3Cards as TranslationObject,
+    t4: itT4Cards as TranslationObject
   },
   ui: itUi as TranslationObject,
   generations: itGenerations as TranslationObject
@@ -157,13 +157,13 @@ const t = (key: string, params?: Record<string, string | number>): string => {
   // Cerca in tutti i namespace
   const searchInAll = (translations: Translations): string | undefined => {
     return getNestedValue(translations.themes, key) ||
-           getNestedValue(translations.cards.t5, key) ||
-           getNestedValue(translations.cards.communication, key) ||
-           getNestedValue(translations.cards.diversity, key) ||
-           getNestedValue(translations.cards.digital, key) ||
-           getNestedValue(translations.cards.intercultural, key) ||
-           getNestedValue(translations.ui, key) ||
-           getNestedValue(translations.generations, key)
+         getNestedValue(translations.cards.t1, key) ||
+         getNestedValue(translations.cards.t2, key) ||
+         getNestedValue(translations.cards.t3, key) ||
+         getNestedValue(translations.cards.t4, key) ||
+         getNestedValue(translations.cards.t5, key) ||
+         getNestedValue(translations.ui, key) ||
+         getNestedValue(translations.generations, key)
   }
   
   // 1. Prova lingua corrente
