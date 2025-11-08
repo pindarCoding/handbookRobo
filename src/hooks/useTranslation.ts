@@ -5,7 +5,7 @@ import { useLanguage } from '@/components/providers/language-provider'
 import enThemes from '@/data/i18n/en/themes.json'
 import enGenerations from '@/data/i18n/en/generations.json'
 import enUi from '@/data/i18n/en/ui.json'
-import enWork from '@/data/i18n/en/cards/work.json'
+import enT5Cards from '@/data/i18n/en/cards/t5_cards.json'
 import enCommunication from '@/data/i18n/en/cards/communication.json'
 import enDiversity from '@/data/i18n/en/cards/diversity.json'
 import enDigital from '@/data/i18n/en/cards/digital.json'
@@ -14,7 +14,7 @@ import enIntercultural from '@/data/i18n/en/cards/intercultural.json'
 import itThemes from '@/data/i18n/it/themes.json'
 import itGenerations from '@/data/i18n/it/generations.json'
 import itUi from '@/data/i18n/it/ui.json'
-import itWork from '@/data/i18n/it/cards/work.json'
+import itT5Cards from '@/data/i18n/it/cards/t5_cards.json'
 import itCommunication from '@/data/i18n/it/cards/communication.json'
 import itDiversity from '@/data/i18n/it/cards/diversity.json'
 import itDigital from '@/data/i18n/it/cards/digital.json'
@@ -71,13 +71,13 @@ interface CardTranslation {
 }
 
 type Translations = {
-  themes: TranslationObject  // ✨ AGGIUNTO
+  themes: TranslationObject
   cards: {
-    work: TranslationObject
-    communication: TranslationObject
-    diversity: TranslationObject
-    digital: TranslationObject
-    intercultural: TranslationObject
+    t5: TranslationObject              // ✅ CODE-based key
+    communication: TranslationObject   // ⚠️ Da cambiare in futuro
+    diversity: TranslationObject       // ⚠️ Da cambiare in futuro
+    digital: TranslationObject         // ⚠️ Da cambiare in futuro
+    intercultural: TranslationObject   // ⚠️ Da cambiare in futuro
   }
   ui: TranslationObject
   generations: TranslationObject
@@ -86,29 +86,29 @@ type Translations = {
 // Tutte le traduzioni caricate all'init (sync!)
 const allTranslations: Record<'en' | 'it', Translations> = {
   en: {
-    themes: enThemes as TranslationObject,  // ✨ AGGIUNTO
-    cards: {
-      work: enWork as TranslationObject,
-      communication: enCommunication as TranslationObject,
-      diversity: enDiversity as TranslationObject,
-      digital: enDigital as TranslationObject,
-      intercultural: enIntercultural as TranslationObject
-    },
-    ui: enUi as TranslationObject,
-    generations: enGenerations as TranslationObject
+  themes: enThemes as TranslationObject,
+  cards: {
+    t5: enT5Cards as TranslationObject,               // ✅ Nuovo nome
+    communication: enCommunication as TranslationObject,
+    diversity: enDiversity as TranslationObject,
+    digital: enDigital as TranslationObject,
+    intercultural: enIntercultural as TranslationObject
   },
+  ui: enUi as TranslationObject,
+  generations: enGenerations as TranslationObject
+},
   it: {
-    themes: itThemes as TranslationObject,  // ✨ AGGIUNTO
-    cards: {
-      work: itWork as TranslationObject,
-      communication: itCommunication as TranslationObject,
-      diversity: itDiversity as TranslationObject,
-      digital: itDigital as TranslationObject,
-      intercultural: itIntercultural as TranslationObject
-    },
-    ui: itUi as TranslationObject,
-    generations: itGenerations as TranslationObject
-  }
+  themes: itThemes as TranslationObject,
+  cards: {
+    t5: itT5Cards as TranslationObject,               // ✅ Nuovo nome
+    communication: itCommunication as TranslationObject,
+    diversity: itDiversity as TranslationObject,
+    digital: itDigital as TranslationObject,
+    intercultural: itIntercultural as TranslationObject
+  },
+  ui: itUi as TranslationObject,
+  generations: itGenerations as TranslationObject
+}
 }
 
 function getNestedValue(obj: TranslationObject | string, path: string): string | undefined {
@@ -157,7 +157,7 @@ const t = (key: string, params?: Record<string, string | number>): string => {
   // Cerca in tutti i namespace
   const searchInAll = (translations: Translations): string | undefined => {
     return getNestedValue(translations.themes, key) ||
-           getNestedValue(translations.cards.work, key) ||
+           getNestedValue(translations.cards.t5, key) ||
            getNestedValue(translations.cards.communication, key) ||
            getNestedValue(translations.cards.diversity, key) ||
            getNestedValue(translations.cards.digital, key) ||
@@ -428,20 +428,19 @@ const t = (key: string, params?: Record<string, string | number>): string => {
   }
   
   /**
-   * ✨ NUOVO: Ottieni TUTTE le cards per un theme
-   * @param themeId - Theme ID (es: 'work')
-   * @returns Array di tutte le cards del theme
-   * 
-   * @example
-   * const cards = getAllCardsForTheme('work') // Tutte le 12 cards di work
-   */
-  const getAllCardsForTheme = (themeId: string): CardTranslation[] => {
-    const cardsData = currentTranslations.cards[themeId as keyof typeof currentTranslations.cards]
-    
-    if (!cardsData || typeof cardsData !== 'object') {
-      console.error(`Cards not found for theme: ${themeId}`)
-      return []
-    }
+ * @param themeCodeLowercase - Theme CODE lowercase (es: 't5', 't1', 't2')
+ * @returns Array di tutte le cards del theme
+ * 
+ * @example
+ * const cards = getAllCardsForTheme('t5') // Tutte le 12 cards di T5
+ */
+const getAllCardsForTheme = (themeCodeLowercase: string): CardTranslation[] => {
+  const cardsData = currentTranslations.cards[themeCodeLowercase as keyof typeof currentTranslations.cards]
+  
+  if (!cardsData || typeof cardsData !== 'object') {
+    console.error(`Cards not found for theme code: ${themeCodeLowercase}`)
+    return []
+  }
     
     const allCards: CardTranslation[] = []
     

@@ -27,8 +27,8 @@ export default function HandbookNavigator() {
   const [selectedCard, setSelectedCard] = useState<Card | null>(null);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
-  // ✅ NUOVO: Sincronizza selectedTheme quando cambia la lingua
-  useEffect(() => {
+// ✅ NUOVO: Sincronizza selectedTheme quando cambia la lingua
+useEffect(() => {
   if (selectedTheme) {
     // Trova il theme aggiornato con le nuove traduzioni
     const updatedTheme = themes.find(t => t.id === selectedTheme.id);
@@ -45,7 +45,9 @@ export default function HandbookNavigator() {
           
           // ✨ NUOVO: Se c'è anche una card selezionata, ricaricala con la nuova lingua
           if (selectedGeneration && selectedCard) {
-            const updatedCard = findCard(selectedGeneration.id, updatedSubTheme.id);
+            const updatedCard = findCard(selectedGeneration.id, updatedSubTheme.code);
+            //                                                   ^^^^^^^^^^^^^^^^^^^
+            //                                                   ✅ USA CODE
             if (updatedCard) {
               setSelectedCard(updatedCard);
             }
@@ -73,23 +75,27 @@ export default function HandbookNavigator() {
   };
 
   const handleGenerationSelect = (generation: Generation) => {
-    setSelectedGeneration(generation);
+  setSelectedGeneration(generation);
 
-    // Trova automaticamente la card quando si seleziona una generazione
-    if (selectedSubTheme && selectedTheme) {
-      const card = findCard(generation.id, selectedSubTheme.id);
+  // Trova automaticamente la card quando si seleziona una generazione
+  if (selectedSubTheme && selectedTheme) {
+    const card = findCard(generation.id, selectedSubTheme.code);
+    //                                    ^^^^^^^^^^^^^^^^^^^^
+    //                                    ✅ USA CODE: "T5.1"
 
-      if (card) {
-        setSelectedCard(card);
-      } else {
-        console.warn(
-          `No card found for generation ${generation.id} and subtheme ${selectedSubTheme.id}`
-        );
-        setSelectedCard(null);
-      }
+    if (card) {
+      setSelectedCard(card);
+    } else {
+      console.warn(
+        `No card found for generation ${generation.id} and subtheme ${selectedSubTheme.code}`
+        //                                                                            ^^^^
+        //                                                                            ✅ Aggiorna anche il log
+      );
+      setSelectedCard(null);
     }
-    setIsMobileNavOpen(false);
-  };
+  }
+  setIsMobileNavOpen(false);
+};
 
   const handleBack = () => {
     switch (currentStep) {
