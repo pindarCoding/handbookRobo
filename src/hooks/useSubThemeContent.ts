@@ -37,27 +37,27 @@ export function useSubThemeContent(subTheme: SubTheme | null | undefined) {
   
   if (isDev) {
     renderCount.current++
-    console.log(`🔄 useSubThemeContent render #${renderCount.current}`, {
-      subThemeId,
-      markdownFile,
-      isLoading,
-      hasContent: content.length > 0,
-      hasError: !!error
-    })
+    // console.log(`🔄 useSubThemeContent render #${renderCount.current}`, {
+    //   subThemeId,
+    //   markdownFile,
+    //   isLoading,
+    //   hasContent: content.length > 0,
+    //   hasError: !!error
+    // })
   }
   
   useEffect(() => {
     if (isDev) {
-      console.log(`🎯 useEffect triggered`, {
-        subThemeId,
-        markdownFile
-      })
+      // console.log(`🎯 useEffect triggered`, {
+      //   subThemeId,
+      //   markdownFile
+      // })
     }
     
     // GUARD CLAUSE: Nessun SubTheme o file non configurato
     if (!subThemeId || !markdownFile) {
       if (isDev && subThemeId && !markdownFile) {
-        console.warn(`⚠️ SubTheme "${subThemeId}" has no markdownFile configured`)
+        // console.warn(`⚠️ SubTheme "${subThemeId}" has no markdownFile configured`)
       }
       
       // Reset state
@@ -78,7 +78,7 @@ export function useSubThemeContent(subTheme: SubTheme | null | undefined) {
         setError(null)
         
         if (isDev) {
-          console.log(`⏳ Loading markdown: ${markdownFile}`)
+          // console.log(`⏳ Loading markdown: ${markdownFile}`)
         }
         
         // 2. Carica markdown (con fallback EN automatico in loadMarkdown)
@@ -87,7 +87,7 @@ export function useSubThemeContent(subTheme: SubTheme | null | undefined) {
         // 3. Verifica: componente ancora montato?
         if (!isMounted) {
           if (isDev) {
-            console.log(`🚫 Component unmounted, ignoring result for: ${markdownFile}`)
+            // console.log(`🚫 Component unmounted, ignoring result for: ${markdownFile}`)
           }
           return
         }
@@ -96,14 +96,14 @@ export function useSubThemeContent(subTheme: SubTheme | null | undefined) {
         setContent(markdown)
         
         if (isDev) {
-          console.log(`✅ Successfully loaded: ${markdownFile} (${markdown.length} chars)`)
+          // console.log(`✅ Successfully loaded: ${markdownFile} (${markdown.length} chars)`)
         }
         
       } catch (err) {
         // 5. Error handling
         if (!isMounted) {
           if (isDev) {
-            console.log('🚫 Component unmounted during error handling')
+            // console.log('🚫 Component unmounted during error handling')
           }
           return
         }
@@ -113,7 +113,7 @@ export function useSubThemeContent(subTheme: SubTheme | null | undefined) {
           : 'Unknown error occurred while loading content'
         
         if (isDev) {
-          console.error(`❌ Failed to load: ${markdownFile}`, err)
+          // console.error(`❌ Failed to load: ${markdownFile}`, err)
         }
         
         setError(new Error(errorMessage))
@@ -134,7 +134,7 @@ export function useSubThemeContent(subTheme: SubTheme | null | undefined) {
     return () => {
       isMounted = false
       if (isDev) {
-        console.log(`🧹 Cleanup for: ${markdownFile}`)
+        // console.log(`🧹 Cleanup for: ${markdownFile}`)
       }
     }
     
