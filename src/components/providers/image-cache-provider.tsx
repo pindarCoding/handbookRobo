@@ -47,7 +47,7 @@ export function ImageCacheProvider({ children }: { children: ReactNode }) {
       urls.forEach(url => newSet.add(url))
       
       // Log per debug (rimuovibile in produzione)
-      console.log(`📦 Added ${urls.length} images to cache. Total: ${newSet.size}`)
+      // console.log(`📦 Added ${urls.length} images to cache. Total: ${newSet.size}`)
       
       return newSet
     })

@@ -64,7 +64,7 @@ export const useImagePreloader = ({
       return;
     }
 
-    console.log(`⏳ Preloading ${images.length} images...`);
+    // console.log(`⏳ Preloading ${images.length} images...`);
     setIsLoading(true);
     
     try {
@@ -87,7 +87,7 @@ export const useImagePreloader = ({
       if (loadedCount > 0) {
         const successfulImages = images.filter((_, index) => !failedIndexes.includes(index));
         addImagesToCache(successfulImages);
-        console.log(`✅ Preloaded and cached ${loadedCount} images`);
+        // console.log(`✅ Preloaded and cached ${loadedCount} images`);
       }
       
     } catch (error) {
@@ -105,7 +105,7 @@ export const useImagePreloader = ({
   useEffect(() => {
     // 🆕 SV0002 - Se già tutto in cache, non chiamare preloadAllImages
     if (allCached) {
-      console.log(`🚀 Hook initialized with all images cached`);
+      // console.log(`🚀 Hook initialized with all images cached`);
       return; // ✅ Skip completamente
     }
     

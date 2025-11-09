@@ -30,7 +30,7 @@ export const GenerationCharacter: React.FC<GenerationCharacterProps> = ({
 }) => {
   // Genera la sequenza di immagini basata sui parametri
   const images = useMemo(() => {
-    console.log(`🔄 Generating images for ${characterFolder}`) // 
+    // console.log(`🔄 Generating images for ${characterFolder}`) 
     return generateImageSequence({
       basePath: `/characters/${characterFolder}`,
       prefix: framePrefix,
