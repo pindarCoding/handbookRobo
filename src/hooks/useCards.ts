@@ -1,6 +1,8 @@
 import { useTranslation, CardTranslation } from './useTranslation'
 import { 
-  parseThemeCode, 
+  parseThemeCode,
+  parseSubThemeCode,      // ✅ AGGIUNTO - Import nuovo
+  parseGenerationCode,    // ✅ AGGIUNTO - Import nuovo
   getThemeId, 
   GENERATION_CODE_TO_ID 
 } from '@/data/config/taxonomy'
@@ -32,7 +34,7 @@ export interface Card {
  * Sostituisce l'import diretto da handbook-data.ts
  * 
  * @returns { 
- *   getCardsByTheme, 
+ *   getCardsByThemeCode, 
  *   findCard, 
  *   getCardByCode,
  *   getAllCards 
@@ -41,39 +43,54 @@ export interface Card {
  * @example
  * ```tsx
  * const { findCard } = useCards()
- * const card = findCard('genz', 'work-values')
+ * const card = findCard('genz', 'T5.1')
  * ```
  */
 export function useCards() {
   const { getAllCardsForTheme, getCardByCode: getCardByCodeFromTranslation } = useTranslation()
   
   /**
-   * Trasforma CardTranslation in Card completo
-   * Aggiunge themeId, subThemeId, generationId per compatibilità
+   * ✅ REFACTORED: Trasforma CardTranslation in Card completo
+   * USA SOLO CODE e funzioni di taxonomy.ts (SV0026)
    */
   const transformCard = (cardTranslation: CardTranslation, themeId: string): Card => {
-    // Estrai generationId dal code (es: T5.1.GZ → GZ)
-    const codeParts = cardTranslation.code.split('.')
-    const generationCode = codeParts[2] // GZ
+    // ✅ MODIFICATO: USA parseSubThemeCode invece di parsing manuale
+    const subThemeCode = parseSubThemeCode(cardTranslation.code)     // "T2.1.GZ" → "T2.1"
     
-    // Costruisci subThemeId dal code (T5.1 → work-values)
-    // Usa l'ID dalla card che è già nel formato corretto
-    const subThemeId = cardTranslation.id.split('-').slice(0, -1).join('-') // 'work-values-genz' → 'work-values'
+    // ✅ MODIFICATO: USA parseGenerationCode invece di split manuale
+    const generationCode = parseGenerationCode(cardTranslation.code) // "T2.1.GZ" → "GZ"
     
-    // Converti generation code in ID
+    // Converti generation code in ID (questo resta uguale)
     const generationId = GENERATION_CODE_TO_ID[generationCode] || generationCode.toLowerCase()
+    
+    // 🔍 AGGIUNTO: DEBUG LOG per tracciare la trasformazione
+    console.log('🔄 [useCards] transformCard:', {
+      input: {
+        cardId: cardTranslation.id,
+        cardCode: cardTranslation.code
+      },
+      parsed: {
+        subThemeCode,      // Es: "T2.1"
+        generationCode,    // Es: "GZ"
+        generationId       // Es: "genz"
+      },
+      output: {
+        themeId,                    // Es: "diversity"
+        subThemeId: subThemeCode    // ⚠️ USA CODE invece di derivare da ID
+      }
+    })
     
     return {
       ...cardTranslation,
       themeId,
-      subThemeId,
+      subThemeId: subThemeCode,  // ✅ MODIFICATO: usa CODE invece di ID derivato
       generationId,
       page_id: cardTranslation.pageId // pageId → page_id
     }
   }
   
  /**
- * ✅ NUOVO: Ottieni tutte le cards per un theme CODE
+ * Ottieni tutte le cards per un theme CODE
  * @param themeCode - Theme CODE (es: 'T5', 'T1')
  * @returns Array di cards per il theme
  * 
@@ -84,17 +101,25 @@ const getCardsByThemeCode = (themeCode: string): Card[] => {
   const themeId = getThemeId(themeCode)
   
   if (!themeId) {
-    console.error(`Invalid theme code: ${themeCode}`)
+    console.error(`❌ [useCards] Invalid theme code: ${themeCode}`)
     return []
   }
   
+  // 🔍 AGGIUNTO: DEBUG LOG caricamento
+  console.log(`📦 [useCards] Loading cards for theme ${themeCode} (ID: ${themeId})`)
+  
   // Passa theme code lowercase a useTranslation ('T5' → 't5')
   const cardsTranslations = getAllCardsForTheme(themeCode.toLowerCase())
-  return cardsTranslations.map(ct => transformCard(ct, themeId))
+  const transformedCards = cardsTranslations.map(ct => transformCard(ct, themeId))
+  
+  // 🔍 AGGIUNTO: DEBUG LOG risultato
+  console.log(`✅ [useCards] Loaded ${transformedCards.length} cards for ${themeCode}`)
+  
+  return transformedCards
 }
   
   /**
- * ✅ NUOVO: Trova card per generation ID + subtheme CODE
+ * Trova card per generation ID + subtheme CODE
  * @param generationId - Generation ID (es: 'genz', 'millennial')
  * @param subThemeCode - SubTheme CODE (es: 'T5.1')
  * @returns Card o undefined
@@ -106,14 +131,48 @@ const findCard = (generationId: string, subThemeCode: string): Card | undefined 
   // Estrai theme CODE da subtheme CODE: "T5.1" → "T5"
   const themeCode = parseThemeCode(subThemeCode)
   
+  // 🔍 AGGIUNTO: DEBUG LOG inizio ricerca
+  console.log('🔍 [useCards] findCard START:', {
+    searching: { generationId, subThemeCode },
+    derivedThemeCode: themeCode
+  })
+  
   // Ottieni tutte le cards del theme (dinamico, no cache)
   const themeCards = getCardsByThemeCode(themeCode)
   
-  // Trova la card che matcha per generation + subtheme CODE
-  return themeCards.find(
-    card => card.generationId === generationId && 
-            card.code.startsWith(subThemeCode)  // T5.1.GZ starts with T5.1
-  )
+  // 🔍 AGGIUNTO: DEBUG LOG cards disponibili
+  console.log(`📋 [useCards] Available ${themeCards.length} cards in ${themeCode}:`)
+  themeCards.forEach(c => {
+    console.log(`  - ${c.code}: subThemeId="${c.subThemeId}", generationId="${c.generationId}"`)
+  })
+  
+  // ✅ MODIFICATO: Matching con LOG dettagliato
+  const foundCard = themeCards.find(card => {
+    const generationMatch = card.generationId === generationId
+    const subThemeMatch = card.subThemeId === subThemeCode  // ✅ MODIFICATO: ora confronta CODE con CODE
+    
+    // 🔍 AGGIUNTO: DEBUG LOG ogni tentativo di match
+    console.log(`  🔎 [useCards] Checking ${card.code}:`, {
+      generationMatch: generationMatch ? '✅' : '❌',
+      subThemeMatch: subThemeMatch ? '✅' : '❌',
+      expected: { generationId, subThemeCode },
+      actual: { generationId: card.generationId, subThemeId: card.subThemeId }
+    })
+    
+    return generationMatch && subThemeMatch
+  })
+  
+  // 🔍 AGGIUNTO: DEBUG LOG risultato finale
+  if (foundCard) {
+    console.log('✅ [useCards] findCard SUCCESS:', {
+      foundCode: foundCard.code,
+      title: foundCard.title
+    })
+  } else {
+    console.warn('❌ [useCards] findCard FAILED - No matching card found')
+  }
+  
+  return foundCard
 }
   
   /**
@@ -126,8 +185,15 @@ const findCard = (generationId: string, subThemeCode: string): Card | undefined 
    * const card = getCardByCode('T5.1.GZ', 'work')
    */
   const getCardByCode = (code: string, themeId: string): Card | undefined => {
+    // 🔍 AGGIUNTO: DEBUG LOG
+    console.log('🔍 [useCards] getCardByCode:', { code, themeId })
+    
     const cardTranslation = getCardByCodeFromTranslation(code, themeId)
-    if (!cardTranslation) return undefined
+    if (!cardTranslation) {
+      // 🔍 AGGIUNTO: DEBUG LOG fallimento
+      console.warn('❌ [useCards] Card translation not found')
+      return undefined
+    }
     
     return transformCard(cardTranslation, themeId)
   }
@@ -139,6 +205,9 @@ const findCard = (generationId: string, subThemeCode: string): Card | undefined 
    * ✨ NESSUN useMemo - si rigenera ad ogni chiamata per reagire al cambio lingua
    */
   const getAllCards = (): Card[] => {
+  // 🔍 AGGIUNTO: DEBUG LOG
+  console.log('📦 [useCards] getAllCards: Loading all themes')
+  
   const allCards: Card[] = []
   
   // Itera su tutti i theme CODES
@@ -148,6 +217,9 @@ const findCard = (generationId: string, subThemeCode: string): Card | undefined 
     const themeCards = getCardsByThemeCode(themeCode)
     allCards.push(...themeCards)
   })
+  
+  // 🔍 AGGIUNTO: DEBUG LOG totale
+  console.log(`✅ [useCards] getAllCards: Total ${allCards.length} cards loaded`)
   
   return allCards
 }
