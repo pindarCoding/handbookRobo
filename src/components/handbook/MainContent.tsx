@@ -112,6 +112,15 @@ export const MainContent = ({
       return (
         <div className="animate-fadeIn">
           <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6 lg:p-16 shadow-lg ">
+
+            {/* Code Pill */}
+            <div className="mb-4">
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium">
+                🏷️ {selectedTheme.code}
+              </span>
+            </div>
+
+
             <div
               className="prose prose-slate dark:prose-invert max-w-none mb-6
                 prose-p:text-slate-600 dark:prose-p:text-slate-300
@@ -148,6 +157,12 @@ export const MainContent = ({
       return (
         <div className="animate-fadeIn">
           <div className="bg-slate-100 dark:bg-slate-800 rounded-lg  p-6 lg:p-16 shadow-lg">
+            {/* Code Pill */}
+            <div className="mb-4">
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium">
+                🏷️ {selectedSubTheme.code}
+              </span>
+            </div>
             {/* Header con titolo e bottone */}
             <div className="flex justify-between items-start mb-6">
               
@@ -243,6 +258,18 @@ export const MainContent = ({
             {/* Header della card */}
             <div className="bg-slate-100 dark:bg-slate-800 p-6 border-b border-slate-200 dark:border-slate-700">
               <div className="space-y-4">
+              {/* Code Pill - Breadcrumb */}
+                <motion.div
+                  variants={fadeSlideUp}
+                  initial="hidden"
+                  animate="visible"
+                  className="flex items-center"
+                >
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium">
+                    🏷️ {selectedCard.code}
+                  </span>
+                </motion.div>
+
                 {/* First row: Button */}
                 <motion.div
                   className="flex justify-end"
