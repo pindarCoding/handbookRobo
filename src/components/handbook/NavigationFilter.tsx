@@ -120,8 +120,13 @@ export const NavigationFilter = ({
                         : "border-l-orange-500"
                       }`}
                   >
+                    <span className="pr-1 text-blue-700 dark:text-blue-400 text-xs font-mono font-medium">
+                    {theme.code} -
+                    </span>  
                     {theme.title}
+                    
                   </motion.button>
+                  
                 ))}
               </motion.div>
             )}
@@ -156,6 +161,9 @@ export const NavigationFilter = ({
                       : "border-l-purple-500"
                     }`}
                 >
+                  <span className="pr-1 text-blue-700 dark:text-blue-400 text-xs font-mono font-medium">
+                    {subTheme.code} -
+                    </span>
                   {subTheme.title}
                 </motion.button>
               ))}

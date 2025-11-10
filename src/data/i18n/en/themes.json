@@ -2,7 +2,7 @@
   "T1": {
     "id": "communication",
     "code": "T1",
-    "title": "1 - Communication between generations - Conflict prevention and management",
+    "title": "Communication between generations - Conflict prevention and management",
     "introduction": "This chapter introduces the three **key themes** that emerged as the most insightful findings from our cross-generational research on **Intergenerational Communication and Conflict** in the workplace across five European countries.\n\nDrawing on the diverse perspectives of four generations in the workforce, our study revealed that workplace communication and conflict are shaped by three interrelated themes:\n\n* **Communication Channel Confusion and Response Expectations**\n* **Identity and Value-Based Conflict**\n* **The Role of Open Dialogue and Social Interaction in Conflict Prevention**\n\nFirstly, **Communication Channel Confusion and Response Expectations** reflect the growing complexity of workplace communication in hybrid and digital environments. Employees often face uncertainty about which platforms to use, how quickly to respond, and how to interpret tone and urgency—issues that are further complicated by generational differences in communication preferences.\n\nSecondly, **Identity and Value-Based Conflict** arises when individuals experience tension due to differences in personal beliefs, cultural backgrounds, or social identities. These conflicts are particularly pronounced in diverse and multi-generational teams, where varying ethical standards, cultural norms, and lived experiences can lead to misunderstanding or exclusion.\n\nFinally, our research highlights the importance of **Open Dialogue and Social Interaction** as a proactive strategy for conflict prevention. Opportunities for informal connection, active listening, and inclusive conversation were consistently identified as key to building trust, fostering empathy, and reducing the likelihood of interpersonal conflict. Each of the three sections below offers deeper analysis, practical insights, and evidence-based recommendations for improving workplace relationships.",
     "reportPdfUrl": null,
     "pageId": 10,
@@ -36,7 +36,7 @@
   "T2": {
     "id": "diversity",
     "code": "T2",
-    "title": "2 - Generational diversity from an intersectional point of view",
+    "title": "Generational diversity from an intersectional point of view",
     "introduction": "Generational diversity describes the interaction and collaboration of multiple age cohorts – Baby Boomers, Generation X, Millennials and Generation Z – in a workplace, community or social setting. When we bring an intersectional perspective, we highlight how generational identity intersects with other social identities, like gender, ethnicity, disability, class, etc., and how these intersections shape experiences of inclusion, discrimination, voice and power. This chapter explores how intersectional factors influence generational diversity. We explore how discrimination can be amplified where stereotypes overlap or conflict and what strategies help to promote equity and understanding. The relevance? As workplaces become more diverse in age as well as other dimensions, policies and culture that ignore intersectionality risk reinforcing systemic bias, leaving some people more marginalised even among “diverse” groups.",
     "reportPdfUrl": null,
     "pageId": 20,
@@ -70,7 +70,7 @@
   "T3": {
     "id": "digital",
     "code": "T3",
-    "title": "3 - How to bridge digital inequality",
+    "title": "How to bridge digital inequality",
     "introduction": "Digital inequality represents one of the most pressing challenges in modern workplaces, encompassing disparities in technology access, digital skills, and effective utilization of digital tools among employees. As organizations increasingly embrace digital transformation, these divides can significantly impact workplace equality, employee productivity, and organizational competitiveness. The COVID-19 pandemic starkly revealed how digital disparities can exclude employees from full participation in work life, particularly as remote work arrangements became necessary. Today, with artificial intelligence and advanced technologies reshaping business operations, addressing digital inequality has transitioned from a peripheral concern to a strategic imperative for organizations committed to inclusive growth. This module examines the multifaceted nature of digital inequality in workplace contexts, exploring not only technological access but also the skills, support systems, and cultural factors that determine how employees engage with digital tools. We will explore how digital inequality mirrors and amplifies existing socioeconomic disparities and examine strategies for creating more digitally inclusive workplaces where all employees can thrive. By understanding and addressing these challenges, organizations can unlock significant productivity gains, innovation potential, and competitive advantages while advancing broader equity goals. The relevance of this topic extends beyond mere technical competence. Digital inequality intersects with generational differences, socioeconomic backgrounds, geographic disparities, and educational opportunities, creating complex challenges that require multifaceted solutions. Research shows that companies ignoring workforce technology risk higher turnover, slower growth, and significant skill gaps that undermine competitiveness . By contrast, organizations that proactively address digital inequality can build more robust talent pipelines, reduce hiring costs, and enhance employee retention while fostering a more inclusive workplace culture.",
     "reportPdfUrl": null,
     "pageId": 30,
@@ -104,7 +104,7 @@
   "T4": {
     "id": "intercultural",
     "code": "T4",
-    "title": "4 - Generational diversity from an intercultural point of view",
+    "title": "Generational diversity from an intercultural point of view",
     "introduction": "The following section deals with different generations and cultures in the workplace and the challenges that can arise in the workplace. Generational conflicts have always existed. Since ancient times, there have been reports of older generations complaining about disrespect shown to them by younger generations (Kollewe 2016: 188). However, ethnological research shows that across cultures, age alone does not determine attitudes to respect. Comparisons between different cultures seem to show that respect for older and elderly people is closely linked to their status in society. Due to their life experience, older people often have greater knowledge (factual, historical, magical), more material goods and, as a result, enjoy a better position in the group or society (Kollewe 2016: 189). Strictly speaking, the factor of 'age' is therefore only an observable physical characteristic. It is not biological age itself that has a higher social value. Rather, it seems that societies associate certain factors with 'age' that have positive connotations and are therefore reason enough to be valued.",
     "reportPdfUrl": null,
     "pageId": 40,
@@ -138,7 +138,7 @@
   "T5": {
     "id": "work",
     "code": "T5",
-    "title": "5 - Differences in approach to work",
+    "title": "Differences in approach to work",
     "introduction": "Workplaces today bring together a uniquely diverse mix of generations. Baby Boomers, Generation X, Millennials, and Generation Z collaborate daily, each shaped by the social, economic, and technological environments of their formative years. These influences affect not only how individuals define success but also how they communicate, stay motivated, and approach teamwork. While differences in expectations and styles can sometimes create tension or misunderstanding, they also open valuable opportunities for mutual learning, innovation, and resilience. By exploring generational perspectives on values, motivation, and collaboration, this handbook provides practical insights and strategies to help organizations build inclusive environments where all generations feel recognized, respected, and empowered to contribute their strengths.",
     "reportPdfUrl": "/pdfs/work-report.pdf",
     "pageId": 50,
