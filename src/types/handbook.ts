@@ -76,4 +76,5 @@ export interface BookPage {
   generationId?: string
   cardId?: string
   addedAt: number
+  language?: string
 }

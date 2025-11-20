@@ -5,10 +5,11 @@ import { ReactNode, createContext, useContext, useState, useEffect } from 'react
 import { BookPage } from '@/types/handbook'
 import { toast } from 'sonner'
 import { useTranslation } from '@/hooks'
+import { useLanguage } from './language-provider' // [SV0001] Import per lingua corrente
 
 interface BookContextType {
   pages: BookPage[];
-  addPage: (page: Omit<BookPage, 'addedAt'>) => void;
+  addPage: (page: Omit<BookPage, 'addedAt' | 'language'>) => void; // [SV0001] language non richiesto in input
   removePage: (id: string) => void;
   clearBook: () => void;
 }
@@ -18,6 +19,7 @@ const BookContext = createContext<BookContextType | undefined>(undefined)
 export function BookProvider({ children }: { children: ReactNode }) {
   const [pages, setPages] = useState<BookPage[]>([])
   const { t } = useTranslation()
+  const { language } = useLanguage() // [SV0001] Ottieni lingua corrente
 
   // Carica le pagine salvate dopo il primo render
   useEffect(() => {
@@ -43,7 +45,7 @@ export function BookProvider({ children }: { children: ReactNode }) {
   /**
    * Crea un BookPage per il SubTheme padre di una Card
    */
-  const createSubThemePage = (cardPage: Omit<BookPage, 'addedAt'>): Omit<BookPage, 'addedAt'> => {
+  const createSubThemePage = (cardPage: Omit<BookPage, 'addedAt' | 'language'>): Omit<BookPage, 'addedAt' | 'language'> => {
     // Estrai info dal titolo della card (es: "Gen Z: Workplace Values")
     // Il SubTheme sarà "Workplace Values (Work)"
     const cardTitle = cardPage.title
@@ -66,7 +68,7 @@ export function BookProvider({ children }: { children: ReactNode }) {
    * Trova la posizione corretta per inserire una nuova card
    * Mantiene l'ordine: SubTheme → Cards dello stesso SubTheme
    */
-  const findInsertPosition = (currentPages: BookPage[], newCard: Omit<BookPage, 'addedAt'>): number => {
+  const findInsertPosition = (currentPages: BookPage[], newCard: Omit<BookPage, 'addedAt' | 'language'>): number => {
     let lastRelatedIndex = -1
     
     // Trova l'ultima pagina dello stesso subTheme (SubTheme o Card)
@@ -90,7 +92,9 @@ export function BookProvider({ children }: { children: ReactNode }) {
    * Aggiunge una Card al book
    * Auto-inserisce il SubTheme padre se non esiste
    */
-  const addPage = (page: Omit<BookPage, 'addedAt'>) => {
+  const addPage = (page: Omit<BookPage, 'addedAt' | 'language'>) => {
+    console.log('[SV0001] Adding page with current language:', language) // [SV0001] Debug log
+    
     // ✅ ASSUNZIONE: Sempre una Card (cardId sempre presente)
     
     // 1. Check duplicato
@@ -110,52 +114,56 @@ export function BookProvider({ children }: { children: ReactNode }) {
     )
 
     setPages(currentPages => {
-  const newPages = [...currentPages]
-  let addedChapter = false
-  
-  // 3. Se SubTheme non esiste, crealo e inseriscilo
-  if (!subThemeExists) {
-    const subThemePage = createSubThemePage(page)
-    const subThemeWithTime: BookPage = { 
-      ...subThemePage, 
-      addedAt: Date.now() - 1
-    }
-    
-    const subThemePosition = findInsertPosition(newPages, page)
-    newPages.splice(subThemePosition, 0, subThemeWithTime)
-    addedChapter = true
-  }
-  
-  // 4. Inserisci la Card
-  const cardWithTime: BookPage = { 
-    ...page, 
-    addedAt: Date.now() 
-  }
-  const cardPosition = findInsertPosition(newPages, page)
-  newPages.splice(cardPosition, 0, cardWithTime)
-  
-  // 5. Toast DOPO aver aggiornato lo state (fuori dal setter)
-  setTimeout(() => {
-    if (addedChapter) {
-      toast.success(
-        <div className="flex flex-col gap-1">
-          <div className="font-semibold text-base">📖 {t('handbook.addedWithChapter')}</div>
-          <div className="text-sm opacity-90">{page.title}</div>
-        </div>,
-        {
-          duration: 4000,
-          position: 'top-center',
+      const newPages = [...currentPages]
+      let addedChapter = false
+      
+      // 3. Se SubTheme non esiste, crealo e inseriscilo
+      if (!subThemeExists) {
+        const subThemePage = createSubThemePage(page)
+        const subThemeWithTime: BookPage = { 
+          ...subThemePage, 
+          addedAt: Date.now() - 1,
+          language // [SV0001] Salva lingua corrente
         }
-      )
-    } else {
-      toast.success(t('handbook.added', { title: page.title }), {
-        duration: 2500,
-      })
-    }
-  }, 0)
-  
-  return newPages
-})
+        
+        const subThemePosition = findInsertPosition(newPages, page)
+        newPages.splice(subThemePosition, 0, subThemeWithTime)
+        addedChapter = true
+        console.log('[SV0001] Created SubTheme with language:', language) // [SV0001] Debug log
+      }
+      
+      // 4. Inserisci la Card
+      const cardWithTime: BookPage = { 
+        ...page, 
+        addedAt: Date.now(),
+        language // [SV0001] Salva lingua corrente
+      }
+      const cardPosition = findInsertPosition(newPages, page)
+      newPages.splice(cardPosition, 0, cardWithTime)
+      console.log('[SV0001] Created Card with language:', language) // [SV0001] Debug log
+      
+      // 5. Toast DOPO aver aggiornato lo state (fuori dal setter)
+      setTimeout(() => {
+        if (addedChapter) {
+          toast.success(
+            <div className="flex flex-col gap-1">
+              <div className="font-semibold text-base">📖 {t('handbook.addedWithChapter')}</div>
+              <div className="text-sm opacity-90">{page.title}</div>
+            </div>,
+            {
+              duration: 4000,
+              position: 'top-center',
+            }
+          )
+        } else {
+          toast.success(t('handbook.added', { title: page.title }), {
+            duration: 2500,
+          })
+        }
+      }, 0)
+      
+      return newPages
+    })
   }
 
   /**

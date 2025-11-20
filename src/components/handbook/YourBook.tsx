@@ -7,6 +7,7 @@ import { BookListItem } from "./BookListItem";
 import { useCards } from "@/hooks/useCards";
 import { useThemes } from "@/hooks/useThemes";
 import { useTranslation } from "@/hooks";
+import { useLanguage } from "@/components/providers/language-provider"; // [SV0001] Import per fallback lingua
 import confetti from "canvas-confetti";
 import { motion, AnimatePresence } from "framer-motion";
 import { bookItemContainer } from "@/data/config/animations";
@@ -16,27 +17,7 @@ export const YourBook = () => {
   const { getAllCards } = useCards();
   const { getThemeById, getSubThemeById } = useThemes();
   const { t } = useTranslation();
-
-  // Funzione helper per recuperare il page_id basandosi sugli ID salvati
-  const getPageId = (page: BookPage): number | null => {
-    if (page.themeId && !page.subThemeId && !page.cardId) {
-      const theme = getThemeById(page.themeId);
-      return theme?.page_id || null;
-    }
-
-    if (page.themeId && page.subThemeId && !page.cardId) {
-      const subTheme = getSubThemeById(page.themeId, page.subThemeId);
-      return subTheme?.page_id || null;
-    }
-
-    if (page.cardId) {
-      const allCards = getAllCards();
-      const card = allCards.find((c) => c.id === page.cardId);
-      return card?.page_id || null;
-    }
-
-    return null;
-  };
+  const { language: currentLanguage } = useLanguage(); // [SV0001] Lingua corrente per fallback
 
   // Funzione helper per recuperare il code della pagina
   const getPageCode = (page: BookPage): string | null => {
@@ -59,18 +40,73 @@ export const YourBook = () => {
     return null;
   };
 
+  /**
+   * Trasforma il code tassonomico in un filename valido
+   * Sostituisce i punti con trattini e converte in lowercase
+   * @example "T1.1" → "t1-1"
+   * @example "T2.1.GZ" → "t2-1-gz"
+   */
+  const codeToFilename = (code: string): string => {
+    return code.toLowerCase().replace(/\./g, "-");
+  };
+
   // Funzione per esportare il PDF
   const exportHandbook = async () => {
     try {
-      const pageIds = pages
-        .map((page) => getPageId(page))
-        .filter((id) => id !== null)
-        .map((id) => id!.toString());
+      console.log("🚀 [SV0001] Starting Custom Handbook Export");
+      console.log("📚 [SV0001] Total pages in book:", pages.length);
+      console.log("🌐 [SV0001] Current UI language:", currentLanguage);
 
-      if (pageIds.length === 0) {
-        alert("No pages with valid page IDs to export");
+      // Costruire l'array dei file da richiedere al backend
+      const fileRequests: string[] = [];
+
+      pages.forEach((page, index) => {
+        console.log(`\n--- Processing Page ${index + 1}/${pages.length} ---`);
+        console.log("📄 Page data:", {
+          id: page.id,
+          themeId: page.themeId,
+          subThemeId: page.subThemeId,
+          cardId: page.cardId,
+          savedLanguage: page.language,
+        });
+
+        // Recuperare il code della pagina
+        const code = getPageCode(page);
+        console.log("🔖 Retrieved code:", code);
+
+        if (!code) {
+          console.warn(
+            `⚠️ [SV0001] Page ${index + 1} has no valid code - SKIPPING`
+          );
+          return; // Skip questa pagina
+        }
+
+        // Trasformare il code in filename
+        const filename = codeToFilename(code);
+        console.log("📝 Transformed filename:", filename);
+
+        // [SV0001] Recuperare la lingua: priorità a page.language, fallback a currentLanguage
+        const language = page.language || currentLanguage;
+        console.log("🌐 Language:", language, page.language ? "(saved)" : "(fallback to current)");
+
+        // Costruire il path completo
+        const filePath = `${language}/${filename}.pdf`;
+        console.log("✅ Final file path:", filePath);
+
+        fileRequests.push(filePath);
+      });
+
+      console.log("\n📦 [SV0001] Final files array to send:", fileRequests);
+
+      if (fileRequests.length === 0) {
+        console.error("❌ [SV0001] No valid files to export");
+        alert("No pages with valid codes to export");
         return;
       }
+
+      console.log(
+        `🌐 [SV0001] Sending request to backend with ${fileRequests.length} files`
+      );
 
       const response = await fetch("https://api.meetyourcolleague.eu/merge", {
         method: "POST",
@@ -78,20 +114,31 @@ export const YourBook = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          files: pageIds.map((id) => `en/${id}.pdf`),
+          files: fileRequests,
         }),
       });
 
+      console.log("📡 [SV0001] Backend response status:", response.status);
+
       const contentType = response.headers.get("content-type");
+      console.log("📋 [SV0001] Response content-type:", contentType);
 
       if (contentType && contentType.includes("application/json")) {
         const errorData = await response.json();
+        console.error("❌ [SV0001] Backend returned JSON error:", errorData);
+
         if (errorData.error) {
           if (errorData.error.includes("File not found")) {
-            const missingFile = errorData.error.match(/en\/(\d+)\.pdf/);
-            if (missingFile) {
+            const missingFileMatch = errorData.error.match(
+              /[a-z]{2}\/[a-z0-9-]+\.pdf/i
+            );
+            if (missingFileMatch) {
+              const missingFile = missingFileMatch[0];
+              console.error(
+                `❌ [SV0001] Missing file on server: ${missingFile}`
+              );
               alert(
-                `Error: Page ${missingFile[1]} is not available on the server. Please remove it from your selection and try again.`
+                `Error: File "${missingFile}" is not available on the server. Please remove it from your selection and try again.`
               );
             } else {
               alert(`Error: ${errorData.error}`);
@@ -104,18 +151,24 @@ export const YourBook = () => {
       }
 
       if (!response.ok) {
+        console.error(
+          `❌ [SV0001] Server error: ${response.status} ${response.statusText}`
+        );
         alert(`Error: Server responded with status ${response.status}`);
         return;
       }
 
       if (!contentType || !contentType.includes("application/pdf")) {
+        console.error("❌ [SV0001] Invalid content-type, expected PDF");
         alert("Error: Server did not return a valid PDF file");
         return;
       }
 
       const blob = await response.blob();
+      console.log("📦 [SV0001] Received PDF blob, size:", blob.size, "bytes");
 
       if (blob.size === 0) {
+        console.error("❌ [SV0001] Received empty PDF blob");
         alert("Error: Received empty PDF file");
         return;
       }
@@ -129,6 +182,8 @@ export const YourBook = () => {
       a.remove();
 
       window.URL.revokeObjectURL(url);
+
+      console.log("✅ [SV0001] PDF download triggered successfully!");
 
       // 🎉 Confetti
       const canvas = document.createElement("canvas");
@@ -153,10 +208,13 @@ export const YourBook = () => {
       setTimeout(() => {
         document.body.removeChild(canvas);
       }, 5000);
+
+      console.log("🎉 [SV0001] Export completed successfully!");
     } catch (error: unknown) {
-      console.error("Export error:", error);
+      console.error("💥 [SV0001] Export error:", error);
 
       if (error instanceof TypeError && error.message === "Failed to fetch") {
+        console.error("🌐 [SV0001] Network error - cannot reach backend");
         alert(
           "Network error: Unable to connect to the PDF server. Please check:\n" +
             "- The server is running at https://api.meetyourcolleague.eu/merge\n" +
@@ -204,39 +262,39 @@ export const YourBook = () => {
       {/* Lista Items */}
       <div className={`flex-1 overflow-y-auto`}>
         <div className="p-6 pb-4 space-y-4 border-b">
-        <motion.ul
-          className="space-y-3"
-          variants={bookItemContainer}
-          initial="hidden"
-          animate="visible"
-        >
-          <AnimatePresence mode="popLayout">
-            {pages.map((page, index) => {
-              const pageCode = getPageCode(page);
-              const isChapter = !page.cardId && !!page.subThemeId;
-              const isFirst = index === 0;
-              const isSingle = pages.length === 1;
+          <motion.ul
+            className="space-y-3"
+            variants={bookItemContainer}
+            initial="hidden"
+            animate="visible"
+          >
+            <AnimatePresence mode="popLayout">
+              {pages.map((page, index) => {
+                const pageCode = getPageCode(page);
+                const isChapter = !page.cardId && !!page.subThemeId;
+                const isFirst = index === 0;
+                const isSingle = pages.length === 1;
 
-              return (
-                <BookListItem
-                  key={page.id}
-                  page={page}
-                  pageCode={pageCode}
-                  isChapter={isChapter}
-                  isFirst={isFirst}
-                  isSingle={isSingle}
-                  onRemove={removePage}
-                />
-              );
-            })}
-          </AnimatePresence>
-        </motion.ul>
-         {/* Footer Button */}
+                return (
+                  <BookListItem
+                    key={page.id}
+                    page={page}
+                    pageCode={pageCode}
+                    isChapter={isChapter}
+                    isFirst={isFirst}
+                    isSingle={isSingle}
+                    onRemove={removePage}
+                  />
+                );
+              })}
+            </AnimatePresence>
+          </motion.ul>
+          {/* Footer Button */}
 
-      <div className="pt-4" >
-        <button
-          onClick={exportHandbook}
-          className="w-full py-3 px-4
+          <div className="pt-4">
+            <button
+              onClick={exportHandbook}
+              className="w-full py-3 px-4
                    bg-gradient-to-r from-orange-500 to-orange-600 
                    hover:from-orange-600 hover:to-orange-700
                    dark:from-orange-500 dark:to-orange-600
@@ -245,28 +303,25 @@ export const YourBook = () => {
                    shadow-md hover:shadow-lg
                    transition-all duration-200
                    flex items-center justify-center gap-2"
-        >
-          <svg
-            className="w-9 h-9"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-            />
-          </svg>
-          {t("yourBook.exportButton")}
-        </button>
-      </div>      
-
+            >
+              <svg
+                className="w-9 h-9"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              {t("yourBook.exportButton")}
+            </button>
+          </div>
         </div>
       </div>
-
-           
     </div>
   );
 };
