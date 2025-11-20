@@ -56,6 +56,14 @@
         "description": "Pratiche inclusive per tutte le generazioni",
         "pageId": 22,
         "markdownFile": "t2-2-diversity-inclusion.md"
+      },
+      "T2.3": {
+        "id": "strategies-avoid",
+        "code": "T2.3",
+        "title": "Strategies to Avoid and Tackle Intersectional Differences at Work",
+        "description": "--",
+        "pageId": 23,
+        "markdownFile": "t2-3-strategies-avoid.md"
       }
     }
   },
@@ -90,14 +98,6 @@
         "description": "Strumenti per il lavoro di squadra intergenerazionale",
         "pageId": 33,
         "markdownFile": "t3-3-digital-collaboration.md"
-      },
-      "T3.4": {
-        "id": "digital-accessibility",
-        "code": "T3.4",
-        "title": "Punti Chiave da Ricordare",
-        "description": "Rendere la tecnologia accessibile a tutti",
-        "pageId": 34,
-        "markdownFile": "t3-4-digital-accessibility.md"
       }
     }
   },
@@ -110,14 +110,30 @@
     "pageId": 40,
     "subthemes": {
       "T4.1": {
-        "id": "intercultural-backgrounds",
+        "id": "hierarchy",
         "code": "T4.1",
-        "title": "Background Culturali",
-        "description": "Influenze culturali sulle prospettive generazionali",
+        "title": "Gerarchie Culturali",
+        "description": "Cultural influences on generational perspectives",
         "pageId": 41,
-        "markdownFile": "t4-1-intercultural-backgrounds.md"
-      }
+        "markdownFile": "t4-1-hierarchy.md"
+      },
+      "T4.2": {
+        "id": "Fuga dall'incertezza",
+        "code": "T4.2",
+        "title": "Uncertainty Avoidance",
+        "description": "Cultural influences on generational perspectives",
+        "pageId": 41,
+        "markdownFile": "t4-2-uncertainty-avoidance.md"
+      },
+      "T4.3": {
+        "id": "direct-and-indirect",
+        "code": "T4.3",
+        "title": "Stile diretto e indiretto di comunicazione",
+        "description": "Cultural influences on generational perspectives",
+        "pageId": 41,
+        "markdownFile": "t4-3-direct-and-indirect.md"
     }
+  }
   },
   "T5": {
     "id": "work",
