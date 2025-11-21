@@ -66,8 +66,8 @@ export function useCards() {
     const generationId = GENERATION_CODE_TO_ID[generationCode] || generationCode.toLowerCase()
 
     // ✅ Log strutturato per tracking caricamento card
-    const themeCode = parseThemeCode(cardTranslation.code) // "T2.1.GZ" → "T2"
-    console.log(`✅ Caricata Card del tema ${themeCode} - subTema ${subThemeCode} - generazione ${generationCode} -> file: cards/${themeCode.toLowerCase()}/${cardTranslation.code}.json`)
+    // const themeCode = parseThemeCode(cardTranslation.code) // "T2.1.GZ" → "T2"
+    // console.log(`✅ Caricata Card del tema ${themeCode} - subTema ${subThemeCode} - generazione ${generationCode} -> file: cards/${themeCode.toLowerCase()}/${cardTranslation.code}.json`)
 
     return {
       ...cardTranslation,
