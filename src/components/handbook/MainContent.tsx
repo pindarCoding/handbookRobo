@@ -18,6 +18,8 @@ import { useSubThemeContent } from "@/hooks/useSubThemeContent";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useTranslation } from "@/hooks";
+import Image from "next/image";
+import { generationsConfig } from "@/data/config/generations";
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
@@ -267,8 +269,10 @@ export const MainContent = ({
                 >
                   <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium">
                     🏷️ {selectedCard.code}
-                  </span>
+                  </span> 
                 </motion.div>
+               
+
 
                 {/* First row: Button */}
                 <motion.div
@@ -289,6 +293,13 @@ export const MainContent = ({
                   <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
                     {selectedCard.title}
                   </h2>
+                  <Image
+                    src={"/images/generations.png"}
+                    alt={selectedCard.title}
+                    width={800}
+                    height={400}
+                    className="mt-4 rounded-md object-cover w-full h-48 md:h-64 lg:h-80"
+                  />
                 </motion.div>
 
                 {/* Third row: Chip with title and age range */}
