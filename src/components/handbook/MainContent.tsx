@@ -152,6 +152,7 @@ export const MainContent = ({
               <h1 className="mb-6 text-4xl font-bold text-slate-900 dark:text-orange-400">
                 {selectedTheme.title}
               </h1>
+              
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
@@ -233,7 +234,7 @@ export const MainContent = ({
             )}
 
             {!isLoading && !error && content && (
-              <div className="prose prose-slate dark:prose-invert max-w-none mb-6 dark:prose-headings:text-orange-400">
+              <div className="prose prose-slate dark:prose-invert max-w-none mb-6 dark:prose-headings:text-orange-400 leading-relaxed text-xl">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                   {content}
                 </ReactMarkdown>
@@ -306,7 +307,7 @@ export const MainContent = ({
                   initial="hidden"
                   animate="visible"
                 >
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+                  <h2 className="text-6xl font-bold text-slate-900 dark:text-white leading-relaxed">
                     {selectedCard.title}
                   </h2>
                 </motion.div>
@@ -352,52 +353,52 @@ export const MainContent = ({
                 >
                   {/* The Stereotype */}
                   <motion.div
-                    className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 lg:flex-1"
+                    className="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg p-4 lg:flex-1"
                     variants={staggerItem}
                     whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                   >
-                    <h3 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
-                      <span className="text-lg">🏷️</span>{" "}
+                    <h2 className="font-semibold text-slate-900 dark:text-white mb-2 flex items-center gap-2 text-2xl">
+                      <span className="text-lg py-4">🏷️</span>{" "}
                       {t("cards.title-stereotypes")}
-                    </h3>
-                    <p className="text-red-800 dark:text-red-200">
+                    </h2>
+                    <p className="text-slate-800 dark:text-slate-50 text-lg leading-relaxed">
                       {selectedCard.stereotype}
                     </p>
                   </motion.div>
 
                   {/* Research Findings */}
                   <motion.div
-                    className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 lg:flex-1"
+                    className="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg p-4 lg:flex-1"
                     variants={staggerItem}
                     whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                   >
-                    <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
-                      <span className="text-lg">📊</span>{" "}
+                    <h2 className="font-semibold text-slate-900 dark:text-white mb-2 flex items-center gap-2 text-2xl">
+                      <span className="text-lg py-4">📊</span>{" "}
                       {t("cards.title-research")}
-                    </h3>
-                    <p className="text-green-800 dark:text-green-200">
+                    </h2>
+                    <p className="text-slate-800 dark:text-slate-50 text-lg leading-relaxed">
                       {selectedCard.researchFindings}
                     </p>
                   </motion.div>
 
                   {/* Strategies and Practical Advice */}
                   <motion.div
-                    className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 lg:flex-1"
+                    className="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg p-4 lg:flex-1"
                     variants={staggerItem}
                     whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                   >
-                    <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center gap-2">
-                      <span className="text-lg">💡</span>{" "}
+                    <h2 className="font-semibold text-slate-900 dark:text-white mb-2 flex items-center gap-2 text-2xl">
+                      <span className="text-lg py-4">💡</span>{" "}
                       {t("cards.title-advices")}
-                    </h3>
-                    <p className="text-blue-800 dark:text-blue-200">
+                    </h2>
+                    <p className="text-slate-800 dark:text-slate-50 text-lg leading-relaxed">
                       {selectedCard.strategiesAdvice}
                     </p>
                   </motion.div>
                 </motion.div>
                 {/* First row: Button */}
                 <motion.div
-                  className="flex justify-end"
+                  className="flex justify-end py-4"
                   variants={scalePop}
                   initial="initial"
                   animate="animate"
