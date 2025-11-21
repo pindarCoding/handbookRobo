@@ -19,7 +19,6 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useTranslation } from "@/hooks";
 import Image from "next/image";
-import { generationsConfig } from "@/data/config/generations";
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
