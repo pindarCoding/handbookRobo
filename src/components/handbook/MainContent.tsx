@@ -61,6 +61,26 @@ export const MainContent = ({
     return "";
   };
 
+  // Funzione per scaricare il PDF del subtheme
+  const handleDownloadPDF = () => {
+    if (selectedSubTheme) {
+      const renemedFileName = selectedSubTheme.code.replace(/\./g, '-');
+      const fileName = `${renemedFileName}-full.pdf`;
+      const pdfPath = `/pdfs/${fileName}`;
+      
+      // Create a temporary link element
+      const link = document.createElement('a');
+      link.href = pdfPath;
+      link.download = fileName;
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      toast.success(`Downloading ${fileName}...`);
+    }
+  };
+
   // Funzione per aggiungere la pagina corrente
   const handleAddPage = () => {
     if (
@@ -219,6 +239,18 @@ export const MainContent = ({
                 </ReactMarkdown>
               </div>
             )}
+            {/* Download PDF Button */}
+            <div className="flex justify-start mb-4">
+              <button
+                onClick={handleDownloadPDF}
+                className="inline-flex items-center px-4 py-2 bg-slate-600 hover:bg-slate-700 dark:bg-slate-500 dark:hover:bg-slate-600 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download The Full Subtheme in PDF
+              </button>
+            </div>
           </div>
         </div>
       );
@@ -254,7 +286,7 @@ export const MainContent = ({
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
           >
             {/* Header della card */}
-            <div className="bg-slate-100 dark:bg-slate-800 p-6 pb-0 border-b border-slate-200 dark:border-slate-700 lg:h-[180px] relative border-b-8 ">
+            <div className="bg-slate-100 dark:bg-slate-800 p-6 pb-0 border-slate-200 dark:border-slate-700 lg:h-[180px] relative border-b-8 ">
               <div className="space-y-4">
                 {/* Code Pill - Breadcrumb */}
                 <motion.div

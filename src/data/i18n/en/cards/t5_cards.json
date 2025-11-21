@@ -57,7 +57,7 @@
       "color": "orange",
       "description": "Motivated by immediate recognition and continuous learning",
       "pageId": 5,
-      "image": "/images/cards/5.png",
+      "image": "/images/cards/GZ_look_down.png",
       "stereotype": "Gen Z is often characterized as needing constant validation and being unable to work without frequent feedback. This overlooks their genuine desire for growth and learning opportunities.",
       "researchFindings": "Research shows Gen Z values real-time feedback as a tool for development, not validation. They seek continuous learning and appreciate transparent communication about performance.",
       "strategiesAdvice": "Implement regular check-ins, provide learning resources, and create clear growth paths. Use digital tools for instant feedback while maintaining meaningful personal interactions."
@@ -69,7 +69,7 @@
       "color": "orange",
       "description": "Motivated by value alignment and team success",
       "pageId": 8,
-      "image": "/images/cards/6.png",
+      "image": "/images/cards/GM_look_down.png",
       "stereotype": "Millennials are stereotyped as wanting constant praise and being unwilling to work hard without immediate rewards.",
       "researchFindings": "Studies show Millennials are motivated by meaningful work and collaborative success. They seek purpose-driven roles and value team achievements.",
       "strategiesAdvice": "Align organizational values with personal beliefs, celebrate team wins, and provide opportunities for collaborative projects with social impact."
@@ -81,7 +81,7 @@
       "color": "orange",
       "description": "Motivated by concrete results, clear goals and operational freedom",
       "pageId": 4,
-      "image": "/images/cards/7.png",
+      "image": "/images/cards/GX_look_down.png",
       "stereotype": "Gen X is often seen as cynical and unmotivated, only caring about getting the job done with minimal engagement.",
       "researchFindings": "Research indicates Gen X is highly motivated by autonomy and results. They prefer clear objectives and the freedom to achieve them in their own way.",
       "strategiesAdvice": "Set clear goals, provide autonomy in execution, recognize results-driven achievements, and minimize unnecessary oversight or micromanagement."
@@ -93,7 +93,7 @@
       "color": "orange",
       "description": "Motivated by formal recognition and career progression",
       "pageId": 10,
-      "image": "/images/cards/8.png",
+      "image": "/images/cards/GB_look_down.png",
       "stereotype": "Boomers are stereotyped as motivated solely by traditional rewards like titles and corner offices, resistant to modern recognition approaches.",
       "researchFindings": "Studies show Boomers value meaningful recognition and career achievement. They appreciate formal acknowledgment of their contributions and expertise.",
       "strategiesAdvice": "Provide formal recognition programs, acknowledge expertise and experience, offer leadership or mentorship roles, and celebrate career milestones."
@@ -107,7 +107,7 @@
       "color": "cyan",
       "description": "Digital collaboration with comfort for async and remote work",
       "pageId": 1,
-      "image": "/images/cards/9.png",
+      "image": "/images/cards/GZ_look_down.png",
       "stereotype": "Placeholder stereotype for work styles Gen Z",
       "researchFindings": "Placeholder research findings for work styles Gen Z",
       "strategiesAdvice": "Placeholder strategies and advice for work styles Gen Z"
@@ -119,7 +119,7 @@
       "color": "cyan",
       "description": "Agile approach with cross-functional collaboration and open environments",
       "pageId": 6,
-      "image": "/images/cards/10.png",
+      "image": "/images/cards/GM_look_down.png",
       "stereotype": "Placeholder stereotype for work styles Millennial",
       "researchFindings": "Placeholder research findings for work styles Millennial",
       "strategiesAdvice": "Placeholder strategies and advice for work styles Millennial"
@@ -131,7 +131,7 @@
       "color": "cyan",
       "description": "Pragmatic style balancing traditional and digital methods",
       "pageId": 3,
-      "image": "/images/cards/11.png",
+      "image": "/images/cards/GX_look_down.png",
       "stereotype": "Placeholder stereotype for work styles Gen X",
       "researchFindings": "Placeholder research findings for work styles Gen X",
       "strategiesAdvice": "Placeholder strategies and advice for work styles Gen X"
@@ -143,7 +143,7 @@
       "color": "cyan",
       "description": "Preference for structured processes, formal communication and clear hierarchies",
       "pageId": 9,
-      "image": "/images/cards/12.png",
+      "image": "/images/cards/GB_look_down.png",
       "stereotype": "Placeholder stereotype for work styles Boomer",
       "researchFindings": "Placeholder research findings for work styles Boomer",
       "strategiesAdvice": "Placeholder strategies and advice for work styles Boomer"
