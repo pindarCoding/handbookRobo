@@ -113,14 +113,12 @@ export const MainContent = ({
       return (
         <div className="animate-fadeIn">
           <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6 lg:p-16 shadow-lg ">
-
             {/* Code Pill */}
             <div className="mb-4">
               <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium">
                 🏷️ {selectedTheme.code}
               </span>
             </div>
-
 
             <div
               className="prose prose-slate dark:prose-invert max-w-none mb-6
@@ -166,7 +164,6 @@ export const MainContent = ({
             </div>
             {/* Header con titolo e bottone */}
             <div className="flex justify-between items-start mb-6">
-              
               <div className="flex flex-col">
                 <div className="text-sm text-slate-500 dark:text-slate-400">
                   Part of: {selectedTheme.title}
@@ -257,9 +254,9 @@ export const MainContent = ({
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
           >
             {/* Header della card */}
-            <div className="bg-slate-100 dark:bg-slate-800 p-6 border-b border-slate-200 dark:border-slate-700">
+            <div className="bg-slate-100 dark:bg-slate-800 p-6 pb-0 border-b border-slate-200 dark:border-slate-700 lg:h-[180px] relative border-b-8 ">
               <div className="space-y-4">
-              {/* Code Pill - Breadcrumb */}
+                {/* Code Pill - Breadcrumb */}
                 <motion.div
                   variants={fadeSlideUp}
                   initial="hidden"
@@ -268,19 +265,7 @@ export const MainContent = ({
                 >
                   <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium">
                     🏷️ {selectedCard.code}
-                  </span> 
-                </motion.div>
-               
-
-
-                {/* First row: Button */}
-                <motion.div
-                  className="flex justify-end"
-                  variants={scalePop}
-                  initial="initial"
-                  animate="animate"
-                >
-                  <AddToHandbookButton size="large" onClick={handleAddPage} />
+                  </span>
                 </motion.div>
 
                 {/* Second row: Title */}
@@ -292,13 +277,6 @@ export const MainContent = ({
                   <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
                     {selectedCard.title}
                   </h2>
-                  <Image
-                    src={"/images/generations.png"}
-                    alt={selectedCard.title}
-                    width={800}
-                    height={400}
-                    className="mt-4 rounded-md object-cover w-full h-48 md:h-64 lg:h-80"
-                  />
                 </motion.div>
 
                 {/* Third row: Chip with title and age range */}
@@ -315,6 +293,16 @@ export const MainContent = ({
                     {selectedGeneration.title} • {selectedGeneration.ageRange}
                   </motion.span>
                 </motion.div>
+               
+                {selectedCard.image && (
+                  <Image
+                    src={selectedCard.image}
+                    alt={selectedCard.title}
+                    width={535}
+                    height={744}
+                    className="absolute top-0 pb-8 right-1 lg:pb-3 md:right-5 rounded-md h-40 md:h-40 lg:h-60 w-auto object-cover "
+                  />
+                )}
               </div>
             </div>
 
@@ -374,6 +362,15 @@ export const MainContent = ({
                       {selectedCard.strategiesAdvice}
                     </p>
                   </motion.div>
+                </motion.div>
+                {/* First row: Button */}
+                <motion.div
+                  className="flex justify-end"
+                  variants={scalePop}
+                  initial="initial"
+                  animate="animate"
+                >
+                  <AddToHandbookButton size="large" onClick={handleAddPage} />
                 </motion.div>
               </div>
               <div></div>
