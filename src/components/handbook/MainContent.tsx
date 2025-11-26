@@ -19,6 +19,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useTranslation } from "@/hooks";
 import Image from "next/image";
+import { useLanguage } from "@/components/providers/language-provider";
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
@@ -41,6 +42,7 @@ export const MainContent = ({
 
   const { addPage } = useBook();
   const { t } = useTranslation();
+  const { language: currentLanguage } = useLanguage(); 
 
   // Funzione per generare l'ID della pagina corrente
   const generatePageId = () => {
@@ -66,7 +68,8 @@ export const MainContent = ({
     if (selectedSubTheme) {
       const renemedFileName = selectedSubTheme.code.replace(/\./g, '-');
       const fileName = `${renemedFileName}-full.pdf`;
-      const pdfPath = `/pdfs/${fileName}`;
+      const pdfPath = `/pdfs/${currentLanguage}/${fileName}`;
+      console.log('PDF Download URL:', pdfPath);
       
       // Create a temporary link element
       const link = document.createElement('a');
