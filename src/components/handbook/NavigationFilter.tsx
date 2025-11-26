@@ -100,7 +100,7 @@ export const NavigationFilter = ({
                 initial="hidden"
                 animate="visible"
               >
-                <h3 className="text-xs font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
+                <h3 className="text-base font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
                   {t("navigation.selectTheme")}
                 </h3>
                 {themes.map((theme, index) => (
@@ -111,8 +111,8 @@ export const NavigationFilter = ({
                     onClick={() => onThemeSelect(theme)}
                     whileHover={{ scale: 1.02, x: 4 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`w-full p-3 rounded-lg bg-slate-100 dark:bg-slate-700 
-                   text-slate-700 dark:text-slate-200 text-sm
+                    className={`text-lg w-full p-3 rounded-lg bg-slate-100 dark:bg-slate-700 
+                   text-slate-700 dark:text-slate-200 
                    hover:bg-slate-200 dark:hover:bg-slate-600
                    transition-all text-left font-medium
                    border-l-4 ${index % 2 === 0
@@ -120,7 +120,7 @@ export const NavigationFilter = ({
                         : "border-l-orange-500"
                       }`}
                   >
-                    <span className="pr-1 text-blue-700 dark:text-blue-400 text-xs font-mono font-medium">
+                    <span className="pr-1 text-blue-700 dark:text-blue-400 text-lg font-mono font-medium">
                     {theme.code} -
                     </span>  
                     {theme.title}
@@ -139,7 +139,7 @@ export const NavigationFilter = ({
               initial="hidden"
               animate="visible"
             >
-              <h3 className="text-xs font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
+              <h3 className="text-lg font-semibold text-slate-500 dark:text-orange-400 uppercase tracking-wider mb-3">
                 {t("navigation.selectSubTheme")}
               </h3>
 
@@ -152,7 +152,7 @@ export const NavigationFilter = ({
                   whileHover={{ scale: 1.02, x: 4 }}
                   whileTap={{ scale: 0.98 }}
                   className={`w-full p-3 rounded-lg bg-slate-100 dark:bg-slate-700 
-                         text-slate-700 dark:text-slate-200 text-sm
+                         text-slate-700 dark:text-slate-200 text-lg
                          hover:bg-blue-100 dark:hover:bg-blue-900/30
                          hover:text-blue-700 dark:hover:text-blue-300
                          transition-all text-left font-medium
@@ -161,7 +161,7 @@ export const NavigationFilter = ({
                       : "border-l-purple-500"
                     }`}
                 >
-                  <span className="pr-1 text-blue-700 dark:text-blue-400 text-xs font-mono font-medium">
+                  <span className="pr-1 text-blue-700 dark:text-blue-400 text-lg font-mono font-medium">
                     {subTheme.code} -
                     </span>
                   {subTheme.title}
