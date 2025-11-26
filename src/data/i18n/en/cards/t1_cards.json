@@ -3,7 +3,7 @@
     "GZ": {
       "id": "communication",
       "code": "T1.1.GZ",
-      "title": "Communication Channel Confusion and Response Expectations",
+      "title": "GZ: Communication Channel Confusion and Response Expectations",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -15,7 +15,7 @@
     "GM": {
       "id": "communication-s",
       "code": "T1.1.GM",
-      "title": "Communication Channel Confusion and Response Expectations",
+      "title": "GM: ommunication Channel Confusion and Response Expectations",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -27,7 +27,7 @@
     "GX": {
       "id": "communication-gx",
       "code": "T1.1.GX",
-      "title": "Communication Channel Confusion and Response Expectations",
+      "title": "GX: Communication Channel Confusion and Response Expectations",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -39,7 +39,7 @@
     "GB": {
       "id": "communication-gb",
       "code": "T1.1.GB",
-      "title": "Communication Channel Confusion and Response Expectations",
+      "title": "GB:Communication Channel Confusion and Response Expectations",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -53,7 +53,7 @@
     "GZ": {
       "id": "communication",
       "code": "T1.2.GZ",
-      "title": "Identity and Value Based Conflict",
+      "title": "GZ: Identity and Value Based Conflict",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -65,7 +65,7 @@
     "GM": {
       "id": "communication",
       "code": "T1.2.GM",
-      "title": "Identity and Value Based Conflict",
+      "title": "GM:Identity and Value Based Conflict",
       "color": "",
       "description": "",
       "pageId": 0,
