@@ -287,55 +287,56 @@ export const MainContent = ({
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
           >
             {/* Header della card */}
-            <div className="bg-slate-100 dark:bg-slate-800 p-6 pb-0 border-slate-200 dark:border-slate-700 lg:h-[180px] relative border-b-8 ">
+            <div className="bg-slate-100 dark:bg-slate-800 p-6 pb-0 border-slate-200 dark:border-slate-700 relative border-b-8 min-h-[180px]">
               <div className="space-y-4">
-                {/* Code Pill - Breadcrumb */}
-                <motion.div
-                  variants={fadeSlideUp}
-                  initial="hidden"
-                  animate="visible"
-                  className="flex items-center"
-                >
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium">
-                    🏷️ {selectedCard.code}
-                  </span>
-                </motion.div>
+              {/* Code Pill - Breadcrumb */}
+              <motion.div
+                variants={fadeSlideUp}
+                initial="hidden"
+                animate="visible"
+                className="flex items-center"
+              >
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium">
+                🏷️ {selectedCard.code}
+                </span>
+                <span className="ml-3 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100">
+                {selectedGeneration.title} • {selectedGeneration.ageRange}
+                </span>
+              </motion.div>
+                      
 
-                {/* Second row: Title */}
-                <motion.div
-                  variants={fadeSlideUp}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  <h2 className="text-6xl font-bold text-slate-900 dark:text-white leading-relaxed">
-                    {selectedCard.title}
-                  </h2>
-                </motion.div>
+              {/* Second row: Title */}
+              <motion.div
+                variants={fadeSlideUp}
+                initial="hidden"
+                animate="visible"
+              >
+                <div className="w-2/3">
+                <h2 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white">
+                {selectedCard.title}
+                </h2>
+                </div>
+              </motion.div>
 
-                {/* Third row: Chip with title and age range */}
-                <motion.div
-                  variants={fadeSlideUp}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: 0.2 }}
-                >
-                  <motion.span
-                    className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-sm font-medium text-blue-800 dark:text-blue-100"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    {selectedGeneration.title} • {selectedGeneration.ageRange}
-                  </motion.span>
-                </motion.div>
+              {/* Third row: Chip with title and age range */}
+              <motion.div
+                variants={fadeSlideUp}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: 0.2 }}
+              >
+
+              </motion.div>
                
-                {selectedCard.image && (
-                  <Image
-                    src={selectedCard.image}
-                    alt={selectedCard.title}
-                    width={535}
-                    height={744}
-                    className="absolute top-0 pb-8 right-1 lg:pb-3 md:right-5 rounded-md h-40 md:h-40 lg:h-60 w-auto object-cover "
-                  />
-                )}
+              {selectedCard.image && (
+                <Image
+                src={selectedCard.image}
+                alt={selectedCard.title}
+                width={535}
+                height={744}
+                className="absolute -bottom-2 right-1 lg:-bottom-3 md:right-5 rounded-md h-40 md:h-40 lg:h-60 w-auto object-cover "
+                />
+              )}
               </div>
             </div>
 

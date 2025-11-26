@@ -1,5 +1,152 @@
 {
-  "placeholder": {
-    "content": "Placeholder content"
+  "T4.1": {
+    "GZ": {
+      "id": "",
+      "code": "T4.1.GZ",
+      "title": "Generation Z: Intersectional Discrimination & Power Asymmetries",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "'Too sensitive / inexperienced' – Frequently perceived as naïve, overly idealistic or lacking resilience and not seen as having the authority to influence workplace culture. Their viewpoints are often overlooked and their understanding of professional hierarchies may be undervalued. While they are seldom identified as perpetrators, subtle biases can still emerge. They tend to show stronger awareness around issues of ethnicity and disability, reflecting how early exposure fosters their inclusive outlook.",
+      "researchFindings": "25% identify disability and ethnicity as decisive factors shaping their work experiences. This reflects not fragility, but heightened awareness of how structural inequalities affect them directly or peers around them. Their “sensitivity” can thus be reframed as an advanced intersectional lens. Rarely reported as perpetrators, but subtle bias can surface. Awareness is heightened around ethnicity and disability, showing that early exposure shapes their inclusive mindset.",
+      "strategiesAdvice": "Don’t dismiss Gen Z concerns as immaturity. Engage them in policy, diversity councils and mentoring. Their perspectives flag systemic issues early and strengthen inclusion efforts. Provide bias training from day one, value their insights as assets and create safe spaces for meaningful contributions."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.1.GM",
+      "title": "Millenials: Intersectional Discrimination & Power Asymmetries",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "'Entitled / always seeking inclusion' – Sometimes framed as demanding or overly focused on fairness. Considered “too politically correct” or hypersensitive, especially around microaggressions and diversity issues. Critics suggest they overemphasise fairness at the expense of pragmatism.",
+      "researchFindings": "Millennials often identify as many as seven intersecting disadvantages that shape workplace opportunities, with disability and mental health standing out in particular. Their call for inclusion reflects not entitlement, but lived experience of navigating stress, precarious career paths and wellbeing challenges. While rarely engaging in discriminatory behaviour, they remain especially alert to how stress, disability and socio-economic disadvantage influence workplace dynamics.",
+      "strategiesAdvice": "Establish structured feedback channels (surveys, focus groups) for Millennials to voice concerns safely. Pair this with targeted initiatives on mental health, disability support and flexible work to show their advocacy drives real change. Empower them to lead inclusively, modeling open communication. Acknowledge advocacy and cultural sensitivity as core leadership qualities and embed them into team culture."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.1.GX",
+      "title": "Generation X: Intersectional Discrimination & Power Asymmetries",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "'Overlooked / conservative' – Frequently regarded as the “invisible middle” between outspoken younger employees and authoritative senior leaders. Often seen as pragmatic and cautious, they may be perceived as resistant to change. Many tend to sidestep inclusion debates, favouring established norms and operational efficiency over broader cultural transformation.",
+      "researchFindings": "Gen X are aware of discrimination around religion and disability, shaped by both managerial roles and personal responsibilities. While sometimes seen as conservative, they can experience subtle exclusion themselves. Their mid-career authority positions them to either challenge or reinforce workplace biases, making their engagement crucial for inclusion efforts.",
+      "strategiesAdvice": "Amplify Gen X voices in leadership spaces and emphasize their role as bridges between generations. Encourage participation in formal allyship and mentoring programs, positioning their pragmatic, mid-career perspective as a stabilising force in diversity initiatives. Leverage their experience through allyship and respectful dialogue initiatives, providing tools to transform authority into positive influence and foster inclusion and cultural awareness across teams."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.1.GB",
+      "title": "Baby Boomers: Intersectional Discrimination & Power Asymmetries",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "'Resistant to change' – Often viewed as set in their ways and less receptive to evolving social and workplace norms. They tend to uphold traditional hierarchies and may find it challenging to adapt to shifting cultural expectations around diversity.",
+      "researchFindings": "While Boomers report fewer instances of discrimination, disability consistently stands out in their experiences. Exclusion is often subtle, including inaccessible technologies, assumptions about digital skills or underestimating their adaptability. They are most frequently linked to discriminatory remarks, particularly around disability. Age and long tenure can also reinforce traditionalist perspectives on inclusion.",
+      "strategiesAdvice": "Provide accessible accommodations and inclusive technology to ensure older employees with disabilities are fully integrated into digital workplaces. Leverage their professional experience to shape intergenerational inclusion strategies, reframing them as valuable resources rather than “obstacles to progress.” Engage Boomers through cross-generational workshops and storytelling, validating their expertise while updating their understanding of current cultural norms and inclusive practices."
+    }
+  },
+  "T4.2": {
+    "GZ": {
+      "id": "",
+      "code": "T4.2.GZ",
+      "title": "Generation Z: Patterns of Voice, Victimhood and Support",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Often dismissed as “too sensitive,” they are assumed unable to handle workplace challenges. Their concerns may be minimised or overlooked, perceived as a sign of immaturity or insufficient resilience.",
+      "researchFindings": "They experience some of the highest rates of victimisation. Intersectional factors—such as age, ethnicity and disability—further increase vulnerability, contributing to structural exclusion within team dynamics.",
+      "strategiesAdvice": "Introduce mentoring programs, safe reporting channels and awareness initiatives. Validate experiences, address systemic barriers and provide Gen Z with the tools to navigate workplace challenges with confidence."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.2.GM",
+      "title": "Millenials: Patterns of Voice, Victimhood and Support",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Often perceived as entitled or quick to raise complaints about unfairness, their advocacy for equitable treatment may be misinterpreted as overreaction rather than a legitimate concern.",
+      "researchFindings": "They are frequently victims, facing disadvantages related to disability, mental health and socio-economic status. These patterns highlight systemic inequities that shape their career trajectories.",
+      "strategiesAdvice": "Enhance institutional protections, normalise conversations about mental health and establish transparent advancement pathways to reduce vulnerabilities and promote fairness."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.2.GX",
+      "title": "Generation X: Patterns of Voice, Victimhood and Support",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Perceived as the “invisible middle,” they are often overlooked in discussions of workplace equity. While assumed resilient because of their age, their challenges frequently remain underrecognised.",
+      "researchFindings": "They experience moderate victimisation, primarily related to religion and disability. Intersectional factors affect mid-career professionals, though these experiences are often underreported.",
+      "strategiesAdvice": "Engage Gen X in equity programs, evaluate intersectional barriers and incorporate their perspectives into policy discussions to ensure mid-level employees are supported and acknowledged."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.2.GB",
+      "title": "Baby Boomers: Patterns of Voice, Victimhood and Support",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Perceived as resilient and senior, they are often assumed to be immune to discrimination due to their experience and authority. Age is seen as conferring protection against exclusion.",
+      "researchFindings": "They are less frequently victims overall, but disability, health and age-related factors can limit participation. These barriers intersect with digital accessibility and changing workplace expectations.",
+      "strategiesAdvice": "Prioritise accessibility, digital inclusion and recognition initiatives. Highlight older employees’ contributions within diversity agendas to ensure inclusion at every career stage."
+    }
+  },
+  "T4.3": {
+    "GZ": {
+      "id": "",
+      "code": "T4.3.GZ",
+      "title": "Generation Z: Strategies to Avoid and Tackle Intersectional Differences at Work",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Gen Z is often perceived as seeing discrimination in many situations.",
+      "researchFindings": "Gen Z are not exaggerating. They are especially attuned to the compounded impact of intersectional factors such as disability and ethnicity, with a quarter of them highlighting four such factors as highly impactful.",
+      "strategiesAdvice": "Establish platforms where Gen Z voices are genuinely heard, such as cross-generational dialogue forums. Combined with mentoring, these spaces enable them to raise awareness while providing support against potential backlash."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.3.GM",
+      "title": "Millenials: Strategies to Avoid and Tackle Intersectional Differences at Work",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millennials are overly sensitive to bias.",
+      "researchFindings": "They are strong advocates for systemic change, especially regarding disability and mental health. Drawing on diverse experiences, they actively highlight gaps in policies and wellbeing structures.",
+      "strategiesAdvice": "Engage Millennials in designing inclusive initiatives and digital reporting tools. Their openness and innovative mindset can help normalise intersectional awareness throughout the organisation."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.3.GX",
+      "title": "Generation X: Strategies to Avoid and Tackle Intersectional Differences at Work",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Gen Xers are seen as keeping their heads down and avoiding discrimination. They are often perceived as hands-off managers who steer clear of sensitive disputes, prioritising operational efficiency and conflict minimisation over cultural leadership.",
+      "researchFindings": "Gen X often recognise subtle forms of intersectional bias, particularly related to religion and disability, but cultural norms may discourage them from speaking up. Providing moderate support empowers them to act. Their mid-level authority allows them to intervene in ways that can meaningfully influence norms and advance inclusion.",
+      "strategiesAdvice": "Encourage structured allyship programs that enable Gen X to serve as role models and sponsors. By framing intervention as leadership rather than confrontation, organisations help them use their influence constructively. Equip Gen X to model supportive behaviours, bridge generational gaps and positively shape organisational culture."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.3.GB",
+      "title": "Baby Boomers: Strategies to Avoid and Tackle Intersectional Differences at Work",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Boomers are perceived as too set in their ways to adapt to inclusion. They are often seen as hesitant to intervene, favouring harmony and stability over directly addressing discrimination. As a result, their potential influence in allyship initiatives may be underutilised.",
+      "researchFindings": "In reality, many Boomers recognise disability as a significant factor in workplace disadvantage, though they report fewer experiences of intersectional discrimination overall, likely due to the protective effect of seniority. While less often identified as supporters, their interventions carry substantial influence. When engaged, Boomers can help reshape cultural norms and expectations.",
+      "strategiesAdvice": "Leverage their authority to champion inclusive policy reviews. When senior leaders visibly endorse intersectional training and reporting systems, it legitimises these efforts across the workforce. Position allyship as a core leadership responsibility, emphasizing that visible support from senior staff sets the tone for organisational culture and reinforces inclusive norms."
+    }
   }
 }

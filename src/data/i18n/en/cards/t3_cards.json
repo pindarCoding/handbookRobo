@@ -1,5 +1,152 @@
 {
-  "placeholder": {
-    "content": "Placeholder content"
+  "T3.1": {
+    "GZ": {
+      "id": "",
+      "code": "T3.1.GZ",
+      "title": "Generation Z: Understanding Digital Inequality in Workplace Contexts",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Gen Z workers are often seen as “glued to their screens”—fluent in the latest apps but lacking the depth of professional skills or the patience to work with more traditional systems. Older colleagues sometimes view them as overconfident with technology but underprepared for the realities of workplace collaboration.",
+      "researchFindings": "Studies show Gen Z leads adoption of AI and new workplace platforms, with 32% driving experimentation with emerging tech. However, they may be less familiar with specialized business systems or professional etiquette, sometimes reinforcing the stereotype.",
+      "strategiesAdvice": "Organizations should provide structured mentoring that pairs Gen Z employees with older colleagues to broaden their understanding of workplace norms and systems. At the same time, reverse mentorship allows Gen Z to share their digital fluency, especially in areas like AI or social media tools. Balancing technical innovation with professional development creates mutual learning and reduces stereotypes."
+    },
+    "GM": {
+      "id": "",
+      "code": "T3.1.GM",
+      "title": "Millenials: Understanding Digital Inequality in Workplace Contexts",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millennials are stereotyped as “entitled digital natives” who are comfortable with digital platforms but resistant to legacy systems or traditional ways of working. They are sometimes labeled as impatient, expecting constant connectivity and flexibility.",
+      "researchFindings": "Research confirms that Millennials are highly digitally fluent and often push organizations toward adopting modern collaboration tools. However, they may undervalue interpersonal communication methods or underestimate the challenges older colleagues face when adopting new technologies.",
+      "strategiesAdvice": "Employers should harness Millennials’ enthusiasm for digital tools by placing them in cross-generational projects where they can both champion innovation and learn the value of established processes. Training that emphasizes hybrid approaches—combining digital efficiency with face-to-face collaboration—helps Millennials adapt their strengths to organizational needs."
+    },
+    "GX": {
+      "id": "",
+      "code": "T3.1.GX",
+      "title": "Generation X: Understanding Digital Inequality in Workplace Contexts",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Generation X is frequently portrayed as being “caught in the middle”—too young to avoid digital tools altogether, but not as naturally fluent as Millennials or Gen Z. They are sometimes seen as reluctant adopters who struggle to balance old and new workflows.",
+      "researchFindings": "Gen X workers often carry deep institutional knowledge and management experience but can feel squeezed by the pace of digital change. They are more likely to report stress when adapting to new collaboration platforms or shifting from analog systems.",
+      "strategiesAdvice": "Companies should provide targeted training that explicitly connects digital tools to productivity gains in Gen X’s areas of responsibility. Creating peer-learning or buddy systems where Gen X employees mentor younger staff on business processes while learning digital shortcuts in return helps bridge divides. Acknowledging their dual role as both learners and leaders reinforces their value."
+    },
+    "GB": {
+      "id": "",
+      "code": "T3.1.GB",
+      "title": "Baby Boomers: Understanding Digital Inequality in Workplace Contexts",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers are often unfairly portrayed as “technophobic,” slow to learn, and unwilling to adapt to digital environments. They may be excluded from conversations about innovation due to these assumptions.",
+      "researchFindings": "Evidence shows that while Boomers face steeper learning curves with digital tools, they are highly capable of adapting when training is clear, contextual, and respectful. Many are eager to continue learning, but stigma and lack of tailored support often block their progress.",
+      "strategiesAdvice": "Organizations should design training for Boomers that is practical, hands-on, and tied to real job tasks. Encouraging reverse mentorship—where younger colleagues share tech skills—can empower Boomers while strengthening intergenerational trust. It is also critical to challenge stereotypes directly by recognizing the adaptability and wisdom that Boomers contribute to digital workplaces."
+    }
+  },
+  "T3.2": {
+    "GZ": {
+      "id": "",
+      "code": "T3.2.GZ",
+      "title": "Generation Z: Strategies for Bridging Digital Inequality in the Workplace",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Gen Z employees are perceived as impatient with slower adopters and intolerant of outdated systems, insisting that everyone move at the pace of new technology. This can create friction with older colleagues.",
+      "researchFindings": "Surveys show that 65% of Gen Z report frustration that older colleagues struggle with digital tools, which can heighten team conflict. They may also push for rapid adoption of apps or platforms without considering infrastructure gaps in rural or low-income contexts.",
+      "strategiesAdvice": "Employers can encourage empathy by involving Gen Z employees in intergenerational collaboration projects that highlight broader challenges—such as limited connectivity in rural areas. Training that emphasizes patience, coaching skills, and cultural awareness prepares Gen Z to become advocates for inclusion rather than critics of others’ struggles."
+    },
+    "GM": {
+      "id": "",
+      "code": "T3.2.GM",
+      "title": "Millenials: Strategies for Bridging Digital Inequality in the Workplace",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millennials are stereotyped as overly reliant on constant connectivity, expecting seamless access to Wi-Fi, mobile devices, and cloud-based tools. They are sometimes seen as demanding or unaware of broader structural barriers.",
+      "researchFindings": "Millennials often lead the push for digital-first workplaces but may underestimate the constraints faced by colleagues in less-connected regions or in roles with limited resources. Their insistence on flexibility can be misinterpreted as unwillingness to adapt to traditional structures.",
+      "strategiesAdvice": "Organizations should encourage Millennials to participate in conversations about infrastructure challenges and equity. Including them in digital inclusion committees or diversity task forces helps them translate their tech advocacy into systemic solutions. At the same time, reinforcing the importance of resilience and adaptability ensures they remain grounded in workplace realities."
+    },
+    "GX": {
+      "id": "",
+      "code": "T3.2.GX",
+      "title": "Generation X: Strategies for Bridging Digital Inequality in the Workplace",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Gen X is sometimes described as “stuck managers”—caught managing teams of digital natives while still grappling with their own digital skill development. They may be perceived as slowing down digital transformation due to cautiousness.",
+      "researchFindings": "Research shows Gen X often feels squeezed between younger, tech-savvy staff and older colleagues who resist new systems. They may lack confidence in emerging tools, contributing to hesitancy in decision-making.",
+      "strategiesAdvice": "Providing Gen X leaders with dedicated coaching on digital leadership skills can reduce hesitancy. They benefit from structured opportunities to test new tools in low-stakes environments. Encouraging Gen X to champion gradual change rather than total transformation allows them to act as bridges between generations."
+    },
+    "GB": {
+      "id": "",
+      "code": "T3.2.GB",
+      "title": "Baby Boomers: Strategies for Bridging Digital Inequality in the Workplace",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers are often seen as the “weak link” when it comes to digital adoption, holding organizations back due to their supposed resistance.",
+      "researchFindings": "Data shows many Boomers do face challenges due to lack of exposure during formative education years. However, when given tailored training and patient support, they are capable of mastering digital tools and contributing fully to digital projects.",
+      "strategiesAdvice": "Employers should provide safe spaces where Boomers can ask questions without judgment, and design training sessions specifically for late learners. Positioning Boomers as mentors in non-digital areas (such as client management, negotiation, or institutional knowledge) ensures they remain valued while building confidence in digital arenas."
+    }
+  },
+  "T3.3": {
+    "GZ": {
+      "id": "",
+      "code": "T3.3.GZ",
+      "title": "Generation Z: Case Studies and Best Practices: Lessons from Leading Organizations.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Gen Z is seen as over-reliant on technology, believing they cannot function without constant connectivity. In workplaces, they’re sometimes dismissed as being productive only when using the latest digital tools, and accused of lacking resilience when those tools aren’t available.",
+      "researchFindings": "Gen Z employees indeed show the highest levels of digital fluency, with 32% leading AI adoption in organizations. However, research also indicates that they may lack experience with legacy systems or traditional communication methods, making collaboration across generations difficult. Their digital strengths, if not integrated with broader skills, can limit their career progression.",
+      "strategiesAdvice": "Employers should create opportunities for Gen Z to practice resilience in less digitally saturated contexts—for example, leading projects that mix digital and traditional communication. Providing mentorship in areas like client interaction, negotiation, and business writing helps balance their skillsets. Encouraging Gen Z to view digital tools as enhancers rather than replacements builds adaptability and helps them thrive in diverse workplace contexts."
+    },
+    "GM": {
+      "id": "",
+      "code": "T3.3.GM",
+      "title": "Millenials: Case Studies and Best Practices: Lessons from Leading Organizations.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millennials are often described as job-hoppers who leave companies if technology feels outdated. This stereotype frames them as overly demanding, unwilling to stay engaged in organizations that lag in digital transformation.",
+      "researchFindings": "Millennials are among the strongest advocates for digital-first workplaces. Research shows that they drive organizational innovation by insisting on modern tools and remote-friendly work arrangements. However, companies that fail to invest in workforce technology report higher turnover rates among Millennials, confirming their sensitivity to digital inequality.",
+      "strategiesAdvice": "Organizations should involve Millennials in shaping digital transformation strategies, giving them ownership and accountability in technology adoption. Highlighting how digital upgrades contribute not only to efficiency but also to equity helps Millennials see themselves as agents of inclusion. Retention improves when Millennials feel that their advocacy leads to tangible improvements for all employees, not just themselves."
+    },
+    "GX": {
+      "id": "",
+      "code": "T3.3.GX",
+      "title": "Generation X: Case Studies and Best Practices: Lessons from Leading Organizations.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Gen X employees are sometimes portrayed as the “bottleneck generation,” seen as pragmatic but less digitally ambitious, thereby slowing organizational innovation. They are often described as managers who resist change because they fear being displaced by younger, more tech-savvy colleagues.",
+      "researchFindings": "Gen X often occupies mid- to senior-level management roles, carrying significant institutional knowledge. Research highlights that they may experience digital transition stress, particularly when managing teams that include both younger digital natives and older late adopters. This tension can lead to misunderstandings, lower productivity, and missed opportunities for innovation if not addressed.",
+      "strategiesAdvice": "Companies should provide Gen X leaders with digital leadership training and frame digital tools as enablers of efficiency rather than threats. Encouraging Gen X to act as mediators in intergenerational teams, sharing their institutional experience while adopting new tools, transforms their position into one of strength rather than vulnerability. Supporting them with visible learning opportunities helps normalize digital growth at all levels."
+    },
+    "GB": {
+      "id": "",
+      "code": "T3.3.GB",
+      "title": "Baby Boomers: Case Studies and Best Practices: Lessons from Leading Organizations.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers are often blamed as the group most “left behind” by digital transformation. They’re portrayed as reluctant to adopt new tools, resistant to remote work, and more comfortable with face-to-face communication than digital platforms.",
+      "researchFindings": "Studies confirm that Baby Boomers may face steeper learning curves due to less exposure to technology in their formative years. However, evidence shows that when provided with patient, practical, and contextual training, Boomers adapt successfully. Moreover, excluding them based on assumptions accelerates career stagnation and undermines morale, which directly impacts organizational retention and diversity.",
+      "strategiesAdvice": "Tailored training that focuses on practical workplace tasks rather than abstract digital theory helps Boomers engage more confidently. Reverse mentorship, where younger employees teach digital skills while Boomers share institutional and interpersonal expertise, creates two-way value. Recognizing the adaptability and loyalty that many Boomers bring ensures they remain fully integrated into digital workplace transitions."
+    }
   }
 }
