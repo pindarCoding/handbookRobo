@@ -45,23 +45,7 @@ export const MainContent = ({
   const { language: currentLanguage } = useLanguage(); 
 
   // Funzione per generare l'ID della pagina corrente
-  const generatePageId = () => {
-    if (
-      selectedCard &&
-      selectedTheme &&
-      selectedSubTheme &&
-      selectedGeneration
-    ) {
-      return `${selectedTheme.id}-${selectedSubTheme.id}-${selectedGeneration.id}-${selectedCard.id}`;
-    }
-    if (selectedTheme && selectedSubTheme) {
-      return `${selectedTheme.id}-${selectedSubTheme.id}`;
-    }
-    if (selectedTheme) {
-      return selectedTheme.id;
-    }
-    return "";
-  };
+  
 
   // Funzione per scaricare il PDF del subtheme
   const handleDownloadPDF = () => {
@@ -93,18 +77,27 @@ export const MainContent = ({
       selectedGeneration
     ) {
       addPage({
-        id: generatePageId(),
+        id: selectedCard.code, // [SV0027] Usa code come ID univoco
         title: selectedCard.title,
+        // [SV0027] CODE-based fields (fonte di verità)
+        themeCode: selectedTheme.code,
+        subThemeCode: selectedSubTheme.code,
+        cardCode: selectedCard.code,
+        // Legacy fields (deprecati)
         themeId: selectedTheme.id,
         subThemeId: selectedSubTheme.id,
         generationId: selectedGeneration.id,
-        cardId: selectedCard.id, // Cambiato da variantId
+        cardId: selectedCard.id,
       });
       toast.success(`Added "${selectedCard.title}" to your handbook!`);
     } else if (selectedTheme && selectedSubTheme) {
       addPage({
-        id: generatePageId(),
+        id: selectedSubTheme.code, // [SV0027] Usa code come ID univoco
         title: `${selectedSubTheme.title} (${selectedTheme.title})`,
+        // [SV0027] CODE-based fields (fonte di verità)
+        themeCode: selectedTheme.code,
+        subThemeCode: selectedSubTheme.code,
+        // Legacy fields (deprecati)
         themeId: selectedTheme.id,
         subThemeId: selectedSubTheme.id,
       });
@@ -113,8 +106,11 @@ export const MainContent = ({
       );
     } else if (selectedTheme) {
       addPage({
-        id: generatePageId(),
+        id: selectedTheme.code, // [SV0027] Usa code come ID univoco
         title: selectedTheme.title,
+        // [SV0027] CODE-based fields (fonte di verità)
+        themeCode: selectedTheme.code,
+        // Legacy fields (deprecati)
         themeId: selectedTheme.id,
       });
       toast.success(`Added "${selectedTheme.title}" to your handbook!`);

@@ -19,22 +19,33 @@ export const YourBook = () => {
   const { t } = useTranslation();
   const { language: currentLanguage } = useLanguage(); // [SV0001] Lingua corrente per fallback
 
-  // Funzione helper per recuperare il code della pagina
+  /**
+   * [SV0027] Recupera il code della pagina
+   * Ora è semplice: i code sono salvati direttamente nel BookPage
+   * Priorità: cardCode > subThemeCode > themeCode
+   * Fallback ai campi legacy per retrocompatibilità
+   */
   const getPageCode = (page: BookPage): string | null => {
+    // [SV0027] Prima prova i nuovi campi CODE-based
+    if (page.cardCode) return page.cardCode;
+    if (page.subThemeCode) return page.subThemeCode;
+    if (page.themeCode) return page.themeCode;
+    
+    // Fallback legacy: cerca nelle strutture dati (per pagine salvate prima di SV0027)
     if (page.cardId) {
       const allCards = getAllCards();
       const card = allCards.find((c) => c.id === page.cardId);
-      return card?.code || null;
+      if (card?.code) return card.code;
     }
 
     if (page.themeId && page.subThemeId) {
       const subTheme = getSubThemeById(page.themeId, page.subThemeId);
-      return subTheme?.code || null;
+      if (subTheme?.code) return subTheme.code;
     }
 
     if (page.themeId) {
       const theme = getThemeById(page.themeId);
-      return theme?.code || null;
+      if (theme?.code) return theme.code;
     }
 
     return null;
@@ -62,11 +73,17 @@ export const YourBook = () => {
 
       pages.forEach((page, index) => {
         console.log(`\n--- Processing Page ${index + 1}/${pages.length} ---`);
-        console.log("📄 Page data:", {
+        console.log("📄 [SV0027] Page data:", {
           id: page.id,
+          // CODE-based (nuovi)
+          themeCode: page.themeCode,
+          subThemeCode: page.subThemeCode,
+          cardCode: page.cardCode,
+          // Legacy (deprecati)
           themeId: page.themeId,
           subThemeId: page.subThemeId,
           cardId: page.cardId,
+          // Metadata
           savedLanguage: page.language,
         });
 

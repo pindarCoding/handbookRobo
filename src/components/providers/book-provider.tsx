@@ -9,7 +9,7 @@ import { useLanguage } from './language-provider' // [SV0001] Import per lingua 
 
 interface BookContextType {
   pages: BookPage[];
-  addPage: (page: Omit<BookPage, 'addedAt' | 'language'>) => void; // [SV0001] language non richiesto in input
+  addPage: (page: Omit<BookPage, 'addedAt' | 'language'>) => void; // [SV0027] language non richiesto in input
   removePage: (id: string) => void;
   clearBook: () => void;
 }
@@ -43,11 +43,11 @@ export function BookProvider({ children }: { children: ReactNode }) {
   }, [pages])
 
   /**
-   * Crea un BookPage per il SubTheme padre di una Card
+   * [SV0027] Crea un BookPage per il SubTheme padre di una Card
+   * Usa i campi CODE-based come fonte di verità
    */
   const createSubThemePage = (cardPage: Omit<BookPage, 'addedAt' | 'language'>): Omit<BookPage, 'addedAt' | 'language'> => {
     // Estrai info dal titolo della card (es: "Gen Z: Workplace Values")
-    // Il SubTheme sarà "Workplace Values (Work)"
     const cardTitle = cardPage.title
     
     // Rimuovi la parte generation dal titolo (tutto prima del ":")
@@ -56,24 +56,34 @@ export function BookProvider({ children }: { children: ReactNode }) {
       : cardTitle
     
     return {
-      id: `${cardPage.themeId}-${cardPage.subThemeId}`,
+      // [SV0027] ID basato su subThemeCode (univoco)
+      id: cardPage.subThemeCode || `${cardPage.themeId}-${cardPage.subThemeId}`,
       title: subThemeTitle,
+      // [SV0027] CODE-based fields
+      themeCode: cardPage.themeCode,
+      subThemeCode: cardPage.subThemeCode,
+      // Legacy fields
       themeId: cardPage.themeId,
       subThemeId: cardPage.subThemeId
-      // No generationId, no cardId → è un SubTheme
+      // No cardCode, no generationId, no cardId → è un SubTheme intro
     }
   }
 
   /**
-   * Trova la posizione corretta per inserire una nuova card
+   * [SV0027] Trova la posizione corretta per inserire una nuova card
    * Mantiene l'ordine: SubTheme → Cards dello stesso SubTheme
+   * Usa subThemeCode per il matching (più robusto)
    */
   const findInsertPosition = (currentPages: BookPage[], newCard: Omit<BookPage, 'addedAt' | 'language'>): number => {
     let lastRelatedIndex = -1
     
-    // Trova l'ultima pagina dello stesso subTheme (SubTheme o Card)
+    // [SV0027] Trova l'ultima pagina dello stesso subTheme usando CODE
     for (let i = currentPages.length - 1; i >= 0; i--) {
-      if (currentPages[i].subThemeId === newCard.subThemeId) {
+      // Priorità a subThemeCode, fallback a subThemeId per retrocompatibilità
+      const pageSubThemeCode = currentPages[i].subThemeCode || currentPages[i].subThemeId
+      const newCardSubThemeCode = newCard.subThemeCode || newCard.subThemeId
+      
+      if (pageSubThemeCode === newCardSubThemeCode) {
         lastRelatedIndex = i
         break
       }
@@ -89,16 +99,24 @@ export function BookProvider({ children }: { children: ReactNode }) {
   }
 
   /**
-   * Aggiunge una Card al book
+   * [SV0027] Aggiunge una Card al book
    * Auto-inserisce il SubTheme padre se non esiste
+   * Usa CODE-based matching per robustezza
    */
   const addPage = (page: Omit<BookPage, 'addedAt' | 'language'>) => {
-    console.log('[SV0001] Adding page with current language:', language) // [SV0001] Debug log
+    console.log('[SV0027] Adding page with code:', page.cardCode || page.subThemeCode || page.themeCode)
+    console.log('[SV0027] Current language:', language)
     
-    // ✅ ASSUNZIONE: Sempre una Card (cardId sempre presente)
+    // 1. [SV0027] Check duplicato usando cardCode (univoco)
+    const isDuplicate = pages.some(p => {
+      // Se è una card, confronta cardCode
+      if (page.cardCode && p.cardCode) {
+        return p.cardCode === page.cardCode
+      }
+      // Altrimenti confronta per id (subtheme o theme)
+      return p.id === page.id
+    })
     
-    // 1. Check duplicato
-    const isDuplicate = pages.some(p => p.id === page.id)
     if (isDuplicate) {
       toast.error(t('handbook.alreadyExists', { title: page.title }), {
         duration: 3000,
@@ -106,12 +124,13 @@ export function BookProvider({ children }: { children: ReactNode }) {
       return
     }
 
-    // 2. Check se SubTheme padre esiste
-    const subThemeExists = pages.some(p => 
-      p.themeId === page.themeId && 
-      p.subThemeId === page.subThemeId && 
-      !p.cardId  // È il SubTheme, non una Card
-    )
+    // 2. [SV0027] Check se SubTheme padre esiste usando subThemeCode
+    const subThemeExists = pages.some(p => {
+      const pageSubThemeCode = p.subThemeCode || p.subThemeId
+      const newPageSubThemeCode = page.subThemeCode || page.subThemeId
+      
+      return pageSubThemeCode === newPageSubThemeCode && !p.cardCode && !p.cardId
+    })
 
     setPages(currentPages => {
       const newPages = [...currentPages]

@@ -71,6 +71,12 @@ export interface Card {
 export interface BookPage {
   id: string
   title: string
+
+  // ✅ CODE-based fields (SV0027) - Fonte di verità
+  themeCode?: string      // es: "T5"
+  subThemeCode?: string   // es: "T5.1"
+  cardCode?: string       // es: "T5.1.GZ"
+  
   themeId: string
   subThemeId?: string
   generationId?: string
