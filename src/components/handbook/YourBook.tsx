@@ -58,7 +58,7 @@ export const YourBook = () => {
    * @example "T2.1.GZ" → "t2-1-gz"
    */
   const codeToFilename = (code: string): string => {
-    return code.toLowerCase().replace(/\./g, "-");
+    return code.replace(/\./g, "-");
   };
 
   // Funzione per esportare il PDF
