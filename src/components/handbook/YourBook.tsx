@@ -1,6 +1,7 @@
-// src/components/handbook/YourBook.tsx
+
 "use client";
 
+import { useState } from "react";
 import { useBook } from "@/components/providers/book-provider";
 import { BookPage } from "@/types/handbook";
 import { BookListItem } from "./BookListItem";
@@ -11,13 +12,16 @@ import { useLanguage } from "@/components/providers/language-provider"; // [SV00
 import confetti from "canvas-confetti";
 import { motion, AnimatePresence } from "framer-motion";
 import { bookItemContainer } from "@/data/config/animations";
+import { ExportOverlay } from "./ExportOverlay";
 
 export const YourBook = () => {
   const { pages, removePage, clearBook } = useBook();
   const { getAllCards } = useCards();
   const { getThemeById, getSubThemeById } = useThemes();
   const { t } = useTranslation();
-  const { language: currentLanguage } = useLanguage(); // [SV0001] Lingua corrente per fallback
+  const { language: currentLanguage } = useLanguage();
+  // [SV0029] State per export overlay
+  const [isExporting, setIsExporting] = useState(false);
 
   /**
    * [SV0027] Recupera il code della pagina
@@ -59,6 +63,24 @@ export const YourBook = () => {
    */
   const codeToFilename = (code: string): string => {
     return code.replace(/\./g, "-");
+  };
+
+
+
+/**
+   * [SV0029] Avvia il processo di export con overlay animato
+   */
+  const handleExportClick = () => {
+    setIsExporting(true);
+  };
+
+  /**
+   * [SV0029] Chiamato quando l'animazione dell'overlay è completata
+   * Esegue l'export reale
+   */
+  const handleOverlayComplete = async () => {
+    await exportHandbook();
+    setIsExporting(false);
   };
 
   // Funzione per esportare il PDF
@@ -318,7 +340,7 @@ export const YourBook = () => {
 
           <div className="pt-4">
             <button
-              onClick={exportHandbook}
+              onClick={handleExportClick}
               className="w-full py-3 px-4
                    bg-gradient-to-r from-orange-500 to-orange-600 
                    hover:from-orange-600 hover:to-orange-700
@@ -347,6 +369,12 @@ export const YourBook = () => {
           </div>
         </div>
       </div>
+
+      {/* [SV0029] Export Overlay */}
+      <ExportOverlay 
+        isOpen={isExporting} 
+        onComplete={handleOverlayComplete} 
+      />
     </div>
   );
 };
