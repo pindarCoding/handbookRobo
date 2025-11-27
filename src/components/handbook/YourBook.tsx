@@ -30,7 +30,7 @@ export const YourBook = () => {
     if (page.cardCode) return page.cardCode;
     if (page.subThemeCode) return page.subThemeCode;
     if (page.themeCode) return page.themeCode;
-    
+
     // Fallback legacy: cerca nelle strutture dati (per pagine salvate prima di SV0027)
     if (page.cardId) {
       const allCards = getAllCards();
@@ -104,7 +104,11 @@ export const YourBook = () => {
 
         // [SV0001] Recuperare la lingua: priorità a page.language, fallback a currentLanguage
         const language = page.language || currentLanguage;
-        console.log("🌐 Language:", language, page.language ? "(saved)" : "(fallback to current)");
+        console.log(
+          "🌐 Language:",
+          language,
+          page.language ? "(saved)" : "(fallback to current)"
+        );
 
         // Costruire il path completo
         const filePath = `${language}/${filename}.pdf`;
@@ -288,7 +292,11 @@ export const YourBook = () => {
             <AnimatePresence mode="popLayout">
               {pages.map((page, index) => {
                 const pageCode = getPageCode(page);
-                const isChapter = !page.cardId && !!page.subThemeId;
+                // [SV0027] Usa CODE-based con fallback a legacy
+                const isChapter =
+                  !page.cardCode &&
+                  !page.cardId &&
+                  (!!page.subThemeCode || !!page.subThemeId);
                 const isFirst = index === 0;
                 const isSingle = pages.length === 1;
 
