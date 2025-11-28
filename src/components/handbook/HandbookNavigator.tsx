@@ -131,7 +131,7 @@ useEffect(() => {
 
       <div className="flex-1 flex">
         {/* LEFT SIDEBAR - NavigationFilter */}
-        <aside className="hidden lg:flex lg:flex-col w-[220px] bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 overflow-y-auto">
+        <aside id="theme-selector" className="hidden lg:flex lg:flex-col w-[220px] bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 overflow-y-auto">
           <NavigationFilter
             currentStep={currentStep}
             selectedTheme={selectedTheme}

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FilterIcon, DownloadIcon, PlusCircleIcon } from "lucide-react";
+import { FilterIcon, DownloadIcon, PlusCircleIcon, ClipboardCheck } from "lucide-react";
 import {
   fadeSlideUp,
   staggerContainer,
@@ -11,6 +11,32 @@ import {
 } from "@/data/config/animations";
 
 export const WelcomeContent = () => {
+
+  const handleScrollToThemes = () => {
+    const sidebar = document.getElementById('theme-selector');
+    
+    if (sidebar) {
+      // Scroll smooth verso la sidebar
+      sidebar.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+      
+      // Aggiungi classe highlight
+      sidebar.classList.add('sidebar-highlight');
+      
+      // Rimuovi dopo 3 secondi
+      setTimeout(() => {
+        sidebar.classList.remove('sidebar-highlight');
+      }, 3000);
+    } else {
+      // Fallback per mobile: potrebbe non esserci la sidebar desktop
+      // In futuro qui si potrebbe aprire il drawer mobile
+      console.log('Theme selector not found - possibly on mobile view');
+    }
+  };
+
+
   return (
     <div className="py-12 px-4 max-w-4xl mx-auto">
       {/* Hero Section */}
@@ -26,7 +52,7 @@ export const WelcomeContent = () => {
           initial="hidden"
           animate="visible"
         >
-          Welcome to the Generational Handbook
+          Welcome to the MYCo Generational Handbook
         </motion.h1>
         <motion.p
           className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-8"
@@ -35,8 +61,8 @@ export const WelcomeContent = () => {
           animate="visible"
           transition={{ delay: 0.2 }}
         >
-          Your comprehensive guide to navigating intergenerational workplace
-          dynamics
+          A practical resource for HR professionals, trainers, and facilitators
+          to navigate intergenerational dynamics and foster inclusive workplaces.
         </motion.p>
 
         {/* Generations Image */}
@@ -56,16 +82,23 @@ export const WelcomeContent = () => {
             priority
           />
         </motion.div>
+
+        {/* Introduction Block - Expanded */}
         <motion.div
-          className="text-xs max-w-[370px] mx-auto"
+          className="text-xs max-w-[600px] mx-auto"
           variants={fadeSlideUp}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.6 }}
         >
           <p className="text-sm text-center text-slate-500 dark:text-slate-400">
-            Following an introductory chapter, the Handbook explores
-            generational inclusion from five different perspectives.
+            This Handbook is the result of transnational research conducted
+            across six European countries, exploring how four
+            generations—Baby Boomers, Generation X, Millennials, and Generation
+            Z—experience the workplace. Rather than reinforcing stereotypes, our
+            goal is to provide evidence-based insights and actionable strategies
+            to promote collaboration, mutual understanding, and generational
+            inclusion.
           </p>
         </motion.div>
       </motion.div>
@@ -105,10 +138,11 @@ export const WelcomeContent = () => {
               1
             </div>
             <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-              Choose Theme
+              Choose a Theme
             </h4>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              Select from communication, diversity, digital inequality, and more
+              Select from five research-based themes: communication, values,
+              diversity, digital skills, or intergenerational learning.
             </p>
           </motion.div>
 
@@ -122,10 +156,11 @@ export const WelcomeContent = () => {
               2
             </div>
             <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-              Pick Subtopic
+              Pick a Subtopic
             </h4>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              Dive deeper into specific areas within your chosen theme
+              Each theme contains three specific topics developed from our
+              transnational research findings.
             </p>
           </motion.div>
 
@@ -139,10 +174,11 @@ export const WelcomeContent = () => {
               3
             </div>
             <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-              Select Generation
+              Select a Generation
             </h4>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              Focus on Gen Z, Millennials, Gen X, or Baby Boomers
+              Focus on the generation most relevant to your context: Gen Z,
+              Millennials, Gen X, or Baby Boomers.
             </p>
           </motion.div>
 
@@ -159,7 +195,8 @@ export const WelcomeContent = () => {
               Build & Export
             </h4>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              Add pages to your book and export your custom PDF
+              Add the pages you need to your personalised handbook and download
+              it as a PDF.
             </p>
           </motion.div>
         </motion.div>
@@ -180,7 +217,7 @@ export const WelcomeContent = () => {
           animate="visible"
           transition={{ delay: 1.6 }}
         >
-          Start now
+          Start Exploring
         </motion.h3>
         <motion.div
           className="flex flex-wrap justify-center gap-4 text-sm"
@@ -195,7 +232,7 @@ export const WelcomeContent = () => {
             whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           >
             <PlusCircleIcon className="w-4 h-4 mr-2 text-blue-500" />
-            Add unlimited pages
+            Build your selection
           </motion.div>
           <motion.div
             className="flex items-center text-slate-600 dark:text-slate-400"
@@ -203,7 +240,7 @@ export const WelcomeContent = () => {
             whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           >
             <FilterIcon className="w-4 h-4 mr-2 text-green-500" />
-            Filter by your needs
+            Focus on what matters
           </motion.div>
           <motion.div
             className="flex items-center text-slate-600 dark:text-slate-400"
@@ -211,7 +248,7 @@ export const WelcomeContent = () => {
             whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           >
             <DownloadIcon className="w-4 h-4 mr-2 text-purple-500" />
-            Export as PDF
+            Download your handbook
           </motion.div>
         </motion.div>
       </motion.div>
@@ -224,7 +261,7 @@ export const WelcomeContent = () => {
         animate="visible"
         transition={{ delay: 2.0 }}
       >
-        {/* Create Custom Handbook */}
+        {/* Custom Handbook Card */}
         <motion.div
           className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700"
           variants={staggerItem}
@@ -247,26 +284,52 @@ export const WelcomeContent = () => {
               className="text-xl font-semibold text-slate-900 dark:text-white"
               variants={fadeSlideUp}
             >
-              Custom Handbook
+              Your Personalised Handbook
             </motion.h3>
           </motion.div>
           <motion.p
             className="text-slate-600 dark:text-slate-300 mb-4"
             variants={fadeSlideUp}
           >
-            Create your personalized handbook by selecting only the topics that
-            matter to you. Navigate through themes, generations, and specific
-            approaches to build your custom guide.
+            The complete Handbook offers extensive research and detailed
+            strategies—but you may not need everything. This platform allows you
+            to select only the content relevant to your specific context, whether
+            you are addressing a particular generation, a single theme, or a
+            combination of both. Build a tailored resource that fits your
+            training needs and download it as a ready-to-use PDF.
           </motion.p>
           <motion.p
             className="text-green-600 dark:text-green-400 font-medium"
             variants={fadeSlideUp}
           >
-            Start by selecting a theme above
           </motion.p>
+          <motion.button
+            onClick={handleScrollToThemes}
+            className="text-green-600 dark:text-green-400 font-medium 
+                       hover:text-green-700 dark:hover:text-green-300
+                       hover:underline cursor-pointer
+                       transition-colors inline-flex items-center gap-1"
+            variants={fadeSlideUp}
+            whileHover={{ x: 4 }}
+          >
+            Select a theme to begin
+            <svg 
+              className="w-4 h-4" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M7 11l5-5m0 0l5 5m-5-5v12" 
+              />
+            </svg>
+          </motion.button>
         </motion.div>
 
-        {/* Test Card */}
+        {/* Self-Assessment Card */}
         <motion.div
           className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700"
           variants={staggerItem}
@@ -279,33 +342,39 @@ export const WelcomeContent = () => {
         >
           <motion.div className="flex items-center mb-4" variants={scalePop}>
             <motion.div
-              className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4"
+              className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg mr-4"
               whileHover={{ rotate: 10 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <FilterIcon className="w-6 h-6 text-green-600 dark:text-green-300" />
+              <ClipboardCheck className="w-6 h-6 text-blue-600 dark:text-blue-300" />
             </motion.div>
             <motion.h3
               className="text-xl font-semibold text-slate-900 dark:text-white"
               variants={fadeSlideUp}
             >
-              Test
+              Self-Assessment Test
             </motion.h3>
           </motion.div>
           <motion.p
             className="text-slate-600 dark:text-slate-300 mb-4"
             variants={fadeSlideUp}
           >
-            Test placeholder
+            Measure your awareness of generational diversity and your ability to
+            manage intergenerational dynamics inclusively. The test consists of
+            10 questions randomly selected from our research-based question pool,
+            covering all five thematic areas. We recommend completing the test
+            before and after exploring the Handbook to track your progress.
           </motion.p>
           <motion.p
-            className="text-green-600 dark:text-green-400 font-medium"
+            className="text-blue-600 dark:text-blue-400 font-medium"
             variants={fadeSlideUp}
           >
-            Start by selecting a theme above
+            Coming soon
           </motion.p>
         </motion.div>
       </motion.div>
+
+      {/* Project Quote */}
       <motion.div
         className="text-xs mx-auto my-8"
         variants={fadeSlideUp}
@@ -319,10 +388,11 @@ export const WelcomeContent = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          &ldquo;MYCO – Meet Your Colleague&rdquo; is a 24-month Erasmus+ funded
-          project that aims to create a training tool in the field of Diversity
-          and Inclusion. By going beyond generational stereotypes, we want to
-          promote inclusion in the workplace.
+          &ldquo;MYCo – Meet Your Colleague&rdquo; is an Erasmus+ funded project
+          bringing together six European partners to create practical tools for
+          generational inclusion. Through research, training activities, and
+          interactive resources, we aim to move beyond stereotypes and build
+          workplaces where every generation can thrive.
         </motion.p>
       </motion.div>
     </div>
