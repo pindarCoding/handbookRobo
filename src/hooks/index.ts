@@ -2,3 +2,4 @@
 export { useTranslation } from './useTranslation'
 export { useGenerations } from './useGenerations'
 export { useSubThemeContent } from './useSubThemeContent'
+export { useQuestions } from './useQuestions';
