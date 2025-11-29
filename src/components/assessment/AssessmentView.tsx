@@ -3,10 +3,10 @@
 'use client';
 
 /**
- * SV0043 - Assessment View (contenuto sostitutivo, non modal)
+ * SV0044 - Assessment View (contenuto sostitutivo, non modal)
  * 
- * Renderizzato al posto di WelcomeContent quando un test è in corso.
- * Evita problemi di overlay, z-index e conflitti Framer Motion.
+ * Renderizzato al posto del layout normale quando un test è in corso.
+ * Aggiornato per 10 step con 1 domanda per step.
  */
 
 import { useEffect, useCallback, useRef } from 'react';
@@ -39,7 +39,7 @@ export function AssessmentView() {
   // Avvia il test al mount (solo una volta)
   useEffect(() => {
     if (testState.status === 'idle' && !hasStartedRef.current) {
-      console.log('[SV0043] 🚀 Starting test from AssessmentView...');
+      console.log('[SV0044] 🚀 Starting test from AssessmentView...');
       hasStartedRef.current = true;
       startTest();
     }
@@ -54,14 +54,14 @@ export function AssessmentView() {
 
   // Gestisce chiusura/annullamento
   const handleClose = useCallback(() => {
-    console.log('[SV0043] 🚪 Closing assessment...');
+    console.log('[SV0044] 🚪 Closing assessment...');
     hasStartedRef.current = false;
     resetTest();
   }, [resetTest]);
 
   // Gestisce "Try Again"
   const handleRetry = useCallback(() => {
-    console.log('[SV0043] 🔄 Retrying assessment...');
+    console.log('[SV0044] 🔄 Retrying assessment...');
     hasStartedRef.current = false;
     resetTest();
     setTimeout(() => {
@@ -70,18 +70,10 @@ export function AssessmentView() {
     }, 100);
   }, [resetTest, startTest]);
 
-  // Estrae le 2 domande per lo step corrente
-  const getStepQuestions = (): [Question, Question] | null => {
+  // Estrae la singola domanda per lo step corrente
+  const getStepQuestion = (): Question | null => {
     const { currentStep, questions } = testState;
-    const startIndex = currentStep * 2;
-    const stepQuestions = questions.slice(startIndex, startIndex + 2);
-    
-    if (stepQuestions.length !== 2) {
-      console.warn(`[SV0043] ⚠️ Expected 2 questions, got ${stepQuestions.length}`);
-      return null;
-    }
-    
-    return stepQuestions as [Question, Question];
+    return questions[currentStep] || null;
   };
 
   // Renderizza il contenuto in base allo stato
@@ -92,20 +84,20 @@ export function AssessmentView() {
         return <AssessmentLoading />;
 
       case 'in-progress': {
-        const stepQuestions = getStepQuestions();
-        if (!stepQuestions) {
+        const question = getStepQuestion();
+        if (!question) {
           return <AssessmentLoading />;
         }
         
         return (
           <AssessmentStep
             stepIndex={testState.currentStep}
-            questions={stepQuestions}
+            question={question}
             answers={testState.answers}
             onAnswer={answerQuestion}
             onNext={nextStep}
             onBack={previousStep}
-            isLastStep={testState.currentStep === 4}
+            isLastStep={testState.currentStep === 9}
             onComplete={completeTest}
           />
         );
@@ -130,7 +122,7 @@ export function AssessmentView() {
   };
 
   return (
-    <div className="py-8 px-4 max-w-2xl mx-auto animate-fadeIn">
+    <div className="py-8 px-4 max-w-3xl mx-auto animate-fadeIn">
       {/* Header con bottone Back */}
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
@@ -149,7 +141,7 @@ export function AssessmentView() {
       </div>
 
       {/* Content Container */}
-      <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 p-6">
+      <div className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 p-6 overflow-hidden">
         {renderContent()}
       </div>
     </div>

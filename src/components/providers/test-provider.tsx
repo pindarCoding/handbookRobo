@@ -174,7 +174,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
    */
   const nextStep = useCallback(() => {
     setTestState(prev => {
-      const newStep = Math.min(prev.currentStep + 1, 4);
+      const newStep = Math.min(prev.currentStep + 1, 9);
       console.log(`[SV0034] ➡️ Next step: ${prev.currentStep} → ${newStep}`);
       return {
         ...prev,

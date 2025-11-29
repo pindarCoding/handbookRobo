@@ -138,7 +138,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="text-center"
             variants={staggerItem}
-            // whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
             <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">
               1
@@ -156,7 +156,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="text-center"
             variants={staggerItem}
-            // whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
             <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">
               2
@@ -174,7 +174,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="text-center"
             variants={staggerItem}
-            // whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
             <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">
               3
@@ -192,7 +192,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="text-center"
             variants={staggerItem}
-            // whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
             <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">
               4
@@ -235,7 +235,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="flex items-center text-slate-600 dark:text-slate-400"
             variants={staggerItem}
-            // whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           >
             <PlusCircleIcon className="w-4 h-4 mr-2 text-blue-500" />
             Build your selection
@@ -243,7 +243,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="flex items-center text-slate-600 dark:text-slate-400"
             variants={staggerItem}
-            // whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           >
             <FilterIcon className="w-4 h-4 mr-2 text-green-500" />
             Focus on what matters
@@ -251,7 +251,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="flex items-center text-slate-600 dark:text-slate-400"
             variants={staggerItem}
-            // whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           >
             <DownloadIcon className="w-4 h-4 mr-2 text-purple-500" />
             Download your handbook
@@ -271,17 +271,17 @@ export const WelcomeContent = () => {
         <motion.div
           className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700"
           variants={staggerItem}
-          // whileHover={{
-          //   scale: 1.05,
-          //   y: -5,
-          //   transition: { duration: 0.3 },
-          // }}
+          whileHover={{
+            scale: 1.05,
+            y: -5,
+            transition: { duration: 0.3 },
+          }}
           whileTap={{ scale: 0.98 }}
         >
           <motion.div className="flex items-center mb-4" variants={scalePop}>
             <motion.div
               className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4"
-              // whileHover={{ rotate: 10 }}
+              whileHover={{ rotate: 10 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <FilterIcon className="w-6 h-6 text-green-600 dark:text-green-300" />
@@ -315,7 +315,7 @@ export const WelcomeContent = () => {
                        hover:underline cursor-pointer
                        transition-colors inline-flex items-center gap-1"
             variants={fadeSlideUp}
-            // whileHover={{ x: 4 }}
+            whileHover={{ x: 4 }}
           >
             Select a theme to begin
             <svg
@@ -338,17 +338,17 @@ export const WelcomeContent = () => {
         <motion.div
           className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700"
           variants={staggerItem}
-          // whileHover={{
-          //   scale: 1.05,
-          //   y: -5,
-          //   transition: { duration: 0.3 },
-          // }}
+          whileHover={{
+            scale: 1.05,
+            y: -5,
+            transition: { duration: 0.3 },
+          }}
           whileTap={{ scale: 0.98 }}
         >
           <motion.div className="flex items-center mb-4" variants={scalePop}>
             <motion.div
               className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg mr-4"
-              // whileHover={{ rotate: 10 }}
+              whileHover={{ rotate: 10 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <ClipboardCheck className="w-6 h-6 text-blue-600 dark:text-blue-300" />
@@ -382,7 +382,7 @@ export const WelcomeContent = () => {
             onClick={startTest}
             className="text-purple-600 dark:text-purple-400 font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
             variants={fadeSlideUp}
-            // whileHover={{ x: 5 }}
+            whileHover={{ x: 5 }}
           >
             Start Test →
           </motion.button>
@@ -400,7 +400,7 @@ export const WelcomeContent = () => {
         <motion.p
           className="text-sm text-center text-slate-500 dark:text-slate-400"
           variants={fadeSlideUp}
-          // whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           &ldquo;MYCo – Meet Your Colleague&rdquo; is an Erasmus+ funded project
