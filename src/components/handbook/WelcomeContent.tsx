@@ -378,14 +378,24 @@ export const WelcomeContent = () => {
             10-question assessment. Questions are randomly selected from all 5
             themes.
           </motion.p>
-          <motion.button
-            onClick={startTest}
-            className="text-purple-600 dark:text-purple-400 font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
-            variants={fadeSlideUp}
-            whileHover={{ x: 5 }}
-          >
-            Start Test →
-          </motion.button>
+         <motion.button
+  onClick={startTest}
+  className="w-full py-3 px-4 mt-4
+    bg-gradient-to-r from-blue-500 to-blue-600 
+    hover:from-blue-600 hover:to-blue-700
+    dark:from-blue-500 dark:to-blue-600
+    dark:hover:from-blue-600 dark:hover:to-blue-700
+    text-white font-semibold rounded-lg 
+    shadow-md hover:shadow-lg
+    transition-all duration-200
+    flex items-center justify-center gap-2"
+  variants={fadeSlideUp}
+  whileHover={{ scale: 1.02 }}
+  whileTap={{ scale: 0.98 }}
+>
+  <ClipboardCheck className="w-5 h-5" />
+  Start Test
+</motion.button>
         </motion.div>
       </motion.div>
 
