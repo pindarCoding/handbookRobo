@@ -90,8 +90,7 @@ export function QuestionCard({
                   : 'border-slate-200 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50'
                 }
               `}
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.99 }}
+
             >
               {/* Option Letter Badge */}
               <span 

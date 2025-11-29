@@ -11,7 +11,7 @@
  * - Connette TestProvider ai componenti UI
  */
 
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useTest } from '@/components/providers/test-provider';
@@ -47,27 +47,40 @@ export function AssessmentModal({ isOpen, onClose }: AssessmentModalProps) {
     resetTest
   } = useTest();
 
-  // Avvia il test quando il modal si apre
-  useEffect(() => {
-    if (isOpen && testState.status === 'idle') {
-      startTest();
-    }
-  }, [isOpen, testState.status, startTest]);
+  // Ref per evitare doppia chiamata a startTest
+  const hasStartedRef = useRef(false);
 
-// Gestisce chiusura con reset
-const handleClose = useCallback(() => {
-  resetTest();
-  onClose();
-}, [resetTest, onClose]);
+  // Gestisce chiusura con reset
+  const handleClose = useCallback(() => {
+     console.log('[SV0040] 🚪 Closing modal...'); // Aggiungi questo log
+    hasStartedRef.current = false; // Reset del flag
+    resetTest();
+    onClose();
+  }, [resetTest, onClose]);
 
   // Gestisce "Try Again"
-  const handleRetry = () => {
+  const handleRetry = useCallback(() => {
+    hasStartedRef.current = false; // Reset del flag
     resetTest();
     // Piccolo delay per permettere il reset, poi avvia nuovo test
     setTimeout(() => {
+      hasStartedRef.current = true;
       startTest();
     }, 100);
-  };
+  }, [resetTest, startTest]);
+
+  // Avvia il test quando il modal si apre (solo una volta)
+  useEffect(() => {
+    if (isOpen && testState.status === 'idle' && !hasStartedRef.current) {
+      hasStartedRef.current = true;
+      startTest();
+    }
+    
+    // Reset del flag quando il modal si chiude
+    if (!isOpen) {
+      hasStartedRef.current = false;
+    }
+  }, [isOpen, testState.status, startTest]);
 
   // Estrae le 2 domande per lo step corrente
   const getStepQuestions = (): [Question, Question] | null => {

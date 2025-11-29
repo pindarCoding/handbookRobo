@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LanguageProvider } from "@/components/providers/language-provider";
 import { BookProvider } from "@/components/providers/book-provider";
 import { ImageCacheProvider } from "@/components/providers/image-cache-provider";
+import { TestProvider } from "@/components/providers/test-provider";
 import { Toaster } from "sonner";
 import "./globals.css";
 
@@ -35,7 +36,11 @@ export default function RootLayout({
         <ThemeProvider>
           <LanguageProvider>
             <ImageCacheProvider>
-              <BookProvider>{children}</BookProvider>
+              <BookProvider>
+                <TestProvider>
+                  {children}
+                </TestProvider>
+              </BookProvider>
             </ImageCacheProvider>
           </LanguageProvider>
         </ThemeProvider>

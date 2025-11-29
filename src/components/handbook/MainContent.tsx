@@ -42,7 +42,7 @@ export const MainContent = ({
 
   const { addPage } = useBook();
   const { t } = useTranslation();
-  const { language: currentLanguage } = useLanguage(); 
+  const { language: currentLanguage } = useLanguage();
 
   // Funzione per generare l'ID della pagina corrente
   
@@ -119,6 +119,7 @@ export const MainContent = ({
 
   // Contenuto del main in base allo stato
   const renderContent = () => {
+
     // Stato iniziale - nessuna selezione
     if (!selectedTheme) {
       return <WelcomeContent />;

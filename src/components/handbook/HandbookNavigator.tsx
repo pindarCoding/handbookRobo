@@ -1,4 +1,3 @@
-// src/components/handbook/HandbookNavigator.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -12,6 +11,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "../layout/Footer";
 import { YourBook } from "./YourBook";
 import { MobileNavigationDrawer } from "@/components/mobile/MobileNavigationDrawer";
+import { useTest } from '@/components/providers/test-provider';
+import { AssessmentView } from '@/components/assessment';
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
@@ -26,6 +27,7 @@ export default function HandbookNavigator() {
   const [selectedGeneration, setSelectedGeneration] = useState<Generation | null>(null);
   const [selectedCard, setSelectedCard] = useState<Card | null>(null);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const { testState } = useTest();
 
 // ✅ NUOVO: Sincronizza selectedTheme quando cambia la lingua
 useEffect(() => {
@@ -126,9 +128,18 @@ useEffect(() => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col">
-      <Header onLogoClick={resetNavigation} />
+  <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col">
+    <Header onLogoClick={resetNavigation} />
 
+    {/* TEST MODE: Full-screen takeover */}
+    {testState.status !== 'idle' ? (
+      <main className="flex-1 overflow-y-auto bg-slate-50 dark:bg-slate-900">
+        <div className="max-w-screen-xl mx-auto p-4 md:p-6">
+          <AssessmentView />
+        </div>
+      </main>
+    ) : (
+      /* NORMAL MODE: Layout con aside */
       <div className="flex-1 flex">
         {/* LEFT SIDEBAR - NavigationFilter */}
         <aside id="theme-selector" className="hidden lg:flex lg:flex-col w-[220px] bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 overflow-y-auto">
@@ -159,12 +170,14 @@ useEffect(() => {
         </main>
 
         {/* RIGHT SIDEBAR - YourBook */}
-<aside className="hidden lg:flex lg:flex-col w-[340px] sticky top-0 h-screen bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 overflow-hidden">
-  <YourBook />
-</aside>
+        <aside className="hidden lg:flex lg:flex-col w-[340px] sticky top-0 h-screen bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 overflow-hidden">
+          <YourBook />
+        </aside>
       </div>
+    )}
 
-      {/* Floating Action Button - Solo Mobile */}
+    {/* Floating Action Button - Solo Mobile (nascosto durante test) */}
+    {testState.status === 'idle' && (
       <button
         onClick={() => setIsMobileNavOpen(true)}
         className="lg:hidden fixed bottom-6 right-6 z-30
@@ -192,8 +205,10 @@ useEffect(() => {
           Filter & Navigate
         </span>
       </button>
+    )}
 
-      {/* Mobile Navigation Drawer */}
+    {/* Mobile Navigation Drawer (nascosto durante test) */}
+    {testState.status === 'idle' && (
       <MobileNavigationDrawer
         isOpen={isMobileNavOpen}
         onClose={() => setIsMobileNavOpen(false)}
@@ -207,8 +222,9 @@ useEffect(() => {
         onGenerationSelect={handleGenerationSelect}
         onBack={handleBack}
       />
+    )}
 
-      <Footer />
-    </div>
-  );
+    <Footer />
+  </div>
+);
 }

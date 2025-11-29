@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FilterIcon, DownloadIcon, PlusCircleIcon, ClipboardCheck } from "lucide-react";
+import { useTest } from "@/components/providers/test-provider";
+import {
+  FilterIcon,
+  DownloadIcon,
+  PlusCircleIcon,
+  ClipboardCheck,
+} from "lucide-react";
 import {
   fadeSlideUp,
   staggerContainer,
@@ -11,31 +17,31 @@ import {
 } from "@/data/config/animations";
 
 export const WelcomeContent = () => {
+  const { startTest } = useTest();
 
   const handleScrollToThemes = () => {
-    const sidebar = document.getElementById('theme-selector');
-    
+    const sidebar = document.getElementById("theme-selector");
+
     if (sidebar) {
       // Scroll smooth verso la sidebar
-      sidebar.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'start' 
+      sidebar.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
-      
+
       // Aggiungi classe highlight
-      sidebar.classList.add('sidebar-highlight');
-      
+      sidebar.classList.add("sidebar-highlight");
+
       // Rimuovi dopo 3 secondi
       setTimeout(() => {
-        sidebar.classList.remove('sidebar-highlight');
+        sidebar.classList.remove("sidebar-highlight");
       }, 3000);
     } else {
       // Fallback per mobile: potrebbe non esserci la sidebar desktop
       // In futuro qui si potrebbe aprire il drawer mobile
-      console.log('Theme selector not found - possibly on mobile view');
+      console.log("Theme selector not found - possibly on mobile view");
     }
   };
-
 
   return (
     <div className="py-12 px-4 max-w-4xl mx-auto">
@@ -62,7 +68,8 @@ export const WelcomeContent = () => {
           transition={{ delay: 0.2 }}
         >
           A practical resource for HR professionals, trainers, and facilitators
-          to navigate intergenerational dynamics and foster inclusive workplaces.
+          to navigate intergenerational dynamics and foster inclusive
+          workplaces.
         </motion.p>
 
         {/* Generations Image */}
@@ -93,12 +100,11 @@ export const WelcomeContent = () => {
         >
           <p className="text-sm text-center text-slate-500 dark:text-slate-400">
             This Handbook is the result of transnational research conducted
-            across six European countries, exploring how four
-            generations—Baby Boomers, Generation X, Millennials, and Generation
-            Z—experience the workplace. Rather than reinforcing stereotypes, our
-            goal is to provide evidence-based insights and actionable strategies
-            to promote collaboration, mutual understanding, and generational
-            inclusion.
+            across six European countries, exploring how four generations—Baby
+            Boomers, Generation X, Millennials, and Generation Z—experience the
+            workplace. Rather than reinforcing stereotypes, our goal is to
+            provide evidence-based insights and actionable strategies to promote
+            collaboration, mutual understanding, and generational inclusion.
           </p>
         </motion.div>
       </motion.div>
@@ -132,7 +138,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="text-center"
             variants={staggerItem}
-            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            // whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
             <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">
               1
@@ -150,7 +156,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="text-center"
             variants={staggerItem}
-            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            // whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
             <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">
               2
@@ -168,7 +174,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="text-center"
             variants={staggerItem}
-            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            // whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
             <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">
               3
@@ -186,7 +192,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="text-center"
             variants={staggerItem}
-            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            // whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
             <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">
               4
@@ -229,7 +235,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="flex items-center text-slate-600 dark:text-slate-400"
             variants={staggerItem}
-            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+            // whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           >
             <PlusCircleIcon className="w-4 h-4 mr-2 text-blue-500" />
             Build your selection
@@ -237,7 +243,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="flex items-center text-slate-600 dark:text-slate-400"
             variants={staggerItem}
-            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+            // whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           >
             <FilterIcon className="w-4 h-4 mr-2 text-green-500" />
             Focus on what matters
@@ -245,7 +251,7 @@ export const WelcomeContent = () => {
           <motion.div
             className="flex items-center text-slate-600 dark:text-slate-400"
             variants={staggerItem}
-            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+            // whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           >
             <DownloadIcon className="w-4 h-4 mr-2 text-purple-500" />
             Download your handbook
@@ -265,17 +271,17 @@ export const WelcomeContent = () => {
         <motion.div
           className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700"
           variants={staggerItem}
-          whileHover={{
-            scale: 1.05,
-            y: -5,
-            transition: { duration: 0.3 },
-          }}
+          // whileHover={{
+          //   scale: 1.05,
+          //   y: -5,
+          //   transition: { duration: 0.3 },
+          // }}
           whileTap={{ scale: 0.98 }}
         >
           <motion.div className="flex items-center mb-4" variants={scalePop}>
             <motion.div
               className="p-3 bg-green-100 dark:bg-green-900 rounded-lg mr-4"
-              whileHover={{ rotate: 10 }}
+              // whileHover={{ rotate: 10 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <FilterIcon className="w-6 h-6 text-green-600 dark:text-green-300" />
@@ -293,16 +299,15 @@ export const WelcomeContent = () => {
           >
             The complete Handbook offers extensive research and detailed
             strategies—but you may not need everything. This platform allows you
-            to select only the content relevant to your specific context, whether
-            you are addressing a particular generation, a single theme, or a
-            combination of both. Build a tailored resource that fits your
+            to select only the content relevant to your specific context,
+            whether you are addressing a particular generation, a single theme,
+            or a combination of both. Build a tailored resource that fits your
             training needs and download it as a ready-to-use PDF.
           </motion.p>
           <motion.p
             className="text-green-600 dark:text-green-400 font-medium"
             variants={fadeSlideUp}
-          >
-          </motion.p>
+          ></motion.p>
           <motion.button
             onClick={handleScrollToThemes}
             className="text-green-600 dark:text-green-400 font-medium 
@@ -310,20 +315,20 @@ export const WelcomeContent = () => {
                        hover:underline cursor-pointer
                        transition-colors inline-flex items-center gap-1"
             variants={fadeSlideUp}
-            whileHover={{ x: 4 }}
+            // whileHover={{ x: 4 }}
           >
             Select a theme to begin
-            <svg 
-              className="w-4 h-4" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M7 11l5-5m0 0l5 5m-5-5v12" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M7 11l5-5m0 0l5 5m-5-5v12"
               />
             </svg>
           </motion.button>
@@ -333,17 +338,17 @@ export const WelcomeContent = () => {
         <motion.div
           className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700"
           variants={staggerItem}
-          whileHover={{
-            scale: 1.05,
-            y: -5,
-            transition: { duration: 0.3 },
-          }}
+          // whileHover={{
+          //   scale: 1.05,
+          //   y: -5,
+          //   transition: { duration: 0.3 },
+          // }}
           whileTap={{ scale: 0.98 }}
         >
           <motion.div className="flex items-center mb-4" variants={scalePop}>
             <motion.div
               className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg mr-4"
-              whileHover={{ rotate: 10 }}
+              // whileHover={{ rotate: 10 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <ClipboardCheck className="w-6 h-6 text-blue-600 dark:text-blue-300" />
@@ -361,16 +366,26 @@ export const WelcomeContent = () => {
           >
             Measure your awareness of generational diversity and your ability to
             manage intergenerational dynamics inclusively. The test consists of
-            10 questions randomly selected from our research-based question pool,
-            covering all five thematic areas. We recommend completing the test
-            before and after exploring the Handbook to track your progress.
+            10 questions randomly selected from our research-based question
+            pool, covering all five thematic areas. We recommend completing the
+            test before and after exploring the Handbook to track your progress.
           </motion.p>
           <motion.p
             className="text-blue-600 dark:text-blue-400 font-medium"
             variants={fadeSlideUp}
           >
-            Coming soon
+            Test your understanding of generational dynamics with our
+            10-question assessment. Questions are randomly selected from all 5
+            themes.
           </motion.p>
+          <motion.button
+            onClick={startTest}
+            className="text-purple-600 dark:text-purple-400 font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+            variants={fadeSlideUp}
+            // whileHover={{ x: 5 }}
+          >
+            Start Test →
+          </motion.button>
         </motion.div>
       </motion.div>
 
@@ -385,7 +400,7 @@ export const WelcomeContent = () => {
         <motion.p
           className="text-sm text-center text-slate-500 dark:text-slate-400"
           variants={fadeSlideUp}
-          whileHover={{ scale: 1.02 }}
+          // whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           &ldquo;MYCo – Meet Your Colleague&rdquo; is an Erasmus+ funded project
