@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "version": "1.0.0-placeholder",
+    "totalQuestions": 10,
+    "questionsPerTheme": 2,
+    "note": "Placeholder questions for development. Replace with real content."
+  },
+  "questions": [
+    {
+      "code": "T1.1.Q1",
+      "themeCode": "T1",
+      "subThemeCode": "T1.1",
+      "question": "This is question 1 - What is the correct answer?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "a",
+      "explanation": "The correct answer is already written in the question number: 1"
+    },
+    {
+      "code": "T1.2.Q2",
+      "themeCode": "T1",
+      "subThemeCode": "T1.2",
+      "question": "This is question 2 - What is the correct answer?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "b",
+      "explanation": "The correct answer is already written in the question number: 2"
+    },
+    {
+      "code": "T2.1.Q3",
+      "themeCode": "T2",
+      "subThemeCode": "T2.1",
+      "question": "This is question 3 - What is the correct answer?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "c",
+      "explanation": "The correct answer is already written in the question number: 3"
+    },
+    {
+      "code": "T2.2.Q4",
+      "themeCode": "T2",
+      "subThemeCode": "T2.2",
+      "question": "This is question 4 - What is the correct answer?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "d",
+      "explanation": "The correct answer is already written in the question number: 4"
+    },
+    {
+      "code": "T3.1.Q5",
+      "themeCode": "T3",
+      "subThemeCode": "T3.1",
+      "question": "This is question 5 - What is the correct answer?",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "8"
+      },
+      "correctAnswer": "a",
+      "explanation": "The correct answer is already written in the question number: 5"
+    },
+    {
+      "code": "T3.2.Q6",
+      "themeCode": "T3",
+      "subThemeCode": "T3.2",
+      "question": "This is question 6 - What is the correct answer?",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "8"
+      },
+      "correctAnswer": "b",
+      "explanation": "The correct answer is already written in the question number: 6"
+    },
+    {
+      "code": "T4.1.Q7",
+      "themeCode": "T4",
+      "subThemeCode": "T4.1",
+      "question": "This is question 7 - What is the correct answer?",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "8"
+      },
+      "correctAnswer": "c",
+      "explanation": "The correct answer is already written in the question number: 7"
+    },
+    {
+      "code": "T4.2.Q8",
+      "themeCode": "T4",
+      "subThemeCode": "T4.2",
+      "question": "This is question 8 - What is the correct answer?",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "8"
+      },
+      "correctAnswer": "d",
+      "explanation": "The correct answer is already written in the question number: 8"
+    },
+    {
+      "code": "T5.1.Q9",
+      "themeCode": "T5",
+      "subThemeCode": "T5.1",
+      "question": "This is question 9 - What is the correct answer?",
+      "options": {
+        "a": "9",
+        "b": "10",
+        "c": "11",
+        "d": "12"
+      },
+      "correctAnswer": "a",
+      "explanation": "The correct answer is already written in the question number: 9"
+    },
+    {
+      "code": "T5.2.Q10",
+      "themeCode": "T5",
+      "subThemeCode": "T5.2",
+      "question": "This is question 10 - What is the correct answer?",
+      "options": {
+        "a": "9",
+        "b": "10",
+        "c": "11",
+        "d": "12"
+      },
+      "correctAnswer": "b",
+      "explanation": "The correct answer is already written in the question number: 10"
+    }
+  ]
+}
