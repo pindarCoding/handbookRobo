@@ -7,6 +7,7 @@ import { useTheme } from "../providers/theme-provider";
 import { useLanguage } from "../providers/language-provider";
 import { YourBookBadge } from "@/components/handbook/YourBookBadge";
 import { YourBookModal } from "@/components/mobile/YourBookModal";
+import { useTest } from "../providers/test-provider";
 
 // const languages = [
 //   { code: "en", name: "English", flag: "🇬🇧" },
@@ -21,7 +22,6 @@ const languages = [
   { code: "it" as const, name: "Italiano", flagSvg: "/flags/it.svg" },
 ];
 
-
 interface HeaderProps {
   onLogoClick?: () => void;
 }
@@ -32,9 +32,11 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
+  const { startTest } = useTest();
 
   // 🆕 Trova la lingua selezionata dall'array
-  const selectedLanguage = languages.find(lang => lang.code === language) || languages[0];
+  const selectedLanguage =
+    languages.find((lang) => lang.code === language) || languages[0];
 
   const handleLanguageSelect = (lang: (typeof languages)[0]) => {
     setLanguage(lang.code); // 🆕 Usa hook invece di stato locale
@@ -60,14 +62,18 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                 aria-label="Go to homepage"
               >
                 <Image
-                  src={theme === 'dark' ? '/myco_web_logo_dark.png' : '/myco_web_logo.png'}  // 🆕 Logo dinamico
+                  src={
+                    theme === "dark"
+                      ? "/myco_web_logo_dark.png"
+                      : "/myco_web_logo.png"
+                  } // 🆕 Logo dinamico
                   alt="MyCo Logo"
                   width={240}
                   height={80}
                   style={{
-                    height: 'auto',
-                    maxHeight: '4.5rem',  // 40px su mobile
-                    width: 'auto'
+                    height: "auto",
+                    maxHeight: "4.5rem", // 40px su mobile
+                    width: "auto",
                   }}
                   className="h-9 sm:h-12 lg:h-16 xl:h-20 w-auto hover:opacity-80 transition-opacity"
                   priority={true}
@@ -77,24 +83,29 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
 
             {/* Desktop Menu */}
             <nav className="hidden md:flex items-center space-x-8">
+              <button
+                onClick={() => {
+                  startTest();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2 text-left"
+              >
+                Self Assessment
+              </button>
               <a
-                href="#"
+                href="https://meetyourcolleague.eu/"
+                target="_blank"
                 className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium"
               >
                 MyCo Website
               </a>
-              <a
-                href="#"
-                className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium"
-              >
-                MyLastHandBook
-              </a>
-              <a
+
+              {/* <a
                 href="#"
                 className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium"
               >
                 How To
-              </a>
+              </a> */}
 
               {/* Language Dropdown */}
               <div className="relative">
@@ -112,7 +123,9 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                     className="rounded-sm"
                   />
                   <ChevronDownIcon
-                    className={`w-4 h-4 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`}
+                    className={`w-4 h-4 transition-transform ${
+                      isLanguageOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
 
@@ -246,24 +259,28 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
           {isMobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
               <div className="flex flex-col space-y-4">
+                <button
+                  onClick={() => {
+                    startTest();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2 text-left"
+                >
+                  Self Assessment
+                </button>
                 <a
                   href="#"
                   className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2"
                 >
                   MyCo Website
                 </a>
-                <a
-                  href="#"
-                  className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2"
-                >
-                  MyLastHandBook
-                </a>
-                <a
+
+                {/* <a
                   href="#"
                   className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2"
                 >
                   How To
-                </a>
+                </a> */}
 
                 {/* Mobile Language Selection */}
                 <div className="border-t dark:border-gray-700 pt-4">
@@ -279,10 +296,11 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                           setIsMobileMenuOpen(false);
                         }}
                         className={`flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium
-                        ${selectedLanguage.code === language.code
+                        ${
+                          selectedLanguage.code === language.code
                             ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
                             : "bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-600"
-                          }`}
+                        }`}
                       >
                         <Image
                           src={language.flagSvg}
