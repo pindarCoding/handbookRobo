@@ -219,7 +219,7 @@ export const YourBook = () => {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "custom-handbook.pdf";
+      a.download = "PersonalMyCo-Generational-handbook.pdf";
       document.body.appendChild(a);
       a.click();
       a.remove();
