@@ -1,7 +1,7 @@
 // src/components/handbook/ExportOverlay.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -23,10 +23,16 @@ const FINAL_STEP_DURATION = 800; // Ultimo step più veloce
 
 export const ExportOverlay = ({ isOpen, onComplete }: ExportOverlayProps) => {
   const [currentStep, setCurrentStep] = useState(0);
+  
+  // [SV0030] Refs per evitare chiamate multiple e tracciare i timer
+  const hasCompletedRef = useRef(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    // [SV0030] Reset quando si chiude
     if (!isOpen) {
       setCurrentStep(0);
+      hasCompletedRef.current = false;
       return;
     }
 
@@ -39,10 +45,17 @@ export const ExportOverlay = ({ isOpen, onComplete }: ExportOverlayProps) => {
         // Se siamo all'ultimo step, fermiamo e chiamiamo onComplete
         if (nextStep >= totalSteps) {
           clearInterval(timer);
-          // Piccolo delay prima di chiamare onComplete per mostrare "Ready!"
-          setTimeout(() => {
-            onComplete();
-          }, FINAL_STEP_DURATION);
+          
+          // [SV0030] Guard: chiama onComplete solo se non è già stato chiamato
+          if (!hasCompletedRef.current) {
+            hasCompletedRef.current = true;
+            
+            // [SV0030] Traccia il timeout per poterlo pulire
+            timeoutRef.current = setTimeout(() => {
+              onComplete();
+            }, FINAL_STEP_DURATION);
+          }
+          
           return prev;
         }
 
@@ -50,8 +63,64 @@ export const ExportOverlay = ({ isOpen, onComplete }: ExportOverlayProps) => {
       });
     }, STEP_DURATION);
 
-    return () => clearInterval(timer);
-  }, [isOpen, onComplete]);
+    // [SV0030] Cleanup: pulisci sia interval che timeout
+    return () => {
+      clearInterval(timer);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    };
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]); // [SV0030] Rimosso onComplete dalle dipendenze - usiamo ref per la stabilità
+
+// [SV0030] Ref stabile per onComplete (evita stale closure)
+const onCompleteRef = useRef(onComplete);
+useEffect(() => {
+  onCompleteRef.current = onComplete;
+}, [onComplete]);
+
+useEffect(() => {
+  // [SV0030] Reset quando si chiude
+  if (!isOpen) {
+    setCurrentStep(0);
+    hasCompletedRef.current = false;
+    return;
+  }
+
+  const totalSteps = EXPORT_STEPS.length;
+
+  const timer = setInterval(() => {
+    setCurrentStep((prev) => {
+      const nextStep = prev + 1;
+
+      if (nextStep >= totalSteps) {
+        clearInterval(timer);
+        
+        // [SV0030] Guard: chiama onComplete solo se non è già stato chiamato
+        if (!hasCompletedRef.current) {
+          hasCompletedRef.current = true;
+          
+          timeoutRef.current = setTimeout(() => {
+            onCompleteRef.current(); // [SV0030] Usa il ref!
+          }, FINAL_STEP_DURATION);
+        }
+        
+        return prev;
+      }
+
+      return nextStep;
+    });
+  }, STEP_DURATION);
+
+  return () => {
+    clearInterval(timer);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  };
+}, [isOpen]); // [SV0030] Solo isOpen come dipendenza
 
   const currentStepData = EXPORT_STEPS[currentStep];
   const progress = ((currentStep + 1) / EXPORT_STEPS.length) * 100;
@@ -75,7 +144,6 @@ export const ExportOverlay = ({ isOpen, onComplete }: ExportOverlayProps) => {
           />
 
           {/* Modal - PIÙ GRANDE */}
-          {/* Modal - 3x più grande su Desktop */}
           <motion.div
             className="relative bg-white dark:bg-slate-800 rounded-3xl shadow-2xl 
                        w-full max-w-md md:max-w-3xl lg:max-w-4xl mx-auto overflow-hidden"
@@ -86,7 +154,7 @@ export const ExportOverlay = ({ isOpen, onComplete }: ExportOverlayProps) => {
           >
             {/* Content */}
             <div className="p-8 md:p-10 flex flex-col items-center">
-              {/* GIF Container - 3x più grande su Desktop */}
+              {/* GIF Container */}
               <div
                 className="w-48 h-48 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] mb-8 rounded-2xl 
                             flex items-center justify-center overflow-hidden"
@@ -97,7 +165,7 @@ export const ExportOverlay = ({ isOpen, onComplete }: ExportOverlayProps) => {
                   width={450}
                   height={450}
                   className="w-full h-full object-contain"
-                  unoptimized // Necessario per GIF animate
+                  unoptimized
                   priority
                 />
               </div>
@@ -121,7 +189,7 @@ export const ExportOverlay = ({ isOpen, onComplete }: ExportOverlayProps) => {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Progress Bar - PIÙ SPESSA */}
+              {/* Progress Bar */}
               <div className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
                 <motion.div
                   className="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"

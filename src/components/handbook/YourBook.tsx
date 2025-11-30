@@ -1,14 +1,14 @@
-
+// src/components/handbook/YourBook.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useBook } from "@/components/providers/book-provider";
 import { BookPage } from "@/types/handbook";
 import { BookListItem } from "./BookListItem";
 import { useCards } from "@/hooks/useCards";
 import { useThemes } from "@/hooks/useThemes";
 import { useTranslation } from "@/hooks";
-import { useLanguage } from "@/components/providers/language-provider"; // [SV0001] Import per fallback lingua
+import { useLanguage } from "@/components/providers/language-provider";
 import confetti from "canvas-confetti";
 import { motion, AnimatePresence } from "framer-motion";
 import { bookItemContainer } from "@/data/config/animations";
@@ -20,6 +20,7 @@ export const YourBook = () => {
   const { getThemeById, getSubThemeById } = useThemes();
   const { t } = useTranslation();
   const { language: currentLanguage } = useLanguage();
+  
   // [SV0029] State per export overlay
   const [isExporting, setIsExporting] = useState(false);
 
@@ -28,8 +29,9 @@ export const YourBook = () => {
    * Ora è semplice: i code sono salvati direttamente nel BookPage
    * Priorità: cardCode > subThemeCode > themeCode
    * Fallback ai campi legacy per retrocompatibilità
+   * [SV0030] Memoizzata per stabilità
    */
-  const getPageCode = (page: BookPage): string | null => {
+  const getPageCode = useCallback((page: BookPage): string | null => {
     // [SV0027] Prima prova i nuovi campi CODE-based
     if (page.cardCode) return page.cardCode;
     if (page.subThemeCode) return page.subThemeCode;
@@ -53,7 +55,7 @@ export const YourBook = () => {
     }
 
     return null;
-  };
+  }, [getAllCards, getSubThemeById, getThemeById]);
 
   /**
    * Trasforma il code tassonomico in un filename valido
@@ -65,26 +67,10 @@ export const YourBook = () => {
     return code.replace(/\./g, "-");
   };
 
-
-
-/**
-   * [SV0029] Avvia il processo di export con overlay animato
-   */
-  const handleExportClick = () => {
-    setIsExporting(true);
-  };
-
   /**
-   * [SV0029] Chiamato quando l'animazione dell'overlay è completata
-   * Esegue l'export reale
+   * [SV0030] Funzione per esportare il PDF - Memoizzata
    */
-  const handleOverlayComplete = async () => {
-    await exportHandbook();
-    setIsExporting(false);
-  };
-
-  // Funzione per esportare il PDF
-  const exportHandbook = async () => {
+  const exportHandbook = useCallback(async () => {
     try {
       console.log("🚀 [SV0001] Starting Custom Handbook Export");
       console.log("📚 [SV0001] Total pages in book:", pages.length);
@@ -270,7 +256,24 @@ export const YourBook = () => {
         );
       }
     }
+  }, [pages, currentLanguage, getPageCode]);
+
+  /**
+   * [SV0029] Avvia il processo di export con overlay animato
+   */
+  const handleExportClick = () => {
+    setIsExporting(true);
   };
+
+  /**
+   * [SV0030] Chiamato quando l'animazione dell'overlay è completata
+   * Memoizzato per evitare re-trigger dell'useEffect in ExportOverlay
+   */
+  const handleOverlayComplete = useCallback(async () => {
+    console.log("🎬 [SV0030] handleOverlayComplete called");
+    await exportHandbook();
+    setIsExporting(false);
+  }, [exportHandbook]);
 
   if (pages.length === 0) {
     return (
@@ -336,8 +339,8 @@ export const YourBook = () => {
               })}
             </AnimatePresence>
           </motion.ul>
-          {/* Footer Button */}
 
+          {/* Footer Button */}
           <div className="pt-4">
             <button
               onClick={handleExportClick}
@@ -371,9 +374,9 @@ export const YourBook = () => {
       </div>
 
       {/* [SV0029] Export Overlay */}
-      <ExportOverlay 
-        isOpen={isExporting} 
-        onComplete={handleOverlayComplete} 
+      <ExportOverlay
+        isOpen={isExporting}
+        onComplete={handleOverlayComplete}
       />
     </div>
   );
