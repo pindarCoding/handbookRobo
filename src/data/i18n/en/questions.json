@@ -10,85 +10,85 @@
       "code": "T1.1.Q1",
       "themeCode": "T1",
       "subThemeCode": "T1.1",
-      "question": "This is question 1 - What is the correct answer?",
+      "question": "Which of the following modes of communication is used most frequently by Gen Z?",
       "options": {
-        "a": "1",
-        "b": "2",
-        "c": "3",
-        "d": "4"
+        "a": "Instant Messaging",
+        "b": "Digital Collaboration Tools",
+        "c": "Video Call",
+        "d": "Face to Face Communication4"
       },
       "correctAnswer": "a",
-      "explanation": "The correct answer is already written in the question number: 1"
+      "explanation": "Gen Z are digital natives and rate Instant Messaging as their most important mode of communication, followed by Digital Collaboration Tools and Video Calls. They place little importance on traditional in person and phone communication"
     },
     {
       "code": "T1.2.Q2",
       "themeCode": "T1",
       "subThemeCode": "T1.2",
-      "question": "This is question 2 - What is the correct answer?",
+      "question": "Which generation has the most balanced use of traditional and digital communication channels?",
       "options": {
-        "a": "1",
-        "b": "2",
-        "c": "3",
-        "d": "4"
+        "a": "Gen Z",
+        "b": "Millennials",
+        "c": "Gen X",
+        "d": "Boomers"
       },
       "correctAnswer": "b",
-      "explanation": "The correct answer is already written in the question number: 2"
+      "explanation": "Millennials prefer email, video calls and collaborative tools while also appreciating instant messaging. Face to face meetings and telephone calls are moderately important to this generation."
     },
     {
       "code": "T2.1.Q3",
       "themeCode": "T2",
       "subThemeCode": "T2.1",
-      "question": "This is question 3 - What is the correct answer?",
+      "question": "Which of these issues is most likely to cause conflict in the workplace?",
       "options": {
-        "a": "1",
-        "b": "2",
-        "c": "3",
-        "d": "4"
+        "a": "Lack of common interests",
+        "b": "Voicing disagreement with a team member",
+        "c": "Inappropriate language in relation to gender identify and sexual orientation",
+        "d": "----"
       },
       "correctAnswer": "c",
-      "explanation": "The correct answer is already written in the question number: 3"
+      "explanation": "This is a potential source of identity based intergenerational conflict. Voicing disagreement and a lack of common interests may cause minor misunderstandings which rarely escalate to conflict."
     },
     {
       "code": "T2.2.Q4",
       "themeCode": "T2",
       "subThemeCode": "T2.2",
-      "question": "This is question 4 - What is the correct answer?",
+      "question": "Apart from Identity based conflict which of the following is perceived as a source of workplace conflict by all generations?",
       "options": {
-        "a": "1",
-        "b": "2",
-        "c": "3",
-        "d": "4"
+        "a": "Value Based Conflict",
+        "b": "Organisational Culture",
+        "c": "Behaviour based conflict",
+        "d": "---"
       },
-      "correctAnswer": "d",
+      "correctAnswer": "a",
       "explanation": "The correct answer is already written in the question number: 4"
     },
     {
       "code": "T3.1.Q5",
       "themeCode": "T3",
       "subThemeCode": "T3.1",
-      "question": "This is question 5 - What is the correct answer?",
+      "question": "Which generation believes themselves to be highly skilled at conflict resolution?",
       "options": {
-        "a": "5",
-        "b": "6",
-        "c": "7",
-        "d": "8"
+        "a": "Gen Z",
+        "b": "Millennials",
+        "c": "Gen X",
+        "d": "Boomers"
       },
       "correctAnswer": "a",
-      "explanation": "The correct answer is already written in the question number: 5"
+      "explanation": "Gen Z believe that their skills in communication, empathy, problem solving and adaptability are more highly developed than the rating given to them by other generations, most notably in the area of adaptability. Older generations perceive Gen Z to be highly idealistic but due to their youth, lacking the real-life experience to be effective conflict resolvers in a multigenerational workforce."
     },
     {
       "code": "T3.2.Q6",
       "themeCode": "T3",
       "subThemeCode": "T3.2",
-      "question": "This is question 6 - What is the correct answer?",
+      "question": "Which of these conflict prevention strategies is preferred across all generations?",
       "options": {
-        "a": "5",
-        "b": "6",
-        "c": "7",
-        "d": "8"
+        "a": "Regular Social Interaction",
+        "b": "Regular Customised Feedback",
+        "c": "7Culture of Open Dialogue",
+        "d": "Intergenerational Teams"
       },
-      "correctAnswer": "b",
-      "explanation": "The correct answer is already written in the question number: 6"
+      "correctAnswer": "c",
+      "explanation": "A Culture of Open Dialogue is seen as an effective tool in preventing conflict in the first instance, and as potential means of resolving conflict when it does arise. A culture where employees feel seen and heard, where there are opportunities for cross generational collaboration and mentorship and where there is clarity around communication fosters understanding and trust."
     },
     {
       "code": "T4.1.Q7",
