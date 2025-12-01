@@ -1,9 +1,9 @@
 {
   "meta": {
-    "version": "1.0.0-placeholder",
-    "totalQuestions": 10,
-    "questionsPerTheme": 2,
-    "note": "Placeholder questions for development. Replace with real content."
+    "version": "1.0.0",
+    "totalQuestions": 30,
+    "questionsPerTheme": 6,
+    "description": "MYCo Generational Handbook - Self Assessment Questions"
   },
   "questions": [
     {
@@ -15,15 +15,15 @@
         "a": "Instant Messaging",
         "b": "Digital Collaboration Tools",
         "c": "Video Call",
-        "d": "Face to Face Communication4"
+        "d": "Email"
       },
       "correctAnswer": "a",
-      "explanation": "Gen Z are digital natives and rate Instant Messaging as their most important mode of communication, followed by Digital Collaboration Tools and Video Calls. They place little importance on traditional in person and phone communication"
+      "explanation": "Gen Z are digital natives and rate Instant Messaging as their most important mode of communication, followed by Digital Collaboration Tools and Video Calls. They place little importance on traditional in person and phone communication."
     },
     {
-      "code": "T1.2.Q2",
+      "code": "T1.1.Q2",
       "themeCode": "T1",
-      "subThemeCode": "T1.2",
+      "subThemeCode": "T1.1",
       "question": "Which generation has the most balanced use of traditional and digital communication channels?",
       "options": {
         "a": "Gen Z",
@@ -35,37 +35,37 @@
       "explanation": "Millennials prefer email, video calls and collaborative tools while also appreciating instant messaging. Face to face meetings and telephone calls are moderately important to this generation."
     },
     {
-      "code": "T2.1.Q3",
-      "themeCode": "T2",
-      "subThemeCode": "T2.1",
+      "code": "T1.2.Q3",
+      "themeCode": "T1",
+      "subThemeCode": "T1.2",
       "question": "Which of these issues is most likely to cause conflict in the workplace?",
       "options": {
         "a": "Lack of common interests",
         "b": "Voicing disagreement with a team member",
-        "c": "Inappropriate language in relation to gender identify and sexual orientation",
-        "d": "----"
+        "c": "Inappropriate language in relation to gender identity and sexual orientation",
+        "d": "Different working hours preferences"
       },
       "correctAnswer": "c",
       "explanation": "This is a potential source of identity based intergenerational conflict. Voicing disagreement and a lack of common interests may cause minor misunderstandings which rarely escalate to conflict."
     },
     {
-      "code": "T2.2.Q4",
-      "themeCode": "T2",
-      "subThemeCode": "T2.2",
+      "code": "T1.2.Q4",
+      "themeCode": "T1",
+      "subThemeCode": "T1.2",
       "question": "Apart from Identity based conflict which of the following is perceived as a source of workplace conflict by all generations?",
       "options": {
         "a": "Value Based Conflict",
         "b": "Organisational Culture",
         "c": "Behaviour based conflict",
-        "d": "---"
+        "d": "Technology preferences"
       },
       "correctAnswer": "a",
-      "explanation": "The correct answer is already written in the question number: 4"
+      "explanation": "Value based conflict encompasses ethical disagreements, attitudes to diversity and inclusion, respect for authority, interest in social and environmental responsibility and much more. Value Based Conflict is the second most likely source of intergenerational conflict in the workplace."
     },
     {
-      "code": "T3.1.Q5",
-      "themeCode": "T3",
-      "subThemeCode": "T3.1",
+      "code": "T1.3.Q5",
+      "themeCode": "T1",
+      "subThemeCode": "T1.3",
       "question": "Which generation believes themselves to be highly skilled at conflict resolution?",
       "options": {
         "a": "Gen Z",
@@ -77,74 +77,354 @@
       "explanation": "Gen Z believe that their skills in communication, empathy, problem solving and adaptability are more highly developed than the rating given to them by other generations, most notably in the area of adaptability. Older generations perceive Gen Z to be highly idealistic but due to their youth, lacking the real-life experience to be effective conflict resolvers in a multigenerational workforce."
     },
     {
-      "code": "T3.2.Q6",
-      "themeCode": "T3",
-      "subThemeCode": "T3.2",
+      "code": "T1.3.Q6",
+      "themeCode": "T1",
+      "subThemeCode": "T1.3",
       "question": "Which of these conflict prevention strategies is preferred across all generations?",
       "options": {
         "a": "Regular Social Interaction",
         "b": "Regular Customised Feedback",
-        "c": "7Culture of Open Dialogue",
-        "d": "Intergenerational Teams"
+        "c": "Culture of Open Dialogue",
+        "d": "Formal Conflict Resolution Policies"
       },
       "correctAnswer": "c",
       "explanation": "A Culture of Open Dialogue is seen as an effective tool in preventing conflict in the first instance, and as potential means of resolving conflict when it does arise. A culture where employees feel seen and heard, where there are opportunities for cross generational collaboration and mentorship and where there is clarity around communication fosters understanding and trust."
     },
     {
-      "code": "T4.1.Q7",
-      "themeCode": "T4",
-      "subThemeCode": "T4.1",
-      "question": "This is question 7 - What is the correct answer?",
+      "code": "T2.1.Q1",
+      "themeCode": "T2",
+      "subThemeCode": "T2.1",
+      "question": "Which strategy best addresses intersectional discrimination for all generations?",
       "options": {
-        "a": "5",
-        "b": "6",
-        "c": "7",
-        "d": "8"
+        "a": "Only provide training to younger employees",
+        "b": "Focus exclusively on gender diversity initiatives",
+        "c": "Implement mentorship, inclusive policies and training that consider multiple intersecting identities",
+        "d": "Encourage employees to solve discrimination issues individually without guidance"
       },
       "correctAnswer": "c",
-      "explanation": "The correct answer is already written in the question number: 7"
+      "explanation": "Intersectional approaches must address multiple identities across generations; mentoring, policies and training ensure systemic support."
     },
     {
-      "code": "T4.2.Q8",
-      "themeCode": "T4",
-      "subThemeCode": "T4.2",
-      "question": "This is question 8 - What is the correct answer?",
+      "code": "T2.1.Q2",
+      "themeCode": "T2",
+      "subThemeCode": "T2.1",
+      "question": "Why might Baby Boomers report fewer experiences of intersectional discrimination compared to younger generations?",
       "options": {
-        "a": "5",
-        "b": "6",
-        "c": "7",
-        "d": "8"
-      },
-      "correctAnswer": "d",
-      "explanation": "The correct answer is already written in the question number: 8"
-    },
-    {
-      "code": "T5.1.Q9",
-      "themeCode": "T5",
-      "subThemeCode": "T5.1",
-      "question": "This is question 9 - What is the correct answer?",
-      "options": {
-        "a": "9",
-        "b": "10",
-        "c": "11",
-        "d": "12"
-      },
-      "correctAnswer": "a",
-      "explanation": "The correct answer is already written in the question number: 9"
-    },
-    {
-      "code": "T5.2.Q10",
-      "themeCode": "T5",
-      "subThemeCode": "T5.2",
-      "question": "This is question 10 - What is the correct answer?",
-      "options": {
-        "a": "9",
-        "b": "10",
-        "c": "11",
-        "d": "12"
+        "a": "They experience no discrimination",
+        "b": "Their position in hierarchies and cultural norms may shield them, though disability remains a key issue",
+        "c": "They are naturally more resilient to discrimination",
+        "d": "Intersectionality does not apply to older employees"
       },
       "correctAnswer": "b",
-      "explanation": "The correct answer is already written in the question number: 10"
+      "explanation": "Baby Boomers often hold senior roles or benefit from established authority, which can buffer them from certain forms of discrimination, though disability based discrimination still features highly."
+    },
+    {
+      "code": "T2.2.Q3",
+      "themeCode": "T2",
+      "subThemeCode": "T2.2",
+      "question": "Which of the following best describes the interaction between age and other identity factors in workplace discrimination?",
+      "options": {
+        "a": "Age is the only determinant of discrimination",
+        "b": "Age and other factors such as gender or ethnicity operate independently",
+        "c": "Age has no influence compared to other factors",
+        "d": "Age often intersects with other identity markers, amplifying disadvantage"
+      },
+      "correctAnswer": "d",
+      "explanation": "Age often intersects with other identity markers, amplifying disadvantage. Discrimination emerges from overlapping characteristics, such as gender, ethnicity, or disability, creating compounded experiences of exclusion."
+    },
+    {
+      "code": "T2.2.Q4",
+      "themeCode": "T2",
+      "subThemeCode": "T2.2",
+      "question": "Which generation is most frequently associated with supporting victims of discriminatory comments?",
+      "options": {
+        "a": "Baby Boomers",
+        "b": "Generation X",
+        "c": "Millennials",
+        "d": "Generation Z"
+      },
+      "correctAnswer": "c",
+      "explanation": "Millennials are the most frequently reported as offering support to colleagues facing discrimination, reflecting a strong generational orientation toward inclusivity and fairness."
+    },
+    {
+      "code": "T2.3.Q5",
+      "themeCode": "T2",
+      "subThemeCode": "T2.3",
+      "question": "An employee reports feeling disadvantaged at work due to being both young and living with a disability. Your best initial response is to:",
+      "options": {
+        "a": "Remind them that everyone has challenges",
+        "b": "Direct them to HR without further discussion",
+        "c": "Listen carefully, acknowledge the intersectional nature of their experience, and explain available support",
+        "d": "Suggest they focus on proving themselves through harder work"
+      },
+      "correctAnswer": "c",
+      "explanation": "Acknowledging both aspects of their identity validates their concern and demonstrates awareness of intersectional discrimination. Referring to resources should be done after showing empathy and understanding."
+    },
+    {
+      "code": "T2.3.Q6",
+      "themeCode": "T2",
+      "subThemeCode": "T2.3",
+      "question": "Which of the following best describes a strong organisational strategy to reduce intersectional discrimination?",
+      "options": {
+        "a": "Anonymous reporting mechanisms combined with clear follow-up actions",
+        "b": "Occasional awareness events about generational differences",
+        "c": "Informal discussions left to individual managers",
+        "d": "Relying on leadership goodwill without formal policy"
+      },
+      "correctAnswer": "a",
+      "explanation": "Anonymous reporting ensures employees feel safe, while follow-up action shows commitment. Without structural backing, awareness alone risks being symbolic."
+    },
+    {
+      "code": "T3.1.Q1",
+      "themeCode": "T3",
+      "subThemeCode": "T3.1",
+      "question": "Which of the following best illustrates skills inequality in the workplace?",
+      "options": {
+        "a": "Employees in rural areas struggle with unreliable internet connections during virtual meetings",
+        "b": "Some workers use digital tools only for basic tasks while others use them for innovation",
+        "c": "Younger employees quickly adapt to new collaboration software, while older employees require additional training",
+        "d": "A company's hierarchical culture discourages staff from experimenting with new digital tools"
+      },
+      "correctAnswer": "c",
+      "explanation": "Skills inequality refers to disparities in employees' ability and confidence to use digital tools effectively. It often arises from generational differences or unequal access to digital education and training."
+    },
+    {
+      "code": "T3.1.Q2",
+      "themeCode": "T3",
+      "subThemeCode": "T3.1",
+      "question": "What is one major consequence of unaddressed digital inequality for organizations?",
+      "options": {
+        "a": "Increased participation in intergenerational mentorship programs",
+        "b": "Reduced productivity and innovation due to unequal digital skills and access",
+        "c": "Improved employee retention and satisfaction",
+        "d": "Greater consistency in communication styles across generations"
+      },
+      "correctAnswer": "b",
+      "explanation": "When digital inequality is not addressed, organizations face reduced productivity, innovation stagnation, and higher turnover rates. Employees lacking tools or digital skills struggle to perform efficiently."
+    },
+    {
+      "code": "T3.2.Q3",
+      "themeCode": "T3",
+      "subThemeCode": "T3.2",
+      "question": "Which of the following best represents an effective strategy for enhancing digital access in the workplace?",
+      "options": {
+        "a": "Encouraging employees to use their personal devices and internet connections for work",
+        "b": "Requiring employees to pay for their own digital tools to promote responsibility",
+        "c": "Providing standardized devices and subsidizing internet access to ensure equal participation",
+        "d": "Allowing only senior employees access to premium digital tools to increase efficiency"
+      },
+      "correctAnswer": "c",
+      "explanation": "Enhancing digital access means ensuring that all employees have reliable devices and connectivity. Providing standardized equipment and internet subsidies reduces socio-economic disparities and ensures consistent participation."
+    },
+    {
+      "code": "T3.2.Q4",
+      "themeCode": "T3",
+      "subThemeCode": "T3.2",
+      "question": "What is a key characteristic of an inclusive digital culture within organizations?",
+      "options": {
+        "a": "Employees avoid admitting difficulties with digital tools to maintain professionalism",
+        "b": "Leaders model openness to learning and create psychological safety for employees to seek help",
+        "c": "Mistakes in using digital tools are penalized to maintain high performance standards",
+        "d": "Digital training is treated as a one-time event rather than a continuous process"
+      },
+      "correctAnswer": "b",
+      "explanation": "An inclusive digital culture promotes psychological safety, where employees can openly seek help and learn without fear of judgment. When leaders model curiosity and acknowledge their own learning gaps, it normalizes continuous digital growth."
+    },
+    {
+      "code": "T3.3.Q5",
+      "themeCode": "T3",
+      "subThemeCode": "T3.3",
+      "question": "What is the most effective long-term approach to reducing digital inequality in organizations?",
+      "options": {
+        "a": "Providing employees with high-quality devices once and expecting them to self-learn",
+        "b": "Outsourcing all training and digital transformation initiatives",
+        "c": "Focusing only on younger generations since they adapt faster to new technologies",
+        "d": "Embedding digital inclusion into culture, leadership, and continuous learning practices"
+      },
+      "correctAnswer": "d",
+      "explanation": "Bridging digital inequality requires a holistic and sustained strategy. This includes leadership engagement, a culture of openness to learning, inclusive access to tools, and ongoing upskilling."
+    },
+    {
+      "code": "T3.3.Q6",
+      "themeCode": "T3",
+      "subThemeCode": "T3.3",
+      "question": "Which of the following best captures why digital inequality has become a central concern for modern organizations?",
+      "options": {
+        "a": "Because unequal access to and use of digital tools affects productivity, inclusion, and career opportunities",
+        "b": "Because technology is replacing all human roles in the workplace",
+        "c": "Because digital tools are optional and only relevant for remote workers",
+        "d": "Because digital inequality only impacts low-income countries"
+      },
+      "correctAnswer": "a",
+      "explanation": "Digital inequality matters because it directly influences who can participate fully in modern work environments. Unequal access, skills, and confidence with digital tools create barriers to collaboration, productivity, and advancement."
+    },
+    {
+      "code": "T4.1.Q1",
+      "themeCode": "T4",
+      "subThemeCode": "T4.1",
+      "question": "Imagine you are working in a multicultural, multigenerational team with colleagues from Germany, Poland, Italy and Portugal. Which scenarios are more likely to occur?",
+      "options": {
+        "a": "German GenZ colleagues might be bossy",
+        "b": "Baby Boomers from Italy might show paternalistic attitudes young colleagues from Germany might not appreciate",
+        "c": "There is no generational difference in terms of appreciation of hierarchical structures",
+        "d": "When working together Gen X from Ireland and Poland will have the same attitude towards hierarchy"
+      },
+      "correctAnswer": "b",
+      "explanation": "Research shows that generations have different attitudes towards hierarchy. Older generations across all cultures seem to appreciate hierarchy and status more than younger generations."
+    },
+    {
+      "code": "T4.1.Q2",
+      "themeCode": "T4",
+      "subThemeCode": "T4.1",
+      "question": "What would be the most effective organisational approach to reduce intergenerational tension regarding hierarchy in multicultural teams?",
+      "options": {
+        "a": "Implement formal and clearly defined reporting lines",
+        "b": "Offer intergenerational dialogue workshops where employees from different cultures and age groups can discuss their expectations around hierarchy, authority, and cooperation",
+        "c": "Allow each cultural group to follow its own preferred hierarchy model",
+        "d": "Avoid addressing hierarchy directly, as such discussions might make older employees uncomfortable and increase conflict"
+      },
+      "correctAnswer": "b",
+      "explanation": "Promoting a culture of dialogue seems the best accepted way by all generations to promote reciprocal understanding and fostering a positive attitude towards collaboration in multicultural teams."
+    },
+    {
+      "code": "T4.2.Q3",
+      "themeCode": "T4",
+      "subThemeCode": "T4.2",
+      "question": "Which of the following approaches would be most effective for an international and intergenerational project team that includes members from both high and low uncertainty-avoidance cultures?",
+      "options": {
+        "a": "Establish very detailed procedures for every task and require strict adherence from all team members to ensure consistency across cultures",
+        "b": "Allow each team member to decide independently how to complete tasks, without any shared guidelines, to encourage creativity and autonomy",
+        "c": "Combine clear basic structures (such as documented goals and workflows) with room for flexibility in how tasks are carried out",
+        "d": "Avoid discussing cultural preferences around structure and flexibility, since addressing them might increase tension within the team"
+      },
+      "correctAnswer": "c",
+      "explanation": "Recognising that team members from high uncertainty-avoidance cultures need clarity and predictability, while those from low uncertainty-avoidance cultures value flexibility and innovation shows appreciation of both, culture and generations."
+    },
+    {
+      "code": "T4.2.Q4",
+      "themeCode": "T4",
+      "subThemeCode": "T4.2",
+      "question": "How does the concept of uncertainty avoidance help explain the cultural differences reflected in the generational workplace trends described in the conducted research?",
+      "options": {
+        "a": "Younger generations—shaped by globalisation and digitalisation—show attitudes closer to low uncertainty avoidance cultures, favouring flexibility, speed and experimentation",
+        "b": "Cultural differences disappear when younger generations adopt new technologies, since uncertainty avoidance no longer plays a role",
+        "c": "High uncertainty avoidance always leads to hierarchical workplaces, regardless of cultural or generational context",
+        "d": "Differences in working styles are mainly due to individual personality traits, not to cultural backgrounds"
+      },
+      "correctAnswer": "a",
+      "explanation": "National culture and generational change interact in a way that even in high uncertainty-avoidance cultures, younger generations are moving toward values typical of low uncertainty-avoidance societies, influencing how work is organised."
+    },
+    {
+      "code": "T4.3.Q5",
+      "themeCode": "T4",
+      "subThemeCode": "T4.3",
+      "question": "How can differences in direct and indirect communication styles across cultures and generations lead to misunderstandings in the workplace?",
+      "options": {
+        "a": "Older generations use indirect communication only when they are uncertain about the topic being discussed",
+        "b": "Direct communication is always clearer and therefore preferable in multicultural and multigenerational settings",
+        "c": "Communication misunderstandings occur mainly because younger generations lack respect for traditional workplace hierarchies",
+        "d": "Older employees from high-context cultures may communicate indirectly and formally, which younger colleagues might interpret as vague or evasive"
+      },
+      "correctAnswer": "d",
+      "explanation": "Direct–indirect communication differences relate to both cultural context (high- vs. low-context communication) and generational style (formality vs. informality). It explains why younger, more direct colleagues may be perceived as aggressive, while older or more indirect communicators may be seen as unclear."
+    },
+    {
+      "code": "T4.3.Q6",
+      "themeCode": "T4",
+      "subThemeCode": "T4.3",
+      "question": "How can differences in communication behaviour impact on intergenerational and multicultural teams?",
+      "options": {
+        "a": "Communication differences have little real impact on intergenerational and intercultural teamwork, since professional standards ensure everyone communicates in the same way regardless of culture or age",
+        "b": "Misunderstandings between generations occur mainly because older employees resist new technologies such as email, rather than due to differing communication norms or cultural expectations",
+        "c": "Differences in communication behaviour — such as levels of directness, formality, and response time — can easily lead to misunderstandings and tension",
+        "d": "Silence or delayed responses in communication between cultures always indicate disagreement or lack of engagement, so managers should encourage immediate replies to maintain productivity"
+      },
+      "correctAnswer": "c",
+      "explanation": "Directness, formality, and response time vary across cultures and generations, affecting how messages are interpreted. Younger generations may be less indirect that older ones."
+    },
+    {
+      "code": "T5.1.Q1",
+      "themeCode": "T5",
+      "subThemeCode": "T5.1",
+      "question": "Which of the following values is most often associated with Generation X?",
+      "options": {
+        "a": "Respect for authority",
+        "b": "Autonomy and work-life balance",
+        "c": "Rapid feedback and inclusion",
+        "d": "Loyalty to one employer"
+      },
+      "correctAnswer": "b",
+      "explanation": "Generation X experienced a time of economic instability and changes within corporations. They typically prioritize independence, adaptability, and equity, placing a high importance on autonomy and balance in their lives."
+    },
+    {
+      "code": "T5.1.Q2",
+      "themeCode": "T5",
+      "subThemeCode": "T5.1",
+      "question": "Which value is consistently important across all generations?",
+      "options": {
+        "a": "Exclusivity",
+        "b": "High salaries",
+        "c": "Respect and collaboration",
+        "d": "Authority and hierarchy"
+      },
+      "correctAnswer": "c",
+      "explanation": "Research indicates that, regardless of varying emphases, all generations place a high value on respect, collaboration, and a nurturing environment. These mutual values form a foundation for cooperation in the workplace."
+    },
+    {
+      "code": "T5.2.Q3",
+      "themeCode": "T5",
+      "subThemeCode": "T5.2",
+      "question": "Which factor is a strong motivator for Millennials?",
+      "options": {
+        "a": "Job security and loyalty to one employer",
+        "b": "Purpose and opportunities for growth",
+        "c": "Strict hierarchies and formal processes",
+        "d": "Avoiding digital tools"
+      },
+      "correctAnswer": "b",
+      "explanation": "Millennials are driven by work that has significance, chances for advancement, and compatibility with their personal beliefs. Although stability matters, they perform best in settings that offer growth and a sense of purpose."
+    },
+    {
+      "code": "T5.2.Q4",
+      "themeCode": "T5",
+      "subThemeCode": "T5.2",
+      "question": "What is a common demotivator for Generation Z?",
+      "options": {
+        "a": "Too much feedback",
+        "b": "Lack of flexibility and poor communication",
+        "c": "Too many hybrid work options",
+        "d": "Mentoring opportunities"
+      },
+      "correctAnswer": "b",
+      "explanation": "Generation Z, being born into the digital age, anticipates adaptability and clear communication. They lose motivation when these elements are lacking or when systems are overly strict and unclear."
+    },
+    {
+      "code": "T5.3.Q5",
+      "themeCode": "T5",
+      "subThemeCode": "T5.3",
+      "question": "What collaboration style is most comfortable for Baby Boomers?",
+      "options": {
+        "a": "Hierarchical structures and face-to-face meetings",
+        "b": "Digital-first and remote-only communication",
+        "c": "Informal chat-based collaboration",
+        "d": "Complete independence without teamwork"
+      },
+      "correctAnswer": "a",
+      "explanation": "Members of the Baby Boomer generation are familiar with conventional frameworks and prioritize straightforward, personal interactions. Although they have adjusted to using digital tools, they still prefer in-person, organized teamwork."
+    },
+    {
+      "code": "T5.3.Q6",
+      "themeCode": "T5",
+      "subThemeCode": "T5.3",
+      "question": "Which approach helps to bridge generational gaps in collaboration?",
+      "options": {
+        "a": "Ignoring generational differences",
+        "b": "Relying only on rigid hierarchies",
+        "c": "Discouraging hybrid work",
+        "d": "Reverse mentoring and open dialogue"
+      },
+      "correctAnswer": "d",
+      "explanation": "Reverse mentoring enables younger staff members to impart their digital expertise while gaining insights from the experiences of their senior co-workers. When paired with open communication, this cultivates mutual respect and enhances collaboration across different age groups."
     }
   ]
 }
