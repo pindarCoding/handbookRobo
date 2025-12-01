@@ -3,7 +3,7 @@
     "GZ": {
       "id": "work-values-genz",
       "code": "T5.1.GZ",
-      "title": "Gen Z: Workplace Values",
+      "title": "GZ: Workplace Values Across Generations",
       "color": "purple",
       "description": "Priority on flexibility, company purpose, social impact and mental wellbeing",
       "pageId": 7,
@@ -15,7 +15,7 @@
     "GM": {
       "id": "work-values-millennial",
       "code": "T5.1.GM",
-      "title": "Millennial: Workplace Values",
+      "title": "GM: Workplace Values Across Generations",
       "color": "purple",
       "description": "Focus on personal growth, career opportunities and meaningful work",
       "pageId": 3,
@@ -27,7 +27,7 @@
     "GX": {
       "id": "work-values-genx",
       "code": "T5.1.GX",
-      "title": "Gen X: Workplace Values",
+      "title": "GX: Workplace Values Across Generations",
       "color": "purple",
       "description": "Valuing autonomy, efficiency and work-life balance",
       "pageId": 9,
@@ -39,7 +39,7 @@
     "GB": {
       "id": "work-values-boomer",
       "code": "T5.1.GB",
-      "title": "Boomer: Workplace Values",
+      "title": "GB: Workplace Values Across Generations",
       "color": "purple",
       "description": "Focus on company loyalty, traditional work ethic and hierarchy",
       "pageId": 2,
@@ -53,7 +53,7 @@
     "GZ": {
       "id": "work-motivation-genz",
       "code": "T5.2.GZ",
-      "title": "Gen Z: Instant Feedback & Learning",
+      "title": "GZ: Motivation and Demotivation",
       "color": "orange",
       "description": "Motivated by immediate recognition and continuous learning",
       "pageId": 5,
@@ -65,7 +65,7 @@
     "GM": {
       "id": "work-motivation-millennial",
       "code": "T5.2.GM",
-      "title": "Millennial: Purpose & Collaboration",
+      "title": "GM: Motivation and Demotivation",
       "color": "orange",
       "description": "Motivated by value alignment and team success",
       "pageId": 8,
@@ -77,7 +77,7 @@
     "GX": {
       "id": "work-motivation-genx",
       "code": "T5.2.GX",
-      "title": "Gen X: Results & Autonomy",
+      "title": "GX: Motivation and Demotivation",
       "color": "orange",
       "description": "Motivated by concrete results, clear goals and operational freedom",
       "pageId": 4,
@@ -89,7 +89,7 @@
     "GB": {
       "id": "work-motivation-boomer",
       "code": "T5.2.GB",
-      "title": "Boomer: Achievement & Recognition",
+      "title": "GB: Motivation and Demotivation",
       "color": "orange",
       "description": "Motivated by formal recognition and career progression",
       "pageId": 10,
@@ -103,7 +103,7 @@
     "GZ": {
       "id": "work-styles-genz",
       "code": "T5.3.GZ",
-      "title": "Gen Z: Digital & Async",
+      "title": "GZ: Work Styles and Collaboration",
       "color": "cyan",
       "description": "Digital collaboration with comfort for async and remote work",
       "pageId": 1,
@@ -115,7 +115,7 @@
     "GM": {
       "id": "work-styles-millennial",
       "code": "T5.3.GM",
-      "title": "Millennial: Agile & Open",
+      "title": "GM: Work Styles and Collaboration",
       "color": "cyan",
       "description": "Agile approach with cross-functional collaboration and open environments",
       "pageId": 6,
@@ -127,7 +127,7 @@
     "GX": {
       "id": "work-styles-genx",
       "code": "T5.3.GX",
-      "title": "Gen X: Pragmatic & Efficient",
+      "title": "GX: Work Styles and Collaboration",
       "color": "cyan",
       "description": "Pragmatic style balancing traditional and digital methods",
       "pageId": 3,
@@ -139,7 +139,7 @@
     "GB": {
       "id": "work-styles-boomer",
       "code": "T5.3.GB",
-      "title": "Boomer: Structured & Formal",
+      "title": "GB: Work Styles and Collaboration",
       "color": "cyan",
       "description": "Preference for structured processes, formal communication and clear hierarchies",
       "pageId": 9,

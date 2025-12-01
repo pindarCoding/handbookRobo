@@ -39,7 +39,7 @@
     "GB": {
       "id": "communication-gb",
       "code": "T1.1.GB",
-      "title": "GB:Communication Channel Confusion and Response Expectations",
+      "title": "GB: Communication Channel Confusion and Response Expectations",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -65,7 +65,7 @@
     "GM": {
       "id": "communication",
       "code": "T1.2.GM",
-      "title": "GM:Identity and Value Based Conflict",
+      "title": "GM: Identity and Value Based Conflict",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -77,7 +77,7 @@
     "GX": {
       "id": "communication",
       "code": "T1.2.GX",
-      "title": "Identity and Value Based Conflict",
+      "title": "GX: Identity and Value Based Conflict",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -89,7 +89,7 @@
     "GB": {
       "id": "communication",
       "code": "T1.2.GB",
-      "title": "Identity and Value Based Conflict",
+      "title": "GB: Identity and Value Based Conflict",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -103,7 +103,7 @@
     "GZ": {
       "id": "communication",
       "code": "T1.3.GZ",
-      "title": "The Role of Open Dialogue and Social Interaction",
+      "title": "GZ: The Role of Open Dialogue and Social Interaction",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -115,7 +115,7 @@
     "GM": {
       "id": "communication",
       "code": "T1.3.GM",
-      "title": "The Role of Open Dialogue and Social Interaction",
+      "title": "GM: The Role of Open Dialogue and Social Interaction",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -127,7 +127,7 @@
     "GX": {
       "id": "communication",
       "code": "T1.3.GX",
-      "title": "The Role of Open Dialogue and Social Interaction",
+      "title": "GX: The Role of Open Dialogue and Social Interaction",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -139,7 +139,7 @@
     "GB": {
       "id": "communication",
       "code": "T1.3.GB",
-      "title": "The Role of Open Dialogue and Social Interaction",
+      "title": "GB: The Role of Open Dialogue and Social Interaction",
       "color": "",
       "description": "",
       "pageId": 0,

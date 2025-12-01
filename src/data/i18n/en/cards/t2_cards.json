@@ -3,7 +3,7 @@
     "GZ": {
       "id": "",
       "code": "T2.1.GZ",
-      "title": "Generation Z: Hierarchy",
+      "title": "GZ: Intersectional Discrimination & Power Asymmetries",
       "color": "orange",
       "description": "",
       "pageId": 0,
@@ -15,7 +15,7 @@
     "GM": {
       "id": "",
       "code": "T2.1.GM",
-      "title": "Millenials: Hierarchy",
+      "title": "GM: Intersectional Discrimination & Power Asymmetries",
       "color": "orange",
       "description": "",
       "pageId": 0,
@@ -27,7 +27,7 @@
     "GX": {
       "id": "",
       "code": "T2.1.GX",
-      "title": "Generation X: Hierarchy",
+      "title": "GX: Intersectional Discrimination & Power Asymmetries",
       "color": "orange",
       "description": "",
       "pageId": 0,
@@ -39,7 +39,7 @@
     "GB": {
       "id": "",
       "code": "T2.1.GB",
-      "title": "Baby Boomers: Hierarchy",
+      "title": "GB: Intersectional Discrimination & Power Asymmetries",
       "color": "orange",
       "description": "",
       "pageId": 0,
@@ -53,7 +53,7 @@
     "GZ": {
       "id": "",
       "code": "T2.2.GZ",
-      "title": "Generation Z: Uncertainty Avoidance",
+      "title": "GZ: Patterns of Voice, Victimhood and Support",
       "color": "magenta",
       "description": "",
       "pageId": 0,
@@ -65,7 +65,7 @@
     "GM": {
       "id": "",
       "code": "T2.2.GM",
-      "title": "Millenials: Uncertainty Avoidance",
+      "title": "GM: Patterns of Voice, Victimhood and Support",
       "color": "magenta",
       "description": "",
       "pageId": 0,
@@ -77,7 +77,7 @@
     "GX": {
       "id": "",
       "code": "T2.2.GX",
-      "title": "Generation X: Uncertainty Avoidance",
+      "title": "GX: Patterns of Voice, Victimhood and Support",
       "color": "",
       "description": "",
       "pageId": 0,
@@ -89,7 +89,7 @@
     "GB": {
       "id": "",
       "code": "T2.2.GB",
-      "title": "Baby Boomers: Uncertainty Avoidance",
+      "title": "GB: Patterns of Voice, Victimhood and Support",
       "color": "magenta",
       "description": "",
       "pageId": 0,
@@ -103,7 +103,7 @@
     "GZ": {
       "id": "",
       "code": "T2.3.GZ",
-      "title": "Gemeration Z: Communication",
+      "title": "GZ: Strategies to Avoid and Tackle Intersectional Differences at Work",
       "color": "purple",
       "description": "",
       "pageId": 0,
@@ -115,7 +115,7 @@
     "GM": {
       "id": "",
       "code": "T2.3.GM",
-      "title": "Millenials: Communication",
+      "title": "GM: Strategies to Avoid and Tackle Intersectional Differences at Work",
       "color": "purple",
       "description": "",
       "pageId": 0,
@@ -127,7 +127,7 @@
     "GX": {
       "id": "",
       "code": "T2.3.GX",
-      "title": "Generation X: Communication",
+      "title": "GX: Strategies to Avoid and Tackle Intersectional Differences at Work",
       "color": "purple",
       "description": "",
       "pageId": 0,
@@ -139,7 +139,7 @@
     "GB": {
       "id": "",
       "code": "T2.3.GB",
-      "title": "Baby Boomers: Communication",
+      "title": "GB: Strategies to Avoid and Tackle Intersectional Differences at Work",
       "color": "purple",
       "description": "",
       "pageId": 0,
