@@ -42,23 +42,26 @@ export function BookProvider({ children }: { children: ReactNode }) {
     }
   }, [pages])
 
-  /**
-   * [SV0027] Crea un BookPage per il SubTheme padre di una Card
-   * Usa i campi CODE-based come fonte di verità
+/**
+   * [SV0031] Crea un BookPage per il SubTheme padre di una Card
+   * Usa subThemeTitle passato dalla card (titolo corretto da themes.json)
    */
   const createSubThemePage = (cardPage: Omit<BookPage, 'addedAt' | 'language'>): Omit<BookPage, 'addedAt' | 'language'> => {
-    // Estrai info dal titolo della card (es: "Gen Z: Workplace Values")
-    const cardTitle = cardPage.title
+    // [SV0031] Usa il titolo corretto del SubTheme (passato da MainContent)
+    // Fallback al vecchio metodo se subThemeTitle non è presente
+    const title = cardPage.subThemeTitle 
+      || (cardPage.title.includes(':') ? cardPage.title.split(':')[1].trim() : cardPage.title)
     
-    // Rimuovi la parte generation dal titolo (tutto prima del ":")
-    const subThemeTitle = cardTitle.includes(':') 
-      ? cardTitle.split(':')[1].trim() 
-      : cardTitle
+    console.log('[SV0031] Creating SubTheme page:', {
+      code: cardPage.subThemeCode,
+      title: title,
+      fromSubThemeTitle: !!cardPage.subThemeTitle
+    })
     
     return {
       // [SV0027] ID basato su subThemeCode (univoco)
       id: cardPage.subThemeCode || `${cardPage.themeId}-${cardPage.subThemeId}`,
-      title: subThemeTitle,
+      title: title,
       // [SV0027] CODE-based fields
       themeCode: cardPage.themeCode,
       subThemeCode: cardPage.subThemeCode,

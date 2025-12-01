@@ -83,6 +83,8 @@ export const MainContent = ({
         themeCode: selectedTheme.code,
         subThemeCode: selectedSubTheme.code,
         cardCode: selectedCard.code,
+        subThemeTitle: selectedSubTheme.title,
+
         // Legacy fields (deprecati)
         themeId: selectedTheme.id,
         subThemeId: selectedSubTheme.id,

@@ -71,16 +71,22 @@ export interface Card {
 export interface BookPage {
   id: string
   title: string
-
+  
   // ✅ CODE-based fields (SV0027) - Fonte di verità
   themeCode?: string      // es: "T5"
   subThemeCode?: string   // es: "T5.1"
   cardCode?: string       // es: "T5.1.GZ"
   
+  // [SV0031] Titolo del SubTheme (per auto-inserimento corretto)
+  subThemeTitle?: string  // es: "Intersectional Discrimination & Power Asymmetries"
+  
+  // ⚠️ LEGACY fields - Deprecati, da rimuovere in futuro
   themeId: string
   subThemeId?: string
   generationId?: string
   cardId?: string
+  
+  // Metadata
   addedAt: number
   language?: string
 }
