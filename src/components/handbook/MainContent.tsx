@@ -51,7 +51,7 @@ export const MainContent = ({
   const handleDownloadPDF = () => {
     if (selectedSubTheme) {
       const renemedFileName = selectedSubTheme.code.replace(/\./g, '-');
-      const fileName = `${renemedFileName}-full.pdf`;
+      const fileName = `${renemedFileName}-FULL.pdf`;
       const pdfPath = `/pdfs/${currentLanguage}/${fileName}`;
       console.log('PDF Download URL:', pdfPath);
       
