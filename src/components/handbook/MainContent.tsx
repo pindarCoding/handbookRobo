@@ -47,14 +47,20 @@ export const MainContent = ({
   // Funzione per generare l'ID della pagina corrente
   
 
-  // Funzione per scaricare il PDF del subtheme
-  const handleDownloadPDF = () => {
-    if (selectedSubTheme) {
-      const renemedFileName = selectedSubTheme.code.replace(/\./g, '-');
-      const fileName = `${renemedFileName}-FULL.pdf`;
+  // Funzione per scaricare il PDF del theme o subtheme
+  // type: 'theme' usa selectedTheme.code, 'subtheme' usa selectedSubTheme.code
+  // suffix: se fornito, viene aggiunto al nome file (es. "-FULL"), altrimenti solo il code
+  const handleDownloadPDF = (type: 'theme' | 'subtheme', suffix?: string) => {
+    const code = type === 'theme' ? selectedTheme?.code : selectedSubTheme?.code;
+
+    if (code) {
+      const renamedFileName = code.replace(/\./g, '-');
+      const fileName = suffix
+        ? `${renamedFileName}${suffix}.pdf`
+        : `${renamedFileName}.pdf`;
       const pdfPath = `/pdfs/${currentLanguage}/${fileName}`;
       console.log('PDF Download URL:', pdfPath);
-      
+
       // Create a temporary link element
       const link = document.createElement('a');
       link.href = pdfPath;
@@ -63,7 +69,7 @@ export const MainContent = ({
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       toast.success(`Downloading ${fileName}...`);
     }
   };
@@ -166,6 +172,18 @@ export const MainContent = ({
                 {selectedTheme.introduction || ""}
               </ReactMarkdown>
             </div>
+            {/* Download PDF Button */}
+            <div className="flex justify-start mb-4">
+              <button
+                onClick={() => handleDownloadPDF('theme')}
+                className="inline-flex items-center px-4 py-2 bg-slate-600 hover:bg-slate-700 dark:bg-slate-500 dark:hover:bg-slate-600 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download Theme PDF
+              </button>
+            </div>
           </div>
         </div>
       );
@@ -245,7 +263,7 @@ export const MainContent = ({
             {/* Download PDF Button */}
             <div className="flex justify-start mb-4">
               <button
-                onClick={handleDownloadPDF}
+                onClick={() => handleDownloadPDF('subtheme', '-FULL')}
                 className="inline-flex items-center px-4 py-2 bg-slate-600 hover:bg-slate-700 dark:bg-slate-500 dark:hover:bg-slate-600 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
               >
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
