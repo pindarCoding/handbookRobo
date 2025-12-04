@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+  handbook:
+    image: registry.achab.19.coop/handbookmyco:0.1.0
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik-public
+        - traefik.constraint-label=traefik-public
+
+        # HTTP → HTTPS redirect
+        - traefik.http.routers.handbook-http.rule=Host(`handbook.meetyourcolleague.eu`)
+        - traefik.http.routers.handbook-http.entrypoints=http
+        - traefik.http.routers.handbook-http.middlewares=https-redirect
+
+        # HTTPS router
+        - traefik.http.routers.handbook-https.rule=Host(`handbook.meetyourcolleague.eu`)
+        - traefik.http.routers.handbook-https.entrypoints=https
+        - traefik.http.routers.handbook-https.tls=true
+        - traefik.http.routers.handbook-https.tls.certresolver=le
+
+        # Service port
+        - traefik.http.services.handbook.loadbalancer.server.port=3000
+
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true
