@@ -35,9 +35,14 @@ export const Footer = () => {
             >
               Privacy Policy
             </Link>
-            <div className="text-xs text-slate-500 dark:text-slate-500">
-              v{APP_VERSION}
-            </div>
+            <Link 
+              href="https://19.coop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-500 dark:text-slate-500 hover:underline"
+            >
+              By 19.coop | Handbook {APP_VERSION}
+            </Link>
           </div>
         </div>
       </div>
