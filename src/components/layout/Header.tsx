@@ -19,7 +19,7 @@ import { useTest } from "../providers/test-provider";
 
 const languages = [
   { code: "en" as const, name: "English", flagSvg: "/flags/gb.svg" },
-  { code: "it" as const, name: "Italiano", flagSvg: "/flags/it.svg" },
+  // { code: "it" as const, name: "Italiano", flagSvg: "/flags/it.svg" },
 ];
 
 interface HeaderProps {
