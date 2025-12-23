@@ -20,6 +20,7 @@ import remarkGfm from "remark-gfm";
 import { useTranslation } from "@/hooks";
 import Image from "next/image";
 import { useLanguage } from "@/components/providers/language-provider";
+import { trackPdfDownload } from "@/utils/analytics";
 
 type FilterStep = "theme" | "subtheme" | "generation";
 
@@ -60,6 +61,14 @@ export const MainContent = ({
         : `${renamedFileName}.pdf`;
       const pdfPath = `/pdfs/${currentLanguage}/${fileName}`;
       console.log('PDF Download URL:', pdfPath);
+
+      // Track PDF download in GA4
+      trackPdfDownload({
+        content_type: type,
+        taxonomic_code: code,
+        pdf_language: currentLanguage,
+        file_name: fileName,
+      });
 
       // Create a temporary link element
       const link = document.createElement('a');

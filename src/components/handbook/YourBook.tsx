@@ -13,6 +13,7 @@ import confetti from "canvas-confetti";
 import { motion, AnimatePresence } from "framer-motion";
 import { bookItemContainer } from "@/data/config/animations";
 import { ExportOverlay } from "./ExportOverlay";
+import { trackHandbookExport } from "@/utils/analytics";
 
 export const YourBook = () => {
   const { pages, removePage, clearBook } = useBook();
@@ -78,6 +79,7 @@ export const YourBook = () => {
 
       // Costruire l'array dei file da richiedere al backend
       const fileRequests: string[] = [];
+      const taxonomicCodes: string[] = [];
 
       pages.forEach((page, index) => {
         console.log(`\n--- Processing Page ${index + 1}/${pages.length} ---`);
@@ -106,6 +108,9 @@ export const YourBook = () => {
           return; // Skip questa pagina
         }
 
+        // Collect code for analytics
+        taxonomicCodes.push(code);
+
         // Trasformare il code in filename
         const filename = codeToFilename(code);
         console.log("📝 Transformed filename:", filename);
@@ -132,6 +137,13 @@ export const YourBook = () => {
         alert("No pages with valid codes to export");
         return;
       }
+
+      // Track handbook export in GA4
+      trackHandbookExport({
+        page_count: fileRequests.length,
+        pdf_language: currentLanguage,
+        taxonomic_codes: taxonomicCodes,
+      });
 
       console.log(
         `🌐 [SV0001] Sending request to backend with ${fileRequests.length} files`
