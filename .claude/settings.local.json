@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:\\\\Users\\\\Roberto\\\\Development\\\\handbook\" remote -v)",
+      "Bash(git -C \"C:\\\\Users\\\\Roberto\\\\Development\\\\handbook\" tag --sort=-v:refname)",
+      "Bash(git -C \"C:\\\\Users\\\\Roberto\\\\Development\\\\handbook\" add .gitignore public/pdfs/en/T1-1-FULL.pdf public/pdfs/en/T1-2-FULL.pdf public/pdfs/en/T1-3-FULL.pdf public/pdfs/en/T1.pdf public/pdfs/en/T2-1-FULL.pdf public/pdfs/en/T2-2-FULL.pdf public/pdfs/en/T2-3-FULL.pdf public/pdfs/en/T2.pdf public/pdfs/en/T3-1-FULL.pdf public/pdfs/en/T3-2-FULL.pdf public/pdfs/en/T3-3-FULL.pdf public/pdfs/en/T3.pdf public/pdfs/en/T4-1-FULL.pdf public/pdfs/en/T4-2-FULL.pdf public/pdfs/en/T4-3-FULL.pdf public/pdfs/en/T4.pdf public/pdfs/en/T5-1-FULL.pdf public/pdfs/en/T5-2-FULL.pdf public/pdfs/en/T5-3-FULL.pdf public/pdfs/en/T5.pdf)",
+      "Bash(git -C \"C:\\\\Users\\\\Roberto\\\\Development\\\\handbook\" commit -m \"$\\(cat <<''EOF''\npdf interi corretti\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C \"C:\\\\Users\\\\Roberto\\\\Development\\\\handbook\" push origin main)",
+      "Bash(git -C \"C:\\\\Users\\\\Roberto\\\\Development\\\\handbook\" push coop main)"
+    ]
+  }
+}

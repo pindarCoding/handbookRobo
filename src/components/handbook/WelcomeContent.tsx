@@ -290,7 +290,7 @@ export const WelcomeContent = () => {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           &ldquo;MYCo – Meet Your Colleague&rdquo; is an Erasmus+ funded project
-          bringing together six European partners to create practical tools for
+          bringing together five European partners to create practical tools for
           generational inclusion. Through research, training activities, and
           interactive resources, we aim to move beyond stereotypes and build
           workplaces where every generation can thrive.
