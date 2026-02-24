@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTest } from "@/components/providers/test-provider";
+import { useTranslation } from "@/hooks/useTranslation";
 import {
   ClipboardCheck,
 } from "lucide-react";
@@ -15,6 +16,7 @@ import {
 
 export const WelcomeContent = () => {
   const { startTest } = useTest();
+  const { t } = useTranslation();
 
   return (
     <div className="py-12 px-4 max-w-4xl mx-auto">
@@ -31,7 +33,7 @@ export const WelcomeContent = () => {
           initial="hidden"
           animate="visible"
         >
-          Welcome to the MYCo Generational Handbook
+          {t('hero.title')}
         </motion.h1>
         <motion.p
           className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-8"
@@ -40,9 +42,7 @@ export const WelcomeContent = () => {
           animate="visible"
           transition={{ delay: 0.2 }}
         >
-          A practical resource for HR professionals, trainers, and facilitators
-          to navigate intergenerational dynamics and foster inclusive
-          workplaces.
+          {t('hero.subtitle')}
         </motion.p>
 
         {/* Generations Image */}
@@ -76,28 +76,19 @@ export const WelcomeContent = () => {
           className="text-2xl font-bold text-slate-900 dark:text-white mb-4 text-center"
           variants={fadeSlideUp}
         >
-          Your Personalised Handbook
+          {t('personalised.title')}
         </motion.h2>
         <motion.p
           className="text-base text-slate-600 dark:text-slate-400 text-center max-w-3xl mx-auto mb-4"
           variants={fadeSlideUp}
         >
-          The complete Handbook offers extensive research and detailed
-          strategies — but you may not need everything. This platform allows you
-          to select only the content relevant to your specific context,
-          whether you are addressing a particular generation, a single theme,
-          or a combination of both. Build a tailored resource that fits your
-          training needs and download it as a ready-to-use PDF.
+          {t('personalised.description')}
         </motion.p>
         <motion.p
           className="text-base text-slate-500 dark:text-slate-400 text-center max-w-3xl mx-auto"
           variants={fadeSlideUp}
-        >
-          This Handbook is the result of <strong>transnational research</strong> conducted
-          across <strong>six European countries</strong>, exploring how four generations — Baby
-          Boomers, Generation X, Millennials, and Generation Z — experience the
-          workplace. Rather than reinforcing stereotypes, <strong>our goal is to provide evidence-based</strong> insights and actionable strategies <strong>to promote collaboration, mutual understanding, and generational inclusion.</strong>
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: t('personalised.research') }}
+        />
       </motion.div>
 
       {/* How It Works Section */}
@@ -112,7 +103,7 @@ export const WelcomeContent = () => {
           className="text-2xl font-bold text-slate-900 dark:text-white mb-6 text-center"
           variants={fadeSlideUp}
         >
-          How to Create Your Custom Handbook
+          {t('howItWorks.title')}
         </motion.h2>
 
         <motion.div
@@ -131,12 +122,12 @@ export const WelcomeContent = () => {
               1
             </div>
             <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-              Choose a Theme
+              {t('howItWorks.step1.title')}
             </h4>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              Select from <strong>five research-based themes</strong>: communication, values,
-              diversity, digital skills, or intergenerational learning.
-            </p>
+            <p
+              className="text-sm text-slate-600 dark:text-slate-400"
+              dangerouslySetInnerHTML={{ __html: t('howItWorks.step1.description') }}
+            />
           </motion.div>
 
           {/* Step 2 */}
@@ -149,12 +140,12 @@ export const WelcomeContent = () => {
               2
             </div>
             <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-              Pick a Subtopic
+              {t('howItWorks.step2.title')}
             </h4>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              Each theme contains <strong>three specific topics </strong> developed from our
-              transnational research findings.
-            </p>
+            <p
+              className="text-sm text-slate-600 dark:text-slate-400"
+              dangerouslySetInnerHTML={{ __html: t('howItWorks.step2.description') }}
+            />
           </motion.div>
 
           {/* Step 3 */}
@@ -167,12 +158,12 @@ export const WelcomeContent = () => {
               3
             </div>
             <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-              Select a Generation
+              {t('howItWorks.step3.title')}
             </h4>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              <strong>Focus on the generation</strong> most relevant to your context: Gen Z,
-              Millennials, Gen X, or Baby Boomers.
-            </p>
+            <p
+              className="text-sm text-slate-600 dark:text-slate-400"
+              dangerouslySetInnerHTML={{ __html: t('howItWorks.step3.description') }}
+            />
           </motion.div>
 
           {/* Step 4 */}
@@ -185,12 +176,12 @@ export const WelcomeContent = () => {
               4
             </div>
             <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-              Build & Export
+              {t('howItWorks.step4.title')}
             </h4>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              Add the pages you need to your personalised handbook and <strong>download
-              it as a PDF.</strong>
-            </p>
+            <p
+              className="text-sm text-slate-600 dark:text-slate-400"
+              dangerouslySetInnerHTML={{ __html: t('howItWorks.step4.description') }}
+            />
           </motion.div>
         </motion.div>
       </motion.div>
@@ -235,33 +226,29 @@ export const WelcomeContent = () => {
               className="text-xl font-semibold text-slate-900 dark:text-white"
               variants={fadeSlideUp}
             >
-              Self-Assessment Test
+              {t('selfAssessment.title')}
             </motion.h3>
           </motion.div>
           <motion.p
             className="text-slate-600 dark:text-slate-300 mb-4"
             variants={fadeSlideUp}
           >
-            Measure your awareness of generational diversity and your ability to
-            manage intergenerational dynamics inclusively. The test consists of
-            10 questions randomly selected from our research-based question
-            pool, covering all five thematic areas.
+            {t('selfAssessment.description')}
           </motion.p>
           <motion.p
             className="text-sm text-slate-500 dark:text-slate-400 mb-4"
             variants={fadeSlideUp}
           >
-            We recommend completing the test before and after exploring the
-            Handbook to track your progress.
+            {t('selfAssessment.recommendation')}
           </motion.p>
           <motion.button
             onClick={startTest}
             className="w-full py-3 px-4
-              bg-gradient-to-r from-blue-500 to-blue-600 
+              bg-gradient-to-r from-blue-500 to-blue-600
               hover:from-blue-600 hover:to-blue-700
               dark:from-blue-500 dark:to-blue-600
               dark:hover:from-blue-600 dark:hover:to-blue-700
-              text-white font-semibold rounded-lg 
+              text-white font-semibold rounded-lg
               shadow-md hover:shadow-lg
               transition-all duration-200
               flex items-center justify-center gap-2"
@@ -270,7 +257,7 @@ export const WelcomeContent = () => {
             whileTap={{ scale: 0.98 }}
           >
             <ClipboardCheck className="w-5 h-5" />
-            Start Test
+            {t('selfAssessment.startButton')}
           </motion.button>
         </motion.div>
       </motion.div>
@@ -289,11 +276,7 @@ export const WelcomeContent = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          &ldquo;MYCo – Meet Your Colleague&rdquo; is an Erasmus+ funded project
-          bringing together five European partners to create practical tools for
-          generational inclusion. Through research, training activities, and
-          interactive resources, we aim to move beyond stereotypes and build
-          workplaces where every generation can thrive.
+          {t('projectQuote')}
         </motion.p>
       </motion.div>
     </div>

@@ -10,6 +10,7 @@ import enT1Cards from '@/data/i18n/en/cards/t1_cards.json'
 import enT2Cards from '@/data/i18n/en/cards/t2_cards.json'
 import enT3Cards from '@/data/i18n/en/cards/t3_cards.json'
 import enT4Cards from '@/data/i18n/en/cards/t4_cards.json'
+import enHome from '@/data/i18n/en/home.json'
 
 import itThemes from '@/data/i18n/it/themes.json'
 import itGenerations from '@/data/i18n/it/generations.json'
@@ -19,6 +20,7 @@ import itT1Cards from '@/data/i18n/it/cards/t1_cards.json'
 import itT2Cards from '@/data/i18n/it/cards/t2_cards.json'
 import itT3Cards from '@/data/i18n/it/cards/t3_cards.json'
 import itT4Cards from '@/data/i18n/it/cards/t4_cards.json'
+import itHome from '@/data/i18n/it/home.json'
 
 interface TranslationObject {
   [key: string]: string | number |boolean | null | TranslationObject
@@ -81,6 +83,7 @@ type Translations = {
   }
   ui: TranslationObject
   generations: TranslationObject
+  home: TranslationObject
 }
 
 // Tutte le traduzioni caricate all'init (sync!)
@@ -95,7 +98,8 @@ const allTranslations: Record<'en' | 'it', Translations> = {
     t4: enT4Cards as TranslationObject
   },
   ui: enUi as TranslationObject,
-  generations: enGenerations as TranslationObject
+  generations: enGenerations as TranslationObject,
+  home: enHome as TranslationObject
 },
   it: {
   themes: itThemes as TranslationObject,
@@ -107,7 +111,8 @@ const allTranslations: Record<'en' | 'it', Translations> = {
     t4: itT4Cards as TranslationObject
   },
   ui: itUi as TranslationObject,
-  generations: itGenerations as TranslationObject
+  generations: itGenerations as TranslationObject,
+  home: itHome as TranslationObject
 }
 }
 
@@ -163,7 +168,8 @@ const t = (key: string, params?: Record<string, string | number>): string => {
          getNestedValue(translations.cards.t4, key) ||
          getNestedValue(translations.cards.t5, key) ||
          getNestedValue(translations.ui, key) ||
-         getNestedValue(translations.generations, key)
+         getNestedValue(translations.generations, key) ||
+         getNestedValue(translations.home, key)
   }
   
   // 1. Prova lingua corrente

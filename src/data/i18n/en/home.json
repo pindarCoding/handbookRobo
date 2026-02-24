@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "title": "Welcome to the MYCo Generational Handbook",
+    "subtitle": "A practical resource for HR professionals, trainers, and facilitators to navigate intergenerational dynamics and foster inclusive workplaces."
+  },
+  "personalised": {
+    "title": "Your Personalised Handbook",
+    "description": "The complete Handbook offers extensive research and detailed strategies — but you may not need everything. This platform allows you to select only the content relevant to your specific context, whether you are addressing a particular generation, a single theme, or a combination of both. Build a tailored resource that fits your training needs and download it as a ready-to-use PDF.",
+    "research": "This Handbook is the result of <strong>transnational research</strong> conducted across <strong>six European countries</strong>, exploring how four generations — Baby Boomers, Generation X, Millennials, and Generation Z — experience the workplace. Rather than reinforcing stereotypes, <strong>our goal is to provide evidence-based</strong> insights and actionable strategies <strong>to promote collaboration, mutual understanding, and generational inclusion.</strong>"
+  },
+  "howItWorks": {
+    "title": "How to Create Your Custom Handbook",
+    "step1": {
+      "title": "Choose a Theme",
+      "description": "Select from <strong>five research-based themes</strong>: communication, values, diversity, digital skills, or intergenerational learning."
+    },
+    "step2": {
+      "title": "Pick a Subtopic",
+      "description": "Each theme contains <strong>three specific topics</strong> developed from our transnational research findings."
+    },
+    "step3": {
+      "title": "Select a Generation",
+      "description": "<strong>Focus on the generation</strong> most relevant to your context: Gen Z, Millennials, Gen X, or Baby Boomers."
+    },
+    "step4": {
+      "title": "Build & Export",
+      "description": "Add the pages you need to your personalised handbook and <strong>download it as a PDF.</strong>"
+    }
+  },
+  "selfAssessment": {
+    "title": "Self-Assessment Test",
+    "description": "Measure your awareness of generational diversity and your ability to manage intergenerational dynamics inclusively. The test consists of 10 questions randomly selected from our research-based question pool, covering all five thematic areas.",
+    "recommendation": "We recommend completing the test before and after exploring the Handbook to track your progress.",
+    "startButton": "Start Test"
+  },
+  "projectQuote": "\"MYCo – Meet Your Colleague\" is an Erasmus+ funded project bringing together five European partners to create practical tools for generational inclusion. Through research, training activities, and interactive resources, we aim to move beyond stereotypes and build workplaces where every generation can thrive."
+}
