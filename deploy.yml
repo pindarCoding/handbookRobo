@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   handbook:
-    image: registry.achab.19.coop/handbookmyco:0.1.3
+    image: registry.achab.19.coop/handbookmyco:0.1.4
     deploy:
       labels:
         - traefik.enable=true
