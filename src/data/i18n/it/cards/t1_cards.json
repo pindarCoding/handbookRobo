@@ -1,5 +1,152 @@
 {
-  "placeholder": {
-    "content": "Placeholder content"
+  "T1.1": {
+    "GZ": {
+      "id": "communication",
+      "code": "T1.1.GZ",
+      "title": "GZ: Confusione sui Canali di Comunicazione e Aspettative di Risposta",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "La Gen Z comunica solo attraverso il telefono ed è dipendente dai social media. Incapace di sostenere conversazioni e telefonate. Preferisce la comunicazione asincrona come messaggi diretti e note vocali. Predilige la comunicazione visiva in formato breve. Sfuma i confini tra comunicazione personale e professionale.",
+      "researchFindings": "Preferiscono la comunicazione digitale istantanea. Si aspettano brevità, velocità e risposte immediate. Possono usare video in stile TikTok al posto di presentazioni formali. Difficoltà nel comprendere il tono della comunicazione più formale. Desidererebbero consigli da colleghi più anziani sull'etichetta lavorativa nell'ambito delle comunicazioni.",
+      "strategiesAdvice": "Fornire indicazioni chiare su quali canali di comunicazione siano appropriati per la comunicazione interna ed esterna. Gestire le aspettative sui tempi di risposta per ciascuno di questi canali. Creare opportunità di mentorship intergenerazionale. Per il lavoro da remoto o ibrido, fornire indicazioni chiare sull'etichetta per le riunioni online. Considerare i messaggi brevi e diretti come una forma di efficienza, non di maleducazione."
+    },
+    "GM": {
+      "id": "communication-s",
+      "code": "T1.1.GM",
+      "title": "GM: Confusione sui Canali di Comunicazione e Aspettative di Risposta",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "I Millennial sono esperti di tecnologia e informali, spesso usano emoji al posto del testo. Preferiscono la messaggistica istantanea, gli SMS e gli strumenti collaborativi. Preferiscono le videochiamate alle riunioni in presenza. Si aspettano risposte tempestive. Apprezzano il feedback. Spesso si frustrano per l'insistenza dei colleghi più anziani sulle riunioni in presenza.",
+      "researchFindings": "I Millennial occupano una posizione intermedia nell'area delle preferenze comunicative. Abili nella comunicazione digitale informale preferita dai lavoratori più giovani e apprezzano le risposte rapide. Utilizzano anche la comunicazione tradizionale con i lavoratori più anziani. La loro preferenza è per la collaborazione e prediligono strumenti come Slack. Valorizzano il loro tempo e spesso cercano feedback.",
+      "strategiesAdvice": "Dare e ricevere feedback tempestivo in caso di malinteso nella comunicazione. Consentire flessibilità negli stili di comunicazione. Riconoscere il potenziale dei Millennial nel colmare il divario di comunicazione digitale tra lavoratori più anziani e più giovani."
+    },
+    "GX": {
+      "id": "communication-gx",
+      "code": "T1.1.GX",
+      "title": "GX: Confusione sui Canali di Comunicazione e Aspettative di Risposta",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "La Gen X è autosufficiente ed efficiente. Preferisce la comunicazione diretta come email, telefono e riunioni faccia a faccia. A volte brusca nella comunicazione. Può essere resistente al cambiamento.",
+      "researchFindings": "La Gen X preferisce la comunicazione via email e telefono. Disponibile a partecipare a riunioni in presenza, ma utilizzerà strumenti digitali quando risulta più efficiente. Preferisce non sfumare il confine tra comunicazione professionale e personale.",
+      "strategiesAdvice": "Incoraggiare la trasparenza nella comunicazione. Fornire formazione sugli strumenti collaborativi digitali. Non fare micromanagement, consentire flessibilità. Fornire feedback diretto e onesto. Riconoscere le comunicazioni in formato lungo, come thread di email e verbali di riunione, come una forma di archiviazione documentale."
+    },
+    "GB": {
+      "id": "communication-gb",
+      "code": "T1.1.GB",
+      "title": "GB: Confusione sui Canali di Comunicazione e Aspettative di Risposta",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "I Boomer sono incompetenti digitalmente. Insistono sulle riunioni faccia a faccia quando un'email o un messaggio sarebbe più efficiente. Formali e molto lenti nel rispondere.",
+      "researchFindings": "I Boomer sono abili nella comunicazione in presenza. Esperti nelle sfumature della comunicazione indiretta. Preferiscono telefonate ed email alla messaggistica istantanea. A volte ignorano o ritardano nel rispondere ai messaggi ricevuti attraverso canali di comunicazione non tradizionali.",
+      "strategiesAdvice": "Sottolineare i vantaggi della comunicazione digitale in termini di efficienza. Fornire indicazioni chiare su quali canali di comunicazione digitale siano approvati e stabilire tempi di risposta. Incoraggiare la partecipazione alla formazione sugli strumenti digitali. Fornire opportunità di scambio bidirezionale di competenze con colleghi più giovani digitalmente competenti."
+    }
+  },
+  "T1.2": {
+    "GZ": {
+      "id": "communication",
+      "code": "T1.2.GZ",
+      "title": "GZ: Conflitto Basato su Identità e Valori",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "La Gen Z non possiede valori tradizionali come la lealtà, l'impegno a lungo termine e il rispetto per l'autorità. Idealista e socialmente consapevole. Appassionata di diversità e inclusione, parità di genere e cambiamento climatico.",
+      "researchFindings": "La Gen Z cerca significato e flessibilità piuttosto che sicurezza o status. Valorizza autonomia, equilibrio vita-lavoro, innovazione, cambiamento e tecnologia. Sensibile alle differenze culturali e alla discriminazione legata a genere, etnia e caratteristiche fisiche.",
+      "strategiesAdvice": "Creare opportunità per il lavoro di squadra intergenerazionale. Considerare come i dipendenti della Gen Z possano informare e partecipare alle iniziative EDI e CSR. Incoraggiare incontri informali intergenerazionali."
+    },
+    "GM": {
+      "id": "communication",
+      "code": "T1.2.GM",
+      "title": "GM: Conflitto Basato su Identità e Valori",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "I Millennial sono visti come privi di lealtà ed etica del lavoro. Basso livello di rispetto per l'autorità. Valorizzano l'equilibrio vita-lavoro e sono adattabili.",
+      "researchFindings": "Valorizzano l'impatto sociale, l'innovazione e l'inclusione. Considerano la mancanza di formazione interculturale come una barriera significativa alla cooperazione intergenerazionale. Hanno assistito a come etnia e nazionalità siano fattori significativi che contribuiscono alla discriminazione.",
+      "strategiesAdvice": "Considerare il lavoro ibrido e flessibile per allinearsi con il bisogno di equilibrio vita-lavoro. Fornire formazione sulla consapevolezza interculturale."
+    },
+    "GX": {
+      "id": "communication",
+      "code": "T1.2.GX",
+      "title": "GX: Conflitto Basato su Identità e Valori",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "La Gen X è vista come dipendenti leali. Valorizza l'impegno a lungo termine e le relazioni personali. Meno innovativa e orientata al cambiamento rispetto ai colleghi più giovani.",
+      "researchFindings": "La Gen X si vede come stabile e indipendente ma con rispetto per la gerarchia. Ha assistito a come disabilità, genere ed etnia siano fattori principali nella discriminazione sul lavoro. Non è culturalmente sensibile come i colleghi più giovani.",
+      "strategiesAdvice": "Non fare micromanagement. Rispettare la loro esperienza. Promuovere il dialogo sulla sensibilità culturale e l'inclusione."
+    },
+    "GB": {
+      "id": "communication",
+      "code": "T1.2.GB",
+      "title": "GB: Conflitto Basato su Identità e Valori",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "I Boomer sostengono valori tradizionali come la lealtà e il rispetto per l'autorità. Valorizzano l'impegno a lungo termine e il duro lavoro. Non valorizzano l'impatto sociale.",
+      "researchFindings": "I Baby Boomer portano una ricchezza di esperienza e una forte etica del lavoro. Valorizzano lealtà, impegno e relazioni personali. Rispettano l'autorità. Attribuiscono meno importanza a innovazione, cambiamento e impatto sociale. Minore sensibilità o percezione meno pronunciata della discriminazione intergenerazionale sul posto di lavoro.",
+      "strategiesAdvice": "Riconoscere la stabilità, l'esperienza e la rete di relazioni dei colleghi più anziani come risorsa per l'azienda. Incoraggiare l'innovazione all'interno di questa fascia d'età coinvolgendoli in team multigenerazionali. Fornire aggiornamenti regolari sulle iniziative EDI."
+    }
+  },
+  "T1.3": {
+    "GZ": {
+      "id": "communication",
+      "code": "T1.3.GZ",
+      "title": "GZ: Il Ruolo del Dialogo Aperto e dell'Interazione Sociale",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "La Gen Z comunica solo tramite messaggi istantanei e non è interessata alle relazioni personali.",
+      "researchFindings": "La Gen Z preferisce la comunicazione digitale e il lavoro da remoto. Cerca ambienti in cui informalità, cooperazione e lavoro di squadra siano centrali. Valorizza l'esperienza vissuta dai lavoratori più anziani e spesso guarda ai manager Millennial per definire il tono delle riunioni e per avere indicazioni sull'etichetta lavorativa.",
+      "strategiesAdvice": "Creare opportunità di socializzazione: pranzi informali, giornate di volontariato, incontri sociali. Fornire opportunità per lo Scambio di Competenze intergenerazionale. Offrire formazione sulle Soft Skills in contesti di gruppo."
+    },
+    "GM": {
+      "id": "communication",
+      "code": "T1.3.GM",
+      "title": "GM: Il Ruolo del Dialogo Aperto e dell'Interazione Sociale",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "I Millennial sono autosufficienti e danno priorità all'equilibrio vita-lavoro. Tengono separate la vita lavorativa e quella personale.",
+      "researchFindings": "I Millennial preferiscono ambienti collaborativi e cooperativi. Valorizzano il lavoro di squadra e mantengono un approccio informale alla comunicazione. Cercano luoghi di lavoro fluidi e inclusivi che mantengano chiarezza su ruoli e responsabilità.",
+      "strategiesAdvice": "Incoraggiare una comunicazione aperta e informale. Organizzare eventi di team building in presenza. Creare opportunità per colleghi che lavorano in team diversi di incontrarsi per condividere esperienze. Formazione di gruppo sulle soft skills."
+    },
+    "GX": {
+      "id": "communication",
+      "code": "T1.3.GX",
+      "title": "GX: Il Ruolo del Dialogo Aperto e dell'Interazione Sociale",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "La Gen X è vista come dipendenti leali che valorizzano le relazioni personali. Cercano il riconoscimento dei propri risultati.",
+      "researchFindings": "La Gen X apprezza il lavoro di squadra e un ambiente di lavoro cooperativo. Ha una tolleranza più alta per le strutture gerarchiche tradizionali rispetto ai colleghi più giovani. Prospera dove ruoli e responsabilità sono chiaramente definiti. Ha bisogno di stabilità, chiarezza e cooperazione. Apprezza un feedback onesto.",
+      "strategiesAdvice": "Feedback regolare. Conversazioni franche su prestazioni e opportunità di sviluppo di carriera. Offrire opportunità di sviluppo personale in contesti di gruppo."
+    },
+    "GB": {
+      "id": "communication",
+      "code": "T1.3.GB",
+      "title": "GB: Il Ruolo del Dialogo Aperto e dell'Interazione Sociale",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "I Baby Boomer valorizzano la struttura e la gerarchia. Professionalmente e socialmente distanti dai colleghi più giovani sul posto di lavoro.",
+      "researchFindings": "I Baby Boomer preferiscono la struttura. Sono interessati a favorire la trasmissione di conoscenze ed esperienze ai colleghi più giovani.",
+      "strategiesAdvice": "Combinare processi formali per il trasferimento di conoscenze ai colleghi più giovani con incontri e workshop informali. Condivisione bidirezionale di competenze: ad esempio, un collega più giovane fa da mentore a un collega più anziano sugli strumenti collaborativi digitali mentre il collega più anziano educa il collega più giovane sull'etichetta nel trattare con clienti esterni."
+    }
   }
 }

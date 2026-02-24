@@ -1,5 +1,152 @@
 {
-  "placeholder": {
-    "content": "Placeholder content"
+  "T4.1": {
+    "GZ": {
+      "id": "",
+      "code": "T4.1.GZ",
+      "title": "GZ: Gerarchia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "'Troppo sensibile / inesperta' – Frequentemente percepita come ingenua, eccessivamente idealistica o priva di resilienza e non ritenuta in possesso dell'autorità per influenzare la cultura aziendale. I loro punti di vista sono spesso trascurati e la loro comprensione delle gerarchie professionali può essere sottovalutata. Sebbene raramente identificati come perpetratori, possono comunque emergere pregiudizi sottili. Tendono a mostrare una consapevolezza più forte riguardo a questioni di etnia e disabilità, riflettendo come l'esposizione precoce favorisca il loro atteggiamento inclusivo.",
+      "researchFindings": "Il 25% identifica disabilità ed etnia come fattori decisivi che plasmano le loro esperienze lavorative. Questo riflette non fragilità, ma una consapevolezza amplificata di come le disuguaglianze strutturali li influenzino direttamente o influenzino i colleghi intorno a loro. La loro \"sensibilità\" può quindi essere riformulata come una lente intersezionale avanzata. Raramente segnalati come perpetratori, ma il pregiudizio sottile può emergere. La consapevolezza è amplificata riguardo a etnia e disabilità, mostrando che l'esposizione precoce plasma la loro mentalità inclusiva.",
+      "strategiesAdvice": "Non liquidare le preoccupazioni della Gen Z come immaturità. Coinvolgili nelle politiche, nei consigli sulla diversità e nel mentoring. Le loro prospettive identificano i problemi sistemici in anticipo e rafforzano gli sforzi di inclusione. Fornisci formazione sui pregiudizi dal primo giorno, valorizza le loro intuizioni come risorse e crea spazi sicuri per contributi significativi."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.1.GM",
+      "title": "GM: Gerarchia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "'Privilegiati / sempre alla ricerca di inclusione' – A volte inquadrati come esigenti o eccessivamente focalizzati sull'equità. Considerati \"troppo politicamente corretti\" o ipersensibili, soprattutto riguardo a microaggressioni e questioni di diversità. I critici suggeriscono che enfatizzano eccessivamente l'equità a scapito del pragmatismo.",
+      "researchFindings": "I Millennial spesso identificano fino a sette svantaggi intersezionali che plasmano le opportunità lavorative, con disabilità e salute mentale che si distinguono in particolare. La loro richiesta di inclusione riflette non privilegio, ma esperienza vissuta nel navigare stress, percorsi di carriera precari e sfide di benessere. Sebbene raramente si impegnino in comportamenti discriminatori, rimangono particolarmente attenti a come stress, disabilità e svantaggio socioeconomico influenzino le dinamiche lavorative.",
+      "strategiesAdvice": "Stabilire canali di feedback strutturati (sondaggi, focus group) affinché i Millennial possano esprimere preoccupazioni in sicurezza. Abbinare questo con iniziative mirate sulla salute mentale, supporto alla disabilità e lavoro flessibile per mostrare che la loro advocacy genera cambiamenti reali. Responsabilizzarli a guidare in modo inclusivo, modellando la comunicazione aperta. Riconoscere l'advocacy e la sensibilità culturale come qualità di leadership fondamentali e incorporarle nella cultura del team."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.1.GX",
+      "title": "GX: Gerarchia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "'Trascurata / conservatrice' – Frequentemente considerata il \"mezzo invisibile\" tra i dipendenti più giovani e vocali e i leader senior autorevoli. Spesso vista come pragmatica e cauta, può essere percepita come resistente al cambiamento. Molti tendono a evitare i dibattiti sull'inclusione, favorendo le norme consolidate e l'efficienza operativa rispetto alla trasformazione culturale più ampia.",
+      "researchFindings": "La Gen X è consapevole della discriminazione riguardo a religione e disabilità, plasmata sia da ruoli manageriali che da responsabilità personali. Sebbene a volte vista come conservatrice, può sperimentare essa stessa un'esclusione sottile. La loro posizione di autorità a metà carriera li pone nella condizione di sfidare o rafforzare i pregiudizi sul posto di lavoro, rendendo il loro coinvolgimento cruciale per gli sforzi di inclusione.",
+      "strategiesAdvice": "Amplificare le voci della Gen X negli spazi di leadership ed enfatizzare il loro ruolo di ponte tra le generazioni. Incoraggiare la partecipazione a programmi formali di alleanza e mentoring, posizionando la loro prospettiva pragmatica e di metà carriera come una forza stabilizzante nelle iniziative di diversità. Sfruttare la loro esperienza attraverso iniziative di alleanza e dialogo rispettoso, fornendo strumenti per trasformare l'autorità in influenza positiva e favorire l'inclusione e la consapevolezza culturale nei team."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.1.GB",
+      "title": "GB: Gerarchia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "'Resistente al cambiamento' – Spesso visti come radicati nelle proprie convinzioni e meno ricettivi all'evoluzione delle norme sociali e lavorative. Tendono a sostenere le gerarchie tradizionali e possono trovare difficile adattarsi alle mutevoli aspettative culturali riguardo alla diversità.",
+      "researchFindings": "Mentre i Boomer riportano meno istanze di discriminazione, la disabilità emerge costantemente nelle loro esperienze. L'esclusione è spesso sottile, includendo tecnologie inaccessibili, supposizioni sulle competenze digitali o sottovalutazione della loro adattabilità. Sono più frequentemente collegati a osservazioni discriminatorie, in particolare riguardo alla disabilità. L'età e la lunga permanenza possono anche rafforzare prospettive tradizionaliste sull'inclusione.",
+      "strategiesAdvice": "Fornire sistemazioni accessibili e tecnologia inclusiva per garantire che i dipendenti anziani con disabilità siano pienamente integrati nei luoghi di lavoro digitali. Sfruttare la loro esperienza professionale per plasmare strategie di inclusione intergenerazionale, riformulandoli come risorse preziose piuttosto che \"ostacoli al progresso\". Coinvolgere i Boomer attraverso workshop intergenerazionali e storytelling, validando la loro competenza mentre si aggiorna la loro comprensione delle norme culturali attuali e delle pratiche inclusive."
+    }
+  },
+  "T4.2": {
+    "GZ": {
+      "id": "",
+      "code": "T4.2.GZ",
+      "title": "GZ: Evitamento dell'Incertezza",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Spesso liquidati come \"troppo sensibili\", si presume non siano in grado di affrontare le sfide lavorative. Le loro preoccupazioni possono essere minimizzate o trascurate, percepite come segno di immaturità o insufficiente resilienza.",
+      "researchFindings": "Sperimentano alcuni dei tassi di vittimizzazione più elevati. I fattori intersezionali – come età, etnia e disabilità – aumentano ulteriormente la vulnerabilità, contribuendo all'esclusione strutturale nelle dinamiche di team.",
+      "strategiesAdvice": "Introdurre programmi di mentoring, canali di segnalazione sicuri e iniziative di sensibilizzazione. Validare le esperienze, affrontare le barriere sistemiche e fornire alla Gen Z gli strumenti per navigare le sfide lavorative con fiducia."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.2.GM",
+      "title": "GM: Evitamento dell'Incertezza",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Spesso percepiti come privilegiati o veloci nel sollevare lamentele sull'ingiustizia, la loro advocacy per un trattamento equo può essere fraintesa come reazione eccessiva piuttosto che come preoccupazione legittima.",
+      "researchFindings": "Sono frequentemente vittime, affrontando svantaggi legati a disabilità, salute mentale e stato socioeconomico. Questi modelli evidenziano iniquità sistemiche che plasmano le loro traiettorie di carriera.",
+      "strategiesAdvice": "Rafforzare le protezioni istituzionali, normalizzare le conversazioni sulla salute mentale e stabilire percorsi di avanzamento trasparenti per ridurre le vulnerabilità e promuovere l'equità."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.2.GX",
+      "title": "GX: Evitamento dell'Incertezza",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Percepiti come il \"mezzo invisibile\", sono spesso trascurati nelle discussioni sull'equità lavorativa. Sebbene si presuma siano resilienti a causa della loro età, le loro sfide rimangono frequentemente non riconosciute.",
+      "researchFindings": "Sperimentano vittimizzazione moderata, principalmente legata a religione e disabilità. I fattori intersezionali influenzano i professionisti a metà carriera, sebbene queste esperienze siano spesso sottoriportate.",
+      "strategiesAdvice": "Coinvolgere la Gen X nei programmi di equità, valutare le barriere intersezionali e incorporare le loro prospettive nelle discussioni politiche per garantire che i dipendenti di livello intermedio siano supportati e riconosciuti."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.2.GB",
+      "title": "GB: Evitamento dell'Incertezza",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Percepiti come resilienti e senior, si presume spesso che siano immuni dalla discriminazione grazie alla loro esperienza e autorità. L'età è vista come conferitrice di protezione contro l'esclusione.",
+      "researchFindings": "Sono meno frequentemente vittime nel complesso, ma fattori legati a disabilità, salute e età possono limitare la partecipazione. Queste barriere si intersecano con l'accessibilità digitale e le mutevoli aspettative del luogo di lavoro.",
+      "strategiesAdvice": "Dare priorità all'accessibilità, all'inclusione digitale e alle iniziative di riconoscimento. Evidenziare i contributi dei dipendenti anziani all'interno delle agende sulla diversità per garantire l'inclusione in ogni fase della carriera."
+    }
+  },
+  "T4.3": {
+    "GZ": {
+      "id": "",
+      "code": "T4.3.GZ",
+      "title": "GZ: Comunicazione Diretta e Indiretta",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "La Gen Z è spesso percepita come vedesse discriminazione in molte situazioni.",
+      "researchFindings": "La Gen Z non sta esagerando. È particolarmente attenta all'impatto composto dei fattori intersezionali come disabilità ed etnia, con un quarto di loro che evidenzia quattro di tali fattori come altamente impattanti.",
+      "strategiesAdvice": "Stabilire piattaforme dove le voci della Gen Z siano autenticamente ascoltate, come forum di dialogo intergenerazionale. Combinati con il mentoring, questi spazi consentono loro di sensibilizzare ricevendo al contempo supporto contro potenziali contraccolpi."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.3.GM",
+      "title": "GM: Comunicazione Diretta e Indiretta",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "I Millennial sono eccessivamente sensibili al pregiudizio.",
+      "researchFindings": "Sono forti sostenitori del cambiamento sistemico, specialmente riguardo a disabilità e salute mentale. Traendo da esperienze diverse, evidenziano attivamente le lacune nelle politiche e nelle strutture di benessere.",
+      "strategiesAdvice": "Coinvolgere i Millennial nella progettazione di iniziative inclusive e strumenti di segnalazione digitale. La loro apertura e mentalità innovativa possono aiutare a normalizzare la consapevolezza intersezionale in tutta l'organizzazione."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.3.GX",
+      "title": "GX: Comunicazione Diretta e Indiretta",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "I Gen X sono visti come persone che tengono la testa bassa ed evitano la discriminazione. Sono spesso percepiti come manager non interventisti che evitano controversie sensibili, dando priorità all'efficienza operativa e alla minimizzazione dei conflitti rispetto alla leadership culturale.",
+      "researchFindings": "La Gen X spesso riconosce forme sottili di pregiudizio intersezionale, in particolare legate a religione e disabilità, ma le norme culturali possono scoraggiarli dall'esprimersi. Fornire supporto moderato li responsabilizza ad agire. La loro autorità di livello intermedio consente loro di intervenire in modi che possono influenzare significativamente le norme e promuovere l'inclusione.",
+      "strategiesAdvice": "Incoraggiare programmi strutturati di alleanza che consentano alla Gen X di servire come modelli e sponsor. Inquadrando l'intervento come leadership piuttosto che confrontazione, le organizzazioni li aiutano a usare la loro influenza in modo costruttivo. Responsabilizzare la Gen X a modellare comportamenti di supporto, colmare i divari generazionali e plasmare positivamente la cultura organizzativa."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.3.GB",
+      "title": "GB: Comunicazione Diretta e Indiretta",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "I Boomer sono percepiti come troppo radicati nelle proprie convinzioni per adattarsi all'inclusione. Sono spesso visti come riluttanti a intervenire, favorendo l'armonia e la stabilità rispetto all'affrontamento diretto della discriminazione. Di conseguenza, la loro potenziale influenza nelle iniziative di alleanza può essere sottoutilizzata.",
+      "researchFindings": "In realtà, molti Boomer riconoscono la disabilità come un fattore significativo dello svantaggio lavorativo, sebbene riportino meno esperienze di discriminazione intersezionale nel complesso, probabilmente a causa dell'effetto protettivo della seniority. Sebbene meno frequentemente identificati come sostenitori, i loro interventi portano un'influenza sostanziale. Se coinvolti, i Boomer possono aiutare a riconfigurare le norme e le aspettative culturali.",
+      "strategiesAdvice": "Sfruttare la loro autorità per promuovere revisioni di politiche inclusive. Quando i leader senior approvano visibilmente la formazione intersezionale e i sistemi di segnalazione, legittimano questi sforzi in tutta la forza lavoro. Posizionare l'alleanza come una responsabilità di leadership fondamentale, sottolineando che il supporto visibile del personale senior stabilisce il tono della cultura organizzativa e rafforza le norme inclusive."
+    }
   }
 }
