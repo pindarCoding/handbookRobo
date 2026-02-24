@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTest } from "@/components/providers/test-provider";
+import { useLanguage } from "@/components/providers/language-provider";
 import { useTranslation } from "@/hooks/useTranslation";
 import {
   ClipboardCheck,
@@ -16,6 +17,7 @@ import {
 
 export const WelcomeContent = () => {
   const { startTest } = useTest();
+  const { language } = useLanguage();
   const { t } = useTranslation();
 
   return (
@@ -183,6 +185,24 @@ export const WelcomeContent = () => {
               dangerouslySetInnerHTML={{ __html: t('howItWorks.step4.description') }}
             />
           </motion.div>
+        </motion.div>
+
+        {/* Video Tutorial */}
+        <motion.div
+          className="mt-8 text-center"
+          variants={fadeSlideUp}
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
+            {t('howItWorks.videoTitle')}
+          </h3>
+          <video
+            key={language}
+            src={`/MyCo_Tutorial_${language === 'it' ? 'ITA' : 'ENG'}.mp4`}
+            poster="/images/tutorial.jpg"
+            preload="none"
+            controls
+            className="w-full max-w-2xl mx-auto rounded-lg shadow-md"
+          />
         </motion.div>
       </motion.div>
 
