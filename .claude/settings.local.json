@@ -7,7 +7,9 @@
       "Bash(git -C \"C:\\\\Users\\\\Roberto\\\\Development\\\\handbook\" commit -m \"$\\(cat <<''EOF''\npdf interi corretti\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git -C \"C:\\\\Users\\\\Roberto\\\\Development\\\\handbook\" push origin main)",
       "Bash(git -C \"C:\\\\Users\\\\Roberto\\\\Development\\\\handbook\" push coop main)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(tail:*)",
+      "Bash(cd /c/Users/Roberto/Development/handbook && npx tsc --noEmit 2>&1)"
     ]
   }
 }

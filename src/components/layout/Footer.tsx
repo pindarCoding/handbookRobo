@@ -4,8 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const Footer = () => {
-  // Versione dell'app - in futuro potrebbe venire da env o package.json
-  const APP_VERSION = '1.0.0'
+  const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION || '0.0.0'
 
   return (
     <footer className="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
