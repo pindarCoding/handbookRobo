@@ -12,6 +12,7 @@
 import { useEffect, useCallback, useRef } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { useTest } from '@/components/providers/test-provider';
+import { useTranslation } from '@/hooks/useTranslation';
 import { Question } from '@/types/assessment';
 import { AssessmentLoading } from './AssessmentLoading';
 import { AssessmentStep } from './AssessmentStep';
@@ -32,6 +33,7 @@ export function AssessmentView() {
     completeTest,
     resetTest
   } = useTest();
+  const { t } = useTranslation();
 
   // Ref per evitare doppia chiamata a startTest
   const hasStartedRef = useRef(false);
@@ -122,20 +124,20 @@ export function AssessmentView() {
   };
 
   return (
-    <div className="py-8 px-4 max-w-3xl mx-auto animate-fadeIn">
+    <div className="py-8 px-4 max-w-4xl mx-auto animate-fadeIn">
       {/* Header con bottone Back */}
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
-          📝 Knowledge Assessment
+          📝 {t('assessment.title')}
         </h1>
         
         {testState.status === 'in-progress' && (
           <button
             onClick={handleClose}
-            className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+            className="flex items-center gap-2 text-sm text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Handbook
+            {t('assessment.backToHandbook')}
           </button>
         )}
       </div>

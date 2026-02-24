@@ -11,12 +11,14 @@
  */
 
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/hooks/useTranslation';
 
 // ============================================
 // COMPONENT
 // ============================================
 
 export function AssessmentLoading() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4">
       {/* Spinner */}
@@ -37,7 +39,7 @@ export function AssessmentLoading() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        Preparing your assessment...
+        {t('assessment.loading')}
       </motion.h3>
 
       {/* Sub Text */}
@@ -47,7 +49,7 @@ export function AssessmentLoading() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
       >
-        Selecting questions from 5 themes...
+        {t('assessment.loadingQuestions')}
       </motion.p>
 
       {/* Animated Dots */}

@@ -8,6 +8,7 @@ import { useLanguage } from "../providers/language-provider";
 import { YourBookBadge } from "@/components/handbook/YourBookBadge";
 import { YourBookModal } from "@/components/mobile/YourBookModal";
 import { useTest } from "../providers/test-provider";
+import { useTranslation } from "@/hooks/useTranslation";
 
 // const languages = [
 //   { code: "en", name: "English", flag: "🇬🇧" },
@@ -33,6 +34,7 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
   const { startTest } = useTest();
+  const { t } = useTranslation();
 
   // 🆕 Trova la lingua selezionata dall'array
   const selectedLanguage =
@@ -90,7 +92,7 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                 }}
                 className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2 text-left"
               >
-                Self Assessment
+                {t('assessment.selfAssessment')}
               </button>
               <a
                 href="https://meetyourcolleague.eu/"
@@ -266,7 +268,7 @@ export const Header = ({ onLogoClick }: HeaderProps) => {
                   }}
                   className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white font-medium py-2 text-left"
                 >
-                  Self Assessment
+                  {t('assessment.selfAssessment')}
                 </button>
                 <a
                   href="#"

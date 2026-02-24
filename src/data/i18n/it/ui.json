@@ -67,5 +67,25 @@
    "title-stereotypes": "Stereotipi",
    "title-research": "Ricerche",
    "title-advices": "Strategia e Consigli pratici"
+  },
+  "assessment": {
+    "title": "Valutazione delle Conoscenze",
+    "backToHandbook": "Torna al Manuale",
+    "questionOf": "Domanda {{current}} di {{total}}",
+    "back": "Indietro",
+    "next": "Avanti",
+    "finish": "Termina",
+    "answered": "Risposta data",
+    "selectAnswer": "Seleziona una risposta",
+    "loading": "Preparazione della valutazione...",
+    "loadingQuestions": "Selezione domande da 5 temi...",
+    "resultsByTheme": "Risultati per Tema",
+    "tryAgain": "Riprova",
+    "close": "Chiudi",
+    "excellent": "Eccellente!",
+    "greatJob": "Ottimo lavoro!",
+    "goodEffort": "Buon impegno!",
+    "keepLearning": "Continua ad apprendere!",
+    "selfAssessment": "Autovalutazione"
   }
 }

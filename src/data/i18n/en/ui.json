@@ -67,5 +67,25 @@
    "title-stereotypes": "Stereotypes",
    "title-research": "Research",
    "title-advices": "Strategy & Practical Advice"
+  },
+  "assessment": {
+    "title": "Knowledge Assessment",
+    "backToHandbook": "Back to Handbook",
+    "questionOf": "Question {{current}} of {{total}}",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Finish",
+    "answered": "Answered",
+    "selectAnswer": "Select an answer",
+    "loading": "Preparing your assessment...",
+    "loadingQuestions": "Selecting questions from 5 themes...",
+    "resultsByTheme": "Results by Theme",
+    "tryAgain": "Try Again",
+    "close": "Close",
+    "excellent": "Excellent!",
+    "greatJob": "Great job!",
+    "goodEffort": "Good effort!",
+    "keepLearning": "Keep learning!",
+    "selfAssessment": "Self Assessment"
   }
 }

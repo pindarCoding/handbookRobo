@@ -17,6 +17,7 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Question, AnswerOption, UserAnswer } from '@/types/assessment';
 import { QuestionCard } from './QuestionCard';
+import { useTranslation } from '@/hooks/useTranslation';
 
 // ============================================
 // TYPES
@@ -46,17 +47,17 @@ interface AssessmentStepProps {
 // ============================================
 
 /** Mapping step → info tema (10 step, 2 per tema) */
-const STEP_INFO: Record<number, { themeCode: string; themeName: string; emoji: string }> = {
-  0: { themeCode: 'T1', themeName: 'Communication', emoji: '💬' },
-  1: { themeCode: 'T1', themeName: 'Communication', emoji: '💬' },
-  2: { themeCode: 'T2', themeName: 'Diversity', emoji: '🌍' },
-  3: { themeCode: 'T2', themeName: 'Diversity', emoji: '🌍' },
-  4: { themeCode: 'T3', themeName: 'Digital', emoji: '💻' },
-  5: { themeCode: 'T3', themeName: 'Digital', emoji: '💻' },
-  6: { themeCode: 'T4', themeName: 'Intercultural', emoji: '🤝' },
-  7: { themeCode: 'T4', themeName: 'Intercultural', emoji: '🤝' },
-  8: { themeCode: 'T5', themeName: 'Work', emoji: '💼' },
-  9: { themeCode: 'T5', themeName: 'Work', emoji: '💼' }
+const STEP_INFO: Record<number, { themeCode: string; emoji: string }> = {
+  0: { themeCode: 'T1', emoji: '💬' },
+  1: { themeCode: 'T1', emoji: '💬' },
+  2: { themeCode: 'T2', emoji: '🌍' },
+  3: { themeCode: 'T2', emoji: '🌍' },
+  4: { themeCode: 'T3', emoji: '💻' },
+  5: { themeCode: 'T3', emoji: '💻' },
+  6: { themeCode: 'T4', emoji: '🤝' },
+  7: { themeCode: 'T4', emoji: '🤝' },
+  8: { themeCode: 'T5', emoji: '💼' },
+  9: { themeCode: 'T5', emoji: '💼' }
 };
 
 /** Colori di sfondo per tema */
@@ -83,10 +84,12 @@ export function AssessmentStep({
   onComplete
 }: AssessmentStepProps) {
   
+  const { t, getTheme } = useTranslation();
   const stepInfo = STEP_INFO[stepIndex];
   const totalSteps = 10;
   const progressPercentage = ((stepIndex + 1) / totalSteps) * 100;
   const questionNumber = stepIndex + 1;
+  const themeName = getTheme(stepInfo.themeCode)?.title || stepInfo.themeCode;
 
   // Trova la risposta per la domanda di questo step
   const getSelectedAnswer = (): AnswerOption | null => {
@@ -111,10 +114,10 @@ export function AssessmentStep({
             <span className="text-3xl">{stepInfo.emoji}</span>
             <div>
               <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
-                Question {questionNumber} of {totalSteps}
+                {t('assessment.questionOf', { current: questionNumber, total: totalSteps })}
               </span>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-                {stepInfo.themeName}
+                {themeName}
               </h2>
             </div>
           </div>
@@ -182,7 +185,7 @@ export function AssessmentStep({
           `}
         >
           <ChevronLeft className="w-5 h-5" />
-          Back
+          {t('assessment.back')}
         </button>
 
         {/* Answer status */}
@@ -192,11 +195,11 @@ export function AssessmentStep({
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              Answered
+              {t('assessment.answered')}
             </span>
           ) : (
             <span className="text-sm text-slate-400 dark:text-slate-500">
-              Select an answer
+              {t('assessment.selectAnswer')}
             </span>
           )}
         </div>
@@ -214,7 +217,7 @@ export function AssessmentStep({
               }
             `}
           >
-            Finish
+            {t('assessment.finish')}
             <ChevronRight className="w-5 h-5" />
           </button>
         ) : (
@@ -229,7 +232,7 @@ export function AssessmentStep({
               }
             `}
           >
-            Next
+            {t('assessment.next')}
             <ChevronRight className="w-5 h-5" />
           </button>
         )}
