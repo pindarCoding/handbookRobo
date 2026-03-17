@@ -81,13 +81,12 @@ export const WelcomeContent = () => {
           {t('personalised.title')}
         </motion.h2>
         <motion.p
-          className="text-base text-slate-600 dark:text-slate-400 text-center max-w-3xl mx-auto mb-4"
+          className="text-base text-slate-600 dark:text-slate-400 text-center max-w-3xl mx-auto mb-4 [&_strong]:text-slate-900 [&_strong]:dark:text-white [&_strong]:font-semibold"
           variants={fadeSlideUp}
-        >
-          {t('personalised.description')}
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: t('personalised.description') }}
+        />
         <motion.p
-          className="text-base text-slate-500 dark:text-slate-400 text-center max-w-3xl mx-auto"
+          className="text-base text-slate-500 dark:text-slate-400 text-center max-w-3xl mx-auto [&_strong]:text-slate-900 [&_strong]:dark:text-white [&_strong]:font-semibold"
           variants={fadeSlideUp}
           dangerouslySetInnerHTML={{ __html: t('personalised.research') }}
         />
