@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Windows null device
 nul
+
+# claude
+.claude/settings.local.json
