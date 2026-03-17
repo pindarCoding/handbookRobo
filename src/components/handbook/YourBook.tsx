@@ -291,7 +291,7 @@ export const YourBook = () => {
     return (
       <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 text-center">
         <p className="text-slate-600 dark:text-slate-400">
-          Your handbook is empty. Start adding pages from the categories above.
+          {t("yourBook.emptyMessage")}
         </p>
       </div>
     );

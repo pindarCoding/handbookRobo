@@ -196,7 +196,7 @@ export const WelcomeContent = () => {
           </h3>
           <video
             key={language}
-            src={`/MyCo_Tutorial_${language === 'it' ? 'ITA' : 'ENG'}.mp4`}
+            src={`/MyCo_Tutorial_${{ en: 'ENG', it: 'ITA', pl: 'PL', de: 'DE', pt: 'PT' }[language] || 'ENG'}.mp4`}
             poster="/images/tutorial.jpg"
             preload="none"
             controls
