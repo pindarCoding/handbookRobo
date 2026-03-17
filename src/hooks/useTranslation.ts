@@ -22,6 +22,36 @@ import itT3Cards from '@/data/i18n/it/cards/t3_cards.json'
 import itT4Cards from '@/data/i18n/it/cards/t4_cards.json'
 import itHome from '@/data/i18n/it/home.json'
 
+import deThemes from '@/data/i18n/de/themes.json'
+import deGenerations from '@/data/i18n/de/generations.json'
+import deUi from '@/data/i18n/de/ui.json'
+import deT1Cards from '@/data/i18n/de/cards/t1_cards.json'
+import deT2Cards from '@/data/i18n/de/cards/t2_cards.json'
+import deT3Cards from '@/data/i18n/de/cards/t3_cards.json'
+import deT4Cards from '@/data/i18n/de/cards/t4_cards.json'
+import deT5Cards from '@/data/i18n/de/cards/t5_cards.json'
+import deHome from '@/data/i18n/de/home.json'
+
+import plThemes from '@/data/i18n/pl/themes.json'
+import plGenerations from '@/data/i18n/pl/generations.json'
+import plUi from '@/data/i18n/pl/ui.json'
+import plT1Cards from '@/data/i18n/pl/cards/t1_cards.json'
+import plT2Cards from '@/data/i18n/pl/cards/t2_cards.json'
+import plT3Cards from '@/data/i18n/pl/cards/t3_cards.json'
+import plT4Cards from '@/data/i18n/pl/cards/t4_cards.json'
+import plT5Cards from '@/data/i18n/pl/cards/t5_cards.json'
+import plHome from '@/data/i18n/pl/home.json'
+
+import ptThemes from '@/data/i18n/pt/themes.json'
+import ptGenerations from '@/data/i18n/pt/generations.json'
+import ptUi from '@/data/i18n/pt/ui.json'
+import ptT1Cards from '@/data/i18n/pt/cards/t1_cards.json'
+import ptT2Cards from '@/data/i18n/pt/cards/t2_cards.json'
+import ptT3Cards from '@/data/i18n/pt/cards/t3_cards.json'
+import ptT4Cards from '@/data/i18n/pt/cards/t4_cards.json'
+import ptT5Cards from '@/data/i18n/pt/cards/t5_cards.json'
+import ptHome from '@/data/i18n/pt/home.json'
+
 interface TranslationObject {
   [key: string]: string | number |boolean | null | TranslationObject
 }
@@ -87,7 +117,7 @@ type Translations = {
 }
 
 // Tutte le traduzioni caricate all'init (sync!)
-const allTranslations: Record<'en' | 'it', Translations> = {
+const allTranslations: Record<'en' | 'it' | 'de' | 'pl' | 'pt', Translations> = {
   en: {
   themes: enThemes as TranslationObject,
   cards: {
@@ -113,6 +143,45 @@ const allTranslations: Record<'en' | 'it', Translations> = {
   ui: itUi as TranslationObject,
   generations: itGenerations as TranslationObject,
   home: itHome as TranslationObject
+},
+  de: {
+  themes: deThemes as TranslationObject,
+  cards: {
+    t5: deT5Cards as TranslationObject,
+    t1: deT1Cards as TranslationObject,
+    t2: deT2Cards as TranslationObject,
+    t3: deT3Cards as TranslationObject,
+    t4: deT4Cards as TranslationObject
+  },
+  ui: deUi as TranslationObject,
+  generations: deGenerations as TranslationObject,
+  home: deHome as TranslationObject
+},
+  pl: {
+  themes: plThemes as TranslationObject,
+  cards: {
+    t5: plT5Cards as TranslationObject,
+    t1: plT1Cards as TranslationObject,
+    t2: plT2Cards as TranslationObject,
+    t3: plT3Cards as TranslationObject,
+    t4: plT4Cards as TranslationObject
+  },
+  ui: plUi as TranslationObject,
+  generations: plGenerations as TranslationObject,
+  home: plHome as TranslationObject
+},
+  pt: {
+  themes: ptThemes as TranslationObject,
+  cards: {
+    t5: ptT5Cards as TranslationObject,
+    t1: ptT1Cards as TranslationObject,
+    t2: ptT2Cards as TranslationObject,
+    t3: ptT3Cards as TranslationObject,
+    t4: ptT4Cards as TranslationObject
+  },
+  ui: ptUi as TranslationObject,
+  generations: ptGenerations as TranslationObject,
+  home: ptHome as TranslationObject
 }
 }
 

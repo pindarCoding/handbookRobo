@@ -1,0 +1,172 @@
+{
+  "T1": {
+    "id": "communication",
+    "code": "T1",
+    "title": "Comunicação entre gerações - Prevenção e gestão de conflitos",
+    "introduction": "Este capítulo apresenta os três **temas-chave** que emergiram como as conclusões mais relevantes da nossa investigação intergeracional sobre **Comunicação Intergeracional e Conflito** no local de trabalho em cinco países europeus.\n\nCom base nas diversas perspetivas de quatro gerações no mercado de trabalho, o nosso estudo revelou que a comunicação e o conflito no local de trabalho são moldados por três temas interrelacionados:\n\n* **Confusão nos Canais de Comunicação e Expectativas de Resposta**\n* **Conflito Baseado na Identidade e nos Valores**\n* **O Papel do Diálogo Aberto e da Interação Social na Prevenção de Conflitos**\n\nEm primeiro lugar, a **Confusão nos Canais de Comunicação e Expectativas de Resposta** reflete a crescente complexidade da comunicação no local de trabalho em ambientes híbridos e digitais. Os colaboradores enfrentam frequentemente incertezas sobre que plataformas utilizar, com que rapidez responder e como interpretar o tom e a urgência — questões que são ainda mais complicadas pelas diferenças geracionais nas preferências de comunicação.\n\nEm segundo lugar, o **Conflito Baseado na Identidade e nos Valores** surge quando os indivíduos vivenciam tensões devido a diferenças de crenças pessoais, contextos culturais ou identidades sociais. Estes conflitos são particularmente acentuados em equipas diversificadas e multigeracionais, onde padrões éticos variados, normas culturais e experiências vividas podem conduzir a mal-entendidos ou exclusão.\n\nPor fim, a nossa investigação destaca a importância do **Diálogo Aberto e da Interação Social** como estratégia proativa para a prevenção de conflitos. As oportunidades de ligação informal, escuta ativa e conversação inclusiva foram consistentemente identificadas como fundamentais para construir confiança, fomentar a empatia e reduzir a probabilidade de conflitos interpessoais. Cada uma das três secções abaixo oferece uma análise mais aprofundada, perspetivas práticas e recomendações baseadas em evidências para melhorar as relações no local de trabalho.",
+    "reportPdfUrl": null,
+    "pageId": 10,
+    "subthemes": {
+      "T1.1": {
+        "id": "communication-tools",
+        "code": "T1.1",
+        "title": "Confusão nos Canais de Comunicação e Expectativas de Resposta no Local de Trabalho",
+        "description": "Métodos de comunicação digitais vs tradicionais",
+        "pageId": 11,
+        "markdownFile": "t1-1-communication-channels.md"
+      },
+      "T1.2": {
+        "id": "communication-conflicts",
+        "code": "T1.2",
+        "title": "Conflito baseado na identidade e nos valores no local de trabalho",
+        "description": "Gestão de conflitos intergeracionais",
+        "pageId": 12,
+        "markdownFile": "t1-2-communication-identity.md"
+      },
+      "T1.3": {
+        "id": "communication-values",
+        "code": "T1.3",
+        "title": "O Papel do Diálogo Aberto e da Interação Social na Prevenção de Conflitos no Local de Trabalho",
+        "description": "Valores fundamentais na comunicação intergeracional",
+        "pageId": 13,
+        "markdownFile": "t1-3-communication-conflict-prevention.md"
+      }
+    }
+  },
+  "T2": {
+    "id": "diversity",
+    "code": "T2",
+    "title": "Diversidade geracional de um ponto de vista interseccional",
+    "introduction": "A diversidade geracional descreve a interação e colaboração de múltiplas coortes etárias – Baby Boomers, Geração X, Millennials e Geração Z – num local de trabalho, comunidade ou contexto social. Quando adotamos uma perspetiva interseccional, destacamos como a identidade geracional se cruza com outras identidades sociais, como género, etnia, deficiência, classe, etc., e como estas interseções moldam experiências de inclusão, discriminação, voz e poder. Este capítulo explora como os fatores interseccionais influenciam a diversidade geracional. Exploramos como a discriminação pode ser amplificada quando estereótipos se sobrepõem ou entram em conflito e que estratégias ajudam a promover a equidade e a compreensão. A relevância? À medida que os locais de trabalho se tornam mais diversificados em termos de idade e noutras dimensões, políticas e culturas que ignoram a interseccionalidade arriscam reforçar preconceitos sistémicos, deixando algumas pessoas mais marginalizadas mesmo entre grupos \"diversos\".",
+    "reportPdfUrl": null,
+    "pageId": 20,
+    "subthemes": {
+      "T2.1": {
+        "id": "diversity-identity",
+        "code": "T2.1",
+        "title": "Discriminação Interseccional e Assimetrias de Poder",
+        "description": "Identidades múltiplas entre gerações",
+        "pageId": 21,
+        "markdownFile": "t2-1-intersectional-discrimination.md"
+      },
+      "T2.2": {
+        "id": "diversity-inclusion",
+        "code": "T2.2",
+        "title": "Padrões de Voz, Vitimização e Apoio",
+        "description": "Práticas inclusivas para todas as gerações",
+        "pageId": 22,
+        "markdownFile": "t2-2-patterns-voice.md"
+      },
+      "T2.3": {
+        "id": "strategies-avoid",
+        "code": "T2.3",
+        "title": "Estratégias para Evitar e Abordar Diferenças Interseccionais no Trabalho",
+        "description": "--",
+        "pageId": 23,
+        "markdownFile": "t2-3-strategies-avoid.md"
+      }
+    }
+  },
+  "T3": {
+    "id": "digital",
+    "code": "T3",
+    "title": "Como colmatar a desigualdade digital",
+    "introduction": "A desigualdade digital representa um dos desafios mais prementes nos locais de trabalho modernos, englobando disparidades no acesso à tecnologia, nas competências digitais e na utilização eficaz de ferramentas digitais entre os colaboradores. À medida que as organizações adotam cada vez mais a transformação digital, estas divisões podem afetar significativamente a igualdade no local de trabalho, a produtividade dos colaboradores e a competitividade organizacional. A pandemia de COVID-19 revelou de forma clara como as disparidades digitais podem excluir colaboradores da participação plena na vida profissional, particularmente quando os modelos de trabalho remoto se tornaram necessários. Atualmente, com a inteligência artificial e as tecnologias avançadas a remodelar as operações empresariais, abordar a desigualdade digital passou de uma preocupação periférica para um imperativo estratégico para organizações comprometidas com o crescimento inclusivo. Este módulo examina a natureza multifacetada da desigualdade digital em contextos laborais, explorando não apenas o acesso tecnológico, mas também as competências, os sistemas de apoio e os fatores culturais que determinam como os colaboradores interagem com as ferramentas digitais. Exploraremos como a desigualdade digital espelha e amplifica as disparidades socioeconómicas existentes e examinaremos estratégias para criar locais de trabalho mais digitalmente inclusivos, onde todos os colaboradores possam prosperar. Ao compreender e abordar estes desafios, as organizações podem desbloquear ganhos significativos de produtividade, potencial de inovação e vantagens competitivas, ao mesmo tempo que promovem objetivos mais amplos de equidade. A relevância deste tema vai além da mera competência técnica. A desigualdade digital cruza-se com diferenças geracionais, contextos socioeconómicos, disparidades geográficas e oportunidades educativas, criando desafios complexos que requerem soluções multifacetadas. A investigação mostra que as empresas que ignoram a tecnologia da força de trabalho enfrentam maior rotatividade, crescimento mais lento e lacunas significativas de competências que comprometem a competitividade. Em contrapartida, as organizações que abordam proativamente a desigualdade digital podem construir reservas de talento mais robustas, reduzir custos de contratação e melhorar a retenção de colaboradores, ao mesmo tempo que promovem uma cultura de trabalho mais inclusiva.",
+    "reportPdfUrl": null,
+    "pageId": 30,
+    "subthemes": {
+      "T3.1": {
+        "id": "digital-gap",
+        "code": "T3.1",
+        "title": "Compreender a Desigualdade Digital em Contextos Laborais",
+        "description": "Compreender as divisões tecnológicas",
+        "pageId": 31,
+        "markdownFile": "t3-1-understanding-digital-inequality.md"
+      },
+      "T3.2": {
+        "id": "digital-training",
+        "code": "T3.2",
+        "title": "Estratégias para Colmatar a Desigualdade Digital no Local de Trabalho",
+        "description": "Requalificação para todas as faixas etárias",
+        "pageId": 32,
+        "markdownFile": "t3-2-strategies-for-bridging.md"
+      },
+      "T3.3": {
+        "id": "digital-collaboration",
+        "code": "T3.3",
+        "title": "Estudos de Caso e Boas Práticas: Lições de Organizações de Referência",
+        "description": "Ferramentas para trabalho em equipa intergeracional",
+        "pageId": 33,
+        "markdownFile": "t3-3-case-studies.md"
+      }
+    }
+  },
+  "T4": {
+    "id": "intercultural",
+    "code": "T4",
+    "title": "Diversidade geracional de um ponto de vista intercultural",
+    "introduction": "A secção seguinte aborda as diferentes gerações e culturas no local de trabalho e os desafios que podem surgir. Os conflitos geracionais sempre existiram. Desde a antiguidade, existem relatos de gerações mais velhas a queixarem-se da falta de respeito demonstrada pelas gerações mais jovens (Kollewe 2016: 188). No entanto, a investigação etnológica mostra que, entre culturas, a idade por si só não determina as atitudes em relação ao respeito. As comparações entre diferentes culturas parecem mostrar que o respeito pelas pessoas mais velhas e idosas está intimamente ligado ao seu estatuto na sociedade. Devido à sua experiência de vida, as pessoas mais velhas possuem frequentemente maior conhecimento (factual, histórico, mágico), mais bens materiais e, como resultado, desfrutam de uma melhor posição no grupo ou na sociedade (Kollewe 2016: 189). Em rigor, o fator \"idade\" é apenas uma característica física observável. Não é a idade biológica em si que tem um valor social mais elevado. Antes, parece que as sociedades associam certos fatores à \"idade\" que têm conotações positivas e são, portanto, razão suficiente para serem valorizados.",
+    "reportPdfUrl": null,
+    "pageId": 40,
+    "subthemes": {
+      "T4.1": {
+        "id": "hierarchy",
+        "code": "T4.1",
+        "title": "Hierarquias Culturais",
+        "description": "Influências culturais nas perspetivas geracionais",
+        "pageId": 41,
+        "markdownFile": "t4-1-hierarchy.md"
+      },
+      "T4.2": {
+        "id": "uncertainty-avoidance",
+        "code": "T4.2",
+        "title": "Aversão à Incerteza",
+        "description": "Influências culturais nas perspetivas geracionais",
+        "pageId": 41,
+        "markdownFile": "t4-2-uncertainty-avoidance.md"
+      },
+      "T4.3": {
+        "id": "direct-and-indirect",
+        "code": "T4.3",
+        "title": "Estilos de Comunicação Direta e Indireta",
+        "description": "Influências culturais nas perspetivas geracionais",
+        "pageId": 41,
+        "markdownFile": "t4-3-direct-and-indirect.md"
+      }
+    }
+  },
+  "T5": {
+    "id": "work",
+    "code": "T5",
+    "title": "Diferenças na abordagem ao trabalho",
+    "introduction": "Os locais de trabalho de hoje reúnem uma mistura de gerações excepcionalmente diversificada. Baby Boomers, Geração X, Millennials e Geração Z colaboram diariamente, cada um moldado pelos ambientes sociais, económicos e tecnológicos dos seus anos formativos. Estas influências afetam não apenas a forma como os indivíduos definem o sucesso, mas também como comunicam, se mantêm motivados e abordam o trabalho em equipa. Embora as diferenças nas expectativas e nos estilos possam por vezes criar tensão ou mal-entendidos, também abrem oportunidades valiosas para a aprendizagem mútua, a inovação e a resiliência. Ao explorar as perspetivas geracionais sobre valores, motivação e colaboração, este manual fornece perspetivas práticas e estratégias para ajudar as organizações a construir ambientes inclusivos onde todas as gerações se sintam reconhecidas, respeitadas e capacitadas para contribuir com os seus pontos fortes.",
+    "reportPdfUrl": "/pdfs/work-report.pdf",
+    "pageId": 50,
+    "subthemes": {
+      "T5.1": {
+        "id": "work-values",
+        "code": "T5.1",
+        "title": "Valores no Local de Trabalho entre Gerações",
+        "description": "Como diferentes gerações definem sucesso e significado no trabalho",
+        "pageId": 10,
+        "markdownFile": "t5-1-workplace-values.md"
+      },
+      "T5.2": {
+        "id": "work-motivation",
+        "code": "T5.2",
+        "title": "Motivação e Desmotivação",
+        "description": "O que motiva e desmotiva as diferentes gerações",
+        "pageId": 10,
+        "markdownFile": "t5-2-motivation-demotivation.md"
+      },
+      "T5.3": {
+        "id": "work-styles",
+        "code": "T5.3",
+        "title": "Estilos de Trabalho e Colaboração",
+        "description": "Diferentes abordagens ao trabalho em equipa e à produtividade",
+        "pageId": 10,
+        "markdownFile": "t5-3-workstyles-collaboration.md"
+      }
+    }
+  }
+}

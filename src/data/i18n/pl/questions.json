@@ -1,0 +1,430 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "totalQuestions": 30,
+    "questionsPerTheme": 6,
+    "description": "MYCo Generational Handbook - Self Assessment Questions"
+  },
+  "questions": [
+    {
+      "code": "T1.1.Q1",
+      "themeCode": "T1",
+      "subThemeCode": "T1.1",
+      "question": "Który z poniższych środków komunikacji jest najczęściej używany przez Pokolenie Z?",
+      "options": {
+        "a": "Komunikatory internetowe",
+        "b": "Cyfrowe narzędzia do współpracy",
+        "c": "Wideorozmowy",
+        "d": "E-mail"
+      },
+      "correctAnswer": "a",
+      "explanation": "Pokolenie Z to cyfrowi tubylcy, którzy uznają komunikatory internetowe za najważniejszy środek komunikacji, a następnie cyfrowe narzędzia do współpracy i wideorozmowy. Przywiązują niewielką wagę do tradycyjnej komunikacji osobistej i telefonicznej."
+    },
+    {
+      "code": "T1.1.Q2",
+      "themeCode": "T1",
+      "subThemeCode": "T1.1",
+      "question": "Które pokolenie w najbardziej zrównoważony sposób korzysta z tradycyjnych i cyfrowych kanałów komunikacji?",
+      "options": {
+        "a": "Pokolenie Z",
+        "b": "Millenialsi",
+        "c": "Pokolenie X",
+        "d": "Baby Boomers"
+      },
+      "correctAnswer": "b",
+      "explanation": "Millenialsi preferują e-mail, wideorozmowy i narzędzia do współpracy, jednocześnie doceniając komunikatory internetowe. Spotkania osobiste i rozmowy telefoniczne mają dla tego pokolenia umiarkowane znaczenie."
+    },
+    {
+      "code": "T1.2.Q3",
+      "themeCode": "T1",
+      "subThemeCode": "T1.2",
+      "question": "Która z poniższych kwestii najczęściej powoduje konflikty w miejscu pracy?",
+      "options": {
+        "a": "Brak wspólnych zainteresowań",
+        "b": "Wyrażanie niezgody z członkiem zespołu",
+        "c": "Nieodpowiedni język w odniesieniu do tożsamości płciowej i orientacji seksualnej",
+        "d": "Różne preferencje dotyczące godzin pracy"
+      },
+      "correctAnswer": "c",
+      "explanation": "Jest to potencjalne źródło międzypokoleniowego konfliktu opartego na tożsamości. Wyrażanie niezgody i brak wspólnych zainteresowań mogą powodować drobne nieporozumienia, które rzadko eskalują do konfliktu."
+    },
+    {
+      "code": "T1.2.Q4",
+      "themeCode": "T1",
+      "subThemeCode": "T1.2",
+      "question": "Oprócz konfliktu opartego na tożsamości, które z poniższych źródeł jest postrzegane jako przyczyna konfliktu w miejscu pracy przez wszystkie pokolenia?",
+      "options": {
+        "a": "Konflikt oparty na wartościach",
+        "b": "Kultura organizacyjna",
+        "c": "Konflikt oparty na zachowaniu",
+        "d": "Preferencje technologiczne"
+      },
+      "correctAnswer": "a",
+      "explanation": "Konflikt oparty na wartościach obejmuje spory etyczne, postawy wobec różnorodności i inkluzji, szacunek dla autorytetów, zainteresowanie odpowiedzialnością społeczną i środowiskową oraz wiele innych kwestii. Konflikt oparty na wartościach jest drugim najbardziej prawdopodobnym źródłem konfliktu międzypokoleniowego w miejscu pracy."
+    },
+    {
+      "code": "T1.3.Q5",
+      "themeCode": "T1",
+      "subThemeCode": "T1.3",
+      "question": "Które pokolenie uważa się za wysoce kompetentne w rozwiązywaniu konfliktów?",
+      "options": {
+        "a": "Pokolenie Z",
+        "b": "Millenialsi",
+        "c": "Pokolenie X",
+        "d": "Baby Boomers"
+      },
+      "correctAnswer": "a",
+      "explanation": "Pokolenie Z uważa, że ich umiejętności w zakresie komunikacji, empatii, rozwiązywania problemów i adaptacji są bardziej rozwinięte niż ocena przyznawana im przez inne pokolenia, szczególnie w obszarze adaptacji. Starsze pokolenia postrzegają Pokolenie Z jako bardzo idealistyczne, ale ze względu na młody wiek — nieposiadające wystarczającego doświadczenia życiowego, aby skutecznie rozwiązywać konflikty w wielopokoleniowym zespole."
+    },
+    {
+      "code": "T1.3.Q6",
+      "themeCode": "T1",
+      "subThemeCode": "T1.3",
+      "question": "Która z tych strategii zapobiegania konfliktom jest preferowana przez wszystkie pokolenia?",
+      "options": {
+        "a": "Regularna interakcja społeczna",
+        "b": "Regularna spersonalizowana informacja zwrotna",
+        "c": "Kultura otwartego dialogu",
+        "d": "Formalne zasady rozwiązywania konfliktów"
+      },
+      "correctAnswer": "c",
+      "explanation": "Kultura otwartego dialogu jest postrzegana jako skuteczne narzędzie zapobiegania konfliktom w pierwszej kolejności oraz jako potencjalny sposób rozwiązywania konfliktów, gdy już się pojawią. Kultura, w której pracownicy czują się zauważeni i wysłuchani, w której istnieją możliwości współpracy międzypokoleniowej i mentoringu oraz gdzie panuje jasność komunikacji, sprzyja zrozumieniu i zaufaniu."
+    },
+    {
+      "code": "T2.1.Q1",
+      "themeCode": "T2",
+      "subThemeCode": "T2.1",
+      "question": "Która strategia najlepiej przeciwdziała dyskryminacji intersekcjonalnej dla wszystkich pokoleń?",
+      "options": {
+        "a": "Zapewnienie szkoleń wyłącznie młodszym pracownikom",
+        "b": "Skupienie się wyłącznie na inicjatywach dotyczących różnorodności płciowej",
+        "c": "Wdrożenie mentoringu, inkluzywnych polityk i szkoleń uwzględniających wiele przecinających się tożsamości",
+        "d": "Zachęcanie pracowników do samodzielnego rozwiązywania problemów dyskryminacji bez wsparcia"
+      },
+      "correctAnswer": "c",
+      "explanation": "Podejścia intersekcjonalne muszą uwzględniać wiele tożsamości w różnych pokoleniach; mentoring, polityki i szkolenia zapewniają wsparcie systemowe."
+    },
+    {
+      "code": "T2.1.Q2",
+      "themeCode": "T2",
+      "subThemeCode": "T2.1",
+      "question": "Dlaczego Baby Boomers mogą zgłaszać mniej doświadczeń dyskryminacji intersekcjonalnej w porównaniu z młodszymi pokoleniami?",
+      "options": {
+        "a": "Nie doświadczają żadnej dyskryminacji",
+        "b": "Ich pozycja w hierarchiach i normy kulturowe mogą ich chronić, choć niepełnosprawność pozostaje kluczową kwestią",
+        "c": "Są z natury bardziej odporni na dyskryminację",
+        "d": "Intersekcjonalność nie dotyczy starszych pracowników"
+      },
+      "correctAnswer": "b",
+      "explanation": "Baby Boomers często zajmują stanowiska kierownicze lub czerpią korzyści z ustalonego autorytetu, co może chronić ich przed pewnymi formami dyskryminacji, choć dyskryminacja ze względu na niepełnosprawność nadal jest istotnym problemem."
+    },
+    {
+      "code": "T2.2.Q3",
+      "themeCode": "T2",
+      "subThemeCode": "T2.2",
+      "question": "Które z poniższych stwierdzeń najlepiej opisuje interakcję między wiekiem a innymi czynnikami tożsamości w dyskryminacji w miejscu pracy?",
+      "options": {
+        "a": "Wiek jest jedynym czynnikiem determinującym dyskryminację",
+        "b": "Wiek i inne czynniki, takie jak płeć lub pochodzenie etniczne, działają niezależnie",
+        "c": "Wiek nie ma wpływu w porównaniu z innymi czynnikami",
+        "d": "Wiek często przecina się z innymi znacznikami tożsamości, nasilając nierówności"
+      },
+      "correctAnswer": "d",
+      "explanation": "Wiek często przecina się z innymi znacznikami tożsamości, nasilając nierówności. Dyskryminacja wynika z nakładających się cech, takich jak płeć, pochodzenie etniczne czy niepełnosprawność, tworząc złożone doświadczenia wykluczenia."
+    },
+    {
+      "code": "T2.2.Q4",
+      "themeCode": "T2",
+      "subThemeCode": "T2.2",
+      "question": "Które pokolenie jest najczęściej kojarzone ze wspieraniem ofiar komentarzy dyskryminacyjnych?",
+      "options": {
+        "a": "Baby Boomers",
+        "b": "Pokolenie X",
+        "c": "Millenialsi",
+        "d": "Pokolenie Z"
+      },
+      "correctAnswer": "c",
+      "explanation": "Millenialsi są najczęściej wskazywani jako osoby oferujące wsparcie kolegom borykającym się z dyskryminacją, co odzwierciedla silną pokoleniową orientację na inkluzywność i sprawiedliwość."
+    },
+    {
+      "code": "T2.3.Q5",
+      "themeCode": "T2",
+      "subThemeCode": "T2.3",
+      "question": "Pracownik zgłasza, że czuje się poszkodowany w pracy z powodu młodego wieku i życia z niepełnosprawnością. Twoja najlepsza początkowa reakcja to:",
+      "options": {
+        "a": "Przypomnienie mu, że każdy ma swoje wyzwania",
+        "b": "Skierowanie go do działu HR bez dalszej rozmowy",
+        "c": "Uważne wysłuchanie, uznanie intersekcjonalnego charakteru jego doświadczenia i wyjaśnienie dostępnego wsparcia",
+        "d": "Zasugerowanie, aby udowodnił swoją wartość przez cięższą pracę"
+      },
+      "correctAnswer": "c",
+      "explanation": "Uznanie obu aspektów tożsamości pracownika potwierdza zasadność jego obaw i świadczy o świadomości dyskryminacji intersekcjonalnej. Kierowanie do zasobów pomocowych powinno nastąpić po okazaniu empatii i zrozumienia."
+    },
+    {
+      "code": "T2.3.Q6",
+      "themeCode": "T2",
+      "subThemeCode": "T2.3",
+      "question": "Które z poniższych stwierdzeń najlepiej opisuje silną strategię organizacyjną mającą na celu ograniczenie dyskryminacji intersekcjonalnej?",
+      "options": {
+        "a": "Anonimowe mechanizmy zgłaszania połączone z wyraźnymi działaniami następczymi",
+        "b": "Sporadyczne wydarzenia uświadamiające dotyczące różnic pokoleniowych",
+        "c": "Nieformalne rozmowy pozostawione poszczególnym menedżerom",
+        "d": "Poleganie na dobrej woli kierownictwa bez formalnej polityki"
+      },
+      "correctAnswer": "a",
+      "explanation": "Anonimowe zgłaszanie zapewnia pracownikom poczucie bezpieczeństwa, a działania następcze świadczą o zaangażowaniu. Bez wsparcia strukturalnego sama świadomość ryzykuje bycie jedynie symboliczną."
+    },
+    {
+      "code": "T3.1.Q1",
+      "themeCode": "T3",
+      "subThemeCode": "T3.1",
+      "question": "Które z poniższych najlepiej ilustruje nierówność kompetencji w miejscu pracy?",
+      "options": {
+        "a": "Pracownicy na obszarach wiejskich zmagają się z niestabilnym połączeniem internetowym podczas spotkań wirtualnych",
+        "b": "Niektórzy pracownicy korzystają z narzędzi cyfrowych tylko do podstawowych zadań, podczas gdy inni używają ich do innowacji",
+        "c": "Młodsi pracownicy szybko adaptują się do nowego oprogramowania do współpracy, podczas gdy starsi wymagają dodatkowego szkolenia",
+        "d": "Hierarchiczna kultura firmy zniechęca pracowników do eksperymentowania z nowymi narzędziami cyfrowymi"
+      },
+      "correctAnswer": "c",
+      "explanation": "Nierówność kompetencji odnosi się do dysproporcji w zdolności i pewności pracowników w efektywnym korzystaniu z narzędzi cyfrowych. Często wynika z różnic pokoleniowych lub nierównego dostępu do edukacji i szkoleń cyfrowych."
+    },
+    {
+      "code": "T3.1.Q2",
+      "themeCode": "T3",
+      "subThemeCode": "T3.1",
+      "question": "Jaka jest jedna z głównych konsekwencji nierozwiązanej nierówności cyfrowej dla organizacji?",
+      "options": {
+        "a": "Zwiększone uczestnictwo w programach mentoringu międzypokoleniowego",
+        "b": "Zmniejszona produktywność i innowacyjność z powodu nierównych umiejętności cyfrowych i dostępu",
+        "c": "Poprawa retencji i satysfakcji pracowników",
+        "d": "Większa spójność stylów komunikacji między pokoleniami"
+      },
+      "correctAnswer": "b",
+      "explanation": "Gdy nierówność cyfrowa nie jest rozwiązywana, organizacje borykają się ze zmniejszoną produktywnością, stagnacją innowacji i wyższą rotacją pracowników. Pracownicy pozbawieni narzędzi lub umiejętności cyfrowych mają trudności z efektywną pracą."
+    },
+    {
+      "code": "T3.2.Q3",
+      "themeCode": "T3",
+      "subThemeCode": "T3.2",
+      "question": "Które z poniższych najlepiej reprezentuje skuteczną strategię zwiększania dostępu cyfrowego w miejscu pracy?",
+      "options": {
+        "a": "Zachęcanie pracowników do korzystania z prywatnych urządzeń i łącza internetowego do pracy",
+        "b": "Wymaganie od pracowników opłacania własnych narzędzi cyfrowych w celu promowania odpowiedzialności",
+        "c": "Zapewnienie standaryzowanych urządzeń i dofinansowanie dostępu do internetu w celu zapewnienia równego uczestnictwa",
+        "d": "Umożliwienie dostępu do premium narzędzi cyfrowych wyłącznie starszym pracownikom w celu zwiększenia efektywności"
+      },
+      "correctAnswer": "c",
+      "explanation": "Zwiększanie dostępu cyfrowego oznacza zapewnienie wszystkim pracownikom niezawodnych urządzeń i łączności. Dostarczanie standaryzowanego sprzętu i dofinansowanie internetu zmniejsza dysproporcje społeczno-ekonomiczne i zapewnia spójne uczestnictwo."
+    },
+    {
+      "code": "T3.2.Q4",
+      "themeCode": "T3",
+      "subThemeCode": "T3.2",
+      "question": "Co jest kluczową cechą inkluzywnej kultury cyfrowej w organizacjach?",
+      "options": {
+        "a": "Pracownicy unikają przyznawania się do trudności z narzędziami cyfrowymi, aby zachować profesjonalizm",
+        "b": "Liderzy modelują otwartość na naukę i tworzą bezpieczeństwo psychologiczne, aby pracownicy mogli szukać pomocy",
+        "c": "Błędy w korzystaniu z narzędzi cyfrowych są karane w celu utrzymania wysokich standardów wydajności",
+        "d": "Szkolenie cyfrowe traktowane jest jako jednorazowe wydarzenie, a nie ciągły proces"
+      },
+      "correctAnswer": "b",
+      "explanation": "Inkluzywna kultura cyfrowa promuje bezpieczeństwo psychologiczne, w którym pracownicy mogą otwarcie szukać pomocy i uczyć się bez obawy przed oceną. Gdy liderzy modelują ciekawość i przyznają się do własnych luk w wiedzy, normalizuje to ciągły rozwój cyfrowy."
+    },
+    {
+      "code": "T3.3.Q5",
+      "themeCode": "T3",
+      "subThemeCode": "T3.3",
+      "question": "Jakie jest najskuteczniejsze długoterminowe podejście do zmniejszania nierówności cyfrowej w organizacjach?",
+      "options": {
+        "a": "Jednorazowe zapewnienie pracownikom wysokiej jakości urządzeń i oczekiwanie samodzielnej nauki",
+        "b": "Zlecanie na zewnątrz wszystkich szkoleń i inicjatyw transformacji cyfrowej",
+        "c": "Skupienie się wyłącznie na młodszych pokoleniach, ponieważ szybciej adaptują się do nowych technologii",
+        "d": "Wbudowanie inkluzji cyfrowej w kulturę, przywództwo i praktyki ciągłego uczenia się"
+      },
+      "correctAnswer": "d",
+      "explanation": "Niwelowanie nierówności cyfrowej wymaga holistycznej i trwałej strategii. Obejmuje to zaangażowanie przywództwa, kulturę otwartości na naukę, inkluzywny dostęp do narzędzi i ciągłe podnoszenie kwalifikacji."
+    },
+    {
+      "code": "T3.3.Q6",
+      "themeCode": "T3",
+      "subThemeCode": "T3.3",
+      "question": "Które z poniższych najlepiej oddaje, dlaczego nierówność cyfrowa stała się centralnym problemem współczesnych organizacji?",
+      "options": {
+        "a": "Ponieważ nierówny dostęp do narzędzi cyfrowych i ich wykorzystanie wpływa na produktywność, inkluzję i możliwości kariery",
+        "b": "Ponieważ technologia zastępuje wszystkie role ludzkie w miejscu pracy",
+        "c": "Ponieważ narzędzia cyfrowe są opcjonalne i dotyczą tylko pracowników zdalnych",
+        "d": "Ponieważ nierówność cyfrowa dotyczy tylko krajów o niskich dochodach"
+      },
+      "correctAnswer": "a",
+      "explanation": "Nierówność cyfrowa ma znaczenie, ponieważ bezpośrednio wpływa na to, kto może w pełni uczestniczyć w nowoczesnych środowiskach pracy. Nierówny dostęp, umiejętności i pewność w korzystaniu z narzędzi cyfrowych tworzą bariery dla współpracy, produktywności i awansu."
+    },
+    {
+      "code": "T4.1.Q1",
+      "themeCode": "T4",
+      "subThemeCode": "T4.1",
+      "question": "Wyobraź sobie, że pracujesz w wielokulturowym, wielopokoleniowym zespole z kolegami z Niemiec, Polski, Włoch i Portugalii. Które scenariusze są bardziej prawdopodobne?",
+      "options": {
+        "a": "Niemieccy koledzy z Pokolenia Z mogą być apodyktyczni",
+        "b": "Baby Boomers z Włoch mogą wykazywać paternalistyczne postawy, których młodzi koledzy z Niemiec mogą nie doceniać",
+        "c": "Nie ma różnicy pokoleniowej w zakresie doceniania struktur hierarchicznych",
+        "d": "Współpracując ze sobą, Pokolenie X z Irlandii i Polski będzie miało takie samo podejście do hierarchii"
+      },
+      "correctAnswer": "b",
+      "explanation": "Badania pokazują, że pokolenia mają różne postawy wobec hierarchii. Starsze pokolenia we wszystkich kulturach wydają się doceniać hierarchię i status bardziej niż młodsze pokolenia."
+    },
+    {
+      "code": "T4.1.Q2",
+      "themeCode": "T4",
+      "subThemeCode": "T4.1",
+      "question": "Jakie byłoby najskuteczniejsze podejście organizacyjne do zmniejszenia napięć międzypokoleniowych dotyczących hierarchii w zespołach wielokulturowych?",
+      "options": {
+        "a": "Wprowadzenie formalnych i jasno zdefiniowanych linii raportowania",
+        "b": "Oferowanie warsztatów dialogu międzypokoleniowego, w których pracownicy z różnych kultur i grup wiekowych mogą omówić swoje oczekiwania dotyczące hierarchii, autorytetu i współpracy",
+        "c": "Pozwolenie każdej grupie kulturowej na stosowanie preferowanego modelu hierarchii",
+        "d": "Unikanie bezpośredniego poruszania tematu hierarchii, ponieważ takie dyskusje mogą sprawić, że starsi pracownicy poczują się niekomfortowo i zwiększyć konflikt"
+      },
+      "correctAnswer": "b",
+      "explanation": "Promowanie kultury dialogu wydaje się najlepiej akceptowanym przez wszystkie pokolenia sposobem na promowanie wzajemnego zrozumienia i wspieranie pozytywnego podejścia do współpracy w zespołach wielokulturowych."
+    },
+    {
+      "code": "T4.2.Q3",
+      "themeCode": "T4",
+      "subThemeCode": "T4.2",
+      "question": "Które z poniższych podejść byłoby najskuteczniejsze dla międzynarodowego i międzypokoleniowego zespołu projektowego obejmującego członków z kultur o wysokim i niskim poziomie unikania niepewności?",
+      "options": {
+        "a": "Ustalenie bardzo szczegółowych procedur dla każdego zadania i wymaganie ścisłego ich przestrzegania od wszystkich członków zespołu w celu zapewnienia spójności między kulturami",
+        "b": "Pozwolenie każdemu członkowi zespołu na samodzielne decydowanie o sposobie wykonywania zadań, bez wspólnych wytycznych, aby zachęcić do kreatywności i autonomii",
+        "c": "Połączenie jasnych podstawowych struktur (takich jak udokumentowane cele i procesy) z elastycznością w sposobie wykonywania zadań",
+        "d": "Unikanie dyskusji o preferencjach kulturowych dotyczących struktury i elastyczności, ponieważ ich poruszanie mogłoby zwiększyć napięcie w zespole"
+      },
+      "correctAnswer": "c",
+      "explanation": "Uznanie, że członkowie zespołu z kultur o wysokim unikaniu niepewności potrzebują jasności i przewidywalności, podczas gdy ci z kultur o niskim unikaniu niepewności cenią elastyczność i innowacyjność, świadczy o szacunku zarówno dla kultury, jak i pokoleń."
+    },
+    {
+      "code": "T4.2.Q4",
+      "themeCode": "T4",
+      "subThemeCode": "T4.2",
+      "question": "W jaki sposób koncepcja unikania niepewności pomaga wyjaśnić różnice kulturowe odzwierciedlone w trendach pokoleniowych w miejscu pracy opisanych w przeprowadzonych badaniach?",
+      "options": {
+        "a": "Młodsze pokolenia — ukształtowane przez globalizację i cyfryzację — wykazują postawy bliższe kulturom o niskim unikaniu niepewności, faworyzując elastyczność, szybkość i eksperymentowanie",
+        "b": "Różnice kulturowe zanikają, gdy młodsze pokolenia przyjmują nowe technologie, ponieważ unikanie niepewności przestaje odgrywać rolę",
+        "c": "Wysokie unikanie niepewności zawsze prowadzi do hierarchicznych miejsc pracy, niezależnie od kontekstu kulturowego lub pokoleniowego",
+        "d": "Różnice w stylach pracy wynikają głównie z indywidualnych cech osobowości, a nie z pochodzenia kulturowego"
+      },
+      "correctAnswer": "a",
+      "explanation": "Kultura narodowa i zmiany pokoleniowe oddziałują na siebie w taki sposób, że nawet w kulturach o wysokim unikaniu niepewności młodsze pokolenia przesuwają się w kierunku wartości typowych dla społeczeństw o niskim unikaniu niepewności, wpływając na organizację pracy."
+    },
+    {
+      "code": "T4.3.Q5",
+      "themeCode": "T4",
+      "subThemeCode": "T4.3",
+      "question": "W jaki sposób różnice w bezpośrednich i pośrednich stylach komunikacji między kulturami i pokoleniami mogą prowadzić do nieporozumień w miejscu pracy?",
+      "options": {
+        "a": "Starsze pokolenia stosują komunikację pośrednią tylko wtedy, gdy nie są pewne omawianego tematu",
+        "b": "Komunikacja bezpośrednia jest zawsze jaśniejsza i dlatego preferowana w środowiskach wielokulturowych i wielopokoleniowych",
+        "c": "Nieporozumienia komunikacyjne występują głównie dlatego, że młodsze pokolenia nie szanują tradycyjnych hierarchii w miejscu pracy",
+        "d": "Starsi pracownicy z kultur wysokokontekstowych mogą komunikować się pośrednio i formalnie, co młodsi koledzy mogą interpretować jako niejasne lub wymijające"
+      },
+      "correctAnswer": "d",
+      "explanation": "Różnice między komunikacją bezpośrednią a pośrednią odnoszą się zarówno do kontekstu kulturowego (komunikacja wysoko- i niskokontekstowa), jak i stylu pokoleniowego (formalność vs. nieformalność). Wyjaśnia to, dlaczego młodsi, bardziej bezpośredni koledzy mogą być postrzegani jako agresywni, podczas gdy starsi lub bardziej pośredni komunikatorzy mogą być postrzegani jako niejasni."
+    },
+    {
+      "code": "T4.3.Q6",
+      "themeCode": "T4",
+      "subThemeCode": "T4.3",
+      "question": "W jaki sposób różnice w zachowaniach komunikacyjnych mogą wpływać na zespoły międzypokoleniowe i wielokulturowe?",
+      "options": {
+        "a": "Różnice komunikacyjne mają niewielki realny wpływ na pracę zespołową międzypokoleniową i międzykulturową, ponieważ standardy profesjonalne zapewniają, że wszyscy komunikują się w ten sam sposób niezależnie od kultury czy wieku",
+        "b": "Nieporozumienia między pokoleniami wynikają głównie z tego, że starsi pracownicy opierają się nowym technologiom, takim jak e-mail, a nie z różnych norm komunikacyjnych lub oczekiwań kulturowych",
+        "c": "Różnice w zachowaniach komunikacyjnych — takie jak poziom bezpośredniości, formalności i czas odpowiedzi — mogą łatwo prowadzić do nieporozumień i napięć",
+        "d": "Milczenie lub opóźnione odpowiedzi w komunikacji między kulturami zawsze wskazują na niezgodę lub brak zaangażowania, więc menedżerowie powinni zachęcać do natychmiastowych odpowiedzi, aby utrzymać produktywność"
+      },
+      "correctAnswer": "c",
+      "explanation": "Bezpośredniość, formalność i czas odpowiedzi różnią się w zależności od kultur i pokoleń, wpływając na interpretację wiadomości. Młodsze pokolenia mogą być mniej pośrednie niż starsze."
+    },
+    {
+      "code": "T5.1.Q1",
+      "themeCode": "T5",
+      "subThemeCode": "T5.1",
+      "question": "Która z poniższych wartości jest najczęściej kojarzona z Pokoleniem X?",
+      "options": {
+        "a": "Szacunek dla autorytetów",
+        "b": "Autonomia i równowaga między pracą a życiem prywatnym",
+        "c": "Szybka informacja zwrotna i inkluzja",
+        "d": "Lojalność wobec jednego pracodawcy"
+      },
+      "correctAnswer": "b",
+      "explanation": "Pokolenie X doświadczyło okresu niestabilności ekonomicznej i zmian w korporacjach. Zazwyczaj priorytetyzuje niezależność, adaptacyjność i równość, przywiązując dużą wagę do autonomii i równowagi w swoim życiu."
+    },
+    {
+      "code": "T5.1.Q2",
+      "themeCode": "T5",
+      "subThemeCode": "T5.1",
+      "question": "Która wartość jest konsekwentnie ważna dla wszystkich pokoleń?",
+      "options": {
+        "a": "Ekskluzywność",
+        "b": "Wysokie zarobki",
+        "c": "Szacunek i współpraca",
+        "d": "Autorytet i hierarchia"
+      },
+      "correctAnswer": "c",
+      "explanation": "Badania wskazują, że niezależnie od różnych akcentów, wszystkie pokolenia przywiązują dużą wagę do szacunku, współpracy i wspierającego środowiska. Te wspólne wartości stanowią fundament kooperacji w miejscu pracy."
+    },
+    {
+      "code": "T5.2.Q3",
+      "themeCode": "T5",
+      "subThemeCode": "T5.2",
+      "question": "Który czynnik jest silnym motywatorem dla Millenialsów?",
+      "options": {
+        "a": "Bezpieczeństwo zatrudnienia i lojalność wobec jednego pracodawcy",
+        "b": "Sens pracy i możliwości rozwoju",
+        "c": "Ścisłe hierarchie i formalne procesy",
+        "d": "Unikanie narzędzi cyfrowych"
+      },
+      "correctAnswer": "b",
+      "explanation": "Millenialsi są motywowani pracą, która ma znaczenie, możliwościami awansu i zgodnością z osobistymi przekonaniami. Chociaż stabilność ma znaczenie, najlepiej funkcjonują w środowiskach oferujących rozwój i poczucie celu."
+    },
+    {
+      "code": "T5.2.Q4",
+      "themeCode": "T5",
+      "subThemeCode": "T5.2",
+      "question": "Co jest częstym czynnikiem demotywującym dla Pokolenia Z?",
+      "options": {
+        "a": "Zbyt dużo informacji zwrotnej",
+        "b": "Brak elastyczności i słaba komunikacja",
+        "c": "Zbyt wiele opcji pracy hybrydowej",
+        "d": "Możliwości mentoringu"
+      },
+      "correctAnswer": "b",
+      "explanation": "Pokolenie Z, urodzone w erze cyfrowej, oczekuje elastyczności i jasnej komunikacji. Tracą motywację, gdy tych elementów brakuje lub gdy systemy są nadmiernie sztywne i niejasne."
+    },
+    {
+      "code": "T5.3.Q5",
+      "themeCode": "T5",
+      "subThemeCode": "T5.3",
+      "question": "Jaki styl współpracy jest najwygodniejszy dla Baby Boomers?",
+      "options": {
+        "a": "Struktury hierarchiczne i spotkania osobiste",
+        "b": "Komunikacja wyłącznie cyfrowa i zdalna",
+        "c": "Nieformalna współpraca oparta na czacie",
+        "d": "Pełna niezależność bez pracy zespołowej"
+      },
+      "correctAnswer": "a",
+      "explanation": "Przedstawiciele pokolenia Baby Boomers są zaznajomieni z konwencjonalnymi ramami i priorytetyzują bezpośrednie, osobiste interakcje. Chociaż przystosowali się do korzystania z narzędzi cyfrowych, nadal preferują osobistą, zorganizowaną pracę zespołową."
+    },
+    {
+      "code": "T5.3.Q6",
+      "themeCode": "T5",
+      "subThemeCode": "T5.3",
+      "question": "Które podejście pomaga niwelować różnice pokoleniowe we współpracy?",
+      "options": {
+        "a": "Ignorowanie różnic pokoleniowych",
+        "b": "Poleganie wyłącznie na sztywnych hierarchiach",
+        "c": "Zniechęcanie do pracy hybrydowej",
+        "d": "Mentoring odwrócony i otwarty dialog"
+      },
+      "correctAnswer": "d",
+      "explanation": "Mentoring odwrócony umożliwia młodszym pracownikom przekazywanie swojej wiedzy cyfrowej, jednocześnie czerpiąc z doświadczeń starszych współpracowników. W połączeniu z otwartą komunikacją buduje to wzajemny szacunek i wzmacnia współpracę między pokoleniami."
+    }
+  ]
+}

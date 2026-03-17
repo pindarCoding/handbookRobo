@@ -1,0 +1,85 @@
+{
+  "common": {
+    "loading": "Ładowanie...",
+    "error": "Błąd",
+    "back": "Wstecz",
+    "clearAll": "Wyczyść wszystko",
+    "page": "Strona {{pageId}}",
+    "chapterIntroduction": "Wprowadzenie do tematu"
+  },
+  "handbook": {
+    "addButton": "Dodaj do Podręcznika",
+    "addedWithChapter": "Dodano dla Ciebie wprowadzenie do rozdziału",
+    "added": "Dodano \"{{title}}\"",
+    "alreadyExists": "\"{{title}}\" jest już w Twoim podręczniku",
+    "removed": "Usunięto z podręcznika",
+    "chapterRemoved": "Rozdział usunięty. Karty pozostają w Twoim podręczniku.",
+    "removeChapterWarning": "Usunięcie tego rozdziału pozostawi {{count}} kartę bez kontekstu. Kliknij ponownie, aby potwierdzić.",
+    "removeChapterWarningPlural": "Usunięcie tego rozdziału pozostawi {{count}} kart bez kontekstu. Kliknij ponownie, aby potwierdzić.",
+    "handbookCleared": "Podręcznik wyczyszczony",
+    "helpGeneration": "Wybierz pokolenie w menu nawigacyjnym, aby zobaczyć konkretne podejścia i metodologie dla tego tematu."
+  },
+  "yourBook": {
+    "title": "Twój Własny Podręcznik",
+    "emptyMessage": "Twój podręcznik jest pusty. Zacznij dodawać strony z powyższych kategorii.",
+    "exportButton": "Eksportuj Podręcznik PDF",
+    "chapterIntroduction": "Wprowadzenie do rozdziału",
+    "clearConfirm": "Usunąć wszystkie {{count}} strony z podręcznika?",
+    "clearConfirmSingle": "Usunąć tę stronę z podręcznika?",
+    "removeAnyway": "Usuń mimo to"
+  },
+  "navigation": {
+    "selectTheme": "Wybierz Temat",
+    "selectSubTheme": "Wybierz Podtemat",
+    "selectGeneration": "Wybierz Pokolenie",
+    "backArrow": "Wstecz"
+  },
+  "progress": {
+    "theme": "Temat",
+    "subtheme": "Podtemat",
+    "generation": "Pokolenie"
+  },
+  "toast": {
+    "success": "Sukces",
+    "error": "Błąd",
+    "warning": "Ostrzeżenie",
+    "info": "Informacja"
+  },
+  "errors": {
+    "exportFailed": "Wystąpił nieoczekiwany błąd podczas eksportowania podręcznika. Spróbuj ponownie.",
+    "noPages": "Brak stron z prawidłowymi identyfikatorami do eksportu",
+    "pageNotFound": "Strona {{pageId}} nie jest dostępna na serwerze. Usuń ją z wyboru i spróbuj ponownie.",
+    "pageNotFoundSimple": "Błąd: Strona {{pageId}} nie jest dostępna na serwerze.",
+    "networkError": "Błąd sieci: Nie można połączyć się z serwerem PDF. Sprawdź swoje połączenie.",
+    "serverError": "Błąd: Serwer odpowiedział statusem {{status}}",
+    "emptyPdfError": "Błąd: Otrzymano pusty plik PDF",
+    "invalidPdfError": "Błąd: Serwer nie zwrócił prawidłowego pliku PDF",
+    "corsError": "Błąd sieci: Nie można połączyć się z serwerem PDF. Sprawdź:\n- Czy serwer działa pod adresem {{serverUrl}}\n- Czy CORS jest prawidłowo skonfigurowany na serwerze\n- Czy jesteś w tej samej sieci",
+    "notLoaded": "Błąd: Nie można załadować treści"
+  },
+  "cards": {
+    "title-stereotypes": "Stereotypy",
+    "title-research": "Badania",
+    "title-advices": "Strategia i&amp;nbsp;Praktyczne Porady"
+  },
+  "assessment": {
+    "title": "Ocena Wiedzy",
+    "backToHandbook": "Powrót do Podręcznika",
+    "questionOf": "Pytanie {{current}} z {{total}}",
+    "back": "Wstecz",
+    "next": "Dalej",
+    "finish": "Zakończ",
+    "answered": "Odpowiedziano",
+    "selectAnswer": "Wybierz odpowiedź",
+    "loading": "Przygotowywanie oceny...",
+    "loadingQuestions": "Wybieranie pytań z 5 tematów...",
+    "resultsByTheme": "Wyniki według tematu",
+    "tryAgain": "Spróbuj ponownie",
+    "close": "Zamknij",
+    "excellent": "Doskonale!",
+    "greatJob": "Świetna robota!",
+    "goodEffort": "Dobry wysiłek!",
+    "keepLearning": "Ucz się dalej!",
+    "selfAssessment": "Samoocena"
+  }
+}

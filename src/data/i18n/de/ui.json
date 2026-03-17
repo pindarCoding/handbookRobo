@@ -1,0 +1,85 @@
+{
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "back": "Zurück",
+    "clearAll": "Alles löschen",
+    "page": "Seite {{pageId}}",
+    "chapterIntroduction": "Themeneinführung"
+  },
+  "handbook": {
+    "addButton": "Zum Handbuch hinzufügen",
+    "addedWithChapter": "Kapiteleinführung wurde für Sie hinzugefügt",
+    "added": "\"{{title}}\" hinzugefügt",
+    "alreadyExists": "\"{{title}}\" ist bereits in Ihrem Handbuch",
+    "removed": "Aus dem Handbuch entfernt",
+    "chapterRemoved": "Kapitel entfernt. Karten sind weiterhin in Ihrem Handbuch.",
+    "removeChapterWarning": "Das Entfernen dieses Kapitels lässt {{count}} Karte ohne Kontext. Klicken Sie erneut zum Bestätigen.",
+    "removeChapterWarningPlural": "Das Entfernen dieses Kapitels lässt {{count}} Karten ohne Kontext. Klicken Sie erneut zum Bestätigen.",
+    "handbookCleared": "Handbuch geleert",
+    "helpGeneration": "Wählen Sie eine Generation im Navigationsmenü aus, um spezifische Ansätze und Methoden für dieses Thema zu sehen."
+  },
+  "yourBook": {
+    "title": "Ihr individuelles Handbuch",
+    "emptyMessage": "Ihr Handbuch ist leer. Beginnen Sie, Seiten aus den obigen Kategorien hinzuzufügen.",
+    "exportButton": "Handbuch als PDF exportieren",
+    "chapterIntroduction": "Kapiteleinführung",
+    "clearConfirm": "Alle {{count}} Seiten aus Ihrem Handbuch entfernen?",
+    "clearConfirmSingle": "Diese Seite aus Ihrem Handbuch entfernen?",
+    "removeAnyway": "Trotzdem entfernen"
+  },
+  "navigation": {
+    "selectTheme": "Thema auswählen",
+    "selectSubTheme": "Unterthema auswählen",
+    "selectGeneration": "Generation auswählen",
+    "backArrow": "Zurück"
+  },
+  "progress": {
+    "theme": "Thema",
+    "subtheme": "Unterthema",
+    "generation": "Generation"
+  },
+  "toast": {
+    "success": "Erfolg",
+    "error": "Fehler",
+    "warning": "Warnung",
+    "info": "Info"
+  },
+  "errors": {
+    "exportFailed": "Beim Exportieren des Handbuchs ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "noPages": "Keine Seiten mit gültigen Seiten-IDs zum Exportieren vorhanden",
+    "pageNotFound": "Seite {{pageId}} ist auf dem Server nicht verfügbar. Bitte entfernen Sie sie aus Ihrer Auswahl und versuchen Sie es erneut.",
+    "pageNotFoundSimple": "Fehler: Seite {{pageId}} ist auf dem Server nicht verfügbar.",
+    "networkError": "Netzwerkfehler: Verbindung zum PDF-Server konnte nicht hergestellt werden. Bitte überprüfen Sie Ihre Verbindung.",
+    "serverError": "Fehler: Server hat mit Status {{status}} geantwortet",
+    "emptyPdfError": "Fehler: Leere PDF-Datei empfangen",
+    "invalidPdfError": "Fehler: Server hat keine gültige PDF-Datei zurückgegeben",
+    "corsError": "Netzwerkfehler: Verbindung zum PDF-Server konnte nicht hergestellt werden. Bitte überprüfen Sie:\n- Der Server läuft unter {{serverUrl}}\n- CORS ist auf dem Server korrekt konfiguriert\n- Sie befinden sich im selben Netzwerk",
+    "notLoaded": "Fehler: Inhalt konnte nicht geladen werden"
+  },
+  "cards": {
+    "title-stereotypes": "Stereotypen",
+    "title-research": "Forschung",
+    "title-advices": "Strategie &amp; praktische Ratschläge"
+  },
+  "assessment": {
+    "title": "Wissenstest",
+    "backToHandbook": "Zurück zum Handbuch",
+    "questionOf": "Frage {{current}} von {{total}}",
+    "back": "Zurück",
+    "next": "Weiter",
+    "finish": "Abschließen",
+    "answered": "Beantwortet",
+    "selectAnswer": "Wählen Sie eine Antwort",
+    "loading": "Ihr Test wird vorbereitet...",
+    "loadingQuestions": "Fragen aus 5 Themen werden ausgewählt...",
+    "resultsByTheme": "Ergebnisse nach Thema",
+    "tryAgain": "Erneut versuchen",
+    "close": "Schließen",
+    "excellent": "Ausgezeichnet!",
+    "greatJob": "Sehr gut!",
+    "goodEffort": "Guter Einsatz!",
+    "keepLearning": "Weiter lernen!",
+    "selfAssessment": "Selbsteinschätzung"
+  }
+}

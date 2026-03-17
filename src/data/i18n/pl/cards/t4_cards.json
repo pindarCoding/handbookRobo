@@ -1,0 +1,152 @@
+{
+  "T4.1": {
+    "GZ": {
+      "id": "",
+      "code": "T4.1.GZ",
+      "title": "GZ: Hierarchia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "\"Zbyt wrażliwi / niedoświadczeni\" – Często postrzegani jako naiwni, nadmiernie idealistyczni lub pozbawieni odporności i niebędący w stanie wpływać na kulturę miejsca pracy. Ich punkty widzenia są często pomijane, a rozumienie profesjonalnych hierarchii może być niedoceniane. Choć rzadko identyfikowani jako sprawcy, mogą pojawić się subtelne uprzedzenia. Wykazują silniejszą świadomość w kwestiach pochodzenia etnicznego i niepełnosprawności, co odzwierciedla, jak wczesna ekspozycja kształtuje ich inkluzywną postawę.",
+      "researchFindings": "25% identyfikuje niepełnosprawność i pochodzenie etniczne jako decydujące czynniki kształtujące ich doświadczenia zawodowe. Odzwierciedla to nie wrażliwość, lecz podwyższoną świadomość tego, jak nierówności strukturalne wpływają bezpośrednio na nich lub ich otoczenie. Ich \"wrażliwość\" może być zatem przeformułowana jako zaawansowana perspektywa intersekcjonalna. Rzadko zgłaszani jako sprawcy, ale mogą pojawić się subtelne uprzedzenia. Świadomość jest podwyższona w kwestii pochodzenia etnicznego i niepełnosprawności, pokazując, że wczesna ekspozycja kształtuje ich inkluzywną postawę.",
+      "strategiesAdvice": "Nie odrzucaj obaw Pokolenia Z jako niedojrzałości. Angażuj ich w politykę, rady ds. różnorodności i mentoring. Ich perspektywy wcześnie sygnalizują problemy systemowe i wzmacniają działania inkluzyjne. Zapewnij szkolenia z uprzedzeń od pierwszego dnia, doceniaj ich spostrzeżenia jako atuty i twórz bezpieczne przestrzenie dla znaczącego wkładu."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.1.GM",
+      "title": "GM: Hierarchia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "\"Uprawnieni / zawsze dążący do inkluzji\" – Czasem przedstawiani jako wymagający lub nadmiernie skupieni na sprawiedliwości. Uważani za \"zbyt poprawnych politycznie\" lub nadwrażliwych, szczególnie w kwestii mikroagresji i różnorodności. Krytycy sugerują, że przeceniają sprawiedliwość kosztem pragmatyzmu.",
+      "researchFindings": "Millenialsi często identyfikują aż siedem przecinających się nierówności kształtujących szanse zawodowe, przy czym szczególnie wyróżniają się niepełnosprawność i zdrowie psychiczne. Ich apel o inkluzję odzwierciedla nie roszczeniowość, lecz doświadczenie życiowe nawigowania po stresie, niepewnych ścieżkach kariery i wyzwaniach związanych z dobrostanem. Choć rzadko angażują się w zachowania dyskryminacyjne, pozostają szczególnie wyczuleni na to, jak stres, niepełnosprawność i nierówności społeczno-ekonomiczne wpływają na dynamikę miejsca pracy.",
+      "strategiesAdvice": "Ustanów ustrukturyzowane kanały informacji zwrotnej (ankiety, grupy fokusowe), aby Millenialsi mogli bezpiecznie wyrażać swoje obawy. Połącz to z ukierunkowanymi inicjatywami dotyczącymi zdrowia psychicznego, wsparcia niepełnosprawności i elastycznej pracy, aby pokazać, że ich rzecznictwo przynosi realne zmiany. Wzmocnij ich pozycję, aby przewodzili w sposób inkluzywny, modelując otwartą komunikację. Uznaj rzecznictwo i wrażliwość kulturową jako kluczowe cechy przywódcze i włącz je do kultury zespołowej."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.1.GX",
+      "title": "GX: Hierarchia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "\"Pomijani / konserwatywni\" – Często uważani za \"niewidzialny środek\" między głośnymi młodszymi pracownikami a autorytatywnymi starszymi liderami. Często postrzegani jako pragmatyczni i ostrożni, mogą być traktowani jako oporni na zmiany. Wielu z nich unika debat o inkluzji, preferując ustalone normy i efektywność operacyjną od szerszej transformacji kulturowej.",
+      "researchFindings": "Pokolenie X jest świadome dyskryminacji związanej z religią i niepełnosprawnością, ukształtowane zarówno przez role menedżerskie, jak i osobiste obowiązki. Choć czasem postrzegani jako konserwatywni, sami mogą doświadczać subtelnego wykluczenia. Ich autorytet w połowie kariery pozycjonuje ich jako mogących albo kwestionować, albo wzmacniać uprzedzenia w miejscu pracy, co czyni ich zaangażowanie kluczowym dla działań inkluzyjnych.",
+      "strategiesAdvice": "Wzmocnij głos Pokolenia X w przestrzeniach przywódczych i podkreśl ich rolę jako pomostów między pokoleniami. Zachęcaj do udziału w formalnych programach sojusznictwa i mentoringu, pozycjonując ich pragmatyczną perspektywę w połowie kariery jako siłę stabilizującą w inicjatywach różnorodności. Wykorzystaj ich doświadczenie poprzez inicjatywy sojusznictwa i pełnego szacunku dialogu, dostarczając narzędzia do przekształcenia autorytetu w pozytywny wpływ oraz wspierania inkluzji i świadomości kulturowej w zespołach."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.1.GB",
+      "title": "GB: Hierarchia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "\"Oporni na zmiany\" – Często postrzegani jako skostniałi w swoich poglądach i mniej otwarci na ewoluujące normy społeczne i w miejscu pracy. Mają tendencję do podtrzymywania tradycyjnych hierarchii i mogą mieć trudności z adaptacją do zmieniających się oczekiwań kulturowych dotyczących różnorodności.",
+      "researchFindings": "Choć Baby Boomers zgłaszają mniej przypadków dyskryminacji, niepełnosprawność konsekwentnie wyróżnia się w ich doświadczeniach. Wykluczenie jest często subtelne, obejmując niedostępne technologie, założenia o umiejętnościach cyfrowych lub niedocenianie ich adaptacyjności. Są najczęściej wiązani z uwagami dyskryminacyjnymi, szczególnie dotyczącymi niepełnosprawności. Wiek i długi staż pracy mogą również wzmacniać tradycjonalistyczne perspektywy na inkluzję.",
+      "strategiesAdvice": "Zapewnij dostępne udogodnienia i inkluzywną technologię, aby starsi pracownicy z niepełnosprawnościami byli w pełni zintegrowani w cyfrowych miejscach pracy. Wykorzystaj ich doświadczenie zawodowe do kształtowania strategii inkluzji międzypokoleniowej, przeformułowując ich jako cenne zasoby, a nie \"przeszkody na drodze postępu\". Angażuj Baby Boomers poprzez warsztaty międzypokoleniowe i opowiadanie historii, doceniając ich wiedzę ekspercką, jednocześnie aktualizując ich rozumienie współczesnych norm kulturowych i praktyk inkluzywnych."
+    }
+  },
+  "T4.2": {
+    "GZ": {
+      "id": "",
+      "code": "T4.2.GZ",
+      "title": "GZ: Unikanie niepewności",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Często lekceważeni jako \"zbyt wrażliwi\", zakłada się, że nie są w stanie sprostać wyzwaniom w miejscu pracy. Ich obawy mogą być minimalizowane lub pomijane, postrzegane jako oznaka niedojrzałości lub niewystarczającej odporności.",
+      "researchFindings": "Doświadczają jednych z najwyższych wskaźników wiktymizacji. Czynniki intersekcjonalne — takie jak wiek, pochodzenie etniczne i niepełnosprawność — dodatkowo zwiększają wrażliwość, przyczyniając się do strukturalnego wykluczenia w dynamice zespołu.",
+      "strategiesAdvice": "Wprowadź programy mentoringowe, bezpieczne kanały zgłaszania i inicjatywy uświadamiające. Potwierdzaj doświadczenia, przeciwdziałaj barierom systemowym i zapewnij Pokoleniu Z narzędzia do pewnego nawigowania po wyzwaniach w miejscu pracy."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.2.GM",
+      "title": "GM: Unikanie niepewności",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Często postrzegani jako roszczeniowi lub szybko składający skargi dotyczące niesprawiedliwości, ich rzecznictwo na rzecz sprawiedliwego traktowania może być błędnie interpretowane jako przesadna reakcja, a nie uzasadniona obawa.",
+      "researchFindings": "Są częstymi ofiarami, borykającymi się z nierównościami związanymi z niepełnosprawnością, zdrowiem psychicznym i statusem społeczno-ekonomicznym. Te wzorce ujawniają systemowe niesprawiedliwości kształtujące ich ścieżki kariery.",
+      "strategiesAdvice": "Wzmocnij ochronę instytucjonalną, normalizuj rozmowy o zdrowiu psychicznym i ustanów transparentne ścieżki awansu, aby zmniejszyć wrażliwość i promować sprawiedliwość."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.2.GX",
+      "title": "GX: Unikanie niepewności",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Postrzegani jako \"niewidzialny środek\", często są pomijani w dyskusjach o równości w miejscu pracy. Choć zakłada się ich odporność ze względu na wiek, ich wyzwania często pozostają niedostrzegane.",
+      "researchFindings": "Doświadczają umiarkowanej wiktymizacji, głównie związanej z religią i niepełnosprawnością. Czynniki intersekcjonalne dotyczą profesjonalistów w połowie kariery, choć te doświadczenia są często niedostatecznie zgłaszane.",
+      "strategiesAdvice": "Angażuj Pokolenie X w programy równościowe, oceniaj bariery intersekcjonalne i włączaj ich perspektywy do dyskusji politycznych, aby zapewnić wsparcie i uznanie dla pracowników średniego szczebla."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.2.GB",
+      "title": "GB: Unikanie niepewności",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Postrzegani jako odporni i na wysokim stanowisku, często zakłada się, że są odporni na dyskryminację ze względu na swoje doświadczenie i autorytet. Uważa się, że wiek zapewnia ochronę przed wykluczeniem.",
+      "researchFindings": "Są ogólnie rzadziej ofiarami, ale niepełnosprawność, zdrowie i czynniki związane z wiekiem mogą ograniczać uczestnictwo. Te bariery przecinają się z dostępnością cyfrową i zmieniającymi się oczekiwaniami w miejscu pracy.",
+      "strategiesAdvice": "Priorytetyzuj dostępność, inkluzję cyfrową i inicjatywy uznania. Podkreślaj wkład starszych pracowników w ramach agend różnorodności, aby zapewnić inkluzję na każdym etapie kariery."
+    }
+  },
+  "T4.3": {
+    "GZ": {
+      "id": "",
+      "code": "T4.3.GZ",
+      "title": "GZ: Komunikacja bezpośrednia i pośrednia",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Pokolenie Z jest często postrzegane jako dostrzegające dyskryminację w wielu sytuacjach.",
+      "researchFindings": "Pokolenie Z nie przesadza. Są szczególnie wyczuleni na złożony wpływ czynników intersekcjonalnych, takich jak niepełnosprawność i pochodzenie etniczne, a jedna czwarta z nich wskazuje cztery takie czynniki jako wysoce wpływowe.",
+      "strategiesAdvice": "Stwórz platformy, na których głosy Pokolenia Z są naprawdę słyszane, takie jak fora dialogu międzypokoleniowego. W połączeniu z mentoringiem, te przestrzenie umożliwiają im podnoszenie świadomości, jednocześnie zapewniając ochronę przed potencjalnymi reperkusjami."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.3.GM",
+      "title": "GM: Komunikacja bezpośrednia i pośrednia",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millenialsi są nadmiernie wrażliwi na uprzedzenia.",
+      "researchFindings": "Są silnymi rzecznikami zmian systemowych, zwłaszcza w kwestii niepełnosprawności i zdrowia psychicznego. Czerpiąc z różnorodnych doświadczeń, aktywnie wskazują luki w politykach i strukturach dobrostanu.",
+      "strategiesAdvice": "Angażuj Millenialsów w projektowanie inicjatyw inkluzywnych i cyfrowych narzędzi do zgłaszania. Ich otwartość i innowacyjne podejście mogą pomóc w normalizacji świadomości intersekcjonalnej w całej organizacji."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.3.GX",
+      "title": "GX: Komunikacja bezpośrednia i pośrednia",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Pokolenie X jest postrzegane jako trzymające głowę nisko i unikające dyskryminacji. Często jest postrzegane jako menedżerowie na dystans, którzy unikają wrażliwych sporów, przedkładając efektywność operacyjną i minimalizację konfliktów nad przywództwo kulturowe.",
+      "researchFindings": "Pokolenie X często rozpoznaje subtelne formy uprzedzeń intersekcjonalnych, szczególnie związanych z religią i niepełnosprawnością, ale normy kulturowe mogą zniechęcać ich do zabierania głosu. Zapewnienie umiarkowanego wsparcia daje im siłę do działania. Ich autorytet na średnim szczeblu pozwala im interweniować w sposób, który może znacząco wpłynąć na normy i wspierać inkluzję.",
+      "strategiesAdvice": "Zachęcaj do ustrukturyzowanych programów sojusznictwa, umożliwiających Pokoleniu X pełnienie roli wzorów i sponsorów. Przedstawiając interwencję jako przywództwo, a nie konfrontację, organizacje pomagają im konstruktywnie wykorzystywać swój wpływ. Wyposaż Pokolenie X w modelowanie wspierających zachowań, niwelowanie różnic pokoleniowych i pozytywne kształtowanie kultury organizacyjnej."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.3.GB",
+      "title": "GB: Komunikacja bezpośrednia i pośrednia",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers są postrzegani jako zbyt skostniałi, aby dostosować się do inkluzji. Często są widziani jako niechętni do interweniowania, preferujący harmonię i stabilność nad bezpośrednim przeciwdziałaniem dyskryminacji. W rezultacie ich potencjalny wpływ w inicjatywach sojusznictwa może być niedostatecznie wykorzystywany.",
+      "researchFindings": "W rzeczywistości wielu Baby Boomers uznaje niepełnosprawność za istotny czynnik nierówności w miejscu pracy, choć ogólnie zgłaszają mniej doświadczeń dyskryminacji intersekcjonalnej, prawdopodobnie z powodu ochronnego efektu starszeństwa. Choć rzadziej identyfikowani jako osoby wspierające, ich interwencje mają znaczny wpływ. Gdy są zaangażowani, Baby Boomers mogą pomóc w przekształceniu norm i oczekiwań kulturowych.",
+      "strategiesAdvice": "Wykorzystaj ich autorytet do promowania inkluzywnych przeglądów polityk. Gdy starsi liderzy widocznie popierają szkolenia intersekcjonalne i systemy zgłaszania, legitymizuje to te działania w całej organizacji. Pozycjonuj sojusznictwo jako kluczowy obowiązek przywódczy, podkreślając, że widoczne wsparcie ze strony starszych pracowników nadaje ton kulturze organizacyjnej i wzmacnia normy inkluzywne."
+    }
+  }
+}

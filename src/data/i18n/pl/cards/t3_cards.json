@@ -1,0 +1,152 @@
+{
+  "T3.1": {
+    "GZ": {
+      "id": "",
+      "code": "T3.1.GZ",
+      "title": "GZ: Zrozumienie nierówności cyfrowej w kontekście miejsca pracy",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Pracownicy Pokolenia Z są często postrzegani jako \"przyklejeni do ekranów\" — biegli w najnowszych aplikacjach, ale pozbawieni głębi umiejętności zawodowych lub cierpliwości do pracy z bardziej tradycyjnymi systemami. Starsi koledzy czasem postrzegają ich jako zbyt pewnych siebie technologicznie, ale nieprzygotowanych do realiów współpracy w miejscu pracy.",
+      "researchFindings": "Badania pokazują, że Pokolenie Z przoduje w adopcji AI i nowych platform w miejscu pracy, a 32% napędza eksperymenty z nowymi technologiami. Jednak mogą być mniej zaznajomieni ze specjalistycznymi systemami biznesowymi lub profesjonalną etykietą, co czasem wzmacnia stereotyp.",
+      "strategiesAdvice": "Organizacje powinny zapewnić ustrukturyzowany mentoring, łączący pracowników Pokolenia Z ze starszymi kolegami, aby poszerzyć ich zrozumienie norm i systemów w miejscu pracy. Jednocześnie mentoring odwrócony pozwala Pokoleniu Z dzielić się swoją biegłością cyfrową, zwłaszcza w obszarach takich jak AI czy narzędzia mediów społecznościowych. Równoważenie innowacji technologicznych z rozwojem zawodowym tworzy wzajemne uczenie się i redukuje stereotypy."
+    },
+    "GM": {
+      "id": "",
+      "code": "T3.1.GM",
+      "title": "GM: Zrozumienie nierówności cyfrowej w kontekście miejsca pracy",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millenialsi są stereotypowo przedstawiani jako \"uprawnieni cyfrowi tubylcy\", którzy czują się komfortowo z platformami cyfrowymi, ale opierają się starszym systemom lub tradycyjnym sposobom pracy. Czasem są etykietowani jako niecierpliwi, oczekujący stałej łączności i elastyczności.",
+      "researchFindings": "Badania potwierdzają, że Millenialsi są bardzo biegli cyfrowo i często skłaniają organizacje do przyjmowania nowoczesnych narzędzi do współpracy. Jednak mogą nie doceniać metod komunikacji interpersonalnej lub nie doceniać wyzwań, przed którymi stają starsi koledzy przy adopcji nowych technologii.",
+      "strategiesAdvice": "Pracodawcy powinni wykorzystać entuzjazm Millenialsów do narzędzi cyfrowych, angażując ich w projekty międzypokoleniowe, w których mogą zarówno promować innowacje, jak i poznawać wartość ustalonych procesów. Szkolenia podkreślające podejścia hybrydowe — łączące efektywność cyfrową ze współpracą osobistą — pomagają Millenialsom dostosować swoje mocne strony do potrzeb organizacji."
+    },
+    "GX": {
+      "id": "",
+      "code": "T3.1.GX",
+      "title": "GX: Zrozumienie nierówności cyfrowej w kontekście miejsca pracy",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Pokolenie X jest często przedstawiane jako \"złapane pośrodku\" — zbyt młode, aby całkowicie unikać narzędzi cyfrowych, ale nie tak naturalnie biegłe jak Millenialsi czy Pokolenie Z. Czasem są postrzegani jako niechętni użytkownicy, którzy zmagają się z równoważeniem starych i nowych procesów pracy.",
+      "researchFindings": "Pracownicy Pokolenia X często posiadają głęboką wiedzę instytucjonalną i doświadczenie zarządcze, ale mogą czuć się przyciśnięci tempem zmian cyfrowych. Częściej zgłaszają stres przy adaptacji do nowych platform współpracy lub przechodzeniu z systemów analogowych.",
+      "strategiesAdvice": "Firmy powinny zapewnić ukierunkowane szkolenia, które wyraźnie łączą narzędzia cyfrowe z korzyściami produktywności w obszarach odpowiedzialności Pokolenia X. Tworzenie systemów wzajemnego uczenia się lub systemów partnerskich, w których pracownicy Pokolenia X mentorują młodszych pracowników w procesach biznesowych, jednocześnie ucząc się cyfrowych skrótów, pomaga niwelować podziały. Uznanie ich podwójnej roli jako uczących się i liderów wzmacnia ich wartość."
+    },
+    "GB": {
+      "id": "",
+      "code": "T3.1.GB",
+      "title": "GB: Zrozumienie nierówności cyfrowej w kontekście miejsca pracy",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers są często niesprawiedliwie przedstawiani jako \"technofobiczni\", wolno uczący się i niechętni do adaptacji w środowiskach cyfrowych. Mogą być wykluczani z rozmów o innowacjach z powodu tych założeń.",
+      "researchFindings": "Dowody pokazują, że chociaż Baby Boomers mają trudniejszą ścieżkę uczenia się narzędzi cyfrowych, są wysoce zdolni do adaptacji, gdy szkolenie jest jasne, kontekstowe i pełne szacunku. Wielu z nich chce kontynuować naukę, ale stygmatyzacja i brak dopasowanego wsparcia często blokują ich postępy.",
+      "strategiesAdvice": "Organizacje powinny projektować szkolenia dla Baby Boomers, które są praktyczne, oparte na ćwiczeniach i powiązane z rzeczywistymi zadaniami zawodowymi. Zachęcanie do mentoringu odwróconego — gdzie młodsi koledzy dzielą się umiejętnościami technologicznymi — może wzmocnić Baby Boomers, jednocześnie budując zaufanie międzypokoleniowe. Kluczowe jest również bezpośrednie kwestionowanie stereotypów poprzez uznanie adaptacyjności i mądrości, które Baby Boomers wnoszą do cyfrowych miejsc pracy."
+    }
+  },
+  "T3.2": {
+    "GZ": {
+      "id": "",
+      "code": "T3.2.GZ",
+      "title": "GZ: Strategie niwelowania nierówności cyfrowej w miejscu pracy",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Pracownicy Pokolenia Z są postrzegani jako niecierpliwi wobec wolniejszych użytkowników i nietolerancyjni wobec przestarzałych systemów, nalegając, aby wszyscy poruszali się w tempie nowych technologii. Może to tworzyć tarcia ze starszymi kolegami.",
+      "researchFindings": "Ankiety pokazują, że 65% Pokolenia Z zgłasza frustrację, gdy starsi koledzy zmagają się z narzędziami cyfrowymi, co może nasilać konflikty zespołowe. Mogą również naciskać na szybką adopcję aplikacji lub platform bez uwzględniania luk infrastrukturalnych w kontekstach wiejskich lub o niskich dochodach.",
+      "strategiesAdvice": "Pracodawcy mogą zachęcać do empatii, angażując pracowników Pokolenia Z w projekty współpracy międzypokoleniowej, które uwypuklają szersze wyzwania — takie jak ograniczona łączność na obszarach wiejskich. Szkolenia kładące nacisk na cierpliwość, umiejętności coachingowe i świadomość kulturową przygotowują Pokolenie Z do bycia rzecznikami inkluzji, a nie krytykami trudności innych."
+    },
+    "GM": {
+      "id": "",
+      "code": "T3.2.GM",
+      "title": "GM: Strategie niwelowania nierówności cyfrowej w miejscu pracy",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millenialsi są stereotypowo przedstawiani jako nadmiernie uzależnieni od stałej łączności, oczekujący bezproblemowego dostępu do Wi-Fi, urządzeń mobilnych i narzędzi chmurowych. Czasem są postrzegani jako wymagający lub nieświadomi szerszych barier strukturalnych.",
+      "researchFindings": "Millenialsi często są liderami dążenia do cyfrowych miejsc pracy, ale mogą nie doceniać ograniczeń, z którymi borykają się koledzy w mniej połączonych regionach lub na stanowiskach z ograniczonymi zasobami. Ich naleganie na elastyczność może być błędnie interpretowane jako niechęć do adaptacji do tradycyjnych struktur.",
+      "strategiesAdvice": "Organizacje powinny zachęcać Millenialsów do uczestnictwa w rozmowach o wyzwaniach infrastrukturalnych i równości. Włączenie ich do komitetów ds. inkluzji cyfrowej lub zespołów ds. różnorodności pomaga im przekształcić ich rzecznictwo technologiczne w rozwiązania systemowe. Jednocześnie wzmocnienie znaczenia odporności i adaptacyjności zapewnia, że pozostają zakotwiczeni w realiach miejsca pracy."
+    },
+    "GX": {
+      "id": "",
+      "code": "T3.2.GX",
+      "title": "GX: Strategie niwelowania nierówności cyfrowej w miejscu pracy",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Pokolenie X jest czasem opisywane jako \"zakleszczeni menedżerowie\" — złapani między zarządzaniem zespołami cyfrowych tubylców a zmaganiem się z własnym rozwojem umiejętności cyfrowych. Mogą być postrzegani jako spowalniający transformację cyfrową z powodu ostrożności.",
+      "researchFindings": "Badania pokazują, że Pokolenie X często czuje się ściśnięte między młodszymi, biegłymi technologicznie pracownikami a starszymi kolegami opierającymi się nowym systemom. Mogą brakować im pewności siebie w korzystaniu z nowych narzędzi, co przyczynia się do wahania w podejmowaniu decyzji.",
+      "strategiesAdvice": "Zapewnienie liderom Pokolenia X dedykowanego coachingu w zakresie umiejętności przywództwa cyfrowego może zmniejszyć wahanie. Korzystają z ustrukturyzowanych możliwości testowania nowych narzędzi w środowiskach niskiego ryzyka. Zachęcanie Pokolenia X do promowania stopniowych zmian zamiast całkowitej transformacji pozwala im pełnić rolę pomostów między pokoleniami."
+    },
+    "GB": {
+      "id": "",
+      "code": "T3.2.GB",
+      "title": "GB: Strategie niwelowania nierówności cyfrowej w miejscu pracy",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers są często postrzegani jako \"słabe ogniwo\" w adopcji cyfrowej, hamujący organizacje z powodu rzekomego oporu.",
+      "researchFindings": "Dane pokazują, że wielu Baby Boomers rzeczywiście boryka się z wyzwaniami wynikającymi z braku kontaktu z technologią w okresie edukacji. Jednak gdy otrzymują dopasowane szkolenia i cierpliwe wsparcie, są w stanie opanować narzędzia cyfrowe i w pełni uczestniczyć w projektach cyfrowych.",
+      "strategiesAdvice": "Pracodawcy powinni zapewnić bezpieczne przestrzenie, w których Baby Boomers mogą zadawać pytania bez oceniania, oraz projektować sesje szkoleniowe specjalnie dla późnych użytkowników. Pozycjonowanie Baby Boomers jako mentorów w obszarach niecyfrowych (takich jak zarządzanie klientami, negocjacje czy wiedza instytucjonalna) zapewnia, że pozostają doceniani, jednocześnie budując pewność siebie w arena cyfrowej."
+    }
+  },
+  "T3.3": {
+    "GZ": {
+      "id": "",
+      "code": "T3.3.GZ",
+      "title": "GZ: Studia przypadków i najlepsze praktyki: Lekcje od wiodących organizacji.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Pokolenie Z jest postrzegane jako nadmiernie uzależnione od technologii, niezdolne do funkcjonowania bez stałej łączności. W miejscach pracy czasem są traktowani lekceważąco jako produktywni tylko przy korzystaniu z najnowszych narzędzi cyfrowych i oskarżani o brak odporności, gdy narzędzia te nie są dostępne.",
+      "researchFindings": "Pracownicy Pokolenia Z rzeczywiście wykazują najwyższy poziom biegłości cyfrowej, a 32% prowadzi adopcję AI w organizacjach. Jednak badania wskazują również, że mogą brakować im doświadczenia ze starszymi systemami lub tradycyjnymi metodami komunikacji, utrudniając współpracę między pokoleniami. Ich mocne strony cyfrowe, jeśli nie zintegrowane z szerszymi umiejętnościami, mogą ograniczać rozwój kariery.",
+      "strategiesAdvice": "Pracodawcy powinni tworzyć możliwości dla Pokolenia Z do ćwiczenia odporności w mniej nasyconych cyfrowo kontekstach — na przykład prowadzenie projektów łączących komunikację cyfrową i tradycyjną. Mentoring w obszarach takich jak interakcja z klientem, negocjacje i pisanie biznesowe pomaga zrównoważyć ich umiejętności. Zachęcanie Pokolenia Z do postrzegania narzędzi cyfrowych jako wzmocnienia, a nie zamiennika, buduje adaptacyjność i pomaga im rozwijać się w zróżnicowanych kontekstach zawodowych."
+    },
+    "GM": {
+      "id": "",
+      "code": "T3.3.GM",
+      "title": "GM: Studia przypadków i najlepsze praktyki: Lekcje od wiodących organizacji.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millenialsi są często opisywani jako osoby często zmieniające pracę, odchodzące z firm, których technologia wydaje się przestarzała. Ten stereotyp przedstawia ich jako nadmiernie wymagających, niechętnych do zaangażowania w organizacje opóźnione w transformacji cyfrowej.",
+      "researchFindings": "Millenialsi są jednymi z najsilniejszych rzeczników cyfrowych miejsc pracy. Badania pokazują, że napędzają innowacje organizacyjne, nalegając na nowoczesne narzędzia i rozwiązania przyjazne pracy zdalnej. Jednak firmy, które nie inwestują w technologię pracowniczą, odnotowują wyższe wskaźniki rotacji wśród Millenialsów, potwierdzając ich wrażliwość na nierówność cyfrową.",
+      "strategiesAdvice": "Organizacje powinny angażować Millenialsów w kształtowanie strategii transformacji cyfrowej, dając im odpowiedzialność za adopcję technologii. Podkreślanie, jak aktualizacje cyfrowe przyczyniają się nie tylko do efektywności, ale także do równości, pomaga Millenialsom postrzegać siebie jako agentów inkluzji. Retencja poprawia się, gdy Millenialsi czują, że ich rzecznictwo prowadzi do namacalnych ulepszeń dla wszystkich pracowników, nie tylko dla nich samych."
+    },
+    "GX": {
+      "id": "",
+      "code": "T3.3.GX",
+      "title": "GX: Studia przypadków i najlepsze praktyki: Lekcje od wiodących organizacji.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Pracownicy Pokolenia X są czasem przedstawiani jako \"pokolenie wąskiego gardła\", postrzegani jako pragmatyczni, ale mniej ambitni cyfrowo, przez co spowalniają innowacje organizacyjne. Często są opisywani jako menedżerowie, którzy opierają się zmianom z obawy przed zastąpieniem przez młodszych, bardziej biegłych technologicznie kolegów.",
+      "researchFindings": "Pokolenie X często zajmuje stanowiska kierownicze średniego i wyższego szczebla, posiadając znaczną wiedzę instytucjonalną. Badania podkreślają, że mogą doświadczać stresu związanego z transformacją cyfrową, szczególnie zarządzając zespołami obejmującymi zarówno młodszych cyfrowych tubylców, jak i starszych późnych użytkowników. To napięcie może prowadzić do nieporozumień, niższej produktywności i utraconych szans na innowacje, jeśli nie zostanie rozwiązane.",
+      "strategiesAdvice": "Firmy powinny zapewnić liderom Pokolenia X szkolenia z przywództwa cyfrowego i przedstawiać narzędzia cyfrowe jako czynniki umożliwiające efektywność, a nie zagrożenia. Zachęcanie Pokolenia X do pełnienia roli mediatorów w zespołach międzypokoleniowych, dzielących się doświadczeniem instytucjonalnym przy jednoczesnym przyjmowaniu nowych narzędzi, przekształca ich pozycję z wrażliwej w silną. Wspieranie ich widocznymi możliwościami uczenia się pomaga normalizować rozwój cyfrowy na wszystkich poziomach."
+    },
+    "GB": {
+      "id": "",
+      "code": "T3.3.GB",
+      "title": "GB: Studia przypadków i najlepsze praktyki: Lekcje od wiodących organizacji.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers są często obwiniani jako grupa najbardziej \"pozostawiona w tyle\" przez transformację cyfrową. Przedstawiani są jako niechętni do adopcji nowych narzędzi, oporni na pracę zdalną i bardziej komfortowi z komunikacją osobistą niż z platformami cyfrowymi.",
+      "researchFindings": "Badania potwierdzają, że Baby Boomers mogą mieć trudniejszą ścieżkę uczenia się ze względu na mniejszy kontakt z technologią w latach formacyjnych. Jednak dowody pokazują, że gdy otrzymują cierpliwe, praktyczne i kontekstowe szkolenie, Baby Boomers adaptują się z powodzeniem. Co więcej, wykluczanie ich na podstawie założeń przyspiesza stagnację kariery i podważa morale, co bezpośrednio wpływa na retencję i różnorodność organizacyjną.",
+      "strategiesAdvice": "Dopasowane szkolenia skupiające się na praktycznych zadaniach w miejscu pracy, a nie na abstrakcyjnej teorii cyfrowej, pomagają Baby Boomers angażować się z większą pewnością siebie. Mentoring odwrócony, w którym młodsi pracownicy uczą umiejętności cyfrowych, podczas gdy Baby Boomers dzielą się wiedzą instytucjonalną i interpersonalną, tworzy dwukierunkową wartość. Uznanie adaptacyjności i lojalności, którą wielu Baby Boomers wnosi, zapewnia ich pełną integrację w cyfrowych transformacjach miejsca pracy."
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
-type Language = 'en' | 'it'
+type Language = 'en' | 'it' | 'de' | 'pl' | 'pt'
 
 interface LanguageContextType {
   language: Language
@@ -18,7 +18,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const saved = localStorage.getItem('handbook-language')
-      if (saved === 'en' || saved === 'it') {
+      if (saved === 'en' || saved === 'it' || saved === 'de' || saved === 'pl' || saved === 'pt') {
         setLanguage(saved)
       }
     } catch (error) {

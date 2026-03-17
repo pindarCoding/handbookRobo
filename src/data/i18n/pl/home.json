@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "Witamy w Podręczniku Międzypokoleniowym MYCo",
+    "subtitle": "Praktyczne źródło wiedzy dla specjalistów HR, trenerów i facylitatorów, pomagające w nawigowaniu po dynamice międzypokoleniowej i tworzeniu inkluzywnych miejsc pracy."
+  },
+  "personalised": {
+    "title": "Twój Spersonalizowany Podręcznik",
+    "description": "Pełny Podręcznik oferuje obszerne badania i szczegółowe strategie — ale możesz nie potrzebować wszystkiego. Ta platforma pozwala wybrać tylko te treści, które są istotne dla Twojego konkretnego kontekstu, niezależnie od tego, czy zajmujesz się konkretnym pokoleniem, pojedynczym tematem, czy kombinacją obu. Zbuduj dopasowany zasób odpowiadający Twoim potrzebom szkoleniowym i pobierz go jako gotowy do użycia plik PDF.",
+    "research": "Ten Podręcznik jest wynikiem <strong>badań transnarodowych</strong> przeprowadzonych w <strong>sześciu krajach europejskich</strong>, badających jak cztery pokolenia — Baby Boomers, Pokolenie X, Millenialsi i Pokolenie Z — doświadczają miejsca pracy. Zamiast wzmacniać stereotypy, <strong>naszym celem jest dostarczanie opartych na dowodach</strong> spostrzeżeń i praktycznych strategii <strong>promujących współpracę, wzajemne zrozumienie i inkluzję międzypokoleniową.</strong>"
+  },
+  "howItWorks": {
+    "title": "Jak Stworzyć Swój Własny Podręcznik",
+    "step1": {
+      "title": "Wybierz Temat",
+      "description": "Wybierz spośród <strong>pięciu tematów opartych na badaniach</strong>: komunikacja, wartości, różnorodność, umiejętności cyfrowe lub uczenie się międzypokoleniowe."
+    },
+    "step2": {
+      "title": "Wybierz Podtemat",
+      "description": "Każdy temat zawiera <strong>trzy szczegółowe zagadnienia</strong> opracowane na podstawie wyników naszych badań transnarodowych."
+    },
+    "step3": {
+      "title": "Wybierz Pokolenie",
+      "description": "<strong>Skoncentruj się na pokoleniu</strong> najbardziej odpowiednim dla Twojego kontekstu: Pokolenie Z, Millenialsi, Pokolenie X lub Baby Boomers."
+    },
+    "step4": {
+      "title": "Zbuduj i&amp;nbsp;Eksportuj",
+      "description": "Dodaj potrzebne strony do swojego spersonalizowanego podręcznika i <strong>pobierz go jako PDF.</strong>"
+    },
+    "videoTitle": "Obejrzyj Samouczek"
+  },
+  "selfAssessment": {
+    "title": "Test Samooceny",
+    "description": "Zmierz swoją świadomość różnorodności pokoleniowej i zdolność do inkluzywnego zarządzania dynamiką międzypokoleniową. Test składa się z 10 pytań losowo wybranych z naszej bazy pytań opartych na badaniach, obejmujących wszystkie pięć obszarów tematycznych.",
+    "recommendation": "Zalecamy wykonanie testu przed i po zapoznaniu się z Podręcznikiem, aby śledzić swoje postępy.",
+    "startButton": "Rozpocznij Test"
+  },
+  "projectQuote": "\"MYCo – Meet Your Colleague\" to projekt finansowany z programu Erasmus+, łączący pięciu europejskich partnerów w celu tworzenia praktycznych narzędzi do inkluzji międzypokoleniowej. Poprzez badania, działania szkoleniowe i interaktywne zasoby dążymy do wyjścia poza stereotypy i budowania miejsc pracy, w których każde pokolenie może się rozwijać."
+}

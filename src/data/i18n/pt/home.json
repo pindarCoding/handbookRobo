@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "Bem-vindo ao Manual Geracional MYCo",
+    "subtitle": "Um recurso prático para profissionais de RH, formadores e facilitadores para navegar as dinâmicas intergeracionais e promover locais de trabalho inclusivos."
+  },
+  "personalised": {
+    "title": "O Seu Manual Personalizado",
+    "description": "O Manual completo oferece investigação aprofundada e estratégias detalhadas — mas poderá não necessitar de tudo. Esta plataforma permite-lhe selecionar apenas o conteúdo relevante para o seu contexto específico, quer esteja a abordar uma geração em particular, um único tema ou uma combinação de ambos. Construa um recurso personalizado que se adeque às suas necessidades de formação e descarregue-o como um PDF pronto a utilizar.",
+    "research": "Este Manual é o resultado de <strong>investigação transnacional</strong> realizada em <strong>seis países europeus</strong>, explorando como quatro gerações — Baby Boomers, Geração X, Millennials e Geração Z — vivenciam o local de trabalho. Em vez de reforçar estereótipos, <strong>o nosso objetivo é fornecer</strong> perspetivas baseadas em evidências e estratégias acionáveis <strong>para promover a colaboração, a compreensão mútua e a inclusão geracional.</strong>"
+  },
+  "howItWorks": {
+    "title": "Como Criar o Seu Manual Personalizado",
+    "step1": {
+      "title": "Escolha um Tema",
+      "description": "Selecione entre <strong>cinco temas baseados em investigação</strong>: comunicação, valores, diversidade, competências digitais ou aprendizagem intergeracional."
+    },
+    "step2": {
+      "title": "Escolha um Subtópico",
+      "description": "Cada tema contém <strong>três tópicos específicos</strong> desenvolvidos a partir dos resultados da nossa investigação transnacional."
+    },
+    "step3": {
+      "title": "Selecione uma Geração",
+      "description": "<strong>Concentre-se na geração</strong> mais relevante para o seu contexto: Geração Z, Millennials, Geração X ou Baby Boomers."
+    },
+    "step4": {
+      "title": "Construa &amp; Exporte",
+      "description": "Adicione as páginas que necessita ao seu manual personalizado e <strong>descarregue-o como PDF.</strong>"
+    },
+    "videoTitle": "Ver o Tutorial"
+  },
+  "selfAssessment": {
+    "title": "Teste de Autoavaliação",
+    "description": "Meça a sua consciência sobre a diversidade geracional e a sua capacidade de gerir dinâmicas intergeracionais de forma inclusiva. O teste é composto por 10 questões selecionadas aleatoriamente do nosso conjunto de perguntas baseadas em investigação, abrangendo as cinco áreas temáticas.",
+    "recommendation": "Recomendamos que complete o teste antes e depois de explorar o Manual para acompanhar o seu progresso.",
+    "startButton": "Iniciar Teste"
+  },
+  "projectQuote": "\"MYCo – Meet Your Colleague\" é um projeto financiado pelo Erasmus+ que reúne cinco parceiros europeus para criar ferramentas práticas para a inclusão geracional. Através de investigação, atividades de formação e recursos interativos, o nosso objetivo é ir além dos estereótipos e construir locais de trabalho onde todas as gerações possam prosperar."
+}

@@ -1,0 +1,152 @@
+{
+  "T5.1": {
+    "GZ": {
+      "id": "work-values-genz",
+      "code": "T5.1.GZ",
+      "title": "GZ: Arbeitswerte über Generationen hinweg",
+      "color": "purple",
+      "description": "Priorität auf Flexibilität, Unternehmenszweck, soziale Wirkung und psychisches Wohlbefinden",
+      "pageId": 7,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Gen Z wird oft als rastlos dargestellt, fixiert auf Technologie und zögerlich, sich an traditionelle Arbeitsplatzstandards zu halten. Sie werden dafür kritisiert, übermäßige Flexibilität einzufordern und mangelnde Belastbarkeit zu zeigen. Diese Charakterisierung verkennt ihre Praktikabilität, Anpassungsfähigkeit und ihr tiefes Engagement für Gleichberechtigung, Offenheit und persönliches Wohlbefinden in ihrem Arbeitsumfeld.",
+      "researchFindings": "Studien zeigen, dass Gen Z Offenheit, Anpassungsfähigkeit und psychisches Wohlbefinden schätzt. Als Digital Natives, die mit Technologie versiert sind, wünschen sie sich auch Mentoring und persönliche Kontakte. Obwohl Arbeitsplatzsicherheit wichtig ist, möchten sie, dass diese von Flexibilität und einer Verbindung zu ihren Grundüberzeugungen begleitet wird. Sie verlieren das Interesse, wenn Organisationen keine Transparenz oder Gleichberechtigung bieten.",
+      "strategiesAdvice": "In einer Marketingagentur erhielten Gen-Z-Mitarbeitende Unterstützung durch eine Kombination aus täglicher Kommunikation über Slack für ihre Aufgaben und wöchentlichen persönlichen Mentoring-Sitzungen. Diese gemischte Strategie ermöglichte es ihnen, digitale Tools effektiv zu nutzen und gleichzeitig personalisierte Anleitung zu erhalten, wodurch sowohl ihr Engagement als auch ihre Leistung verbessert wurden."
+    },
+    "GM": {
+      "id": "work-values-millennial",
+      "code": "T5.1.GM",
+      "title": "GM: Arbeitswerte über Generationen hinweg",
+      "color": "purple",
+      "description": "Fokus auf persönliche Entwicklung, Karrierechancen und sinnvolle Arbeit",
+      "pageId": 3,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Viele Menschen charakterisieren Millennials als anspruchsvolle Jobhopper, die sich nicht an einen Arbeitgeber binden wollen und ausschließlich auf Vergünstigungen oder sofortige Belohnungen fixiert sind. Sie werden als übermäßig auf Feedback angewiesen wahrgenommen und fordern übermäßige Flexibilität. Dieses Stereotyp übersieht ihr tiefes Engagement für sinnvolle Arbeit, Inklusion und zweckgetriebene Karrieren, die mit ihren persönlichen Werten übereinstimmen.",
+      "researchFindings": "Forschung zeigt, dass Millennials kontinuierliche Weiterbildung, Diversität und befähigende Führung priorisieren. Sie suchen sinnvolle Arbeit und Inklusivität und bevorzugen weniger starre Organisationsstrukturen und teamorientierte Umgebungen. Studien zeigen, dass sie häufiges Feedback und eine Verbindung zwischen ihren persönlichen Überzeugungen und den Zielen der Organisation erwarten, was zu höherem Engagement in sozial verantwortlichen Unternehmen führt.",
+      "strategiesAdvice": "Millennials entfalten sich am besten in Umgebungen, die Aufstiegschancen, ermutigendes Mentoring und Offenheit bieten. Unternehmen sollten ehrliche Kommunikation fördern und Unternehmensziele mit sozialen oder ökologischen Missionen verknüpfen. Klare Karrierewege, kontinuierliches Lernen und inklusive Umgebungen steigern ihre Begeisterung und ihr Engagement."
+    },
+    "GX": {
+      "id": "work-values-genx",
+      "code": "T5.1.GX",
+      "title": "GX: Arbeitswerte über Generationen hinweg",
+      "color": "purple",
+      "description": "Wertschätzung von Autonomie, Effizienz und Work-Life-Balance",
+      "pageId": 9,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Generation X wird oft als desillusioniert und distanziert angesehen, die Loyalität gegenüber Arbeitgebern meidet und eigenständiges Arbeiten bevorzugt. Sie werden häufig als autoritätsskeptisch, bindungsunwillig und weniger engagiert in der Zusammenarbeit charakterisiert. Obwohl sie Unabhängigkeit schätzen, übersieht diese Wahrnehmung ihre Flexibilität und pragmatische Herangehensweise, eine Balance zwischen Struktur und Autonomie zu finden.",
+      "researchFindings": "Studien zeigen, dass Generation X Unabhängigkeit, Fairness und eine Work-Life-Balance priorisiert. Da sie Unternehmensrestrukturierungen in ihren prägenden Jahren erlebt haben, sind sie oft selbstständig und vorsichtig bei übermäßigen Verpflichtungen gegenüber Arbeitgebern. Dennoch können sie sich sowohl an konventionelle Strukturen als auch an moderne kollaborative Umgebungen anpassen und in Umfeldern erfolgreich sein, die Autonomie mit Fairness und Offenheit verbinden.",
+      "strategiesAdvice": "Organisationen können Gen X unterstützen, indem sie Flexibilität bieten, ihre Beiträge angemessen anerkennen und Aufstiegsmöglichkeiten eröffnen. Klare Ziele bei gleichzeitiger Eigenständigkeit ermöglichen es ihnen, effizient zu arbeiten. Sie sind geschickt darin, verschiedene Generationen zu verbinden, da sie etablierte Normen verstehen und gleichzeitig moderne kollaborative und digitale Methoden akzeptieren können."
+    },
+    "GB": {
+      "id": "work-values-boomer",
+      "code": "T5.1.GB",
+      "title": "GB: Arbeitswerte über Generationen hinweg",
+      "color": "purple",
+      "description": "Fokus auf Unternehmensloyalität, traditionelle Arbeitsmoral und Hierarchie",
+      "pageId": 2,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Babyboomer werden häufig als übermäßig arbeitsorientiert dargestellt, die lange Arbeitszeiten mit Loyalität gleichsetzen und sich gegen Flexibilität oder Veränderung sträuben. Diese Charakterisierung zeigt sie als unflexible Traditionalisten, die an veralteten Methoden festhalten. In Wahrheit haben Babyboomer schnelle kulturelle und technologische Veränderungen erlebt und haben durchgehend ihre Fähigkeit bewiesen, sich an neue Umstände anzupassen, wenn ihnen respektvolle Unterstützung gewährt wird.",
+      "researchFindings": "Studien zeigen, dass Babyboomer Loyalität, Respekt und Anerkennung priorisieren. Sie betrachten ihre Arbeit als Teil ihrer persönlichen Identität und werden vom Wunsch angetrieben, bedeutende Beiträge zu leisten. Sie neigen zu organisierten Umgebungen und schätzen das in sie gesetzte Vertrauen. Forschung zeigt auch, dass sie sich erfolgreich an die digitale Transformation anpassen können, wenn sie klare Anleitung und angemessene Unterstützungssysteme erhalten.",
+      "strategiesAdvice": "Um das Engagement von Babyboomern aufrechtzuerhalten, sollten Organisationen ihre langjährigen Beiträge anerkennen und strukturierte Schulungen zu neuen Technologien anbieten. Die Einbindung in Mentoring ermöglicht es ihnen, ihr Fachwissen zu teilen und sich wertgeschätzt zu fühlen. Positionen, die ihr institutionelles Wissen hervorheben, strategische Beratungsrollen und Anerkennungsinitiativen unterstützen die fortlaufende Motivation und Inklusion."
+    }
+  },
+  "T5.2": {
+    "GZ": {
+      "id": "work-motivation-genz",
+      "code": "T5.2.GZ",
+      "title": "GZ: Motivation und Demotivation",
+      "color": "orange",
+      "description": "Motiviert durch sofortige Anerkennung und kontinuierliches Lernen",
+      "pageId": 5,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Gen Z wird oft als ständige Bestätigung benötigend charakterisiert und als unfähig, ohne häufiges Feedback zu arbeiten. Dies übersieht ihren echten Wunsch nach Wachstum und Lernmöglichkeiten.",
+      "researchFindings": "Forschung zeigt, dass Gen Z Echtzeit-Feedback als Entwicklungsinstrument schätzt, nicht als Bestätigung. Sie suchen kontinuierliches Lernen und schätzen transparente Kommunikation über Leistung.",
+      "strategiesAdvice": "Implementieren Sie regelmäßige Check-ins, stellen Sie Lernressourcen bereit und schaffen Sie klare Entwicklungspfade. Nutzen Sie digitale Tools für sofortiges Feedback bei gleichzeitiger Aufrechterhaltung bedeutungsvoller persönlicher Interaktionen."
+    },
+    "GM": {
+      "id": "work-motivation-millennial",
+      "code": "T5.2.GM",
+      "title": "GM: Motivation und Demotivation",
+      "color": "orange",
+      "description": "Motiviert durch Werteübereinstimmung und Teamerfolg",
+      "pageId": 8,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millennials wird stereotypisch nachgesagt, ständiges Lob zu wollen und nicht bereit zu sein, hart zu arbeiten, ohne sofortige Belohnungen.",
+      "researchFindings": "Studien zeigen, dass Millennials durch sinnvolle Arbeit und gemeinsamen Erfolg motiviert werden. Sie suchen zweckgetriebene Rollen und schätzen Teamleistungen.",
+      "strategiesAdvice": "Bringen Sie organisatorische Werte mit persönlichen Überzeugungen in Einklang, feiern Sie Teamerfolge und bieten Sie Möglichkeiten für kollaborative Projekte mit sozialer Wirkung."
+    },
+    "GX": {
+      "id": "work-motivation-genx",
+      "code": "T5.2.GX",
+      "title": "GX: Motivation und Demotivation",
+      "color": "orange",
+      "description": "Motiviert durch konkrete Ergebnisse, klare Ziele und operative Freiheit",
+      "pageId": 4,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Gen X wird oft als zynisch und unmotiviert angesehen, die sich nur darum kümmert, die Arbeit mit minimalem Engagement zu erledigen.",
+      "researchFindings": "Forschung zeigt, dass Gen X stark durch Autonomie und Ergebnisse motiviert ist. Sie bevorzugen klare Ziele und die Freiheit, diese auf ihre eigene Weise zu erreichen.",
+      "strategiesAdvice": "Setzen Sie klare Ziele, gewähren Sie Autonomie bei der Umsetzung, erkennen Sie ergebnisorientierte Leistungen an und minimieren Sie unnötige Überwachung oder Mikromanagement."
+    },
+    "GB": {
+      "id": "work-motivation-boomer",
+      "code": "T5.2.GB",
+      "title": "GB: Motivation und Demotivation",
+      "color": "orange",
+      "description": "Motiviert durch formelle Anerkennung und Karriereentwicklung",
+      "pageId": 10,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Babyboomern wird stereotypisch nachgesagt, nur durch traditionelle Belohnungen wie Titel und Eckbüros motiviert zu sein und sich gegen moderne Anerkennungsansätze zu sträuben.",
+      "researchFindings": "Studien zeigen, dass Babyboomer bedeutungsvolle Anerkennung und Karriereleistung schätzen. Sie schätzen formelle Würdigung ihrer Beiträge und Expertise.",
+      "strategiesAdvice": "Bieten Sie formelle Anerkennungsprogramme, würdigen Sie Expertise und Erfahrung, bieten Sie Führungs- oder Mentoring-Rollen an und feiern Sie Karrieremeilensteine."
+    }
+  },
+  "T5.3": {
+    "GZ": {
+      "id": "work-styles-genz",
+      "code": "T5.3.GZ",
+      "title": "GZ: Arbeitsstile und Zusammenarbeit",
+      "color": "cyan",
+      "description": "Digitale Zusammenarbeit mit Affinität zu asynchroner und Remote-Arbeit",
+      "pageId": 1,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Platzhalter-Stereotyp für Arbeitsstile Gen Z",
+      "researchFindings": "Platzhalter-Forschungsergebnisse für Arbeitsstile Gen Z",
+      "strategiesAdvice": "Platzhalter-Strategien und Ratschläge für Arbeitsstile Gen Z"
+    },
+    "GM": {
+      "id": "work-styles-millennial",
+      "code": "T5.3.GM",
+      "title": "GM: Arbeitsstile und Zusammenarbeit",
+      "color": "cyan",
+      "description": "Agiler Ansatz mit funktionsübergreifender Zusammenarbeit und offenen Umgebungen",
+      "pageId": 6,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Platzhalter-Stereotyp für Arbeitsstile Millennial",
+      "researchFindings": "Platzhalter-Forschungsergebnisse für Arbeitsstile Millennial",
+      "strategiesAdvice": "Platzhalter-Strategien und Ratschläge für Arbeitsstile Millennial"
+    },
+    "GX": {
+      "id": "work-styles-genx",
+      "code": "T5.3.GX",
+      "title": "GX: Arbeitsstile und Zusammenarbeit",
+      "color": "cyan",
+      "description": "Pragmatischer Stil, der traditionelle und digitale Methoden verbindet",
+      "pageId": 3,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Platzhalter-Stereotyp für Arbeitsstile Gen X",
+      "researchFindings": "Platzhalter-Forschungsergebnisse für Arbeitsstile Gen X",
+      "strategiesAdvice": "Platzhalter-Strategien und Ratschläge für Arbeitsstile Gen X"
+    },
+    "GB": {
+      "id": "work-styles-boomer",
+      "code": "T5.3.GB",
+      "title": "GB: Arbeitsstile und Zusammenarbeit",
+      "color": "cyan",
+      "description": "Bevorzugung strukturierter Prozesse, formeller Kommunikation und klarer Hierarchien",
+      "pageId": 9,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Platzhalter-Stereotyp für Arbeitsstile Babyboomer",
+      "researchFindings": "Platzhalter-Forschungsergebnisse für Arbeitsstile Babyboomer",
+      "strategiesAdvice": "Platzhalter-Strategien und Ratschläge für Arbeitsstile Babyboomer"
+    }
+  }
+}

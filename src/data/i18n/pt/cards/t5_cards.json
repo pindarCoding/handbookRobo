@@ -1,0 +1,152 @@
+{
+  "T5.1": {
+    "GZ": {
+      "id": "work-values-genz",
+      "code": "T5.1.GZ",
+      "title": "GZ: Valores no Local de Trabalho entre Gerações",
+      "color": "purple",
+      "description": "Prioridade na flexibilidade, propósito da empresa, impacto social e bem-estar mental",
+      "pageId": 7,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "A Geração Z é frequentemente retratada como inquieta, fixada na tecnologia e hesitante em aderir aos padrões tradicionais do local de trabalho. Enfrentam críticas por insistirem em flexibilidade excessiva e por exibirem falta de resiliência. Esta caracterização não reconhece a sua praticidade, capacidade de adaptação e profundo compromisso com equidade, abertura e bem-estar pessoal nos seus ambientes de trabalho.",
+      "researchFindings": "Estudos mostram que a Geração Z valoriza a abertura, a adaptabilidade e o bem-estar mental. Como nativos digitais com aptidão tecnológica, desejam também mentoria e ligações pessoais. Embora a segurança no emprego seja importante, querem que seja acompanhada de flexibilidade e ligação às suas crenças fundamentais. Tendem a perder interesse quando as organizações não proporcionam transparência ou equidade.",
+      "strategiesAdvice": "Numa agência de marketing, os colaboradores da Geração Z receberam apoio através de uma combinação de comunicações diárias no Slack para as suas tarefas e sessões de mentoria presenciais semanais. Esta estratégia mista permitiu-lhes utilizar ferramentas digitais de forma eficaz, ao mesmo tempo que recebiam orientação personalizada, melhorando assim tanto o seu envolvimento como desempenho."
+    },
+    "GM": {
+      "id": "work-values-millennial",
+      "code": "T5.1.GM",
+      "title": "GM: Valores no Local de Trabalho entre Gerações",
+      "color": "purple",
+      "description": "Foco no crescimento pessoal, oportunidades de carreira e trabalho com significado",
+      "pageId": 3,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Muitas pessoas caracterizam os Millennials como saltadores de empregos com direitos adquiridos, relutantes em comprometer-se com um único empregador e focados apenas em regalias ou recompensas imediatas. São percecionados como excessivamente dependentes de feedback e como solicitando flexibilidade excessiva. Este estereótipo ignora a sua profunda dedicação à procura de trabalho com significado, promoção da inclusão e envolvimento em carreiras orientadas por um propósito que ressoem com os seus valores pessoais.",
+      "researchFindings": "A investigação indica que os Millennials priorizam a educação contínua, a diversidade e a liderança empoderadora. Procuram trabalho com significado e inclusão, favorecendo estruturas organizacionais menos rígidas e ambientes orientados para o trabalho em equipa. Estudos revelam que antecipam feedback frequente e uma ligação entre as suas crenças pessoais e os objetivos da organização, levando a maior envolvimento em empresas socialmente responsáveis.",
+      "strategiesAdvice": "Os Millennials destacam-se em ambientes que oferecem oportunidades de progressão, mentoria encorajadora e abertura. As empresas devem promover comunicação honesta e alinhar os objetivos empresariais com missões sociais ou ambientais. Fornecer percursos de carreira distintos, aprendizagem contínua e ambientes inclusivos melhora o seu entusiasmo e compromisso."
+    },
+    "GX": {
+      "id": "work-values-genx",
+      "code": "T5.1.GX",
+      "title": "GX: Valores no Local de Trabalho entre Gerações",
+      "color": "purple",
+      "description": "Valorização da autonomia, eficiência e equilíbrio entre vida pessoal e profissional",
+      "pageId": 9,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "A Geração X é frequentemente vista como desiludida e distante, evitando lealdade aos seus empregadores e favorecendo o trabalho independente. São frequentemente caracterizados como céticos em relação à autoridade, relutantes em assumir compromissos e menos envolvidos em esforços colaborativos. Embora de facto apreciem a independência, esta perceção ignora a sua flexibilidade e mentalidade prática em encontrar um equilíbrio entre estrutura e autonomia.",
+      "researchFindings": "Estudos indicam que a Geração X prioriza a independência, a equidade e o equilíbrio entre vida pessoal e profissional. Tendo experienciado despedimentos corporativos nos seus anos formativos, são frequentemente autossuficientes e cautelosos em assumir compromissos excessivos com os empregadores. Contudo, são capazes de se adaptar tanto a estruturas convencionais como a ambientes colaborativos contemporâneos, tendo sucesso em contextos que combinam autonomia com justiça e abertura.",
+      "strategiesAdvice": "As organizações podem apoiar a Geração X oferecendo flexibilidade, reconhecendo as suas contribuições adequadamente e apresentando vias de progressão. Ter objetivos claros a par de independência permite-lhes trabalhar eficientemente. São hábeis em conectar diferentes gerações, pois conseguem compreender normas estabelecidas enquanto aceitam métodos colaborativos e digitais modernos."
+    },
+    "GB": {
+      "id": "work-values-boomer",
+      "code": "T5.1.GB",
+      "title": "GB: Valores no Local de Trabalho entre Gerações",
+      "color": "purple",
+      "description": "Foco na lealdade à empresa, ética de trabalho tradicional e hierarquia",
+      "pageId": 2,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Os Baby Boomers são frequentemente retratados como excessivamente dedicados aos seus empregos, associando horários prolongados a lealdade e demonstrando resistência à flexibilidade ou mudança. Esta caracterização mostra-os como tradicionalistas inflexíveis agarrados a formas ultrapassadas. Na verdade, os Boomers experienciaram transformações culturais e tecnológicas rápidas e demonstraram consistentemente a sua capacidade de se adaptar a novas circunstâncias quando lhes é fornecido apoio respeitoso.",
+      "researchFindings": "Estudos indicam que os Baby Boomers priorizam a lealdade, o respeito e o reconhecimento. Percecionam o seu trabalho como componente da sua identidade pessoal e são motivados pelo desejo de fazer contribuições significativas. São inclinados a ambientes organizados e valorizam a confiança neles depositada para gerir responsabilidades. A investigação também revela que conseguem adaptar-se com sucesso à transformação digital, desde que recebam instruções claras e sistemas de apoio adequados.",
+      "strategiesAdvice": "Para manter o interesse dos Boomers, as organizações devem reconhecer as suas contribuições de longa data e fornecer formação estruturada sobre novas tecnologias. Envolvê-los em mentoria permite-lhes partilhar a sua expertise e sentir-se valorizados. Funções que destaquem o seu conhecimento institucional, papéis consultivos estratégicos e iniciativas de reconhecimento apoiam a motivação e inclusão contínuas."
+    }
+  },
+  "T5.2": {
+    "GZ": {
+      "id": "work-motivation-genz",
+      "code": "T5.2.GZ",
+      "title": "GZ: Motivação e Desmotivação",
+      "color": "orange",
+      "description": "Motivados pelo reconhecimento imediato e aprendizagem contínua",
+      "pageId": 5,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "A Geração Z é frequentemente caracterizada como necessitando de validação constante e sendo incapaz de trabalhar sem feedback frequente. Isto ignora o seu genuíno desejo de crescimento e oportunidades de aprendizagem.",
+      "researchFindings": "A investigação mostra que a Geração Z valoriza o feedback em tempo real como ferramenta de desenvolvimento, não de validação. Procuram aprendizagem contínua e apreciam comunicação transparente sobre desempenho.",
+      "strategiesAdvice": "Implemente reuniões regulares de acompanhamento, forneça recursos de aprendizagem e crie percursos de crescimento claros. Utilize ferramentas digitais para feedback instantâneo, mantendo interações pessoais significativas."
+    },
+    "GM": {
+      "id": "work-motivation-millennial",
+      "code": "T5.2.GM",
+      "title": "GM: Motivação e Desmotivação",
+      "color": "orange",
+      "description": "Motivados pelo alinhamento de valores e sucesso da equipa",
+      "pageId": 8,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Os Millennials são estereotipados como querendo elogios constantes e sendo relutantes em trabalhar arduamente sem recompensas imediatas.",
+      "researchFindings": "Estudos mostram que os Millennials são motivados por trabalho com significado e sucesso colaborativo. Procuram funções orientadas por um propósito e valorizam conquistas de equipa.",
+      "strategiesAdvice": "Alinhe os valores organizacionais com as crenças pessoais, celebre vitórias de equipa e proporcione oportunidades para projetos colaborativos com impacto social."
+    },
+    "GX": {
+      "id": "work-motivation-genx",
+      "code": "T5.2.GX",
+      "title": "GX: Motivação e Desmotivação",
+      "color": "orange",
+      "description": "Motivados por resultados concretos, objetivos claros e liberdade operacional",
+      "pageId": 4,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "A Geração X é frequentemente vista como cínica e desmotivada, preocupando-se apenas em concluir o trabalho com o mínimo de envolvimento.",
+      "researchFindings": "A investigação indica que a Geração X é altamente motivada pela autonomia e pelos resultados. Preferem objetivos claros e a liberdade de os alcançar à sua maneira.",
+      "strategiesAdvice": "Defina objetivos claros, proporcione autonomia na execução, reconheça conquistas orientadas por resultados e minimize a supervisão desnecessária ou a microgestão."
+    },
+    "GB": {
+      "id": "work-motivation-boomer",
+      "code": "T5.2.GB",
+      "title": "GB: Motivação e Desmotivação",
+      "color": "orange",
+      "description": "Motivados pelo reconhecimento formal e progressão na carreira",
+      "pageId": 10,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Os Boomers são estereotipados como motivados unicamente por recompensas tradicionais como títulos e escritórios de canto, resistentes a abordagens modernas de reconhecimento.",
+      "researchFindings": "Estudos mostram que os Boomers valorizam reconhecimento significativo e conquistas na carreira. Apreciam o reconhecimento formal das suas contribuições e expertise.",
+      "strategiesAdvice": "Forneça programas de reconhecimento formal, reconheça a expertise e experiência, ofereça papéis de liderança ou mentoria e celebre marcos na carreira."
+    }
+  },
+  "T5.3": {
+    "GZ": {
+      "id": "work-styles-genz",
+      "code": "T5.3.GZ",
+      "title": "GZ: Estilos de Trabalho e Colaboração",
+      "color": "cyan",
+      "description": "Colaboração digital com conforto para trabalho assíncrono e remoto",
+      "pageId": 1,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Estereótipo provisório para estilos de trabalho da Geração Z",
+      "researchFindings": "Resultados de investigação provisórios para estilos de trabalho da Geração Z",
+      "strategiesAdvice": "Estratégias e conselhos provisórios para estilos de trabalho da Geração Z"
+    },
+    "GM": {
+      "id": "work-styles-millennial",
+      "code": "T5.3.GM",
+      "title": "GM: Estilos de Trabalho e Colaboração",
+      "color": "cyan",
+      "description": "Abordagem ágil com colaboração multifuncional e ambientes abertos",
+      "pageId": 6,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Estereótipo provisório para estilos de trabalho dos Millennials",
+      "researchFindings": "Resultados de investigação provisórios para estilos de trabalho dos Millennials",
+      "strategiesAdvice": "Estratégias e conselhos provisórios para estilos de trabalho dos Millennials"
+    },
+    "GX": {
+      "id": "work-styles-genx",
+      "code": "T5.3.GX",
+      "title": "GX: Estilos de Trabalho e Colaboração",
+      "color": "cyan",
+      "description": "Estilo pragmático equilibrando métodos tradicionais e digitais",
+      "pageId": 3,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Estereótipo provisório para estilos de trabalho da Geração X",
+      "researchFindings": "Resultados de investigação provisórios para estilos de trabalho da Geração X",
+      "strategiesAdvice": "Estratégias e conselhos provisórios para estilos de trabalho da Geração X"
+    },
+    "GB": {
+      "id": "work-styles-boomer",
+      "code": "T5.3.GB",
+      "title": "GB: Estilos de Trabalho e Colaboração",
+      "color": "cyan",
+      "description": "Preferência por processos estruturados, comunicação formal e hierarquias claras",
+      "pageId": 9,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Estereótipo provisório para estilos de trabalho dos Baby Boomers",
+      "researchFindings": "Resultados de investigação provisórios para estilos de trabalho dos Baby Boomers",
+      "strategiesAdvice": "Estratégias e conselhos provisórios para estilos de trabalho dos Baby Boomers"
+    }
+  }
+}

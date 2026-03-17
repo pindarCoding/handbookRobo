@@ -1,0 +1,152 @@
+{
+  "T4.1": {
+    "GZ": {
+      "id": "",
+      "code": "T4.1.GZ",
+      "title": "GZ: Hierarquia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "'Demasiado sensível / inexperiente' – Frequentemente percecionados como ingénuos, excessivamente idealistas ou com falta de resiliência, e não vistos como tendo autoridade para influenciar a cultura do local de trabalho. Os seus pontos de vista são frequentemente ignorados e a sua compreensão das hierarquias profissionais pode ser subvalorizada. Embora raramente sejam identificados como perpetradores, preconceitos subtis podem ainda emergir. Tendem a demonstrar maior consciência em torno de questões de etnia e deficiência, refletindo como a exposição precoce fomenta a sua perspetiva inclusiva.",
+      "researchFindings": "25% identificam a deficiência e a etnia como fatores decisivos que moldam as suas experiências profissionais. Isto reflete não fragilidade, mas uma consciência aguçada de como as desigualdades estruturais os afetam diretamente ou aos seus pares. A sua \"sensibilidade\" pode assim ser reinterpretada como uma lente interseccional avançada. Raramente reportados como perpetradores, mas o preconceito subtil pode surgir. A consciência é aguçada em torno da etnia e deficiência, mostrando que a exposição precoce molda a sua mentalidade inclusiva.",
+      "strategiesAdvice": "Não descarte as preocupações da Geração Z como imaturidade. Envolva-os em políticas, conselhos de diversidade e mentoria. As suas perspetivas sinalizam questões sistémicas precocemente e reforçam os esforços de inclusão. Forneça formação sobre preconceitos desde o primeiro dia, valorize as suas perspetivas como ativos e crie espaços seguros para contribuições significativas."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.1.GM",
+      "title": "GM: Hierarquia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "'Com direitos adquiridos / sempre em busca de inclusão' – Por vezes enquadrados como exigentes ou excessivamente focados na justiça. Considerados \"demasiado politicamente corretos\" ou hipersensíveis, especialmente em torno de microagressões e questões de diversidade. Os críticos sugerem que enfatizam demasiado a justiça em detrimento do pragmatismo.",
+      "researchFindings": "Os Millennials frequentemente identificam até sete desvantagens interseccionais que moldam as oportunidades no local de trabalho, com a deficiência e a saúde mental a destacarem-se particularmente. O seu apelo à inclusão reflete não direitos adquiridos, mas experiência vivida de navegação de stress, percursos profissionais precários e desafios de bem-estar. Embora raramente se envolvam em comportamento discriminatório, permanecem especialmente alerta à forma como o stress, a deficiência e a desvantagem socioeconómica influenciam as dinâmicas do local de trabalho.",
+      "strategiesAdvice": "Estabeleça canais de feedback estruturados (inquéritos, grupos focais) para os Millennials expressarem preocupações de forma segura. Combine isto com iniciativas direcionadas sobre saúde mental, apoio à deficiência e trabalho flexível para mostrar que a sua advocacia impulsiona mudanças reais. Capacite-os para liderar de forma inclusiva, modelando comunicação aberta. Reconheça a advocacia e a sensibilidade cultural como qualidades de liderança fundamentais e integre-as na cultura da equipa."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.1.GX",
+      "title": "GX: Hierarquia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "'Ignorados / conservadores' – Frequentemente considerados como o \"meio invisível\" entre colaboradores mais jovens expressivos e líderes seniores com autoridade. Vistos frequentemente como pragmáticos e cautelosos, podem ser percecionados como resistentes à mudança. Muitos tendem a evitar debates sobre inclusão, favorecendo normas estabelecidas e eficiência operacional em detrimento de transformação cultural mais ampla.",
+      "researchFindings": "A Geração X está ciente da discriminação em torno da religião e da deficiência, moldada tanto por funções de gestão como por responsabilidades pessoais. Embora por vezes vistos como conservadores, podem experienciar exclusão subtil eles próprios. A sua autoridade a meio da carreira posiciona-os para desafiar ou reforçar preconceitos no local de trabalho, tornando o seu envolvimento crucial para os esforços de inclusão.",
+      "strategiesAdvice": "Amplifique as vozes da Geração X em espaços de liderança e enfatize o seu papel como pontes entre gerações. Encoraje a participação em programas formais de aliança e mentoria, posicionando a sua perspetiva pragmática e de meio de carreira como uma força estabilizadora nas iniciativas de diversidade. Aproveite a sua experiência através de iniciativas de aliança e diálogo respeitoso, fornecendo ferramentas para transformar autoridade em influência positiva e promover inclusão e consciência cultural entre equipas."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.1.GB",
+      "title": "GB: Hierarquia",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "'Resistentes à mudança' – Frequentemente vistos como tendo hábitos enraizados e menos recetivos à evolução das normas sociais e laborais. Tendem a manter hierarquias tradicionais e podem ter dificuldade em adaptar-se às expectativas culturais em mudança em torno da diversidade.",
+      "researchFindings": "Embora os Boomers reportem menos instâncias de discriminação, a deficiência destaca-se consistentemente nas suas experiências. A exclusão é frequentemente subtil, incluindo tecnologias inacessíveis, suposições sobre competências digitais ou subestimação da sua adaptabilidade. São mais frequentemente associados a comentários discriminatórios, particularmente em torno da deficiência. A idade e a antiguidade podem também reforçar perspetivas tradicionalistas sobre inclusão.",
+      "strategiesAdvice": "Forneça adaptações acessíveis e tecnologia inclusiva para garantir que colaboradores mais velhos com deficiência sejam plenamente integrados nos locais de trabalho digitais. Aproveite a sua experiência profissional para moldar estratégias de inclusão intergeracional, reenquadrando-os como recursos valiosos em vez de \"obstáculos ao progresso\". Envolva os Boomers através de workshops intergeracionais e partilha de histórias, validando a sua expertise enquanto atualiza a sua compreensão das normas culturais atuais e práticas inclusivas."
+    }
+  },
+  "T4.2": {
+    "GZ": {
+      "id": "",
+      "code": "T4.2.GZ",
+      "title": "GZ: Aversão à incerteza",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Frequentemente descartados como \"demasiado sensíveis\", assume-se que são incapazes de lidar com desafios no local de trabalho. As suas preocupações podem ser minimizadas ou ignoradas, percecionadas como sinal de imaturidade ou resiliência insuficiente.",
+      "researchFindings": "Experienciam algumas das taxas mais elevadas de vitimização. Fatores interseccionais — como idade, etnia e deficiência — aumentam ainda mais a vulnerabilidade, contribuindo para a exclusão estrutural dentro das dinâmicas de equipa.",
+      "strategiesAdvice": "Introduza programas de mentoria, canais de denúncia seguros e iniciativas de sensibilização. Valide experiências, aborde barreiras sistémicas e forneça à Geração Z as ferramentas para navegar os desafios do local de trabalho com confiança."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.2.GM",
+      "title": "GM: Aversão à incerteza",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Frequentemente percecionados como com direitos adquiridos ou rápidos a levantar queixas sobre injustiça, a sua advocacia por tratamento equitativo pode ser mal interpretada como reação excessiva em vez de preocupação legítima.",
+      "researchFindings": "São frequentemente vítimas, enfrentando desvantagens relacionadas com deficiência, saúde mental e estatuto socioeconómico. Estes padrões destacam iniquidades sistémicas que moldam as suas trajetórias profissionais.",
+      "strategiesAdvice": "Reforce as proteções institucionais, normalize as conversas sobre saúde mental e estabeleça percursos de progressão transparentes para reduzir vulnerabilidades e promover a justiça."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.2.GX",
+      "title": "GX: Aversão à incerteza",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Percecionados como o \"meio invisível\", são frequentemente ignorados nas discussões sobre equidade no local de trabalho. Embora se assuma que são resilientes devido à sua idade, os seus desafios permanecem frequentemente sub-reconhecidos.",
+      "researchFindings": "Experienciam vitimização moderada, principalmente relacionada com religião e deficiência. Fatores interseccionais afetam profissionais a meio da carreira, embora estas experiências sejam frequentemente sub-reportadas.",
+      "strategiesAdvice": "Envolva a Geração X em programas de equidade, avalie barreiras interseccionais e incorpore as suas perspetivas nas discussões de políticas para garantir que os colaboradores de nível intermédio são apoiados e reconhecidos."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.2.GB",
+      "title": "GB: Aversão à incerteza",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Percecionados como resilientes e seniores, assume-se frequentemente que são imunes à discriminação devido à sua experiência e autoridade. A idade é vista como conferindo proteção contra a exclusão.",
+      "researchFindings": "São menos frequentemente vítimas no geral, mas a deficiência, a saúde e os fatores relacionados com a idade podem limitar a participação. Estas barreiras cruzam-se com a acessibilidade digital e as expectativas em mudança do local de trabalho.",
+      "strategiesAdvice": "Priorize a acessibilidade, a inclusão digital e as iniciativas de reconhecimento. Destaque as contribuições dos colaboradores mais velhos nas agendas de diversidade para garantir inclusão em todas as fases da carreira."
+    }
+  },
+  "T4.3": {
+    "GZ": {
+      "id": "",
+      "code": "T4.3.GZ",
+      "title": "GZ: Comunicação direta e indireta",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "A Geração Z é frequentemente percecionada como vendo discriminação em muitas situações.",
+      "researchFindings": "A Geração Z não está a exagerar. Estão especialmente atentos ao impacto composto de fatores interseccionais como deficiência e etnia, com um quarto deles a destacar quatro desses fatores como altamente impactantes.",
+      "strategiesAdvice": "Estabeleça plataformas onde as vozes da Geração Z sejam genuinamente ouvidas, como fóruns de diálogo intergeracional. Combinados com mentoria, estes espaços permitem-lhes sensibilizar enquanto fornecem apoio contra potenciais reações adversas."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.3.GM",
+      "title": "GM: Comunicação direta e indireta",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Os Millennials são excessivamente sensíveis ao preconceito.",
+      "researchFindings": "São fortes defensores da mudança sistémica, especialmente no que diz respeito à deficiência e saúde mental. Com base em experiências diversas, destacam ativamente lacunas nas políticas e estruturas de bem-estar.",
+      "strategiesAdvice": "Envolva os Millennials na conceção de iniciativas inclusivas e ferramentas de denúncia digital. A sua abertura e mentalidade inovadora podem ajudar a normalizar a consciência interseccional em toda a organização."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.3.GX",
+      "title": "GX: Comunicação direta e indireta",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Os membros da Geração X são vistos como mantendo a cabeça baixa e evitando a discriminação. São frequentemente percecionados como gestores passivos que se afastam de disputas sensíveis, priorizando a eficiência operacional e a minimização de conflitos em detrimento da liderança cultural.",
+      "researchFindings": "A Geração X reconhece frequentemente formas subtis de preconceito interseccional, particularmente relacionadas com religião e deficiência, mas as normas culturais podem desencorajá-los de se pronunciarem. Fornecer apoio moderado capacita-os a agir. A sua autoridade de nível intermédio permite-lhes intervir de formas que podem influenciar significativamente as normas e promover a inclusão.",
+      "strategiesAdvice": "Encoraje programas estruturados de aliança que permitam à Geração X servir como modelos e padrinhos. Ao enquadrar a intervenção como liderança em vez de confronto, as organizações ajudam-nos a usar a sua influência de forma construtiva. Equipe a Geração X para modelar comportamentos de apoio, colmatar lacunas geracionais e moldar positivamente a cultura organizacional."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.3.GB",
+      "title": "GB: Comunicação direta e indireta",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Os Boomers são percecionados como demasiado enraizados nos seus hábitos para se adaptarem à inclusão. São frequentemente vistos como hesitantes em intervir, favorecendo a harmonia e a estabilidade em detrimento de abordar diretamente a discriminação. Como resultado, a sua potencial influência em iniciativas de aliança pode ser subutilizada.",
+      "researchFindings": "Na realidade, muitos Boomers reconhecem a deficiência como um fator significativo na desvantagem no local de trabalho, embora reportem menos experiências de discriminação interseccional no geral, provavelmente devido ao efeito protetor da antiguidade. Embora menos frequentemente identificados como apoiantes, as suas intervenções têm influência substancial. Quando envolvidos, os Boomers podem ajudar a remodelar normas e expectativas culturais.",
+      "strategiesAdvice": "Aproveite a sua autoridade para promover revisões de políticas inclusivas. Quando líderes seniores endossam visivelmente formação e sistemas de denúncia interseccionais, isto legitima estes esforços em toda a força de trabalho. Posicione a aliança como uma responsabilidade fundamental de liderança, enfatizando que o apoio visível de pessoal sénior define o tom da cultura organizacional e reforça normas inclusivas."
+    }
+  }
+}

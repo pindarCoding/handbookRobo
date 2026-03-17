@@ -1,0 +1,152 @@
+{
+  "T1.1": {
+    "GZ": {
+      "id": "communication",
+      "code": "T1.1.GZ",
+      "title": "GZ: Zamieszanie wokół kanałów komunikacji i oczekiwania dotyczące czasu odpowiedzi",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Pokolenie Z komunikuje się wyłącznie przez telefon i jest uzależnione od mediów społecznościowych. Nie radzi sobie z rozmowami i połączeniami telefonicznymi. Preferuje komunikację asynchroniczną, taką jak wiadomości prywatne i notatki głosowe. Faworyzuje krótkie formy komunikacji wizualnej. Zaciera granice między komunikacją osobistą a zawodową.",
+      "researchFindings": "Preferują natychmiastową komunikację cyfrową. Oczekują zwięzłości, szybkości i natychmiastowych odpowiedzi. Mogą używać filmów w stylu TikTok zamiast formalnych prezentacji. Mają trudności ze zrozumieniem tonu bardziej formalnej komunikacji. Chcieliby otrzymywać porady od starszych kolegów dotyczące etykiety komunikacji w miejscu pracy.",
+      "strategiesAdvice": "Zapewnij jasne wytyczne dotyczące kanałów komunikacji odpowiednich do komunikacji wewnętrznej i zewnętrznej. Zarządzaj oczekiwaniami dotyczącymi czasu odpowiedzi dla każdego kanału komunikacji. Twórz możliwości mentoringu międzypokoleniowego. W przypadku pracy zdalnej lub hybrydowej zapewnij jasne wytyczne dotyczące etykiety spotkań online. Traktuj krótkie, zwięzłe wiadomości jako formę efektywności, a nie złych manier."
+    },
+    "GM": {
+      "id": "communication-s",
+      "code": "T1.1.GM",
+      "title": "GM: Zamieszanie wokół kanałów komunikacji i oczekiwania dotyczące czasu odpowiedzi",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millenialsi są biegli technologicznie i nieformalni, często używając emotikonów zamiast tekstu. Preferują komunikatory, wiadomości tekstowe i narzędzia do współpracy. Wolą wideorozmowy od spotkań osobistych. Oczekują terminowych odpowiedzi. Cenią informację zwrotną. Często frustrują się, gdy starsi koledzy nalegają na spotkania osobiste.",
+      "researchFindings": "Millenialsi zajmują pozycję pośrednią w zakresie preferencji komunikacyjnych. Biegli w nieformalnej komunikacji cyfrowej preferowanej przez młodszych pracowników i cenią szybkie odpowiedzi. Używają również tradycyjnej komunikacji ze starszymi pracownikami. Preferują współpracę i faworyzują narzędzia takie jak Slack. Cenią swój czas i często poszukują informacji zwrotnej.",
+      "strategiesAdvice": "Dawaj i otrzymuj terminową informację zwrotną w przypadku nieporozumienia komunikacyjnego. Pozwól na elastyczność w stylach komunikacji. Rozpoznaj potencjał millenialsów w łączeniu luki komunikacji cyfrowej między starszymi a młodszymi pracownikami."
+    },
+    "GX": {
+      "id": "communication-gx",
+      "code": "T1.1.GX",
+      "title": "GX: Zamieszanie wokół kanałów komunikacji i oczekiwania dotyczące czasu odpowiedzi",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Pokolenie X jest samodzielne i efektywne. Preferuje bezpośrednią komunikację, taką jak e-mail, telefon i spotkania osobiste. Czasem bywa zbyt dosadne w komunikacji. Może być oporne na zmiany.",
+      "researchFindings": "Pokolenie X preferuje komunikację przez e-mail i telefon. Chętnie uczestniczy w spotkaniach osobistych, ale korzysta z narzędzi cyfrowych, gdy jest to bardziej efektywne. Woli nie zacierać granicy między komunikacją zawodową a osobistą.",
+      "strategiesAdvice": "Zachęcaj do przejrzystości w komunikacji. Zapewnij szkolenia z cyfrowych narzędzi do współpracy. Nie stosuj mikrozarządzania, pozwól na elastyczność. Dawaj bezpośrednią i uczciwą informację zwrotną. Uznaj dłuższe formy komunikacji, np. wątki e-mailowe i protokoły spotkań, jako formę dokumentacji."
+    },
+    "GB": {
+      "id": "communication-gb",
+      "code": "T1.1.GB",
+      "title": "GB: Zamieszanie wokół kanałów komunikacji i oczekiwania dotyczące czasu odpowiedzi",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers są niekompetentni cyfrowo. Nalegają na spotkania osobiste, gdy e-mail lub wiadomość byłyby bardziej efektywne. Są formalni i bardzo wolno odpowiadają.",
+      "researchFindings": "Baby Boomers są biegli w komunikacji osobistej. Doświadczeni w niuansach komunikacji pośredniej. Preferują rozmowy telefoniczne i e-maile od komunikatorów. Czasem ignorują lub opóźniają odpowiedzi na wiadomości otrzymane przez nietradycyjne kanały komunikacji.",
+      "strategiesAdvice": "Podkreśl korzyści komunikacji cyfrowej pod względem efektywności. Zapewnij jasne wytyczne dotyczące zatwierdzonych cyfrowych kanałów komunikacji i ustal czasy odpowiedzi. Zachęcaj do szkoleń z narzędzi cyfrowych. Stwórz możliwości dwukierunkowej wymiany umiejętności z młodszymi, biegłymi cyfrowo współpracownikami."
+    }
+  },
+  "T1.2": {
+    "GZ": {
+      "id": "communication",
+      "code": "T1.2.GZ",
+      "title": "GZ: Konflikty oparte na tożsamości i wartościach",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Pokolenie Z nie wyznaje tradycyjnych wartości, takich jak lojalność, długoterminowe zaangażowanie i szacunek dla autorytetów. Jest idealistyczne i społecznie świadome. Pasjonuje się różnorodnością i inkluzją, równością płci i zmianami klimatycznymi.",
+      "researchFindings": "Pokolenie Z poszukuje sensu i elastyczności, a nie bezpieczeństwa czy statusu. Ceni autonomię, równowagę między pracą a życiem, innowacje, zmiany i technologię. Jest wrażliwe na różnice kulturowe i dyskryminację ze względu na płeć, pochodzenie etniczne i cechy fizyczne.",
+      "strategiesAdvice": "Twórz możliwości pracy w zespołach międzypokoleniowych. Zastanów się, jak pracownicy Pokolenia Z mogą informować i uczestniczyć w inicjatywach EDI i CSR. Zachęcaj do nieformalnych spotkań międzypokoleniowych."
+    },
+    "GM": {
+      "id": "communication",
+      "code": "T1.2.GM",
+      "title": "GM: Konflikty oparte na tożsamości i wartościach",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millenialsi są postrzegani jako pozbawieni lojalności i etyki pracy. Niski poziom szacunku dla autorytetów. Cenią równowagę między pracą a życiem i są elastyczni.",
+      "researchFindings": "Cenią wpływ społeczny, innowacje i inkluzję. Uważają brak szkoleń międzykulturowych za istotną barierę dla współpracy międzypokoleniowej. Byli świadkami, jak pochodzenie etniczne i narodowość są istotnymi czynnikami przyczyniającymi się do dyskryminacji.",
+      "strategiesAdvice": "Rozważ pracę hybrydową i elastyczną, aby odpowiadać potrzebie równowagi między pracą a życiem. Zapewnij szkolenia z zakresu świadomości międzykulturowej."
+    },
+    "GX": {
+      "id": "communication",
+      "code": "T1.2.GX",
+      "title": "GX: Konflikty oparte na tożsamości i wartościach",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Pokolenie X jest postrzegane jako lojalni pracownicy. Cenią długoterminowe zaangażowanie i relacje osobiste. Mniej innowacyjni i zorientowani na zmiany niż młodsi współpracownicy.",
+      "researchFindings": "Pokolenie X postrzega siebie jako stabilne i niezależne, ale z szacunkiem dla hierarchii. Było świadkiem dyskryminacji ze względu na niepełnosprawność, płeć i pochodzenie etniczne jako głównych czynników w miejscu pracy. Nie jest tak wrażliwe kulturowo jak młodsi koledzy.",
+      "strategiesAdvice": "Nie stosuj mikrozarządzania. Szanuj ich doświadczenie. Promuj dialog na temat wrażliwości kulturowej i inkluzji."
+    },
+    "GB": {
+      "id": "communication",
+      "code": "T1.2.GB",
+      "title": "GB: Konflikty oparte na tożsamości i wartościach",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers podtrzymują tradycyjne wartości, takie jak lojalność i szacunek dla autorytetów. Cenią długoterminowe zaangażowanie i ciężką pracę. Nie cenią wpływu społecznego.",
+      "researchFindings": "Baby Boomers wnoszą bogactwo doświadczenia i silną etykę pracy. Cenią lojalność, zaangażowanie i relacje osobiste. Szanują autorytet. Przywiązują mniejszą wagę do innowacji, zmian i wpływu społecznego. Mają niższą wrażliwość lub mniej wyraźne postrzeganie dyskryminacji międzypokoleniowej w miejscu pracy.",
+      "strategiesAdvice": "Uznaj stabilność, doświadczenie i sieć relacji starszych kolegów jako atut dla firmy. Zachęcaj do innowacji w tej grupie wiekowej, włączając ich do zespołów wielopokoleniowych. Regularnie informuj o inicjatywach EDI."
+    }
+  },
+  "T1.3": {
+    "GZ": {
+      "id": "communication",
+      "code": "T1.3.GZ",
+      "title": "GZ: Rola otwartego dialogu i interakcji społecznych",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Pokolenie Z komunikuje się wyłącznie przez komunikatory i nie jest zainteresowane relacjami osobistymi.",
+      "researchFindings": "Pokolenie Z preferuje komunikację cyfrową i pracę zdalną. Poszukuje środowisk, w których nieformalność, współpraca i praca zespołowa są centralne. Ceni doświadczenie życiowe starszych pracowników i często oczekuje od menedżerów z pokolenia millenialsów nadawania tonu spotkaniom i wskazówek dotyczących etykiety w miejscu pracy.",
+      "strategiesAdvice": "Twórz możliwości socjalizacji — nieformalne spotkania przy lunchu, dni wolontariatu, spotkania towarzyskie. Zapewnij możliwości międzypokoleniowej wymiany umiejętności. Oferuj szkolenia z umiejętności miękkich w grupach."
+    },
+    "GM": {
+      "id": "communication",
+      "code": "T1.3.GM",
+      "title": "GM: Rola otwartego dialogu i interakcji społecznych",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millenialsi są samowystarczalni i priorytetyzują równowagę między pracą a życiem. Oddzielają życie zawodowe od prywatnego.",
+      "researchFindings": "Millenialsi preferują środowiska oparte na współpracy i kooperacji. Cenią pracę zespołową i utrzymują nieformalne podejście do komunikacji. Poszukują płynnych, inkluzywnych miejsc pracy z jasnością co do ról i obowiązków.",
+      "strategiesAdvice": "Zachęcaj do otwartej i nieformalnej komunikacji. Organizuj osobiste wydarzenia integracyjne. Twórz możliwości spotkań kolegów pracujących w różnych zespołach w celu wymiany doświadczeń. Grupowe szkolenia z umiejętności miękkich."
+    },
+    "GX": {
+      "id": "communication",
+      "code": "T1.3.GX",
+      "title": "GX: Rola otwartego dialogu i interakcji społecznych",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Pokolenie X jest postrzegane jako lojalni pracownicy, którzy cenią relacje osobiste. Poszukują uznania swoich osiągnięć.",
+      "researchFindings": "Pokolenie X docenia pracę zespołową i środowisko oparte na współpracy. Ma wyższą tolerancję dla tradycyjnych struktur hierarchicznych niż młodsi koledzy. Rozwija się tam, gdzie jasno zdefiniowane są role i obowiązki. Potrzebuje stabilności, jasności i współpracy. Docenia szczerą informację zwrotną.",
+      "strategiesAdvice": "Regularna informacja zwrotna. Otwarte rozmowy o wynikach pracy i możliwościach rozwoju kariery. Oferuj możliwości rozwoju osobistego w kontekście grupowym."
+    },
+    "GB": {
+      "id": "communication",
+      "code": "T1.3.GB",
+      "title": "GB: Rola otwartego dialogu i interakcji społecznych",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers cenią strukturę i hierarchię. Są zawodowo i społecznie oddaleni od młodszych kolegów w miejscu pracy.",
+      "researchFindings": "Baby Boomers preferują strukturę. Zainteresowani przekazywaniem wiedzy i doświadczenia młodszym kolegom.",
+      "strategiesAdvice": "Połącz formalne procesy transferu wiedzy do młodszych kolegów z nieformalnymi spotkaniami i warsztatami. Dwukierunkowa wymiana umiejętności, np. młodszy kolega mentoruje starszego w zakresie cyfrowych narzędzi do współpracy, podczas gdy starszy kolega edukuje młodszego w zakresie etykiety kontaktów z klientami zewnętrznymi."
+    }
+  }
+}

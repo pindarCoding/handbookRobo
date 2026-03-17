@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "Willkommen beim MYCo Generationen-Handbuch",
+    "subtitle": "Eine praxisorientierte Ressource für Personalfachleute, Trainer und Moderatoren, um generationenübergreifende Dynamiken zu verstehen und inklusive Arbeitsplätze zu fördern."
+  },
+  "personalised": {
+    "title": "Ihr personalisiertes Handbuch",
+    "description": "Das vollständige Handbuch bietet umfassende Forschungsergebnisse und detaillierte Strategien – aber Sie benötigen möglicherweise nicht alles. Diese Plattform ermöglicht es Ihnen, nur die Inhalte auszuwählen, die für Ihren spezifischen Kontext relevant sind, egal ob Sie sich mit einer bestimmten Generation, einem einzelnen Thema oder einer Kombination aus beidem befassen. Erstellen Sie eine maßgeschneiderte Ressource, die zu Ihren Schulungsbedürfnissen passt, und laden Sie sie als druckfertiges PDF herunter.",
+    "research": "Dieses Handbuch ist das Ergebnis <strong>transnationaler Forschung</strong>, die in <strong>sechs europäischen Ländern</strong> durchgeführt wurde und untersucht, wie vier Generationen – Babyboomer, Generation X, Millennials und Generation Z – die Arbeitswelt erleben. Anstatt Stereotypen zu verstärken, ist es <strong>unser Ziel, evidenzbasierte</strong> Erkenntnisse und umsetzbare Strategien bereitzustellen, <strong>um Zusammenarbeit, gegenseitiges Verständnis und generationenübergreifende Inklusion zu fördern.</strong>"
+  },
+  "howItWorks": {
+    "title": "So erstellen Sie Ihr individuelles Handbuch",
+    "step1": {
+      "title": "Wählen Sie ein Thema",
+      "description": "Wählen Sie aus <strong>fünf forschungsbasierten Themen</strong>: Kommunikation, Werte, Diversität, digitale Kompetenzen oder intergenerationelles Lernen."
+    },
+    "step2": {
+      "title": "Wählen Sie ein Unterthema",
+      "description": "Jedes Thema enthält <strong>drei spezifische Unterthemen</strong>, die aus unseren transnationalen Forschungsergebnissen entwickelt wurden."
+    },
+    "step3": {
+      "title": "Wählen Sie eine Generation",
+      "description": "<strong>Konzentrieren Sie sich auf die Generation</strong>, die für Ihren Kontext am relevantesten ist: Gen Z, Millennials, Gen X oder Babyboomer."
+    },
+    "step4": {
+      "title": "Erstellen &amp; Exportieren",
+      "description": "Fügen Sie die Seiten, die Sie benötigen, zu Ihrem personalisierten Handbuch hinzu und <strong>laden Sie es als PDF herunter.</strong>"
+    },
+    "videoTitle": "Tutorial ansehen"
+  },
+  "selfAssessment": {
+    "title": "Selbsteinschätzungstest",
+    "description": "Messen Sie Ihr Bewusstsein für generationelle Vielfalt und Ihre Fähigkeit, intergenerationelle Dynamiken inklusiv zu gestalten. Der Test besteht aus 10 Fragen, die zufällig aus unserem forschungsbasierten Fragenpool ausgewählt werden und alle fünf Themenbereiche abdecken.",
+    "recommendation": "Wir empfehlen, den Test vor und nach der Erkundung des Handbuchs durchzuführen, um Ihren Fortschritt zu verfolgen.",
+    "startButton": "Test starten"
+  },
+  "projectQuote": "\"MYCo – Meet Your Colleague\" ist ein von Erasmus+ gefördertes Projekt, das fünf europäische Partner zusammenbringt, um praktische Werkzeuge für generationenübergreifende Inklusion zu entwickeln. Durch Forschung, Schulungsaktivitäten und interaktive Ressourcen wollen wir über Stereotypen hinausgehen und Arbeitsplätze schaffen, an denen jede Generation erfolgreich sein kann."
+}

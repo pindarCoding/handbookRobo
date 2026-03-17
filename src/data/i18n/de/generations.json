@@ -1,0 +1,30 @@
+{
+  "GZ": {
+    "id": "genz",
+    "code": "GZ",
+    "title": "Gen Z",
+    "ageRange": "14 - 27",
+    "description": "Digital Natives, die Authentizität und die Verbindung von Arbeit und Leben schätzen"
+  },
+  "GM": {
+    "id": "millennial",
+    "code": "GM",
+    "title": "Millennial",
+    "ageRange": "28 - 43",
+    "description": "Technologieaffine Optimisten mit Fokus auf Sinnhaftigkeit und Weiterentwicklung"
+  },
+  "GX": {
+    "id": "genx",
+    "code": "GX",
+    "title": "Gen X",
+    "ageRange": "44 - 59",
+    "description": "Unabhängig und anpassungsfähig, Brücke zwischen traditionellen und digitalen Ansätzen"
+  },
+  "GB": {
+    "id": "boomer",
+    "code": "GB",
+    "title": "Baby Boomer",
+    "ageRange": "60 - 78",
+    "description": "Erfahrungsorientiert mit starker Arbeitsmoral und traditionellen Werten"
+  }
+}

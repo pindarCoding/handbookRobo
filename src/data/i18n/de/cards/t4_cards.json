@@ -1,0 +1,152 @@
+{
+  "T4.1": {
+    "GZ": {
+      "id": "",
+      "code": "T4.1.GZ",
+      "title": "GZ: Hierarchie",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "‚Zu sensibel / unerfahren' – Wird häufig als naiv, übermäßig idealistisch oder wenig belastbar wahrgenommen und ihnen wird nicht zugetraut, die Arbeitsplatzkultur zu beeinflussen. Ihre Standpunkte werden oft übersehen und ihr Verständnis für professionelle Hierarchien wird möglicherweise unterschätzt. Obwohl sie selten als Täter identifiziert werden, können subtile Vorurteile auftreten. Sie zeigen ein stärkeres Bewusstsein für Themen rund um Ethnizität und Behinderung, was widerspiegelt, wie frühe Auseinandersetzung ihre inklusive Haltung fördert.",
+      "researchFindings": "25% identifizieren Behinderung und Ethnizität als entscheidende Faktoren, die ihre Arbeitserfahrungen prägen. Das reflektiert nicht Fragilität, sondern ein erhöhtes Bewusstsein dafür, wie strukturelle Ungleichheiten sie direkt oder Gleichaltrige um sie herum betreffen. Ihre 'Sensibilität' kann somit als fortgeschrittene intersektionale Perspektive neu interpretiert werden. Selten als Täter gemeldet, aber subtile Vorurteile können auftreten. Das Bewusstsein ist bei Ethnizität und Behinderung erhöht, was zeigt, dass frühe Auseinandersetzung ihr inklusives Denken formt.",
+      "strategiesAdvice": "Weisen Sie Bedenken der Gen Z nicht als Unreife ab. Binden Sie sie in Richtlinien, Diversitätsräte und Mentoring ein. Ihre Perspektiven identifizieren systemische Probleme frühzeitig und stärken Inklusionsbemühungen. Bieten Sie von Anfang an Schulungen gegen Vorurteile, schätzen Sie ihre Erkenntnisse als Ressource und schaffen Sie sichere Räume für bedeutsame Beiträge."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.1.GM",
+      "title": "GM: Hierarchie",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "‚Anspruchsvoll / immer auf Inklusion bedacht' – Werden manchmal als fordernd oder übermäßig auf Fairness fokussiert dargestellt. Gelten als 'zu politisch korrekt' oder überempfindlich, besonders bei Mikroaggressionen und Diversitätsthemen. Kritiker meinen, sie betonen Fairness auf Kosten von Pragmatismus.",
+      "researchFindings": "Millennials identifizieren oft bis zu sieben sich überschneidende Benachteiligungen, die Arbeitsplatzchancen beeinflussen, wobei Behinderung und psychische Gesundheit besonders hervorstechen. Ihr Ruf nach Inklusion reflektiert nicht Anspruchsdenken, sondern gelebte Erfahrung im Navigieren von Stress, prekären Karrierewegen und Wohlbefindensherausforderungen. Obwohl sie selten diskriminierendes Verhalten zeigen, bleiben sie besonders wachsam dafür, wie Stress, Behinderung und sozioökonomische Benachteiligung die Arbeitsplatzdynamik beeinflussen.",
+      "strategiesAdvice": "Richten Sie strukturierte Feedback-Kanäle ein (Umfragen, Fokusgruppen), damit Millennials Bedenken sicher äußern können. Kombinieren Sie dies mit gezielten Initiativen zu psychischer Gesundheit, Behinderungsunterstützung und flexiblem Arbeiten, um zu zeigen, dass ihr Engagement echte Veränderungen bewirkt. Befähigen Sie sie, inklusiv zu führen und offene Kommunikation vorzuleben. Erkennen Sie Engagement und kulturelle Sensibilität als zentrale Führungsqualitäten an und verankern Sie sie in der Teamkultur."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.1.GX",
+      "title": "GX: Hierarchie",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "‚Übersehen / konservativ' – Wird häufig als die 'unsichtbare Mitte' zwischen wortstarken jüngeren Mitarbeitenden und autoritativen Führungskräften betrachtet. Oft als pragmatisch und vorsichtig angesehen, können sie als veränderungsresistent wahrgenommen werden. Viele neigen dazu, Inklusionsdebatten zu meiden und bevorzugen etablierte Normen und betriebliche Effizienz gegenüber breiterer kultureller Transformation.",
+      "researchFindings": "Gen X ist sich der Diskriminierung in Bezug auf Religion und Behinderung bewusst, geprägt durch Führungsrollen und persönliche Verantwortlichkeiten. Obwohl sie manchmal als konservativ angesehen wird, kann sie selbst subtile Ausgrenzung erfahren. Ihre Autorität in der Karrieremitte positioniert sie so, dass sie Vorurteile am Arbeitsplatz entweder hinterfragen oder verstärken kann, was ihr Engagement für Inklusionsbemühungen entscheidend macht.",
+      "strategiesAdvice": "Verstärken Sie die Stimme der Gen X in Führungsräumen und betonen Sie ihre Rolle als Brücke zwischen Generationen. Fördern Sie die Teilnahme an formellen Allyship- und Mentoring-Programmen und positionieren Sie ihre pragmatische Perspektive als stabilisierende Kraft in Diversitätsinitiativen. Nutzen Sie ihre Erfahrung durch Allyship- und respektvolle Dialoginitiativen und bieten Sie Werkzeuge, um Autorität in positiven Einfluss zu verwandeln und Inklusion sowie kulturelles Bewusstsein teamübergreifend zu fördern."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.1.GB",
+      "title": "GB: Hierarchie",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "‚Veränderungsresistent' – Werden oft als festgefahren und weniger aufnahmebereit für sich wandelnde soziale und Arbeitsplatznormen angesehen. Sie neigen dazu, traditionelle Hierarchien aufrechtzuerhalten und haben möglicherweise Schwierigkeiten, sich an veränderte kulturelle Erwartungen rund um Diversität anzupassen.",
+      "researchFindings": "Während Babyboomer weniger Diskriminierungserfahrungen berichten, sticht Behinderung in ihren Erfahrungen durchgehend hervor. Ausgrenzung ist oft subtil, einschließlich unzugänglicher Technologien, Annahmen über digitale Fähigkeiten oder Unterschätzung ihrer Anpassungsfähigkeit. Sie werden am häufigsten mit diskriminierenden Äußerungen in Verbindung gebracht, insbesondere in Bezug auf Behinderung. Alter und lange Betriebszugehörigkeit können zudem traditionalistische Perspektiven auf Inklusion verstärken.",
+      "strategiesAdvice": "Stellen Sie barrierefreie Anpassungen und inklusive Technologie bereit, um sicherzustellen, dass ältere Mitarbeitende mit Behinderungen vollständig in digitale Arbeitsplätze integriert sind. Nutzen Sie ihre Berufserfahrung zur Gestaltung intergenerationeller Inklusionsstrategien und definieren Sie sie als wertvolle Ressourcen statt als 'Hindernisse für den Fortschritt' um. Binden Sie Babyboomer durch generationenübergreifende Workshops und Storytelling ein, validieren Sie ihr Fachwissen und aktualisieren Sie gleichzeitig ihr Verständnis aktueller kultureller Normen und inklusiver Praktiken."
+    }
+  },
+  "T4.2": {
+    "GZ": {
+      "id": "",
+      "code": "T4.2.GZ",
+      "title": "GZ: Unsicherheitsvermeidung",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Wird oft als 'zu sensibel' abgetan und ihnen wird unterstellt, Herausforderungen am Arbeitsplatz nicht bewältigen zu können. Ihre Bedenken werden möglicherweise heruntergespielt oder übersehen, als Zeichen von Unreife oder mangelnder Belastbarkeit wahrgenommen.",
+      "researchFindings": "Sie erleben einige der höchsten Viktimisierungsraten. Intersektionale Faktoren – wie Alter, Ethnizität und Behinderung – erhöhen die Vulnerabilität zusätzlich und tragen zur strukturellen Ausgrenzung innerhalb der Teamdynamik bei.",
+      "strategiesAdvice": "Führen Sie Mentoring-Programme, sichere Meldekanäle und Sensibilisierungsinitiativen ein. Validieren Sie Erfahrungen, adressieren Sie systemische Barrieren und geben Sie Gen Z die Werkzeuge an die Hand, um Herausforderungen am Arbeitsplatz selbstbewusst zu bewältigen."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.2.GM",
+      "title": "GM: Unsicherheitsvermeidung",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Wird oft als anspruchsvoll wahrgenommen oder als schnell dabei, sich über Ungerechtigkeit zu beschweren. Ihr Eintreten für gleichberechtigte Behandlung kann als Überreaktion statt als berechtigtes Anliegen fehlinterpretiert werden.",
+      "researchFindings": "Sie sind häufig Betroffene und erleben Benachteiligungen im Zusammenhang mit Behinderung, psychischer Gesundheit und sozioökonomischem Status. Diese Muster verdeutlichen systemische Ungleichheiten, die ihre Karriereverläufe prägen.",
+      "strategiesAdvice": "Stärken Sie den institutionellen Schutz, normalisieren Sie Gespräche über psychische Gesundheit und schaffen Sie transparente Aufstiegsmöglichkeiten, um Vulnerabilitäten zu reduzieren und Fairness zu fördern."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.2.GX",
+      "title": "GX: Unsicherheitsvermeidung",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Als die 'unsichtbare Mitte' wahrgenommen, wird sie in Diskussionen über Gleichberechtigung am Arbeitsplatz oft übersehen. Obwohl sie aufgrund ihres Alters als belastbar angesehen werden, bleiben ihre Herausforderungen häufig unerkannt.",
+      "researchFindings": "Sie erfahren moderate Viktimisierung, hauptsächlich im Zusammenhang mit Religion und Behinderung. Intersektionale Faktoren betreffen Fachkräfte in der Karrieremitte, wobei diese Erfahrungen oft untererfasst werden.",
+      "strategiesAdvice": "Binden Sie Gen X in Gleichstellungsprogramme ein, bewerten Sie intersektionale Barrieren und integrieren Sie ihre Perspektiven in Politikdiskussionen, um sicherzustellen, dass Mitarbeitende auf mittlerer Ebene unterstützt und anerkannt werden."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.2.GB",
+      "title": "GB: Unsicherheitsvermeidung",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Als belastbar und erfahren wahrgenommen, wird oft angenommen, dass sie aufgrund ihrer Erfahrung und Autorität immun gegen Diskriminierung sind. Alter wird als Schutz vor Ausgrenzung angesehen.",
+      "researchFindings": "Sie sind insgesamt seltener Opfer, aber Behinderung, Gesundheit und altersbedingte Faktoren können die Teilhabe einschränken. Diese Barrieren überschneiden sich mit digitaler Zugänglichkeit und sich verändernden Arbeitsplatzerwartungen.",
+      "strategiesAdvice": "Priorisieren Sie Barrierefreiheit, digitale Inklusion und Anerkennungsinitiativen. Heben Sie die Beiträge älterer Mitarbeitender in Diversitätsagenden hervor, um Inklusion in jeder Karrierephase sicherzustellen."
+    }
+  },
+  "T4.3": {
+    "GZ": {
+      "id": "",
+      "code": "T4.3.GZ",
+      "title": "GZ: Direkte und indirekte Kommunikation",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Gen Z wird oft so wahrgenommen, als sehe sie in vielen Situationen Diskriminierung.",
+      "researchFindings": "Gen Z übertreibt nicht. Sie ist besonders aufmerksam für die kumulativen Auswirkungen intersektionaler Faktoren wie Behinderung und Ethnizität, wobei ein Viertel von ihnen vier solcher Faktoren als hoch bedeutsam hervorhebt.",
+      "strategiesAdvice": "Schaffen Sie Plattformen, auf denen die Stimmen der Gen Z wirklich gehört werden, wie generationenübergreifende Dialogforen. In Kombination mit Mentoring ermöglichen diese Räume ihnen, Bewusstsein zu schaffen und gleichzeitig Unterstützung gegen mögliche Gegenreaktionen zu bieten."
+    },
+    "GM": {
+      "id": "",
+      "code": "T4.3.GM",
+      "title": "GM: Direkte und indirekte Kommunikation",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millennials sind übermäßig sensibel gegenüber Vorurteilen.",
+      "researchFindings": "Sie sind starke Befürworter systemischer Veränderungen, insbesondere in Bezug auf Behinderung und psychische Gesundheit. Aus vielfältigen Erfahrungen schöpfend, weisen sie aktiv auf Lücken in Richtlinien und Wohlbefindensstrukturen hin.",
+      "strategiesAdvice": "Binden Sie Millennials in die Gestaltung inklusiver Initiativen und digitaler Meldetools ein. Ihre Offenheit und innovative Denkweise können dazu beitragen, intersektionales Bewusstsein in der gesamten Organisation zu normalisieren."
+    },
+    "GX": {
+      "id": "",
+      "code": "T4.3.GX",
+      "title": "GX: Direkte und indirekte Kommunikation",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Gen X wird als zurückhaltend wahrgenommen, die den Kopf einzieht und Diskriminierung meidet. Sie werden oft als distanzierte Manager gesehen, die sensible Streitigkeiten umgehen und betriebliche Effizienz sowie Konfliktminimierung über kulturelle Führung stellen.",
+      "researchFindings": "Gen X erkennt oft subtile Formen intersektionaler Vorurteile, insbesondere in Bezug auf Religion und Behinderung, aber kulturelle Normen können sie davon abhalten, sich zu äußern. Moderate Unterstützung befähigt sie zum Handeln. Ihre Autorität auf mittlerer Ebene ermöglicht es ihnen, auf Weisen einzugreifen, die Normen bedeutsam beeinflussen und Inklusion fördern können.",
+      "strategiesAdvice": "Fördern Sie strukturierte Allyship-Programme, die Gen X ermöglichen, als Vorbilder und Sponsoren zu fungieren. Indem Intervention als Führung und nicht als Konfrontation dargestellt wird, helfen Organisationen ihnen, ihren Einfluss konstruktiv zu nutzen. Befähigen Sie Gen X, unterstützendes Verhalten vorzuleben, generationelle Kluft zu überbrücken und die Organisationskultur positiv zu gestalten."
+    },
+    "GB": {
+      "id": "",
+      "code": "T4.3.GB",
+      "title": "GB: Direkte und indirekte Kommunikation",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Babyboomer werden als zu festgefahren wahrgenommen, um sich an Inklusion anzupassen. Sie werden oft als zögerlich gesehen, einzugreifen, und bevorzugen Harmonie und Stabilität gegenüber der direkten Thematisierung von Diskriminierung. Dadurch wird ihr potenzieller Einfluss in Allyship-Initiativen möglicherweise nicht ausreichend genutzt.",
+      "researchFindings": "In Wirklichkeit erkennen viele Babyboomer Behinderung als bedeutenden Faktor bei Benachteiligungen am Arbeitsplatz an, obwohl sie insgesamt weniger Erfahrungen mit intersektionaler Diskriminierung berichten, wahrscheinlich aufgrund des schützenden Effekts ihrer Seniorität. Obwohl sie seltener als Unterstützer identifiziert werden, hat ihre Intervention erheblichen Einfluss. Wenn sie eingebunden werden, können Babyboomer dazu beitragen, kulturelle Normen und Erwartungen umzugestalten.",
+      "strategiesAdvice": "Nutzen Sie ihre Autorität, um inklusive Richtlinienüberprüfungen voranzutreiben. Wenn hochrangige Führungskräfte sichtbar intersektionale Schulungen und Meldesysteme befürworten, legitimiert dies diese Bemühungen in der gesamten Belegschaft. Positionieren Sie Allyship als zentrale Führungsverantwortung und betonen Sie, dass sichtbare Unterstützung von erfahrenen Mitarbeitenden den Ton für die Organisationskultur setzt und inklusive Normen stärkt."
+    }
+  }
+}

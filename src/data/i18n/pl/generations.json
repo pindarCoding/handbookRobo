@@ -1,0 +1,30 @@
+{
+  "GZ": {
+    "id": "genz",
+    "code": "GZ",
+    "title": "Pokolenie Z",
+    "ageRange": "14 - 27",
+    "description": "Cyfrowi tubylcy, którzy cenią autentyczność i integrację życia zawodowego z prywatnym"
+  },
+  "GM": {
+    "id": "millennial",
+    "code": "GM",
+    "title": "Millenials",
+    "ageRange": "28 - 43",
+    "description": "Biegli technologicznie optymiści skupieni na celu i rozwoju"
+  },
+  "GX": {
+    "id": "genx",
+    "code": "GX",
+    "title": "Pokolenie X",
+    "ageRange": "44 - 59",
+    "description": "Niezależni i elastyczni, łączący podejście tradycyjne z cyfrowym"
+  },
+  "GB": {
+    "id": "boomer",
+    "code": "GB",
+    "title": "Baby Boomer",
+    "ageRange": "60 - 78",
+    "description": "Kierujący się doświadczeniem, z silną etyką pracy i tradycyjnymi wartościami"
+  }
+}

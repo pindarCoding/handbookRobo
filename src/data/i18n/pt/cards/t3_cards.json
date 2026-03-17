@@ -1,0 +1,152 @@
+{
+  "T3.1": {
+    "GZ": {
+      "id": "",
+      "code": "T3.1.GZ",
+      "title": "GZ: Compreender a Desigualdade Digital em Contextos Laborais",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Os trabalhadores da Geração Z são frequentemente vistos como \"colados aos ecrãs\" — fluentes nas aplicações mais recentes mas com falta de profundidade em competências profissionais ou paciência para trabalhar com sistemas mais tradicionais. Os colegas mais velhos por vezes consideram-nos demasiado confiantes com a tecnologia mas pouco preparados para as realidades da colaboração no local de trabalho.",
+      "researchFindings": "Estudos mostram que a Geração Z lidera a adoção de IA e novas plataformas no local de trabalho, com 32% a impulsionar a experimentação com tecnologias emergentes. No entanto, podem estar menos familiarizados com sistemas empresariais especializados ou etiqueta profissional, por vezes reforçando o estereótipo.",
+      "strategiesAdvice": "As organizações devem proporcionar mentoria estruturada que emparelhe colaboradores da Geração Z com colegas mais velhos para ampliar a sua compreensão das normas e sistemas do local de trabalho. Ao mesmo tempo, a mentoria inversa permite à Geração Z partilhar a sua fluência digital, especialmente em áreas como IA ou ferramentas de redes sociais. Equilibrar inovação técnica com desenvolvimento profissional cria aprendizagem mútua e reduz estereótipos."
+    },
+    "GM": {
+      "id": "",
+      "code": "T3.1.GM",
+      "title": "GM: Compreender a Desigualdade Digital em Contextos Laborais",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Os Millennials são estereotipados como \"nativos digitais com direitos adquiridos\" que se sentem confortáveis com plataformas digitais mas são resistentes a sistemas legados ou formas tradicionais de trabalho. Por vezes são rotulados como impacientes, esperando conectividade e flexibilidade constantes.",
+      "researchFindings": "A investigação confirma que os Millennials são altamente fluentes digitalmente e frequentemente impulsionam as organizações a adotar ferramentas de colaboração modernas. No entanto, podem subestimar os métodos de comunicação interpessoal ou subestimar os desafios que os colegas mais velhos enfrentam ao adotar novas tecnologias.",
+      "strategiesAdvice": "Os empregadores devem aproveitar o entusiasmo dos Millennials pelas ferramentas digitais, colocando-os em projetos intergeracionais onde possam tanto promover a inovação como aprender o valor dos processos estabelecidos. Formação que enfatize abordagens híbridas — combinando eficiência digital com colaboração presencial — ajuda os Millennials a adaptar os seus pontos fortes às necessidades organizacionais."
+    },
+    "GX": {
+      "id": "",
+      "code": "T3.1.GX",
+      "title": "GX: Compreender a Desigualdade Digital em Contextos Laborais",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "A Geração X é frequentemente retratada como estando \"no meio\" — demasiado jovem para evitar completamente as ferramentas digitais, mas não tão naturalmente fluente como os Millennials ou a Geração Z. São por vezes vistos como adotantes relutantes que lutam para equilibrar fluxos de trabalho antigos e novos.",
+      "researchFindings": "Os trabalhadores da Geração X possuem frequentemente um profundo conhecimento institucional e experiência de gestão, mas podem sentir-se pressionados pelo ritmo da mudança digital. São mais propensos a reportar stress ao adaptar-se a novas plataformas de colaboração ou ao transitarem de sistemas analógicos.",
+      "strategiesAdvice": "As empresas devem fornecer formação direcionada que ligue explicitamente as ferramentas digitais a ganhos de produtividade nas áreas de responsabilidade da Geração X. Criar sistemas de aprendizagem entre pares ou de \"companheiro\" onde os colaboradores da Geração X orientam o pessoal mais jovem em processos empresariais enquanto aprendem atalhos digitais em retorno ajuda a colmatar divisões. Reconhecer o seu duplo papel como aprendizes e líderes reforça o seu valor."
+    },
+    "GB": {
+      "id": "",
+      "code": "T3.1.GB",
+      "title": "GB: Compreender a Desigualdade Digital em Contextos Laborais",
+      "color": "orange",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Os Baby Boomers são frequentemente retratados injustamente como \"tecnofóbicos\", lentos a aprender e relutantes em adaptar-se a ambientes digitais. Podem ser excluídos de conversas sobre inovação devido a estas suposições.",
+      "researchFindings": "As evidências mostram que, embora os Boomers enfrentem curvas de aprendizagem mais acentuadas com ferramentas digitais, são altamente capazes de se adaptar quando a formação é clara, contextual e respeitosa. Muitos estão ansiosos por continuar a aprender, mas o estigma e a falta de apoio personalizado frequentemente bloqueiam o seu progresso.",
+      "strategiesAdvice": "As organizações devem desenhar formação para os Boomers que seja prática, hands-on e ligada a tarefas reais do trabalho. Encorajar a mentoria inversa — onde colegas mais jovens partilham competências tecnológicas — pode empoderar os Boomers enquanto fortalece a confiança intergeracional. É também fundamental desafiar diretamente os estereótipos, reconhecendo a adaptabilidade e a sabedoria que os Boomers contribuem para os locais de trabalho digitais."
+    }
+  },
+  "T3.2": {
+    "GZ": {
+      "id": "",
+      "code": "T3.2.GZ",
+      "title": "GZ: Estratégias para Colmatar a Desigualdade Digital no Local de Trabalho",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Os colaboradores da Geração Z são percecionados como impacientes com adotantes mais lentos e intolerantes a sistemas desatualizados, insistindo que todos avancem ao ritmo das novas tecnologias. Isto pode criar atritos com colegas mais velhos.",
+      "researchFindings": "Os inquéritos mostram que 65% da Geração Z reporta frustração com colegas mais velhos que têm dificuldades com ferramentas digitais, o que pode intensificar conflitos de equipa. Podem também pressionar para a adoção rápida de aplicações ou plataformas sem considerar lacunas de infraestrutura em contextos rurais ou de baixos rendimentos.",
+      "strategiesAdvice": "Os empregadores podem encorajar a empatia envolvendo colaboradores da Geração Z em projetos de colaboração intergeracional que destaquem desafios mais amplos — como conectividade limitada em áreas rurais. Formação que enfatize paciência, competências de coaching e consciência cultural prepara a Geração Z para se tornar defensora da inclusão em vez de crítica das dificuldades dos outros."
+    },
+    "GM": {
+      "id": "",
+      "code": "T3.2.GM",
+      "title": "GM: Estratégias para Colmatar a Desigualdade Digital no Local de Trabalho",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Os Millennials são estereotipados como excessivamente dependentes de conectividade constante, esperando acesso contínuo a Wi-Fi, dispositivos móveis e ferramentas baseadas na nuvem. São por vezes vistos como exigentes ou inconscientes de barreiras estruturais mais amplas.",
+      "researchFindings": "Os Millennials lideram frequentemente o impulso para locais de trabalho digitais, mas podem subestimar as limitações enfrentadas por colegas em regiões menos conectadas ou em funções com recursos limitados. A sua insistência na flexibilidade pode ser mal interpretada como relutância em adaptar-se a estruturas tradicionais.",
+      "strategiesAdvice": "As organizações devem encorajar os Millennials a participar em conversas sobre desafios de infraestrutura e equidade. Incluí-los em comités de inclusão digital ou grupos de trabalho sobre diversidade ajuda-os a traduzir a sua advocacia tecnológica em soluções sistémicas. Ao mesmo tempo, reforçar a importância da resiliência e adaptabilidade garante que se mantêm alicerçados nas realidades do local de trabalho."
+    },
+    "GX": {
+      "id": "",
+      "code": "T3.2.GX",
+      "title": "GX: Estratégias para Colmatar a Desigualdade Digital no Local de Trabalho",
+      "color": "",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "A Geração X é por vezes descrita como \"gestores estagnados\" — presos a gerir equipas de nativos digitais enquanto ainda lidam com o seu próprio desenvolvimento de competências digitais. Podem ser percecionados como atrasando a transformação digital devido à cautela.",
+      "researchFindings": "A investigação mostra que a Geração X frequentemente se sente pressionada entre pessoal mais jovem e conhecedor de tecnologia e colegas mais velhos que resistem a novos sistemas. Podem ter falta de confiança em ferramentas emergentes, contribuindo para hesitação na tomada de decisões.",
+      "strategiesAdvice": "Fornecer aos líderes da Geração X coaching dedicado em competências de liderança digital pode reduzir a hesitação. Beneficiam de oportunidades estruturadas para testar novas ferramentas em ambientes de baixo risco. Encorajar a Geração X a liderar mudanças graduais em vez de transformações totais permite-lhes atuar como pontes entre gerações."
+    },
+    "GB": {
+      "id": "",
+      "code": "T3.2.GB",
+      "title": "GB: Estratégias para Colmatar a Desigualdade Digital no Local de Trabalho",
+      "color": "magenta",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Os Baby Boomers são frequentemente vistos como o \"elo fraco\" quando se trata de adoção digital, atrasando as organizações devido à sua suposta resistência.",
+      "researchFindings": "Os dados mostram que muitos Boomers enfrentam desafios devido à falta de exposição durante os anos de formação educativa. No entanto, quando lhes é dada formação personalizada e apoio paciente, são capazes de dominar ferramentas digitais e contribuir plenamente para projetos digitais.",
+      "strategiesAdvice": "Os empregadores devem proporcionar espaços seguros onde os Boomers possam fazer perguntas sem julgamento e desenhar sessões de formação especificamente para aprendizes tardios. Posicionar os Boomers como mentores em áreas não digitais (como gestão de clientes, negociação ou conhecimento institucional) garante que se mantêm valorizados enquanto constroem confiança nas áreas digitais."
+    }
+  },
+  "T3.3": {
+    "GZ": {
+      "id": "",
+      "code": "T3.3.GZ",
+      "title": "GZ: Estudos de Caso e Boas Práticas: Lições de Organizações de Referência.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "A Geração Z é vista como excessivamente dependente da tecnologia, acreditando que não consegue funcionar sem conectividade constante. Nos locais de trabalho, são por vezes descartados como produtivos apenas quando utilizam as ferramentas digitais mais recentes, e acusados de falta de resiliência quando essas ferramentas não estão disponíveis.",
+      "researchFindings": "Os colaboradores da Geração Z mostram efetivamente os níveis mais elevados de fluência digital, com 32% a liderar a adoção de IA nas organizações. No entanto, a investigação também indica que podem ter falta de experiência com sistemas legados ou métodos de comunicação tradicionais, tornando a colaboração entre gerações difícil. Os seus pontos fortes digitais, se não integrados com competências mais amplas, podem limitar a sua progressão na carreira.",
+      "strategiesAdvice": "Os empregadores devem criar oportunidades para a Geração Z praticar resiliência em contextos menos saturados digitalmente — por exemplo, liderando projetos que misturem comunicação digital e tradicional. Proporcionar mentoria em áreas como interação com clientes, negociação e redação empresarial ajuda a equilibrar as suas competências. Encorajar a Geração Z a ver as ferramentas digitais como potenciadores e não substitutos constrói adaptabilidade e ajuda-os a prosperar em contextos laborais diversos."
+    },
+    "GM": {
+      "id": "",
+      "code": "T3.3.GM",
+      "title": "GM: Estudos de Caso e Boas Práticas: Lições de Organizações de Referência.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Os Millennials são frequentemente descritos como saltadores de empregos que deixam as empresas se a tecnologia parecer desatualizada. Este estereótipo retrata-os como excessivamente exigentes, relutantes em manter-se envolvidos em organizações que ficam para trás na transformação digital.",
+      "researchFindings": "Os Millennials estão entre os maiores defensores de locais de trabalho digitais. A investigação mostra que impulsionam a inovação organizacional ao insistir em ferramentas modernas e modelos de trabalho amigáveis ao remoto. No entanto, as empresas que não investem em tecnologia para a força de trabalho reportam taxas de rotatividade mais elevadas entre os Millennials, confirmando a sua sensibilidade à desigualdade digital.",
+      "strategiesAdvice": "As organizações devem envolver os Millennials na definição de estratégias de transformação digital, dando-lhes propriedade e responsabilidade na adoção tecnológica. Destacar como as atualizações digitais contribuem não apenas para a eficiência mas também para a equidade ajuda os Millennials a verem-se como agentes de inclusão. A retenção melhora quando os Millennials sentem que a sua advocacia conduz a melhorias tangíveis para todos os colaboradores, não apenas para si próprios."
+    },
+    "GX": {
+      "id": "",
+      "code": "T3.3.GX",
+      "title": "GX: Estudos de Caso e Boas Práticas: Lições de Organizações de Referência.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Os colaboradores da Geração X são por vezes retratados como a \"geração gargalo\", vistos como pragmáticos mas menos ambiciosos digitalmente, atrasando assim a inovação organizacional. São frequentemente descritos como gestores que resistem à mudança por recearem ser substituídos por colegas mais jovens e mais conhecedores de tecnologia.",
+      "researchFindings": "A Geração X ocupa frequentemente cargos de gestão intermédia a sénior, possuindo significativo conhecimento institucional. A investigação destaca que podem experienciar stress de transição digital, particularmente ao gerir equipas que incluem tanto nativos digitais mais jovens como adotantes tardios mais velhos. Esta tensão pode levar a mal-entendidos, menor produtividade e oportunidades perdidas de inovação se não for abordada.",
+      "strategiesAdvice": "As empresas devem fornecer aos líderes da Geração X formação em liderança digital e enquadrar as ferramentas digitais como facilitadores de eficiência em vez de ameaças. Encorajar a Geração X a atuar como mediadores em equipas intergeracionais, partilhando a sua experiência institucional enquanto adotam novas ferramentas, transforma a sua posição numa de força em vez de vulnerabilidade. Apoiá-los com oportunidades de aprendizagem visíveis ajuda a normalizar o crescimento digital a todos os níveis."
+    },
+    "GB": {
+      "id": "",
+      "code": "T3.3.GB",
+      "title": "GB: Estudos de Caso e Boas Práticas: Lições de Organizações de Referência.",
+      "color": "purple",
+      "description": "",
+      "pageId": 0,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Os Baby Boomers são frequentemente apontados como o grupo mais \"deixado para trás\" pela transformação digital. São retratados como relutantes em adotar novas ferramentas, resistentes ao trabalho remoto, e mais confortáveis com comunicação presencial do que com plataformas digitais.",
+      "researchFindings": "Os estudos confirmam que os Baby Boomers podem enfrentar curvas de aprendizagem mais acentuadas devido a menor exposição à tecnologia nos seus anos formativos. No entanto, as evidências mostram que quando lhes é fornecida formação paciente, prática e contextual, os Boomers adaptam-se com sucesso. Além disso, excluí-los com base em suposições acelera a estagnação da carreira e mina o moral, o que impacta diretamente a retenção e diversidade organizacional.",
+      "strategiesAdvice": "Formação personalizada que se concentre em tarefas práticas do local de trabalho em vez de teoria digital abstrata ajuda os Boomers a envolverem-se com mais confiança. A mentoria inversa, onde colaboradores mais jovens ensinam competências digitais enquanto os Boomers partilham a sua expertise institucional e interpessoal, cria valor bidirecional. Reconhecer a adaptabilidade e a lealdade que muitos Boomers trazem garante que permanecem plenamente integrados nas transições digitais do local de trabalho."
+    }
+  }
+}

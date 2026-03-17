@@ -10,17 +10,12 @@ import { YourBookModal } from "@/components/mobile/YourBookModal";
 import { useTest } from "../providers/test-provider";
 import { useTranslation } from "@/hooks/useTranslation";
 
-// const languages = [
-//   { code: "en", name: "English", flag: "🇬🇧" },
-//   { code: "de", name: "Deutsch", flag: "🇩🇪" },
-//   { code: "it", name: "Italiano", flag: "🇮🇹" },
-//   { code: "pl", name: "Polski", flag: "🇵🇱" },
-//   { code: "pt", name: "Português", flag: "🇵🇹" },
-// ];
-
 const languages = [
   { code: "en" as const, name: "English", flagSvg: "/flags/gb.svg" },
+  { code: "de" as const, name: "Deutsch", flagSvg: "/flags/de.svg" },
   { code: "it" as const, name: "Italiano", flagSvg: "/flags/it.svg" },
+  { code: "pl" as const, name: "Polski", flagSvg: "/flags/pl.svg" },
+  { code: "pt" as const, name: "Português", flagSvg: "/flags/pt.svg" },
 ];
 
 interface HeaderProps {

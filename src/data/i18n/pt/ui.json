@@ -1,0 +1,85 @@
+{
+  "common": {
+    "loading": "A carregar...",
+    "error": "Erro",
+    "back": "Voltar",
+    "clearAll": "Limpar Tudo",
+    "page": "Página {{pageId}}",
+    "chapterIntroduction": "Introdução ao Tema"
+  },
+  "handbook": {
+    "addButton": "Adicionar ao Manual",
+    "addedWithChapter": "Introdução do capítulo adicionada automaticamente",
+    "added": "\"{{title}}\" adicionado",
+    "alreadyExists": "\"{{title}}\" já se encontra no seu manual",
+    "removed": "Removido do manual",
+    "chapterRemoved": "Capítulo removido. Os cartões permanecem no seu manual.",
+    "removeChapterWarning": "Remover este capítulo deixará {{count}} cartão sem contexto. Clique novamente para confirmar.",
+    "removeChapterWarningPlural": "Remover este capítulo deixará {{count}} cartões sem contexto. Clique novamente para confirmar.",
+    "handbookCleared": "Manual limpo",
+    "helpGeneration": "Selecione uma geração no menu de navegação para ver abordagens e metodologias específicas para este tópico."
+  },
+  "yourBook": {
+    "title": "O Seu Manual Personalizado",
+    "emptyMessage": "O seu manual está vazio. Comece a adicionar páginas a partir das categorias acima.",
+    "exportButton": "Exportar Manual em PDF",
+    "chapterIntroduction": "Introdução do Capítulo",
+    "clearConfirm": "Remover todas as {{count}} páginas do seu manual?",
+    "clearConfirmSingle": "Remover esta página do seu manual?",
+    "removeAnyway": "Remover Mesmo Assim"
+  },
+  "navigation": {
+    "selectTheme": "Selecionar Tema",
+    "selectSubTheme": "Selecionar Subtema",
+    "selectGeneration": "Selecionar Geração",
+    "backArrow": "Voltar"
+  },
+  "progress": {
+    "theme": "Tema",
+    "subtheme": "Subtema",
+    "generation": "Geração"
+  },
+  "toast": {
+    "success": "Sucesso",
+    "error": "Erro",
+    "warning": "Aviso",
+    "info": "Informação"
+  },
+  "errors": {
+    "exportFailed": "Ocorreu um erro inesperado ao exportar o manual. Por favor, tente novamente.",
+    "noPages": "Não existem páginas com IDs válidos para exportar",
+    "pageNotFound": "A página {{pageId}} não está disponível no servidor. Por favor, remova-a da sua seleção e tente novamente.",
+    "pageNotFoundSimple": "Erro: A página {{pageId}} não está disponível no servidor.",
+    "networkError": "Erro de rede: Não foi possível ligar ao servidor de PDF. Por favor, verifique a sua ligação.",
+    "serverError": "Erro: O servidor respondeu com o estado {{status}}",
+    "emptyPdfError": "Erro: Ficheiro PDF recebido está vazio",
+    "invalidPdfError": "Erro: O servidor não devolveu um ficheiro PDF válido",
+    "corsError": "Erro de rede: Não foi possível ligar ao servidor de PDF. Por favor, verifique:\n- O servidor está a funcionar em {{serverUrl}}\n- O CORS está corretamente configurado no servidor\n- Está na mesma rede",
+    "notLoaded": "Erro: Não foi possível carregar o conteúdo"
+  },
+  "cards": {
+    "title-stereotypes": "Estereótipos",
+    "title-research": "Investigação",
+    "title-advices": "Estratégia &amp; Conselhos Práticos"
+  },
+  "assessment": {
+    "title": "Avaliação de Conhecimentos",
+    "backToHandbook": "Voltar ao Manual",
+    "questionOf": "Questão {{current}} de {{total}}",
+    "back": "Voltar",
+    "next": "Seguinte",
+    "finish": "Terminar",
+    "answered": "Respondida",
+    "selectAnswer": "Selecione uma resposta",
+    "loading": "A preparar a sua avaliação...",
+    "loadingQuestions": "A selecionar questões de 5 temas...",
+    "resultsByTheme": "Resultados por Tema",
+    "tryAgain": "Tentar Novamente",
+    "close": "Fechar",
+    "excellent": "Excelente!",
+    "greatJob": "Muito bem!",
+    "goodEffort": "Bom esforço!",
+    "keepLearning": "Continue a aprender!",
+    "selfAssessment": "Autoavaliação"
+  }
+}

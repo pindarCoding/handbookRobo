@@ -1,0 +1,430 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "totalQuestions": 30,
+    "questionsPerTheme": 6,
+    "description": "MYCo Generational Handbook - Self Assessment Questions"
+  },
+  "questions": [
+    {
+      "code": "T1.1.Q1",
+      "themeCode": "T1",
+      "subThemeCode": "T1.1",
+      "question": "Welches der folgenden Kommunikationsmittel wird von der Gen Z am häufigsten genutzt?",
+      "options": {
+        "a": "Instant Messaging",
+        "b": "Digitale Kollaborationstools",
+        "c": "Videoanruf",
+        "d": "E-Mail"
+      },
+      "correctAnswer": "a",
+      "explanation": "Die Gen Z sind Digital Natives und bewerten Instant Messaging als ihr wichtigstes Kommunikationsmittel, gefolgt von digitalen Kollaborationstools und Videoanrufen. Sie messen persönlicher und telefonischer Kommunikation wenig Bedeutung bei."
+    },
+    {
+      "code": "T1.1.Q2",
+      "themeCode": "T1",
+      "subThemeCode": "T1.1",
+      "question": "Welche Generation hat die ausgewogenste Nutzung von traditionellen und digitalen Kommunikationskanälen?",
+      "options": {
+        "a": "Gen Z",
+        "b": "Millennials",
+        "c": "Gen X",
+        "d": "Babyboomer"
+      },
+      "correctAnswer": "b",
+      "explanation": "Millennials bevorzugen E-Mail, Videoanrufe und kollaborative Tools, schätzen aber auch Instant Messaging. Persönliche Treffen und Telefongespräche sind für diese Generation mäßig wichtig."
+    },
+    {
+      "code": "T1.2.Q3",
+      "themeCode": "T1",
+      "subThemeCode": "T1.2",
+      "question": "Welches dieser Themen verursacht am ehesten Konflikte am Arbeitsplatz?",
+      "options": {
+        "a": "Mangel an gemeinsamen Interessen",
+        "b": "Meinungsverschiedenheiten mit einem Teammitglied äußern",
+        "c": "Unangemessene Sprache in Bezug auf Geschlechtsidentität und sexuelle Orientierung",
+        "d": "Unterschiedliche Arbeitszeitpräferenzen"
+      },
+      "correctAnswer": "c",
+      "explanation": "Dies ist eine potenzielle Quelle für identitätsbasierte intergenerationelle Konflikte. Meinungsverschiedenheiten und mangelnde gemeinsame Interessen können kleinere Missverständnisse verursachen, die selten zu Konflikten eskalieren."
+    },
+    {
+      "code": "T1.2.Q4",
+      "themeCode": "T1",
+      "subThemeCode": "T1.2",
+      "question": "Welcher der folgenden Faktoren wird neben identitätsbasierten Konflikten von allen Generationen als Quelle für Konflikte am Arbeitsplatz wahrgenommen?",
+      "options": {
+        "a": "Wertebasierte Konflikte",
+        "b": "Organisationskultur",
+        "c": "Verhaltensbasierte Konflikte",
+        "d": "Technologiepräferenzen"
+      },
+      "correctAnswer": "a",
+      "explanation": "Wertebasierte Konflikte umfassen ethische Meinungsverschiedenheiten, Einstellungen zu Diversität und Inklusion, Respekt vor Autorität, Interesse an sozialer und ökologischer Verantwortung und vieles mehr. Wertebasierte Konflikte sind die zweithäufigste Quelle intergenerationeller Konflikte am Arbeitsplatz."
+    },
+    {
+      "code": "T1.3.Q5",
+      "themeCode": "T1",
+      "subThemeCode": "T1.3",
+      "question": "Welche Generation hält sich selbst für besonders kompetent in der Konfliktlösung?",
+      "options": {
+        "a": "Gen Z",
+        "b": "Millennials",
+        "c": "Gen X",
+        "d": "Babyboomer"
+      },
+      "correctAnswer": "a",
+      "explanation": "Die Gen Z glaubt, dass ihre Fähigkeiten in Kommunikation, Empathie, Problemlösung und Anpassungsfähigkeit stärker entwickelt sind als die Bewertung, die ihnen andere Generationen geben, insbesondere im Bereich der Anpassungsfähigkeit. Ältere Generationen nehmen die Gen Z als sehr idealistisch wahr, aber aufgrund ihrer Jugend als mangelhaft an realer Lebenserfahrung, um effektive Konfliktlöser in einer multigenerationellen Belegschaft zu sein."
+    },
+    {
+      "code": "T1.3.Q6",
+      "themeCode": "T1",
+      "subThemeCode": "T1.3",
+      "question": "Welche dieser Strategien zur Konfliktprävention wird generationenübergreifend bevorzugt?",
+      "options": {
+        "a": "Regelmäßige soziale Interaktion",
+        "b": "Regelmäßiges individuelles Feedback",
+        "c": "Kultur des offenen Dialogs",
+        "d": "Formale Konfliktlösungsrichtlinien"
+      },
+      "correctAnswer": "c",
+      "explanation": "Eine Kultur des offenen Dialogs wird als wirksames Mittel angesehen, um Konflikte von vornherein zu verhindern und als mögliches Mittel zur Lösung von Konflikten, wenn sie auftreten. Eine Kultur, in der sich Mitarbeitende gesehen und gehört fühlen, in der es Möglichkeiten für generationenübergreifende Zusammenarbeit und Mentoring gibt und in der Kommunikation klar ist, fördert Verständnis und Vertrauen."
+    },
+    {
+      "code": "T2.1.Q1",
+      "themeCode": "T2",
+      "subThemeCode": "T2.1",
+      "question": "Welche Strategie adressiert intersektionale Diskriminierung für alle Generationen am besten?",
+      "options": {
+        "a": "Nur jüngeren Mitarbeitenden Schulungen anbieten",
+        "b": "Sich ausschließlich auf Initiativen zur Geschlechtervielfalt konzentrieren",
+        "c": "Mentoring, inklusive Richtlinien und Schulungen implementieren, die mehrere sich überschneidende Identitäten berücksichtigen",
+        "d": "Mitarbeitende ermutigen, Diskriminierungsprobleme ohne Anleitung selbst zu lösen"
+      },
+      "correctAnswer": "c",
+      "explanation": "Intersektionale Ansätze müssen mehrere Identitäten über Generationen hinweg adressieren; Mentoring, Richtlinien und Schulungen gewährleisten systemische Unterstützung."
+    },
+    {
+      "code": "T2.1.Q2",
+      "themeCode": "T2",
+      "subThemeCode": "T2.1",
+      "question": "Warum berichten Babyboomer möglicherweise über weniger Erfahrungen mit intersektionaler Diskriminierung als jüngere Generationen?",
+      "options": {
+        "a": "Sie erleben keine Diskriminierung",
+        "b": "Ihre Position in Hierarchien und kulturelle Normen können sie schützen, wobei Behinderung ein zentrales Thema bleibt",
+        "c": "Sie sind von Natur aus widerstandsfähiger gegen Diskriminierung",
+        "d": "Intersektionalität trifft auf ältere Mitarbeitende nicht zu"
+      },
+      "correctAnswer": "b",
+      "explanation": "Babyboomer bekleiden oft Führungspositionen oder profitieren von etablierter Autorität, was sie vor bestimmten Formen der Diskriminierung schützen kann, obwohl behinderungsbasierte Diskriminierung weiterhin eine wichtige Rolle spielt."
+    },
+    {
+      "code": "T2.2.Q3",
+      "themeCode": "T2",
+      "subThemeCode": "T2.2",
+      "question": "Welche der folgenden Aussagen beschreibt am besten die Wechselwirkung zwischen Alter und anderen Identitätsfaktoren bei Diskriminierung am Arbeitsplatz?",
+      "options": {
+        "a": "Alter ist der einzige bestimmende Faktor für Diskriminierung",
+        "b": "Alter und andere Faktoren wie Geschlecht oder Ethnizität wirken unabhängig voneinander",
+        "c": "Alter hat keinen Einfluss im Vergleich zu anderen Faktoren",
+        "d": "Alter überschneidet sich oft mit anderen Identitätsmerkmalen und verstärkt Benachteiligungen"
+      },
+      "correctAnswer": "d",
+      "explanation": "Alter überschneidet sich oft mit anderen Identitätsmerkmalen und verstärkt Benachteiligungen. Diskriminierung entsteht durch überlappende Merkmale wie Geschlecht, Ethnizität oder Behinderung, die zusammenwirkende Erfahrungen der Ausgrenzung erzeugen."
+    },
+    {
+      "code": "T2.2.Q4",
+      "themeCode": "T2",
+      "subThemeCode": "T2.2",
+      "question": "Welche Generation wird am häufigsten mit der Unterstützung von Opfern diskriminierender Äußerungen in Verbindung gebracht?",
+      "options": {
+        "a": "Babyboomer",
+        "b": "Generation X",
+        "c": "Millennials",
+        "d": "Generation Z"
+      },
+      "correctAnswer": "c",
+      "explanation": "Millennials werden am häufigsten als diejenigen genannt, die Kolleginnen und Kollegen, die von Diskriminierung betroffen sind, Unterstützung anbieten, was eine starke generationelle Ausrichtung auf Inklusivität und Fairness widerspiegelt."
+    },
+    {
+      "code": "T2.3.Q5",
+      "themeCode": "T2",
+      "subThemeCode": "T2.3",
+      "question": "Ein Mitarbeiter berichtet, sich am Arbeitsplatz benachteiligt zu fühlen, weil er sowohl jung ist als auch mit einer Behinderung lebt. Ihre beste erste Reaktion ist:",
+      "options": {
+        "a": "Ihn daran erinnern, dass jeder Herausforderungen hat",
+        "b": "Ihn ohne weitere Diskussion an die Personalabteilung verweisen",
+        "c": "Aufmerksam zuhören, den intersektionalen Charakter seiner Erfahrung anerkennen und verfügbare Unterstützung erklären",
+        "d": "Ihm vorschlagen, sich durch härtere Arbeit zu beweisen"
+      },
+      "correctAnswer": "c",
+      "explanation": "Die Anerkennung beider Aspekte seiner Identität validiert sein Anliegen und zeigt Bewusstsein für intersektionale Diskriminierung. Die Verweisung auf Ressourcen sollte erst nach dem Zeigen von Empathie und Verständnis erfolgen."
+    },
+    {
+      "code": "T2.3.Q6",
+      "themeCode": "T2",
+      "subThemeCode": "T2.3",
+      "question": "Welche der folgenden Aussagen beschreibt am besten eine starke organisatorische Strategie zur Reduzierung intersektionaler Diskriminierung?",
+      "options": {
+        "a": "Anonyme Meldemechanismen in Kombination mit klaren Folgemaßnahmen",
+        "b": "Gelegentliche Sensibilisierungsveranstaltungen zu Generationenunterschieden",
+        "c": "Informelle Gespräche, die einzelnen Führungskräften überlassen werden",
+        "d": "Sich auf den guten Willen der Führungsebene ohne formale Richtlinien verlassen"
+      },
+      "correctAnswer": "a",
+      "explanation": "Anonyme Meldungen stellen sicher, dass sich Mitarbeitende sicher fühlen, während Folgemaßnahmen Engagement zeigen. Ohne strukturelle Unterstützung besteht die Gefahr, dass Sensibilisierung nur symbolisch bleibt."
+    },
+    {
+      "code": "T3.1.Q1",
+      "themeCode": "T3",
+      "subThemeCode": "T3.1",
+      "question": "Welches der folgenden Beispiele veranschaulicht am besten die Kompetenzungleichheit am Arbeitsplatz?",
+      "options": {
+        "a": "Mitarbeitende in ländlichen Gebieten haben mit unzuverlässigen Internetverbindungen bei virtuellen Meetings zu kämpfen",
+        "b": "Einige Mitarbeitende nutzen digitale Tools nur für grundlegende Aufgaben, während andere sie für Innovation einsetzen",
+        "c": "Jüngere Mitarbeitende passen sich schnell an neue Kollaborationssoftware an, während ältere Mitarbeitende zusätzliche Schulungen benötigen",
+        "d": "Die hierarchische Kultur eines Unternehmens hält Mitarbeitende davon ab, mit neuen digitalen Tools zu experimentieren"
+      },
+      "correctAnswer": "c",
+      "explanation": "Kompetenzungleichheit bezieht sich auf Unterschiede in der Fähigkeit und dem Vertrauen der Mitarbeitenden, digitale Tools effektiv zu nutzen. Sie entsteht häufig durch Generationsunterschiede oder ungleichen Zugang zu digitaler Bildung und Schulung."
+    },
+    {
+      "code": "T3.1.Q2",
+      "themeCode": "T3",
+      "subThemeCode": "T3.1",
+      "question": "Was ist eine wesentliche Folge unbehandelter digitaler Ungleichheit für Organisationen?",
+      "options": {
+        "a": "Erhöhte Teilnahme an intergenerationellen Mentoring-Programmen",
+        "b": "Verringerte Produktivität und Innovation aufgrund ungleicher digitaler Kompetenzen und Zugänge",
+        "c": "Verbesserte Mitarbeiterbindung und -zufriedenheit",
+        "d": "Größere Einheitlichkeit in den Kommunikationsstilen über Generationen hinweg"
+      },
+      "correctAnswer": "b",
+      "explanation": "Wenn digitale Ungleichheit nicht adressiert wird, erleben Organisationen verringerte Produktivität, Innovationsstillstand und höhere Fluktuationsraten. Mitarbeitende ohne entsprechende Tools oder digitale Kompetenzen haben Schwierigkeiten, effizient zu arbeiten."
+    },
+    {
+      "code": "T3.2.Q3",
+      "themeCode": "T3",
+      "subThemeCode": "T3.2",
+      "question": "Welche der folgenden Maßnahmen stellt die wirksamste Strategie zur Verbesserung des digitalen Zugangs am Arbeitsplatz dar?",
+      "options": {
+        "a": "Mitarbeitende ermutigen, ihre privaten Geräte und Internetverbindungen für die Arbeit zu nutzen",
+        "b": "Von Mitarbeitenden verlangen, ihre eigenen digitalen Tools zu bezahlen, um Verantwortungsbewusstsein zu fördern",
+        "c": "Standardisierte Geräte bereitstellen und den Internetzugang subventionieren, um gleiche Teilhabe zu gewährleisten",
+        "d": "Nur leitenden Mitarbeitenden Zugang zu Premium-Digitaltools gewähren, um die Effizienz zu steigern"
+      },
+      "correctAnswer": "c",
+      "explanation": "Die Verbesserung des digitalen Zugangs bedeutet sicherzustellen, dass alle Mitarbeitenden über zuverlässige Geräte und Konnektivität verfügen. Die Bereitstellung standardisierter Ausstattung und Internetsubventionen reduziert sozioökonomische Unterschiede und gewährleistet eine einheitliche Teilhabe."
+    },
+    {
+      "code": "T3.2.Q4",
+      "themeCode": "T3",
+      "subThemeCode": "T3.2",
+      "question": "Was ist ein Schlüsselmerkmal einer inklusiven digitalen Kultur innerhalb von Organisationen?",
+      "options": {
+        "a": "Mitarbeitende vermeiden es, Schwierigkeiten mit digitalen Tools zuzugeben, um Professionalität zu wahren",
+        "b": "Führungskräfte leben Offenheit für Lernen vor und schaffen psychologische Sicherheit, damit Mitarbeitende Hilfe suchen können",
+        "c": "Fehler bei der Nutzung digitaler Tools werden bestraft, um hohe Leistungsstandards aufrechtzuerhalten",
+        "d": "Digitale Schulungen werden als einmaliges Ereignis und nicht als kontinuierlicher Prozess behandelt"
+      },
+      "correctAnswer": "b",
+      "explanation": "Eine inklusive digitale Kultur fördert psychologische Sicherheit, in der Mitarbeitende offen Hilfe suchen und lernen können, ohne Angst vor Bewertung zu haben. Wenn Führungskräfte Neugier vorleben und eigene Lernlücken eingestehen, normalisiert dies kontinuierliches digitales Wachstum."
+    },
+    {
+      "code": "T3.3.Q5",
+      "themeCode": "T3",
+      "subThemeCode": "T3.3",
+      "question": "Was ist der wirksamste langfristige Ansatz zur Reduzierung digitaler Ungleichheit in Organisationen?",
+      "options": {
+        "a": "Mitarbeitenden einmalig hochwertige Geräte bereitstellen und erwarten, dass sie selbstständig lernen",
+        "b": "Alle Schulungs- und digitalen Transformationsinitiativen auslagern",
+        "c": "Sich nur auf jüngere Generationen konzentrieren, da sie sich schneller an neue Technologien anpassen",
+        "d": "Digitale Inklusion in Kultur, Führung und kontinuierliche Lernpraktiken einbetten"
+      },
+      "correctAnswer": "d",
+      "explanation": "Die Überbrückung digitaler Ungleichheit erfordert eine ganzheitliche und nachhaltige Strategie. Dazu gehören Führungsengagement, eine Kultur der Lernoffenheit, inklusiver Zugang zu Tools und fortlaufende Weiterbildung."
+    },
+    {
+      "code": "T3.3.Q6",
+      "themeCode": "T3",
+      "subThemeCode": "T3.3",
+      "question": "Welche der folgenden Aussagen erfasst am besten, warum digitale Ungleichheit zu einem zentralen Anliegen moderner Organisationen geworden ist?",
+      "options": {
+        "a": "Weil ungleicher Zugang zu und Nutzung von digitalen Tools Produktivität, Inklusion und Karrierechancen beeinflusst",
+        "b": "Weil Technologie alle menschlichen Aufgaben am Arbeitsplatz ersetzt",
+        "c": "Weil digitale Tools optional sind und nur für Remote-Arbeitende relevant sind",
+        "d": "Weil digitale Ungleichheit nur Länder mit niedrigem Einkommen betrifft"
+      },
+      "correctAnswer": "a",
+      "explanation": "Digitale Ungleichheit ist wichtig, weil sie direkt beeinflusst, wer vollständig an modernen Arbeitsumgebungen teilhaben kann. Ungleicher Zugang, Kompetenzen und Vertrauen im Umgang mit digitalen Tools schaffen Barrieren für Zusammenarbeit, Produktivität und beruflichen Aufstieg."
+    },
+    {
+      "code": "T4.1.Q1",
+      "themeCode": "T4",
+      "subThemeCode": "T4.1",
+      "question": "Stellen Sie sich vor, Sie arbeiten in einem multikulturellen, multigenerationellen Team mit Kollegen aus Deutschland, Polen, Italien und Portugal. Welche Szenarien sind wahrscheinlicher?",
+      "options": {
+        "a": "Deutsche Gen-Z-Kollegen könnten herrisch sein",
+        "b": "Babyboomer aus Italien könnten paternalistische Einstellungen zeigen, die junge Kollegen aus Deutschland nicht schätzen",
+        "c": "Es gibt keinen generationellen Unterschied in der Wertschätzung hierarchischer Strukturen",
+        "d": "Bei der Zusammenarbeit werden Gen X aus Irland und Polen die gleiche Einstellung zur Hierarchie haben"
+      },
+      "correctAnswer": "b",
+      "explanation": "Forschung zeigt, dass Generationen unterschiedliche Einstellungen zur Hierarchie haben. Ältere Generationen über alle Kulturen hinweg scheinen Hierarchie und Status stärker zu schätzen als jüngere Generationen."
+    },
+    {
+      "code": "T4.1.Q2",
+      "themeCode": "T4",
+      "subThemeCode": "T4.1",
+      "question": "Was wäre der wirksamste organisatorische Ansatz, um intergenerationelle Spannungen bezüglich Hierarchie in multikulturellen Teams zu reduzieren?",
+      "options": {
+        "a": "Formale und klar definierte Berichtslinien implementieren",
+        "b": "Intergenerationelle Dialog-Workshops anbieten, in denen Mitarbeitende verschiedener Kulturen und Altersgruppen ihre Erwartungen an Hierarchie, Autorität und Zusammenarbeit diskutieren können",
+        "c": "Jeder kulturellen Gruppe erlauben, ihrem eigenen bevorzugten Hierarchiemodell zu folgen",
+        "d": "Hierarchie nicht direkt ansprechen, da solche Diskussionen ältere Mitarbeitende verunsichern und Konflikte verstärken könnten"
+      },
+      "correctAnswer": "b",
+      "explanation": "Die Förderung einer Dialogkultur scheint der von allen Generationen am besten akzeptierte Weg zu sein, um gegenseitiges Verständnis zu fördern und eine positive Einstellung zur Zusammenarbeit in multikulturellen Teams zu unterstützen."
+    },
+    {
+      "code": "T4.2.Q3",
+      "themeCode": "T4",
+      "subThemeCode": "T4.2",
+      "question": "Welcher der folgenden Ansätze wäre am wirksamsten für ein internationales und intergenerationelles Projektteam, das Mitglieder aus Kulturen mit sowohl hoher als auch niedriger Unsicherheitsvermeidung umfasst?",
+      "options": {
+        "a": "Sehr detaillierte Verfahren für jede Aufgabe festlegen und strikte Einhaltung von allen Teammitgliedern verlangen, um Konsistenz über Kulturen hinweg zu gewährleisten",
+        "b": "Jedem Teammitglied erlauben, unabhängig zu entscheiden, wie Aufgaben erledigt werden, ohne gemeinsame Richtlinien, um Kreativität und Autonomie zu fördern",
+        "c": "Klare Grundstrukturen (wie dokumentierte Ziele und Arbeitsabläufe) mit Flexibilität bei der Aufgabenerledigung kombinieren",
+        "d": "Kulturelle Präferenzen bezüglich Struktur und Flexibilität nicht ansprechen, da dies die Spannungen im Team erhöhen könnte"
+      },
+      "correctAnswer": "c",
+      "explanation": "Das Erkennen, dass Teammitglieder aus Kulturen mit hoher Unsicherheitsvermeidung Klarheit und Vorhersehbarkeit brauchen, während jene aus Kulturen mit niedriger Unsicherheitsvermeidung Flexibilität und Innovation schätzen, zeigt Wertschätzung für Kultur und Generationen gleichermaßen."
+    },
+    {
+      "code": "T4.2.Q4",
+      "themeCode": "T4",
+      "subThemeCode": "T4.2",
+      "question": "Wie hilft das Konzept der Unsicherheitsvermeidung, die kulturellen Unterschiede zu erklären, die sich in den generationellen Arbeitsplatztrends der durchgeführten Forschung widerspiegeln?",
+      "options": {
+        "a": "Jüngere Generationen – geprägt durch Globalisierung und Digitalisierung – zeigen Einstellungen, die eher Kulturen mit niedriger Unsicherheitsvermeidung entsprechen und Flexibilität, Geschwindigkeit und Experimentierfreude bevorzugen",
+        "b": "Kulturelle Unterschiede verschwinden, wenn jüngere Generationen neue Technologien übernehmen, da Unsicherheitsvermeidung keine Rolle mehr spielt",
+        "c": "Hohe Unsicherheitsvermeidung führt immer zu hierarchischen Arbeitsplätzen, unabhängig vom kulturellen oder generationellen Kontext",
+        "d": "Unterschiede in Arbeitsstilen sind hauptsächlich auf individuelle Persönlichkeitsmerkmale zurückzuführen, nicht auf kulturelle Hintergründe"
+      },
+      "correctAnswer": "a",
+      "explanation": "Nationale Kultur und Generationenwandel interagieren so, dass sich selbst in Kulturen mit hoher Unsicherheitsvermeidung jüngere Generationen zu Werten bewegen, die für Gesellschaften mit niedriger Unsicherheitsvermeidung typisch sind, und beeinflussen, wie Arbeit organisiert wird."
+    },
+    {
+      "code": "T4.3.Q5",
+      "themeCode": "T4",
+      "subThemeCode": "T4.3",
+      "question": "Wie können Unterschiede in direkten und indirekten Kommunikationsstilen über Kulturen und Generationen hinweg zu Missverständnissen am Arbeitsplatz führen?",
+      "options": {
+        "a": "Ältere Generationen verwenden indirekte Kommunikation nur, wenn sie sich beim diskutierten Thema unsicher sind",
+        "b": "Direkte Kommunikation ist immer klarer und daher in multikulturellen und multigenerationellen Umgebungen vorzuziehen",
+        "c": "Kommunikationsmissverständnisse entstehen hauptsächlich, weil jüngere Generationen keinen Respekt vor traditionellen Arbeitsplatzhierarchien haben",
+        "d": "Ältere Mitarbeitende aus High-Context-Kulturen kommunizieren möglicherweise indirekt und formell, was jüngere Kollegen als vage oder ausweichend interpretieren könnten"
+      },
+      "correctAnswer": "d",
+      "explanation": "Unterschiede zwischen direkter und indirekter Kommunikation hängen sowohl mit dem kulturellen Kontext (High-Context- vs. Low-Context-Kommunikation) als auch mit dem generationellen Stil (Formalität vs. Informalität) zusammen. Dies erklärt, warum jüngere, direktere Kollegen als aggressiv wahrgenommen werden können, während ältere oder indirektere Kommunikatoren als unklar erscheinen mögen."
+    },
+    {
+      "code": "T4.3.Q6",
+      "themeCode": "T4",
+      "subThemeCode": "T4.3",
+      "question": "Wie können Unterschiede im Kommunikationsverhalten intergenerationelle und multikulturelle Teams beeinflussen?",
+      "options": {
+        "a": "Kommunikationsunterschiede haben wenig realen Einfluss auf intergenerationelle und interkulturelle Teamarbeit, da professionelle Standards sicherstellen, dass alle unabhängig von Kultur oder Alter gleich kommunizieren",
+        "b": "Missverständnisse zwischen Generationen entstehen hauptsächlich, weil ältere Mitarbeitende sich gegen neue Technologien wie E-Mail wehren, und nicht aufgrund unterschiedlicher Kommunikationsnormen oder kultureller Erwartungen",
+        "c": "Unterschiede im Kommunikationsverhalten – wie Direktheit, Formalität und Reaktionszeit – können leicht zu Missverständnissen und Spannungen führen",
+        "d": "Schweigen oder verzögerte Antworten in der Kommunikation zwischen Kulturen weisen immer auf Meinungsverschiedenheiten oder mangelndes Engagement hin, weshalb Führungskräfte sofortige Antworten fördern sollten, um die Produktivität aufrechtzuerhalten"
+      },
+      "correctAnswer": "c",
+      "explanation": "Direktheit, Formalität und Reaktionszeit variieren über Kulturen und Generationen hinweg und beeinflussen, wie Nachrichten interpretiert werden. Jüngere Generationen können weniger indirekt sein als ältere."
+    },
+    {
+      "code": "T5.1.Q1",
+      "themeCode": "T5",
+      "subThemeCode": "T5.1",
+      "question": "Welcher der folgenden Werte wird am häufigsten mit der Generation X in Verbindung gebracht?",
+      "options": {
+        "a": "Respekt vor Autorität",
+        "b": "Autonomie und Work-Life-Balance",
+        "c": "Schnelles Feedback und Inklusion",
+        "d": "Loyalität gegenüber einem Arbeitgeber"
+      },
+      "correctAnswer": "b",
+      "explanation": "Die Generation X hat eine Zeit wirtschaftlicher Instabilität und Veränderungen in Unternehmen erlebt. Sie priorisiert typischerweise Unabhängigkeit, Anpassungsfähigkeit und Fairness und legt großen Wert auf Autonomie und Ausgewogenheit in ihrem Leben."
+    },
+    {
+      "code": "T5.1.Q2",
+      "themeCode": "T5",
+      "subThemeCode": "T5.1",
+      "question": "Welcher Wert ist über alle Generationen hinweg durchgehend wichtig?",
+      "options": {
+        "a": "Exklusivität",
+        "b": "Hohe Gehälter",
+        "c": "Respekt und Zusammenarbeit",
+        "d": "Autorität und Hierarchie"
+      },
+      "correctAnswer": "c",
+      "explanation": "Die Forschung zeigt, dass unabhängig von unterschiedlichen Schwerpunkten alle Generationen großen Wert auf Respekt, Zusammenarbeit und ein förderndes Umfeld legen. Diese gemeinsamen Werte bilden die Grundlage für Kooperation am Arbeitsplatz."
+    },
+    {
+      "code": "T5.2.Q3",
+      "themeCode": "T5",
+      "subThemeCode": "T5.2",
+      "question": "Welcher Faktor ist ein starker Motivator für Millennials?",
+      "options": {
+        "a": "Arbeitsplatzsicherheit und Loyalität gegenüber einem Arbeitgeber",
+        "b": "Sinnhaftigkeit und Möglichkeiten zur Weiterentwicklung",
+        "c": "Strenge Hierarchien und formale Prozesse",
+        "d": "Vermeidung digitaler Tools"
+      },
+      "correctAnswer": "b",
+      "explanation": "Millennials werden von sinnvoller Arbeit, Aufstiegschancen und der Übereinstimmung mit ihren persönlichen Überzeugungen angetrieben. Obwohl Stabilität wichtig ist, entfalten sie ihr Potenzial am besten in Umgebungen, die Wachstum und ein Gefühl von Sinnhaftigkeit bieten."
+    },
+    {
+      "code": "T5.2.Q4",
+      "themeCode": "T5",
+      "subThemeCode": "T5.2",
+      "question": "Was ist ein häufiger Demotivator für die Generation Z?",
+      "options": {
+        "a": "Zu viel Feedback",
+        "b": "Mangel an Flexibilität und schlechte Kommunikation",
+        "c": "Zu viele hybride Arbeitsmöglichkeiten",
+        "d": "Mentoring-Möglichkeiten"
+      },
+      "correctAnswer": "b",
+      "explanation": "Da die Generation Z in das digitale Zeitalter hineingeboren wurde, erwartet sie Anpassungsfähigkeit und klare Kommunikation. Sie verliert die Motivation, wenn diese Elemente fehlen oder wenn Systeme übermäßig starr und unklar sind."
+    },
+    {
+      "code": "T5.3.Q5",
+      "themeCode": "T5",
+      "subThemeCode": "T5.3",
+      "question": "Welcher Kollaborationsstil ist für Babyboomer am angenehmsten?",
+      "options": {
+        "a": "Hierarchische Strukturen und persönliche Treffen",
+        "b": "Digital-first und ausschließlich Remote-Kommunikation",
+        "c": "Informelle Chat-basierte Zusammenarbeit",
+        "d": "Vollständige Unabhängigkeit ohne Teamarbeit"
+      },
+      "correctAnswer": "a",
+      "explanation": "Angehörige der Babyboomer-Generation sind mit konventionellen Rahmenbedingungen vertraut und bevorzugen direkte, persönliche Interaktionen. Obwohl sie sich an digitale Tools angepasst haben, bevorzugen sie weiterhin persönliche, strukturierte Teamarbeit."
+    },
+    {
+      "code": "T5.3.Q6",
+      "themeCode": "T5",
+      "subThemeCode": "T5.3",
+      "question": "Welcher Ansatz hilft, generationelle Lücken in der Zusammenarbeit zu überbrücken?",
+      "options": {
+        "a": "Generationenunterschiede ignorieren",
+        "b": "Sich nur auf starre Hierarchien verlassen",
+        "c": "Hybrides Arbeiten unterbinden",
+        "d": "Reverse Mentoring und offener Dialog"
+      },
+      "correctAnswer": "d",
+      "explanation": "Reverse Mentoring ermöglicht es jüngeren Mitarbeitenden, ihre digitale Kompetenz weiterzugeben, während sie von den Erfahrungen ihrer älteren Kolleginnen und Kollegen lernen. In Kombination mit offener Kommunikation fördert dies gegenseitigen Respekt und verbessert die Zusammenarbeit über Altersgruppen hinweg."
+    }
+  ]
+}

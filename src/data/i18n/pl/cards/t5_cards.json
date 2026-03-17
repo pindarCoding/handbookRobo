@@ -1,0 +1,152 @@
+{
+  "T5.1": {
+    "GZ": {
+      "id": "work-values-genz",
+      "code": "T5.1.GZ",
+      "title": "GZ: Wartości w miejscu pracy w różnych pokoleniach",
+      "color": "purple",
+      "description": "Priorytet elastyczności, misji firmy, wpływu społecznego i dobrostanu psychicznego",
+      "pageId": 7,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Pokolenie Z jest często przedstawiane jako niespokojne, skupione na technologii i niechętne przestrzeganiu tradycyjnych standardów w miejscu pracy. Krytykuje się je za naleganie na nadmierną elastyczność i brak odporności. Ta charakterystyka nie uwzględnia ich praktyczności, zdolności adaptacji i głębokiego zaangażowania w równość, otwartość i dobrostan osobisty w środowisku pracy.",
+      "researchFindings": "Badania pokazują, że Pokolenie Z ceni otwartość, adaptacyjność i dobrostan psychiczny. Jako cyfrowi tubylcy biegli w technologii pragną również mentoringu i osobistych kontaktów. Chociaż bezpieczeństwo zatrudnienia jest ważne, chcą, aby towarzyszyła mu elastyczność i powiązanie z ich podstawowymi przekonaniami. Tracą zainteresowanie, gdy organizacje nie zapewniają przejrzystości lub równości.",
+      "strategiesAdvice": "W agencji marketingowej pracownicy Pokolenia Z otrzymali wsparcie poprzez połączenie codziennej komunikacji na Slacku dotyczącej ich zadań z cotygodniowymi sesjami mentoringu osobistego. Ta mieszana strategia umożliwiła im efektywne wykorzystanie narzędzi cyfrowych przy jednoczesnym otrzymywaniu spersonalizowanego wsparcia, zwiększając zarówno ich zaangażowanie, jak i wydajność."
+    },
+    "GM": {
+      "id": "work-values-millennial",
+      "code": "T5.1.GM",
+      "title": "GM: Wartości w miejscu pracy w różnych pokoleniach",
+      "color": "purple",
+      "description": "Skupienie na rozwoju osobistym, możliwościach kariery i pracy pełnej sensu",
+      "pageId": 3,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Wielu ludzi charakteryzuje Millenialsów jako roszczeniowych, często zmieniających pracę, niechętnych do zaangażowania się u jednego pracodawcy i skupionych wyłącznie na benefitach lub natychmiastowych nagrodach. Postrzegani są jako nadmiernie zależni od informacji zwrotnej i żądający nadmiernej elastyczności. Ten stereotyp pomija ich głębokie zaangażowanie w poszukiwanie pracy pełnej sensu, wspieranie inkluzji i prowadzenie kariery opartej na wartościach zgodnych z ich osobistymi przekonaniami.",
+      "researchFindings": "Badania wskazują, że Millenialsi priorytetyzują ciągłą edukację, różnorodność i wzmacniające przywództwo. Szukają pracy pełnej sensu i inkluzywności, preferując mniej sztywne struktury organizacyjne i środowiska zorientowane na pracę zespołową. Badania pokazują, że oczekują częstej informacji zwrotnej i połączenia osobistych przekonań z celami organizacji, co prowadzi do wyższego zaangażowania w firmach odpowiedzialnych społecznie.",
+      "strategiesAdvice": "Millenialsi rozwijają się w środowiskach oferujących szanse awansu, wspierający mentoring i otwartość. Firmy powinny promować uczciwą komunikację i dostosowywać cele korporacyjne do misji społecznej lub środowiskowej. Zapewnienie wyraźnych ścieżek kariery, ciągłego uczenia się i inkluzywnych środowisk zwiększa ich entuzjazm i zaangażowanie."
+    },
+    "GX": {
+      "id": "work-values-genx",
+      "code": "T5.1.GX",
+      "title": "GX: Wartości w miejscu pracy w różnych pokoleniach",
+      "color": "purple",
+      "description": "Docenianie autonomii, efektywności i równowagi między pracą a życiem",
+      "pageId": 9,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Pokolenie X jest często postrzegane jako rozczarowane i zdystansowane, unikające lojalności wobec pracodawców i preferujące samodzielną pracę. Często są charakteryzowani jako sceptyczni wobec autorytetów, niechętni do zobowiązań i mniej zaangażowani we wspólne działania. Choć cenią niezależność, ta percepcja pomija ich elastyczność i praktyczne podejście do równoważenia struktury z autonomią.",
+      "researchFindings": "Badania wskazują, że Pokolenie X priorytetyzuje niezależność, równość i równowagę między pracą a życiem. Doświadczywszy zwolnień korporacyjnych w swoich latach formacyjnych, są często samowystarczalni i ostrożni wobec nadmiernego angażowania się u pracodawców. Niemniej jednak potrafią dostosować się zarówno do tradycyjnych struktur, jak i nowoczesnych środowisk współpracy, odnajdując się w warunkach łączących autonomię ze sprawiedliwością i otwartością.",
+      "strategiesAdvice": "Organizacje mogą wspierać Pokolenie X, oferując elastyczność, odpowiednie docenianie ich wkładu i przedstawiając ścieżki awansu. Jasne cele obok niezależności pozwalają im pracować efektywnie. Doskonale łączą pokolenia, ponieważ rozumieją ustalone normy, jednocześnie akceptując nowoczesne metody współpracy i cyfrowe."
+    },
+    "GB": {
+      "id": "work-values-boomer",
+      "code": "T5.1.GB",
+      "title": "GB: Wartości w miejscu pracy w różnych pokoleniach",
+      "color": "purple",
+      "description": "Skupienie na lojalności wobec firmy, tradycyjnej etyce pracy i hierarchii",
+      "pageId": 2,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers są często przedstawiani jako nadmiernie oddani pracy, utożsamiający długie godziny z lojalnością i wykazujący opór wobec elastyczności lub zmian. Ta charakterystyka pokazuje ich jako nieelastycznych tradycjonalistów trzymających się przestarzałych metod. W rzeczywistości Baby Boomers doświadczyli szybkich transformacji kulturowych i technologicznych i konsekwentnie wykazywali zdolność do adaptacji, gdy zapewniono im pełen szacunku wsparcie.",
+      "researchFindings": "Badania wskazują, że Baby Boomers priorytetyzują lojalność, szacunek i uznanie. Postrzegają swoją pracę jako element osobistej tożsamości i są motywowani pragnieniem wnoszenia znaczącego wkładu. Preferują uporządkowane środowiska i cenią okazywane im zaufanie w zarządzaniu obowiązkami. Badania pokazują również, że potrafią z powodzeniem adaptować się do transformacji cyfrowej, pod warunkiem otrzymania jasnych instrukcji i odpowiednich systemów wsparcia.",
+      "strategiesAdvice": "Aby utrzymać zaangażowanie Baby Boomers, organizacje powinny uznawać ich długoletni wkład i zapewniać ustrukturyzowane szkolenia z nowych technologii. Angażowanie ich w mentoring pozwala im dzielić się wiedzą i czuć się docenianymi. Stanowiska podkreślające ich wiedzę instytucjonalną, role doradztwa strategicznego i inicjatywy uznania wspierają ciągłą motywację i inkluzję."
+    }
+  },
+  "T5.2": {
+    "GZ": {
+      "id": "work-motivation-genz",
+      "code": "T5.2.GZ",
+      "title": "GZ: Motywacja i demotywacja",
+      "color": "orange",
+      "description": "Motywowani natychmiastowym uznaniem i ciągłym uczeniem się",
+      "pageId": 5,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Pokolenie Z jest często charakteryzowane jako potrzebujące ciągłej walidacji i niezdolne do pracy bez częstej informacji zwrotnej. Pomija to ich prawdziwe pragnienie rozwoju i możliwości uczenia się.",
+      "researchFindings": "Badania pokazują, że Pokolenie Z ceni informację zwrotną w czasie rzeczywistym jako narzędzie rozwoju, a nie walidacji. Poszukują ciągłego uczenia się i doceniają transparentną komunikację na temat wyników pracy.",
+      "strategiesAdvice": "Wdrażaj regularne konsultacje, zapewniaj zasoby edukacyjne i twórz jasne ścieżki rozwoju. Używaj narzędzi cyfrowych do natychmiastowej informacji zwrotnej, utrzymując jednocześnie wartościowe interakcje osobiste."
+    },
+    "GM": {
+      "id": "work-motivation-millennial",
+      "code": "T5.2.GM",
+      "title": "GM: Motywacja i demotywacja",
+      "color": "orange",
+      "description": "Motywowani zgodnością wartości i sukcesem zespołu",
+      "pageId": 8,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Millenialsi są stereotypowo przedstawiani jako osoby oczekujące stałego chwalenia i niechętne do ciężkiej pracy bez natychmiastowych nagród.",
+      "researchFindings": "Badania pokazują, że Millenialsi są motywowani pracą pełną sensu i wspólnym sukcesem. Poszukują ról opartych na celach i cenią osiągnięcia zespołowe.",
+      "strategiesAdvice": "Dostosuj wartości organizacyjne do osobistych przekonań, celebruj sukcesy zespołowe i zapewnij możliwości projektów współpracy o wpływie społecznym."
+    },
+    "GX": {
+      "id": "work-motivation-genx",
+      "code": "T5.2.GX",
+      "title": "GX: Motywacja i demotywacja",
+      "color": "orange",
+      "description": "Motywowani konkretnymi rezultatami, jasnymi celami i swobodą operacyjną",
+      "pageId": 4,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Pokolenie X jest często postrzegane jako cyniczne i pozbawione motywacji, zainteresowane jedynie wykonaniem zadania przy minimalnym zaangażowaniu.",
+      "researchFindings": "Badania wskazują, że Pokolenie X jest wysoce motywowane autonomią i wynikami. Preferuje jasne cele i swobodę ich osiągania na własny sposób.",
+      "strategiesAdvice": "Wyznaczaj jasne cele, zapewnij autonomię w realizacji, doceniaj osiągnięcia oparte na wynikach i minimalizuj zbędny nadzór lub mikrozarządzanie."
+    },
+    "GB": {
+      "id": "work-motivation-boomer",
+      "code": "T5.2.GB",
+      "title": "GB: Motywacja i demotywacja",
+      "color": "orange",
+      "description": "Motywowani formalnym uznaniem i rozwojem kariery",
+      "pageId": 10,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Baby Boomers są stereotypowo przedstawiani jako motywowani wyłącznie tradycyjnymi nagrodami, takimi jak tytuły i narożne gabinety, oporni na nowoczesne formy uznania.",
+      "researchFindings": "Badania pokazują, że Baby Boomers cenią znaczące uznanie i osiągnięcia zawodowe. Doceniają formalne potwierdzenie ich wkładu i wiedzy eksperckiej.",
+      "strategiesAdvice": "Zapewnij formalne programy uznania, doceniaj wiedzę ekspercką i doświadczenie, oferuj role przywódcze lub mentoringowe oraz celebruj kamienie milowe kariery."
+    }
+  },
+  "T5.3": {
+    "GZ": {
+      "id": "work-styles-genz",
+      "code": "T5.3.GZ",
+      "title": "GZ: Style pracy i współpraca",
+      "color": "cyan",
+      "description": "Współpraca cyfrowa z komfortem pracy asynchronicznej i zdalnej",
+      "pageId": 1,
+      "image": "/images/cards/GZ_look_down.png",
+      "stereotype": "Przykładowy stereotyp dotyczący stylów pracy Pokolenia Z",
+      "researchFindings": "Przykładowe wyniki badań dotyczące stylów pracy Pokolenia Z",
+      "strategiesAdvice": "Przykładowe strategie i porady dotyczące stylów pracy Pokolenia Z"
+    },
+    "GM": {
+      "id": "work-styles-millennial",
+      "code": "T5.3.GM",
+      "title": "GM: Style pracy i współpraca",
+      "color": "cyan",
+      "description": "Podejście zwinne z współpracą międzyfunkcyjną i otwartymi środowiskami",
+      "pageId": 6,
+      "image": "/images/cards/GM_look_down.png",
+      "stereotype": "Przykładowy stereotyp dotyczący stylów pracy Millenialsów",
+      "researchFindings": "Przykładowe wyniki badań dotyczące stylów pracy Millenialsów",
+      "strategiesAdvice": "Przykładowe strategie i porady dotyczące stylów pracy Millenialsów"
+    },
+    "GX": {
+      "id": "work-styles-genx",
+      "code": "T5.3.GX",
+      "title": "GX: Style pracy i współpraca",
+      "color": "cyan",
+      "description": "Pragmatyczny styl równoważący metody tradycyjne i cyfrowe",
+      "pageId": 3,
+      "image": "/images/cards/GX_look_down.png",
+      "stereotype": "Przykładowy stereotyp dotyczący stylów pracy Pokolenia X",
+      "researchFindings": "Przykładowe wyniki badań dotyczące stylów pracy Pokolenia X",
+      "strategiesAdvice": "Przykładowe strategie i porady dotyczące stylów pracy Pokolenia X"
+    },
+    "GB": {
+      "id": "work-styles-boomer",
+      "code": "T5.3.GB",
+      "title": "GB: Style pracy i współpraca",
+      "color": "cyan",
+      "description": "Preferencja uporządkowanych procesów, formalnej komunikacji i jasnych hierarchii",
+      "pageId": 9,
+      "image": "/images/cards/GB_look_down.png",
+      "stereotype": "Przykładowy stereotyp dotyczący stylów pracy Baby Boomers",
+      "researchFindings": "Przykładowe wyniki badań dotyczące stylów pracy Baby Boomers",
+      "strategiesAdvice": "Przykładowe strategie i porady dotyczące stylów pracy Baby Boomers"
+    }
+  }
+}

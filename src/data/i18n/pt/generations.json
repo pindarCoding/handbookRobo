@@ -1,0 +1,30 @@
+{
+  "GZ": {
+    "id": "genz",
+    "code": "GZ",
+    "title": "Geração Z",
+    "ageRange": "14 - 27",
+    "description": "Nativos digitais que valorizam a autenticidade e a integração entre vida pessoal e profissional"
+  },
+  "GM": {
+    "id": "millennial",
+    "code": "GM",
+    "title": "Millennial",
+    "ageRange": "28 - 43",
+    "description": "Otimistas com aptidão tecnológica, focados no propósito e no crescimento"
+  },
+  "GX": {
+    "id": "genx",
+    "code": "GX",
+    "title": "Geração X",
+    "ageRange": "44 - 59",
+    "description": "Independentes e adaptáveis, fazendo a ponte entre abordagens tradicionais e digitais"
+  },
+  "GB": {
+    "id": "boomer",
+    "code": "GB",
+    "title": "Baby Boomer",
+    "ageRange": "60 - 78",
+    "description": "Orientados pela experiência, com forte ética de trabalho e valores tradicionais"
+  }
+}

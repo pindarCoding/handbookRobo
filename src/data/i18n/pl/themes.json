@@ -1,0 +1,172 @@
+{
+  "T1": {
+    "id": "communication",
+    "code": "T1",
+    "title": "Komunikacja między pokoleniami – Zapobieganie konfliktom i zarządzanie nimi",
+    "introduction": "Ten rozdział przedstawia trzy **kluczowe tematy**, które okazały się najbardziej wartościowymi odkryciami naszych badań międzypokoleniowych dotyczących **komunikacji międzypokoleniowej i konfliktów** w miejscu pracy w pięciu krajach europejskich.\n\nCzerpiąc z różnorodnych perspektyw czterech pokoleń na rynku pracy, nasze badania wykazały, że komunikacja w miejscu pracy i konflikty kształtowane są przez trzy powiązane ze sobą tematy:\n\n* **Zamieszanie wokół kanałów komunikacji i oczekiwania dotyczące czasu odpowiedzi**\n* **Konflikty oparte na tożsamości i wartościach**\n* **Rola otwartego dialogu i interakcji społecznych w zapobieganiu konfliktom**\n\nPo pierwsze, **zamieszanie wokół kanałów komunikacji i oczekiwania dotyczące czasu odpowiedzi** odzwierciedlają rosnącą złożoność komunikacji w miejscu pracy w środowiskach hybrydowych i cyfrowych. Pracownicy często stają przed niepewnością co do tego, jakich platform używać, jak szybko odpowiadać i jak interpretować ton oraz pilność — kwestie te są dodatkowo komplikowane przez różnice pokoleniowe w preferencjach komunikacyjnych.\n\nPo drugie, **konflikty oparte na tożsamości i wartościach** pojawiają się, gdy jednostki doświadczają napięcia z powodu różnic w osobistych przekonaniach, pochodzeniu kulturowym lub tożsamości społecznej. Konflikty te są szczególnie wyraźne w zróżnicowanych i wielopokoleniowych zespołach, gdzie różne standardy etyczne, normy kulturowe i doświadczenia życiowe mogą prowadzić do nieporozumień lub wykluczenia.\n\nWreszcie, nasze badania podkreślają znaczenie **otwartego dialogu i interakcji społecznych** jako proaktywnej strategii zapobiegania konfliktom. Możliwości nieformalnego kontaktu, aktywnego słuchania i inkluzywnej rozmowy zostały konsekwentnie zidentyfikowane jako kluczowe dla budowania zaufania, rozwijania empatii i zmniejszania prawdopodobieństwa konfliktów interpersonalnych. Każda z trzech poniższych sekcji oferuje głębszą analizę, praktyczne spostrzeżenia i rekomendacje oparte na dowodach, służące poprawie relacji w miejscu pracy.",
+    "reportPdfUrl": null,
+    "pageId": 10,
+    "subthemes": {
+      "T1.1": {
+        "id": "communication-tools",
+        "code": "T1.1",
+        "title": "Zamieszanie wokół kanałów komunikacji i oczekiwania dotyczące czasu odpowiedzi w miejscu pracy",
+        "description": "Cyfrowe a tradycyjne metody komunikacji",
+        "pageId": 11,
+        "markdownFile": "t1-1-communication-channels.md"
+      },
+      "T1.2": {
+        "id": "communication-conflicts",
+        "code": "T1.2",
+        "title": "Konflikty oparte na tożsamości i wartościach w miejscu pracy",
+        "description": "Zarządzanie konfliktami międzypokoleniowymi",
+        "pageId": 12,
+        "markdownFile": "t1-2-communication-identity.md"
+      },
+      "T1.3": {
+        "id": "communication-values",
+        "code": "T1.3",
+        "title": "Rola otwartego dialogu i interakcji społecznych w zapobieganiu konfliktom w miejscu pracy",
+        "description": "Kluczowe wartości w komunikacji międzypokoleniowej",
+        "pageId": 13,
+        "markdownFile": "t1-3-communication-conflict-prevention.md"
+      }
+    }
+  },
+  "T2": {
+    "id": "diversity",
+    "code": "T2",
+    "title": "Różnorodność pokoleniowa z perspektywy intersekcjonalnej",
+    "introduction": "Różnorodność pokoleniowa opisuje interakcję i współpracę wielu kohort wiekowych — Baby Boomers, Pokolenia X, Millenialsów i Pokolenia Z — w miejscu pracy, społeczności lub otoczeniu społecznym. Kiedy przyjmujemy perspektywę intersekcjonalną, podkreślamy, jak tożsamość pokoleniowa przecina się z innymi tożsamościami społecznymi, takimi jak płeć, pochodzenie etniczne, niepełnosprawność, klasa społeczna itp., oraz jak te przecięcia kształtują doświadczenia inkluzji, dyskryminacji, głosu i władzy. Ten rozdział bada, jak czynniki intersekcjonalne wpływają na różnorodność pokoleniową. Analizujemy, jak dyskryminacja może się nasilać, gdy stereotypy nakładają się na siebie lub wchodzą w konflikt, oraz jakie strategie pomagają promować równość i zrozumienie. Dlaczego to istotne? W miarę jak miejsca pracy stają się bardziej zróżnicowane pod względem wieku i innych wymiarów, polityki i kultury ignorujące intersekcjonalność ryzykują wzmocnienie systemowych uprzedzeń, pozostawiając niektóre osoby bardziej marginalizowane nawet wśród \"zróżnicowanych\" grup.",
+    "reportPdfUrl": null,
+    "pageId": 20,
+    "subthemes": {
+      "T2.1": {
+        "id": "diversity-identity",
+        "code": "T2.1",
+        "title": "Dyskryminacja intersekcjonalna i asymetrie władzy",
+        "description": "Wielorakie tożsamości w różnych pokoleniach",
+        "pageId": 21,
+        "markdownFile": "t2-1-intersectional-discrimination.md"
+      },
+      "T2.2": {
+        "id": "diversity-inclusion",
+        "code": "T2.2",
+        "title": "Wzorce głosu, wiktymizacji i wsparcia",
+        "description": "Inkluzywne praktyki dla wszystkich pokoleń",
+        "pageId": 22,
+        "markdownFile": "t2-2-patterns-voice.md"
+      },
+      "T2.3": {
+        "id": "strategies-avoid",
+        "code": "T2.3",
+        "title": "Strategie unikania i radzenia sobie z różnicami intersekcjonalnymi w pracy",
+        "description": "--",
+        "pageId": 23,
+        "markdownFile": "t2-3-strategies-avoid.md"
+      }
+    }
+  },
+  "T3": {
+    "id": "digital",
+    "code": "T3",
+    "title": "Jak zniwelować nierówności cyfrowe",
+    "introduction": "Nierówność cyfrowa stanowi jedno z najbardziej palących wyzwań współczesnych miejsc pracy, obejmując dysproporcje w dostępie do technologii, umiejętnościach cyfrowych i efektywnym wykorzystaniu narzędzi cyfrowych wśród pracowników. W miarę jak organizacje coraz intensywniej wdrażają cyfrową transformację, te podziały mogą znacząco wpływać na równość w miejscu pracy, produktywność pracowników i konkurencyjność organizacji. Pandemia COVID-19 wyraźnie pokazała, jak nierówności cyfrowe mogą wykluczać pracowników z pełnego uczestnictwa w życiu zawodowym, szczególnie gdy praca zdalna stała się koniecznością. Dziś, gdy sztuczna inteligencja i zaawansowane technologie przekształcają operacje biznesowe, przeciwdziałanie nierówności cyfrowej przeszło od kwestii pobocznej do strategicznego imperatywu dla organizacji zaangażowanych w inkluzywny rozwój. Ten moduł bada wieloaspektowy charakter nierówności cyfrowej w kontekście miejsca pracy, eksplorując nie tylko dostęp technologiczny, ale także umiejętności, systemy wsparcia i czynniki kulturowe, które determinują sposób, w jaki pracownicy korzystają z narzędzi cyfrowych. Zbadamy, jak nierówność cyfrowa odzwierciedla i wzmacnia istniejące dysproporcje społeczno-ekonomiczne oraz przeanalizujemy strategie tworzenia bardziej inkluzywnych cyfrowo miejsc pracy, w których wszyscy pracownicy mogą się rozwijać. Poprzez zrozumienie i przeciwdziałanie tym wyzwaniom organizacje mogą odblokować znaczące zyski produktywności, potencjał innowacyjny i przewagi konkurencyjne, jednocześnie realizując szersze cele równościowe. Istotność tego tematu wykracza poza samą kompetencję techniczną. Nierówność cyfrowa przecina się z różnicami pokoleniowymi, pochodzeniem społeczno-ekonomicznym, dysproporcjami geograficznymi i możliwościami edukacyjnymi, tworząc złożone wyzwania wymagające wieloaspektowych rozwiązań. Badania pokazują, że firmy ignorujące technologię pracowniczą ryzykują wyższą rotację, wolniejszy wzrost i znaczne luki kompetencyjne podważające konkurencyjność. Natomiast organizacje, które proaktywnie przeciwdziałają nierówności cyfrowej, mogą budować solidniejsze ścieżki pozyskiwania talentów, zmniejszać koszty rekrutacji i zwiększać retencję pracowników, jednocześnie wspierając bardziej inkluzywną kulturę miejsca pracy.",
+    "reportPdfUrl": null,
+    "pageId": 30,
+    "subthemes": {
+      "T3.1": {
+        "id": "digital-gap",
+        "code": "T3.1",
+        "title": "Zrozumienie nierówności cyfrowej w kontekście miejsca pracy",
+        "description": "Zrozumienie podziałów technologicznych",
+        "pageId": 31,
+        "markdownFile": "t3-1-understanding-digital-inequality.md"
+      },
+      "T3.2": {
+        "id": "digital-training",
+        "code": "T3.2",
+        "title": "Strategie niwelowania nierówności cyfrowej w miejscu pracy",
+        "description": "Podnoszenie kwalifikacji dla wszystkich grup wiekowych",
+        "pageId": 32,
+        "markdownFile": "t3-2-strategies-for-bridging.md"
+      },
+      "T3.3": {
+        "id": "digital-collaboration",
+        "code": "T3.3",
+        "title": "Studia przypadków i najlepsze praktyki: Lekcje od wiodących organizacji",
+        "description": "Narzędzia do współpracy międzypokoleniowej",
+        "pageId": 33,
+        "markdownFile": "t3-3-case-studies.md"
+      }
+    }
+  },
+  "T4": {
+    "id": "intercultural",
+    "code": "T4",
+    "title": "Różnorodność pokoleniowa z perspektywy międzykulturowej",
+    "introduction": "Poniższa sekcja dotyczy różnych pokoleń i kultur w miejscu pracy oraz wyzwań, które mogą się w nim pojawić. Konflikty pokoleniowe istniały zawsze. Od starożytności istnieją relacje o starszych pokoleniach narzekających na brak szacunku ze strony młodszych pokoleń (Kollewe 2016: 188). Jednak badania etnologiczne pokazują, że w różnych kulturach sam wiek nie determinuje postaw wobec szacunku. Porównania między różnymi kulturami wydają się wskazywać, że szacunek dla osób starszych i w podeszłym wieku jest ściśle powiązany z ich statusem w społeczeństwie. Ze względu na swoje doświadczenie życiowe starsi ludzie często posiadają większą wiedzę (faktyczną, historyczną, magiczną), więcej dóbr materialnych i w rezultacie cieszą się lepszą pozycją w grupie lub społeczeństwie (Kollewe 2016: 189). Ściśle rzecz biorąc, czynnik \"wieku\" jest więc jedynie obserwowalną cechą fizyczną. To nie sam wiek biologiczny ma wyższą wartość społeczną. Wydaje się raczej, że społeczeństwa kojarzą pewne czynniki z \"wiekiem\", które mają pozytywne konotacje i są wystarczającym powodem do okazywania szacunku.",
+    "reportPdfUrl": null,
+    "pageId": 40,
+    "subthemes": {
+      "T4.1": {
+        "id": "hierarchy",
+        "code": "T4.1",
+        "title": "Hierarchie kulturowe",
+        "description": "Wpływy kulturowe na perspektywy pokoleniowe",
+        "pageId": 41,
+        "markdownFile": "t4-1-hierarchy.md"
+      },
+      "T4.2": {
+        "id": "uncertainty-avoidance",
+        "code": "T4.2",
+        "title": "Unikanie niepewności",
+        "description": "Wpływy kulturowe na perspektywy pokoleniowe",
+        "pageId": 41,
+        "markdownFile": "t4-2-uncertainty-avoidance.md"
+      },
+      "T4.3": {
+        "id": "direct-and-indirect",
+        "code": "T4.3",
+        "title": "Bezpośrednie i pośrednie style komunikacji",
+        "description": "Wpływy kulturowe na perspektywy pokoleniowe",
+        "pageId": 41,
+        "markdownFile": "t4-3-direct-and-indirect.md"
+      }
+    }
+  },
+  "T5": {
+    "id": "work",
+    "code": "T5",
+    "title": "Różnice w podejściu do pracy",
+    "introduction": "Współczesne miejsca pracy łączą wyjątkowo zróżnicowaną mieszankę pokoleń. Baby Boomers, Pokolenie X, Millenialsi i Pokolenie Z współpracują na co dzień, a każde z nich zostało ukształtowane przez środowisko społeczne, ekonomiczne i technologiczne swoich lat formacyjnych. Wpływy te oddziałują nie tylko na to, jak jednostki definiują sukces, ale także jak się komunikują, co ich motywuje i jak podchodzą do pracy zespołowej. Choć różnice w oczekiwaniach i stylach mogą czasem prowadzić do napięć lub nieporozumień, otwierają również cenne możliwości wzajemnego uczenia się, innowacji i odporności. Badając perspektywy pokoleniowe dotyczące wartości, motywacji i współpracy, ten podręcznik dostarcza praktycznych spostrzeżeń i strategii pomagających organizacjom budować inkluzywne środowiska, w których wszystkie pokolenia czują się docenione, szanowane i uprawnione do wnoszenia swoich mocnych stron.",
+    "reportPdfUrl": "/pdfs/work-report.pdf",
+    "pageId": 50,
+    "subthemes": {
+      "T5.1": {
+        "id": "work-values",
+        "code": "T5.1",
+        "title": "Wartości w miejscu pracy w różnych pokoleniach",
+        "description": "Jak różne pokolenia definiują sukces i sens w pracy",
+        "pageId": 10,
+        "markdownFile": "t5-1-workplace-values.md"
+      },
+      "T5.2": {
+        "id": "work-motivation",
+        "code": "T5.2",
+        "title": "Motywacja i demotywacja",
+        "description": "Co napędza i zniechęca różne pokolenia",
+        "pageId": 10,
+        "markdownFile": "t5-2-motivation-demotivation.md"
+      },
+      "T5.3": {
+        "id": "work-styles",
+        "code": "T5.3",
+        "title": "Style pracy i współpraca",
+        "description": "Różne podejścia do pracy zespołowej i produktywności",
+        "pageId": 10,
+        "markdownFile": "t5-3-workstyles-collaboration.md"
+      }
+    }
+  }
+}
