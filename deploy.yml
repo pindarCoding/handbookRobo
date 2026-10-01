@@ -2,8 +2,11 @@ version: '3.3'
 
 services:
   handbook:
-    image: registry.achab.19.coop/handbookmyco:0.1.7
+    image: registry.achab.19.coop/handbookmyco:0.1.8
     deploy:
+      resources:
+        limits:
+          memory: 1G
       labels:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
