@@ -3,6 +3,20 @@
     "title": "Witamy w Podręczniku MYCo dotyczącym Inkluzji i Różnorodności Międzypokoleniowej",
     "subtitle": "Praktyczne źródło wiedzy dla specjalistów HR, trenerów i facylitatorów, pomagające w nawigowaniu po dynamice międzypokoleniowej i tworzeniu inkluzywnych miejsc pracy."
   },
+  "guide": {
+    "button": "Jesteś tu nowy? Zacznij od przewodnika",
+    "caption": "Bez rejestracji. Wracaj, kiedy chcesz.",
+    "modalTitle": "Pierwsze kroki z Podręcznikiem",
+    "modalIntro": "Wszystko, czego potrzebujesz, aby się odnaleźć: przewodnik krok po kroku, samouczek wideo i test samooceny.",
+    "pdfTitle": "Przewodnik krok po kroku",
+    "pdfDescription": "Pobierz przewodnik PDF, który przeprowadzi Cię przez wszystkie funkcje Podręcznika.",
+    "pdfButton": "Pobierz przewodnik (PDF)",
+    "videoTitle": "Obejrzyj samouczek",
+    "assessmentTitle": "Test samooceny",
+    "assessmentDescription": "Zmierz swoją świadomość różnorodności pokoleniowej, zanim zaczniesz korzystać z Podręcznika.",
+    "assessmentButton": "Rozpocznij samoocenę",
+    "close": "Zamknij"
+  },
   "personalised": {
     "title": "Twój Spersonalizowany Podręcznik",
     "description": "Podręcznik zapewnia <strong>podstawy teoretyczne do zrozumienia różnorodności pokoleniowej w miejscu pracy</strong>, łącząc badania i spostrzeżenia dotyczące kluczowych tematów kształtujących współpracę między różnymi pokoleniami. Nie musisz jednak eksplorować wszystkich treści. Z tego powodu platforma pozwala wybrać tylko te sekcje, które są najbardziej istotne dla Twojego konkretnego kontekstu — niezależnie od tego, czy chcesz skupić się na konkretnym pokoleniu, określonym temacie, czy kombinacji obu. W ten sposób możesz stworzyć zasób dostosowany do swoich potrzeb i pobrać go jako spersonalizowany plik PDF.",

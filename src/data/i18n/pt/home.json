@@ -3,6 +3,20 @@
     "title": "Bem-vindo ao Manual MYCo sobre Inclusão e Diversidade Geracional",
     "subtitle": "Um recurso prático para profissionais de RH, formadores e facilitadores para navegar as dinâmicas intergeracionais e promover locais de trabalho inclusivos."
   },
+  "guide": {
+    "button": "É novo aqui? Comece pelo guia",
+    "caption": "Não é necessário registo. Volte quando quiser.",
+    "modalTitle": "Primeiros passos com o Manual",
+    "modalIntro": "Tudo o que precisa para se orientar: um guia passo a passo, um vídeo tutorial e a autoavaliação.",
+    "pdfTitle": "Guia passo a passo",
+    "pdfDescription": "Descarregue o guia em PDF que o acompanha por todas as funcionalidades do Manual.",
+    "pdfButton": "Descarregar o guia (PDF)",
+    "videoTitle": "Veja o tutorial",
+    "assessmentTitle": "Teste de autoavaliação",
+    "assessmentDescription": "Avalie a sua consciência sobre a diversidade geracional antes de explorar o Manual.",
+    "assessmentButton": "Iniciar a autoavaliação",
+    "close": "Fechar"
+  },
   "personalised": {
     "title": "O Seu Manual Personalizado",
     "description": "O Manual fornece uma <strong>base teórica para compreender a diversidade geracional no local de trabalho</strong>, reunindo investigação e perspetivas sobre os temas-chave que moldam a colaboração entre diferentes gerações. No entanto, poderá não necessitar de explorar todo o conteúdo. Por esta razão, a plataforma permite-lhe selecionar apenas as secções mais relevantes para o seu contexto específico, quer pretenda focar-se numa geração em particular, num tema específico ou numa combinação de ambos. Desta forma, pode criar um recurso adaptado às suas necessidades e descarregá-lo como um PDF personalizado.",

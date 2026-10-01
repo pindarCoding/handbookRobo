@@ -3,6 +3,20 @@
     "title": "Welcome to the MYCo Handbook on Generational Inclusion and Diversity",
     "subtitle": "A practical resource for HR professionals, trainers, and facilitators to navigate intergenerational dynamics and foster inclusive workplaces."
   },
+  "guide": {
+    "button": "New here? Start with the guide",
+    "caption": "No sign-up needed. Come back anytime.",
+    "modalTitle": "Getting started with the Handbook",
+    "modalIntro": "Everything you need to find your way around: a step-by-step guide, a video tutorial and the self-assessment.",
+    "pdfTitle": "Step-by-step guide",
+    "pdfDescription": "Download the PDF guide that walks you through every feature of the Handbook.",
+    "pdfButton": "Download the guide (PDF)",
+    "videoTitle": "Watch the tutorial",
+    "assessmentTitle": "Self-Assessment Test",
+    "assessmentDescription": "Measure your awareness of generational diversity before exploring the Handbook.",
+    "assessmentButton": "Start the self-assessment",
+    "close": "Close"
+  },
   "personalised": {
     "title": "Your Personalised Handbook",
     "description": "The Handbook provides a <strong>theoretical foundation for understanding generational diversity in the workplace</strong>, bringing together research and insights on the key themes that shape collaboration between different generations. However, you may not need to explore all the content. For this reason, the platform allows you to select only the sections most relevant to your specific context, whether you want to focus on a particular generation, a specific topic, or a combination of both. In this way, you can create a resource tailored to your needs and download it as a customised PDF.",

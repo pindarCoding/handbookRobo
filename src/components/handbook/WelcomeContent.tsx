@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTest } from "@/components/providers/test-provider";
 import { useLanguage } from "@/components/providers/language-provider";
 import { useTranslation } from "@/hooks/useTranslation";
 import {
+  BookOpen,
   ClipboardCheck,
 } from "lucide-react";
 import {
@@ -14,14 +16,18 @@ import {
   staggerItem,
   scalePop,
 } from "@/data/config/animations";
+import { getTutorialVideo } from "@/data/config/guide";
+import { GuideModal } from "./GuideModal";
 
 export const WelcomeContent = () => {
   const { startTest } = useTest();
   const { language } = useLanguage();
   const { t } = useTranslation();
+  const [isGuideOpen, setIsGuideOpen] = useState(false);
 
   return (
     <div className="py-12 px-4 max-w-4xl mx-auto">
+      <GuideModal isOpen={isGuideOpen} onClose={() => setIsGuideOpen(false)} />
       {/* Hero Section */}
       <motion.div
         className="text-center mb-12"
@@ -46,6 +52,36 @@ export const WelcomeContent = () => {
         >
           {t('hero.subtitle')}
         </motion.p>
+
+        {/* Guide CTA */}
+        <motion.div
+          className="flex flex-col items-center mb-10"
+          variants={fadeSlideUp}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.3 }}
+        >
+          <motion.button
+            onClick={() => setIsGuideOpen(true)}
+            className="py-3 px-6
+              bg-gradient-to-r from-blue-500 to-blue-600
+              hover:from-blue-600 hover:to-blue-700
+              dark:from-blue-500 dark:to-blue-600
+              dark:hover:from-blue-600 dark:hover:to-blue-700
+              text-white font-semibold rounded-lg
+              shadow-md hover:shadow-lg
+              transition-all duration-200
+              flex items-center justify-center gap-2"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <BookOpen className="w-5 h-5" />
+            {t('guide.button')}
+          </motion.button>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
+            {t('guide.caption')}
+          </p>
+        </motion.div>
 
         {/* Generations Image */}
         <motion.div
@@ -196,7 +232,7 @@ export const WelcomeContent = () => {
           </h3>
           <video
             key={language}
-            src={`/MyCo_Tutorial_${{ en: 'ENG', it: 'ITA', pl: 'PL', de: 'DE', pt: 'PT' }[language] || 'ENG'}.mp4`}
+            src={getTutorialVideo(language)}
             poster="/images/tutorial.jpg"
             preload="none"
             controls
