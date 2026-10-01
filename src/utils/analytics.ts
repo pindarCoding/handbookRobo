@@ -5,7 +5,7 @@
  */
 
 // Type definitions for custom events
-export type ContentType = 'theme' | 'subtheme' | 'custom';
+export type ContentType = 'theme' | 'subtheme' | 'custom' | 'guide';
 
 export interface PdfDownloadParams {
   content_type: ContentType;
