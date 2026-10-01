@@ -3,11 +3,14 @@ import { readFileSync } from "fs";
 
 const pkg = JSON.parse(readFileSync("./package.json", "utf-8"));
 
+const isDev = process.env.NODE_ENV === "development";
+
 // Content Security Policy: self + Google Analytics + API di merge PDF.
 // 'unsafe-inline' è necessario per gli script inline di Next/GA e gli stili di framer-motion.
+// 'unsafe-eval' serve solo a `next dev` (react-refresh); in produzione non viene emesso.
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://www.googletagmanager.com https://*.google-analytics.com",
   "font-src 'self' data:",
